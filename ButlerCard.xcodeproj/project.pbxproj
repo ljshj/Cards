@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2380DFA18B6F55100D895DA /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2380DF918B6F55100D895DA /* HXTIGoWithTypeViewController.m */; };
+		B2380E0018B6F9C000D895DA /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2380DFF18B6F9C000D895DA /* HXTIGoViewController.m */; };
+		B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */; };
+		B2380E1018B7014900D895DA /* WSNineSquares.m in Sources */ = {isa = PBXBuildFile; fileRef = B2380E0B18B7014900D895DA /* WSNineSquares.m */; };
+		B2380E1118B7014900D895DA /* WSNineSquaresCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2380E0D18B7014900D895DA /* WSNineSquaresCell.m */; };
+		B2380E1218B7014900D895DA /* WSNineSquaresUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B2380E0F18B7014900D895DA /* WSNineSquaresUpdateItem.m */; };
+		B2380E1518B701D400D895DA /* HXTBrowseHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2380E1418B701D400D895DA /* HXTBrowseHousingEstateViewController.m */; };
+		B2380E1718B7273B00D895DA /* housingEstate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2380E1618B7273B00D895DA /* housingEstate.jpg */; };
+		B25F6FC818BB1DD2001421A3 /* HXTUserBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25F6FC718BB1DD2001421A3 /* HXTUserBillViewController.m */; };
+		B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BED218B5EF93003A14DA /* ComboBoxView.m */; };
+		B287BED618B5F22A003A14DA /* list_ico_d.png in Resources */ = {isa = PBXBuildFile; fileRef = B287BED518B5F22A003A14DA /* list_ico_d.png */; };
+		B287BEDD18B5F941003A14DA /* HXTGroupTogetherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BEDC18B5F941003A14DA /* HXTGroupTogetherViewController.m */; };
+		B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */; };
+		B2C27D8C18B48432003AA091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8B18B48432003AA091 /* Foundation.framework */; };
+		B2C27D8E18B48432003AA091 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8D18B48432003AA091 /* CoreGraphics.framework */; };
+		B2C27D9018B48432003AA091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8F18B48432003AA091 /* UIKit.framework */; };
+		B2C27D9618B48432003AA091 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2C27D9418B48432003AA091 /* InfoPlist.strings */; };
+		B2C27D9818B48432003AA091 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C27D9718B48432003AA091 /* main.m */; };
+		B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C27D9B18B48432003AA091 /* HXTAppDelegate.m */; };
+		B2C27D9F18B48432003AA091 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C27D9D18B48432003AA091 /* Root.storyboard */; };
+		B2C27DA418B48432003AA091 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C27DA318B48432003AA091 /* Images.xcassets */; };
+		B2C27DAB18B48432003AA091 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27DAA18B48432003AA091 /* XCTest.framework */; };
+		B2C27DAC18B48432003AA091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8B18B48432003AA091 /* Foundation.framework */; };
+		B2C27DAD18B48432003AA091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8F18B48432003AA091 /* UIKit.framework */; };
+		B2C27DB518B48432003AA091 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2C27DB318B48432003AA091 /* InfoPlist.strings */; };
+		B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C27DB618B48432003AA091 /* ButlerCardTests.m */; };
+		B2C27DC218B48C41003AA091 /* LoginAndRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C27DC118B48C41003AA091 /* LoginAndRegister.storyboard */; };
+		B2CBEFD718B74CAA00651A30 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBEFD618B74CAA00651A30 /* HXTLoginViewController.m */; };
+		B2CBEFDA18B7582F00651A30 /* HXTRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBEFD918B7582F00651A30 /* HXTRegisterAccountViewController.m */; };
+		B2D4880518B5DABA00F331D3 /* HXTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D4880418B5DABA00F331D3 /* HXTHomeViewController.m */; };
+		B2D4880818B5DF1000F331D3 /* IWant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D4880618B5DF1000F331D3 /* IWant.storyboard */; };
+		B2D4881018B5E1F600F331D3 /* HXTIWantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D4880F18B5E1F600F331D3 /* HXTIWantViewController.m */; };
+		B2E31FD918BC498100165F89 /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E31FD718BC498100165F89 /* checkbox_checked.png */; };
+		B2E31FDA18BC498100165F89 /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E31FD818BC498100165F89 /* checkbox_unchecked.png */; };
+		B2E31FDD18BC49A700165F89 /* HXTCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E31FDC18BC49A700165F89 /* HXTCheckBox.m */; };
+		B2E31FE018BC90F000165F89 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E31FDF18BC90F000165F89 /* HXTAccountManager.m */; };
+		B2E31FE118BC90F000165F89 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E31FDF18BC90F000165F89 /* HXTAccountManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2C27DAE18B48432003AA091 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2C27D8018B48432003AA091 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2C27D8718B48432003AA091;
+			remoteInfo = ButlerCard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B2380DF818B6F55100D895DA /* HXTIGoWithTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTIGoWithTypeViewController.h; path = Controllers/IWant/IGo/HXTIGoWithTypeViewController.h; sourceTree = "<group>"; };
+		B2380DF918B6F55100D895DA /* HXTIGoWithTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTIGoWithTypeViewController.m; path = Controllers/IWant/IGo/HXTIGoWithTypeViewController.m; sourceTree = "<group>"; };
+		B2380DFE18B6F9C000D895DA /* HXTIGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTIGoViewController.h; path = Controllers/IWant/IGo/HXTIGoViewController.h; sourceTree = "<group>"; };
+		B2380DFF18B6F9C000D895DA /* HXTIGoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTIGoViewController.m; path = Controllers/IWant/IGo/HXTIGoViewController.m; sourceTree = "<group>"; };
+		B2380E0418B6FC3B00D895DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyProperty.storyboard; sourceTree = "<group>"; };
+		B2380E0A18B7014900D895DA /* WSNineSquares.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNineSquares.h; sourceTree = "<group>"; };
+		B2380E0B18B7014900D895DA /* WSNineSquares.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNineSquares.m; sourceTree = "<group>"; };
+		B2380E0C18B7014900D895DA /* WSNineSquaresCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNineSquaresCell.h; sourceTree = "<group>"; };
+		B2380E0D18B7014900D895DA /* WSNineSquaresCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNineSquaresCell.m; sourceTree = "<group>"; };
+		B2380E0E18B7014900D895DA /* WSNineSquaresUpdateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSNineSquaresUpdateItem.h; sourceTree = "<group>"; };
+		B2380E0F18B7014900D895DA /* WSNineSquaresUpdateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSNineSquaresUpdateItem.m; sourceTree = "<group>"; };
+		B2380E1318B701D400D895DA /* HXTBrowseHousingEstateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTBrowseHousingEstateViewController.h; path = Controllers/MyProperty/HXTBrowseHousingEstateViewController.h; sourceTree = "<group>"; };
+		B2380E1418B701D400D895DA /* HXTBrowseHousingEstateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTBrowseHousingEstateViewController.m; path = Controllers/MyProperty/HXTBrowseHousingEstateViewController.m; sourceTree = "<group>"; };
+		B2380E1618B7273B00D895DA /* housingEstate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = housingEstate.jpg; path = Images/housingEstate.jpg; sourceTree = "<group>"; };
+		B25F6FC618BB1DD2001421A3 /* HXTUserBillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTUserBillViewController.h; path = Controllers/MyProperty/HXTUserBillViewController.h; sourceTree = "<group>"; };
+		B25F6FC718BB1DD2001421A3 /* HXTUserBillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTUserBillViewController.m; path = Controllers/MyProperty/HXTUserBillViewController.m; sourceTree = "<group>"; };
+		B287BED118B5EF93003A14DA /* ComboBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComboBoxView.h; path = View/ComboBoxView.h; sourceTree = "<group>"; };
+		B287BED218B5EF93003A14DA /* ComboBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComboBoxView.m; path = View/ComboBoxView.m; sourceTree = "<group>"; };
+		B287BED518B5F22A003A14DA /* list_ico_d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = list_ico_d.png; path = Images/list_ico_d.png; sourceTree = "<group>"; };
+		B287BEDB18B5F941003A14DA /* HXTGroupTogetherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTGroupTogetherViewController.h; path = Controllers/IWant/GroupTogether/HXTGroupTogetherViewController.h; sourceTree = "<group>"; };
+		B287BEDC18B5F941003A14DA /* HXTGroupTogetherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTGroupTogetherViewController.m; path = Controllers/IWant/GroupTogether/HXTGroupTogetherViewController.m; sourceTree = "<group>"; };
+		B287BEDF18B607F8003A14DA /* HXTYouComeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTYouComeViewController.h; path = YouCome/HXTYouComeViewController.h; sourceTree = "<group>"; };
+		B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTYouComeViewController.m; path = YouCome/HXTYouComeViewController.m; sourceTree = "<group>"; };
+		B2C27D8818B48432003AA091 /* ButlerCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButlerCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C27D8B18B48432003AA091 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B2C27D8D18B48432003AA091 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B2C27D8F18B48432003AA091 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B2C27D9318B48432003AA091 /* ButlerCard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ButlerCard-Info.plist"; sourceTree = "<group>"; };
+		B2C27D9518B48432003AA091 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B2C27D9718B48432003AA091 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2C27D9918B48432003AA091 /* ButlerCard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButlerCard-Prefix.pch"; sourceTree = "<group>"; };
+		B2C27D9A18B48432003AA091 /* HXTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXTAppDelegate.h; sourceTree = "<group>"; };
+		B2C27D9B18B48432003AA091 /* HXTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTAppDelegate.m; sourceTree = "<group>"; };
+		B2C27D9E18B48432003AA091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Root.storyboard; sourceTree = "<group>"; };
+		B2C27DA318B48432003AA091 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B2C27DA918B48432003AA091 /* ButlerCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButlerCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C27DAA18B48432003AA091 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B2C27DB218B48432003AA091 /* ButlerCardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ButlerCardTests-Info.plist"; sourceTree = "<group>"; };
+		B2C27DB418B48432003AA091 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B2C27DB618B48432003AA091 /* ButlerCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButlerCardTests.m; sourceTree = "<group>"; };
+		B2C27DC118B48C41003AA091 /* LoginAndRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndRegister.storyboard; sourceTree = "<group>"; };
+		B2CBEFD518B74CAA00651A30 /* HXTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTLoginViewController.h; path = Controllers/Login/HXTLoginViewController.h; sourceTree = "<group>"; };
+		B2CBEFD618B74CAA00651A30 /* HXTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTLoginViewController.m; path = Controllers/Login/HXTLoginViewController.m; sourceTree = "<group>"; };
+		B2CBEFD818B7582F00651A30 /* HXTRegisterAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTRegisterAccountViewController.h; path = Controllers/Login/HXTRegisterAccountViewController.h; sourceTree = "<group>"; };
+		B2CBEFD918B7582F00651A30 /* HXTRegisterAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTRegisterAccountViewController.m; path = Controllers/Login/HXTRegisterAccountViewController.m; sourceTree = "<group>"; };
+		B2D4880318B5DABA00F331D3 /* HXTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTHomeViewController.h; path = Controllers/HXTHomeViewController.h; sourceTree = "<group>"; };
+		B2D4880418B5DABA00F331D3 /* HXTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTHomeViewController.m; path = Controllers/HXTHomeViewController.m; sourceTree = "<group>"; };
+		B2D4880718B5DF1000F331D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/IWant.storyboard; sourceTree = "<group>"; };
+		B2D4880E18B5E1F600F331D3 /* HXTIWantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTIWantViewController.h; path = Controllers/IWant/HXTIWantViewController.h; sourceTree = "<group>"; };
+		B2D4880F18B5E1F600F331D3 /* HXTIWantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTIWantViewController.m; path = Controllers/IWant/HXTIWantViewController.m; sourceTree = "<group>"; };
+		B2E31FD718BC498100165F89 /* checkbox_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_checked.png; path = ButlerCard/View/CheckBox/checkbox_checked.png; sourceTree = SOURCE_ROOT; };
+		B2E31FD818BC498100165F89 /* checkbox_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_unchecked.png; path = ButlerCard/View/CheckBox/checkbox_unchecked.png; sourceTree = SOURCE_ROOT; };
+		B2E31FDB18BC49A700165F89 /* HXTCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTCheckBox.h; path = ButlerCard/View/CheckBox/HXTCheckBox.h; sourceTree = SOURCE_ROOT; };
+		B2E31FDC18BC49A700165F89 /* HXTCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTCheckBox.m; path = ButlerCard/View/CheckBox/HXTCheckBox.m; sourceTree = SOURCE_ROOT; };
+		B2E31FDE18BC90F000165F89 /* HXTAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTAccountManager.h; path = Models/AccountManager/HXTAccountManager.h; sourceTree = "<group>"; };
+		B2E31FDF18BC90F000165F89 /* HXTAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTAccountManager.m; path = Models/AccountManager/HXTAccountManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2C27D8518B48432003AA091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C27D8E18B48432003AA091 /* CoreGraphics.framework in Frameworks */,
+				B2C27D9018B48432003AA091 /* UIKit.framework in Frameworks */,
+				B2C27D8C18B48432003AA091 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C27DA618B48432003AA091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C27DAB18B48432003AA091 /* XCTest.framework in Frameworks */,
+				B2C27DAD18B48432003AA091 /* UIKit.framework in Frameworks */,
+				B2C27DAC18B48432003AA091 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2380DF718B6F4DC00D895DA /* 我去 */ = {
+			isa = PBXGroup;
+			children = (
+				B2380DF818B6F55100D895DA /* HXTIGoWithTypeViewController.h */,
+				B2380DF918B6F55100D895DA /* HXTIGoWithTypeViewController.m */,
+				B2380DFE18B6F9C000D895DA /* HXTIGoViewController.h */,
+				B2380DFF18B6F9C000D895DA /* HXTIGoViewController.m */,
+			);
+			name = "我去";
+			sourceTree = "<group>";
+		};
+		B2380E0218B6FB7800D895DA /* 我的物业 */ = {
+			isa = PBXGroup;
+			children = (
+				B2380E1318B701D400D895DA /* HXTBrowseHousingEstateViewController.h */,
+				B2380E1418B701D400D895DA /* HXTBrowseHousingEstateViewController.m */,
+				B25F6FC618BB1DD2001421A3 /* HXTUserBillViewController.h */,
+				B25F6FC718BB1DD2001421A3 /* HXTUserBillViewController.m */,
+			);
+			name = "我的物业";
+			sourceTree = "<group>";
+		};
+		B2380E0918B7014900D895DA /* NineSquaresView */ = {
+			isa = PBXGroup;
+			children = (
+				B2380E0A18B7014900D895DA /* WSNineSquares.h */,
+				B2380E0B18B7014900D895DA /* WSNineSquares.m */,
+				B2380E0C18B7014900D895DA /* WSNineSquaresCell.h */,
+				B2380E0D18B7014900D895DA /* WSNineSquaresCell.m */,
+				B2380E0E18B7014900D895DA /* WSNineSquaresUpdateItem.h */,
+				B2380E0F18B7014900D895DA /* WSNineSquaresUpdateItem.m */,
+			);
+			name = NineSquaresView;
+			path = View/NineSquaresView;
+			sourceTree = "<group>";
+		};
+		B287BED418B5F216003A14DA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B2380E1618B7273B00D895DA /* housingEstate.jpg */,
+				B287BED518B5F22A003A14DA /* list_ico_d.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		B287BED718B5F87B003A14DA /* 伙拼 */ = {
+			isa = PBXGroup;
+			children = (
+				B287BEDB18B5F941003A14DA /* HXTGroupTogetherViewController.h */,
+				B287BEDC18B5F941003A14DA /* HXTGroupTogetherViewController.m */,
+			);
+			name = "伙拼";
+			sourceTree = "<group>";
+		};
+		B287BEDE18B60778003A14DA /* 你来 */ = {
+			isa = PBXGroup;
+			children = (
+				B287BEDF18B607F8003A14DA /* HXTYouComeViewController.h */,
+				B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */,
+			);
+			name = "你来";
+			sourceTree = "<group>";
+		};
+		B2C27D7F18B48432003AA091 = {
+			isa = PBXGroup;
+			children = (
+				B2C27D9118B48432003AA091 /* ButlerCard */,
+				B2C27DB018B48432003AA091 /* ButlerCardTests */,
+				B2C27D8A18B48432003AA091 /* Frameworks */,
+				B2C27D8918B48432003AA091 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2C27D8918B48432003AA091 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2C27D8818B48432003AA091 /* ButlerCard.app */,
+				B2C27DA918B48432003AA091 /* ButlerCardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2C27D8A18B48432003AA091 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2C27D8B18B48432003AA091 /* Foundation.framework */,
+				B2C27D8D18B48432003AA091 /* CoreGraphics.framework */,
+				B2C27D8F18B48432003AA091 /* UIKit.framework */,
+				B2C27DAA18B48432003AA091 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2C27D9118B48432003AA091 /* ButlerCard */ = {
+			isa = PBXGroup;
+			children = (
+				B2F63CE418BC399A00BFBE60 /* Model */,
+				B2C27DC018B48484003AA091 /* View */,
+				B2D4880218B5DA9E00F331D3 /* Controllers */,
+				B2C27D9A18B48432003AA091 /* HXTAppDelegate.h */,
+				B2C27D9B18B48432003AA091 /* HXTAppDelegate.m */,
+				B2C27DA318B48432003AA091 /* Images.xcassets */,
+				B2C27D9218B48432003AA091 /* Supporting Files */,
+			);
+			path = ButlerCard;
+			sourceTree = "<group>";
+		};
+		B2C27D9218B48432003AA091 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2C27D9318B48432003AA091 /* ButlerCard-Info.plist */,
+				B2C27D9418B48432003AA091 /* InfoPlist.strings */,
+				B2C27D9718B48432003AA091 /* main.m */,
+				B2C27D9918B48432003AA091 /* ButlerCard-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2C27DB018B48432003AA091 /* ButlerCardTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2C27DB618B48432003AA091 /* ButlerCardTests.m */,
+				B2C27DB118B48432003AA091 /* Supporting Files */,
+			);
+			path = ButlerCardTests;
+			sourceTree = "<group>";
+		};
+		B2C27DB118B48432003AA091 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2C27DB218B48432003AA091 /* ButlerCardTests-Info.plist */,
+				B2C27DB318B48432003AA091 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2C27DC018B48484003AA091 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2CBEFC818B74B2F00651A30 /* Checkbox */,
+				B287BED418B5F216003A14DA /* images */,
+				B287BED118B5EF93003A14DA /* ComboBoxView.h */,
+				B287BED218B5EF93003A14DA /* ComboBoxView.m */,
+				B2380E0918B7014900D895DA /* NineSquaresView */,
+				B2C27D9D18B48432003AA091 /* Root.storyboard */,
+				B2C27DC118B48C41003AA091 /* LoginAndRegister.storyboard */,
+				B2D4880618B5DF1000F331D3 /* IWant.storyboard */,
+				B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B2CBEFC818B74B2F00651A30 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				B2E31FD718BC498100165F89 /* checkbox_checked.png */,
+				B2E31FD818BC498100165F89 /* checkbox_unchecked.png */,
+				B2E31FDB18BC49A700165F89 /* HXTCheckBox.h */,
+				B2E31FDC18BC49A700165F89 /* HXTCheckBox.m */,
+			);
+			name = Checkbox;
+			path = View/QCheckbox;
+			sourceTree = "<group>";
+		};
+		B2CBEFD418B74C3900651A30 /* 登录/注册/忘记密码 */ = {
+			isa = PBXGroup;
+			children = (
+				B2CBEFD518B74CAA00651A30 /* HXTLoginViewController.h */,
+				B2CBEFD618B74CAA00651A30 /* HXTLoginViewController.m */,
+				B2CBEFD818B7582F00651A30 /* HXTRegisterAccountViewController.h */,
+				B2CBEFD918B7582F00651A30 /* HXTRegisterAccountViewController.m */,
+			);
+			name = "登录/注册/忘记密码";
+			sourceTree = "<group>";
+		};
+		B2D4880218B5DA9E00F331D3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2D4880318B5DABA00F331D3 /* HXTHomeViewController.h */,
+				B2D4880418B5DABA00F331D3 /* HXTHomeViewController.m */,
+				B2CBEFD418B74C3900651A30 /* 登录/注册/忘记密码 */,
+				B2380E0218B6FB7800D895DA /* 我的物业 */,
+				B2D4880A18B5E15E00F331D3 /* 我要 */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B2D4880A18B5E15E00F331D3 /* 我要 */ = {
+			isa = PBXGroup;
+			children = (
+				B2D4880E18B5E1F600F331D3 /* HXTIWantViewController.h */,
+				B2D4880F18B5E1F600F331D3 /* HXTIWantViewController.m */,
+				B2380DF718B6F4DC00D895DA /* 我去 */,
+				B287BEDE18B60778003A14DA /* 你来 */,
+				B287BED718B5F87B003A14DA /* 伙拼 */,
+			);
+			name = "我要";
+			sourceTree = "<group>";
+		};
+		B2F63CE418BC399A00BFBE60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2F63CE518BC39BD00BFBE60 /* AccountManager --登录/注册/忘记密码 */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B2F63CE518BC39BD00BFBE60 /* AccountManager --登录/注册/忘记密码 */ = {
+			isa = PBXGroup;
+			children = (
+				B2E31FDE18BC90F000165F89 /* HXTAccountManager.h */,
+				B2E31FDF18BC90F000165F89 /* HXTAccountManager.m */,
+			);
+			name = "AccountManager --登录/注册/忘记密码";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2C27D8718B48432003AA091 /* ButlerCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2C27DBA18B48432003AA091 /* Build configuration list for PBXNativeTarget "ButlerCard" */;
+			buildPhases = (
+				B2C27D8418B48432003AA091 /* Sources */,
+				B2C27D8518B48432003AA091 /* Frameworks */,
+				B2C27D8618B48432003AA091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ButlerCard;
+			productName = ButlerCard;
+			productReference = B2C27D8818B48432003AA091 /* ButlerCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2C27DA818B48432003AA091 /* ButlerCardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2C27DBD18B48432003AA091 /* Build configuration list for PBXNativeTarget "ButlerCardTests" */;
+			buildPhases = (
+				B2C27DA518B48432003AA091 /* Sources */,
+				B2C27DA618B48432003AA091 /* Frameworks */,
+				B2C27DA718B48432003AA091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2C27DAF18B48432003AA091 /* PBXTargetDependency */,
+			);
+			name = ButlerCardTests;
+			productName = ButlerCardTests;
+			productReference = B2C27DA918B48432003AA091 /* ButlerCardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2C27D8018B48432003AA091 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HXT;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "johnny tang";
+				TargetAttributes = {
+					B2C27D8718B48432003AA091 = {
+						DevelopmentTeam = W24H4ZR8PD;
+					};
+					B2C27DA818B48432003AA091 = {
+						TestTargetID = B2C27D8718B48432003AA091;
+					};
+				};
+			};
+			buildConfigurationList = B2C27D8318B48432003AA091 /* Build configuration list for PBXProject "ButlerCard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2C27D7F18B48432003AA091;
+			productRefGroup = B2C27D8918B48432003AA091 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2C27D8718B48432003AA091 /* ButlerCard */,
+				B2C27DA818B48432003AA091 /* ButlerCardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2C27D8618B48432003AA091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E31FD918BC498100165F89 /* checkbox_checked.png in Resources */,
+				B2C27DA418B48432003AA091 /* Images.xcassets in Resources */,
+				B2C27D9618B48432003AA091 /* InfoPlist.strings in Resources */,
+				B2E31FDA18BC498100165F89 /* checkbox_unchecked.png in Resources */,
+				B287BED618B5F22A003A14DA /* list_ico_d.png in Resources */,
+				B2380E1718B7273B00D895DA /* housingEstate.jpg in Resources */,
+				B2C27D9F18B48432003AA091 /* Root.storyboard in Resources */,
+				B2D4880818B5DF1000F331D3 /* IWant.storyboard in Resources */,
+				B2C27DC218B48C41003AA091 /* LoginAndRegister.storyboard in Resources */,
+				B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C27DA718B48432003AA091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C27DB518B48432003AA091 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2C27D8418B48432003AA091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B287BEDD18B5F941003A14DA /* HXTGroupTogetherViewController.m in Sources */,
+				B2380DFA18B6F55100D895DA /* HXTIGoWithTypeViewController.m in Sources */,
+				B2380E1018B7014900D895DA /* WSNineSquares.m in Sources */,
+				B2C27D9818B48432003AA091 /* main.m in Sources */,
+				B2E31FDD18BC49A700165F89 /* HXTCheckBox.m in Sources */,
+				B2380E1518B701D400D895DA /* HXTBrowseHousingEstateViewController.m in Sources */,
+				B2E31FE018BC90F000165F89 /* HXTAccountManager.m in Sources */,
+				B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */,
+				B2380E1118B7014900D895DA /* WSNineSquaresCell.m in Sources */,
+				B2D4881018B5E1F600F331D3 /* HXTIWantViewController.m in Sources */,
+				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
+				B2CBEFDA18B7582F00651A30 /* HXTRegisterAccountViewController.m in Sources */,
+				B2D4880518B5DABA00F331D3 /* HXTHomeViewController.m in Sources */,
+				B25F6FC818BB1DD2001421A3 /* HXTUserBillViewController.m in Sources */,
+				B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */,
+				B2380E1218B7014900D895DA /* WSNineSquaresUpdateItem.m in Sources */,
+				B2380E0018B6F9C000D895DA /* HXTIGoViewController.m in Sources */,
+				B2CBEFD718B74CAA00651A30 /* HXTLoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2C27DA518B48432003AA091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E31FE118BC90F000165F89 /* HXTAccountManager.m in Sources */,
+				B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2C27DAF18B48432003AA091 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2C27D8718B48432003AA091 /* ButlerCard */;
+			targetProxy = B2C27DAE18B48432003AA091 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2380E0418B6FC3B00D895DA /* Base */,
+			);
+			name = MyProperty.storyboard;
+			sourceTree = "<group>";
+		};
+		B2C27D9418B48432003AA091 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2C27D9518B48432003AA091 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B2C27D9D18B48432003AA091 /* Root.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2C27D9E18B48432003AA091 /* Base */,
+			);
+			name = Root.storyboard;
+			sourceTree = "<group>";
+		};
+		B2C27DB318B48432003AA091 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2C27DB418B48432003AA091 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B2D4880618B5DF1000F331D3 /* IWant.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2D4880718B5DF1000F331D3 /* Base */,
+			);
+			name = IWant.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2C27DB818B48432003AA091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B2C27DB918B48432003AA091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2C27DBB18B48432003AA091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ButlerCard/ButlerCard-Prefix.pch";
+				INFOPLIST_FILE = "ButlerCard/ButlerCard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B2C27DBC18B48432003AA091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ButlerCard/ButlerCard-Prefix.pch";
+				INFOPLIST_FILE = "ButlerCard/ButlerCard-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B2C27DBE18B48432003AA091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ButlerCard.app/ButlerCard";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ButlerCard/ButlerCard-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ButlerCardTests/ButlerCardTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B2C27DBF18B48432003AA091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ButlerCard.app/ButlerCard";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ButlerCard/ButlerCard-Prefix.pch";
+				INFOPLIST_FILE = "ButlerCardTests/ButlerCardTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2C27D8318B48432003AA091 /* Build configuration list for PBXProject "ButlerCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C27DB818B48432003AA091 /* Debug */,
+				B2C27DB918B48432003AA091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2C27DBA18B48432003AA091 /* Build configuration list for PBXNativeTarget "ButlerCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C27DBB18B48432003AA091 /* Debug */,
+				B2C27DBC18B48432003AA091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2C27DBD18B48432003AA091 /* Build configuration list for PBXNativeTarget "ButlerCardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2C27DBE18B48432003AA091 /* Debug */,
+				B2C27DBF18B48432003AA091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2C27D8018B48432003AA091 /* Project object */;
+}
