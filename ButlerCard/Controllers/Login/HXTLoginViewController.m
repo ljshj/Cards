@@ -8,6 +8,7 @@
 
 #import "HXTLoginViewController.h"
 #import "HXTCheckBox.h"
+#import "HXTAccountManager.h"
 
 @interface HXTLoginViewController () <UITextFieldDelegate>
 
@@ -80,10 +81,22 @@
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
-    if (_delegate && [_delegate respondsToSelector:@selector(loginViewController:loginDidSucessed:)]) {
-        [_delegate loginViewController:self loginDidSucessed:YES];
+    BOOL loginDidSucessed = [[HXTAccountManager sharedInstance] loginWithUsername:_userNameTextField.text password:_passwordTextField.text];
+    
+    if (loginDidSucessed) {
+        if (_delegate && [_delegate respondsToSelector:@selector(loginViewController:loginDidSucessed:)]) {
+            [_delegate loginViewController:self loginDidSucessed:loginDidSucessed];
+        }
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败"
+                                                            message:@"无效用户名或密码"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil];
+        [alertView show];
     }
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 - (void)dismissKeyboard {

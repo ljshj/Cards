@@ -8,25 +8,28 @@
 
 #import <Foundation/Foundation.h>
 
-#define kSessionID				@"SessionID"
-#define kUserID                 @"UserID"
-#define kGroupID                @"GroupID"
-#define kUserName				@"UserName"
-#define kNickName				@"NickName"
-#define kSchemeName             @"SchemeName"
-#define kPassword				@"Password"
-#define kPhoneNumber            @"PhoneNumber"
-#define kEmailAddr              @"EmailAddr"
-#define kSex                    @"Sex"
-#define kFirstRun               @"FirstRun"
-#define kRememberLoginInfo      @"RememberLoginInfo"
-#define kEnablePush             @"EnablePush"
+#define kSessionID				  @"SessionID"
+#define kUserID                   @"UserID"
+#define kGroupID                  @"GroupID"
+#define kUserName				  @"UserName"
+#define kNickName				  @"NickName"
+#define kSchemeName               @"SchemeName"
+#define kPassword				  @"Password"
+#define kPhoneNumber              @"PhoneNumber"
+#define kEmailAddr                @"EmailAddr"
+#define kSex                      @"Sex"
+#define kLogged                   @"Logged"
+#define kFirstRun                 @"FirstRun"
+#define kEnablePush               @"EnablePush"
+#define kRememberdUsernameAtLogin @"RememberdUsernameAtLogin"
+#define kRememberdPasswordAtLogin @"RememberdPasswordAtLogin"
 
 @class HXTAccountManager;
 
 @protocol AccountManagerDelegate <NSObject>
 
 @optional
+
 - (void)accountManager:(HXTAccountManager *)accountManager loginDidSucessed:(BOOL)sucessed;
 - (void)accountManager:(HXTAccountManager *)accountManager registerAccountDidSucessed:(BOOL)sucessed;
 
@@ -36,7 +39,6 @@
 
 @property (assign, nonatomic) id<AccountManagerDelegate> delegate;
 
-@property (assign, nonatomic, getter = isLogged) BOOL logged;
 @property (copy,   nonatomic) NSString *sessionID;
 @property (copy,   nonatomic) NSString *userID;
 @property (copy,   nonatomic) NSString *groupID;
@@ -48,11 +50,15 @@
 @property (copy,   nonatomic) NSString *emailAddr;
 @property (copy,   nonatomic) NSString *sex;
 
-@property (assign, nonatomic, getter = isLoginRememberdUsername) BOOL loginRememberdUsername;
-@property (assign, nonatomic, getter = isLoginRememberdPassword) BOOL loginRememberdPassword;
+@property (assign, nonatomic, getter = isLogged) BOOL logged;
 @property (assign, nonatomic, getter = isFirstRun) BOOL firstRun;
+@property (assign, nonatomic, getter = isEnablePush) BOOL enablePush;
+@property (assign, nonatomic, getter = isRememberdUsernameAtLogin) BOOL rememberdUsernameAtLogin;
+@property (assign, nonatomic, getter = isRememberdPasswordAtLogin) BOOL rememberdPasswordAtLogin;
 
 + (HXTAccountManager *)sharedInstance;
-- (void)loginWithUsername:(NSString *)username password:(NSString *)password;
-- (void)registerAccountWithUsername:(NSString *)username password:(NSString *)password;
+- (BOOL)writeDataToUserDefault;
+
+- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password;
+- (BOOL)registerAccountWithUsername:(NSString *)username password:(NSString *)password;
 @end

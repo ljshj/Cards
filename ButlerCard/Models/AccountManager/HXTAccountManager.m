@@ -15,15 +15,75 @@
     static HXTAccountManager *accountManager;
     if (accountManager == nil) {
         accountManager = [[HXTAccountManager alloc] init];
+        [accountManager LoadDataFromUserDefault];
     }
+    if (!accountManager.username || !accountManager.password) {
+        accountManager.username = @"username";
+        accountManager.password = @"password";
+        [accountManager writeDataToUserDefault];
+        [accountManager LoadDataFromUserDefault];
+    }
+    NSLog(@"username = #%@#, password = #%@#", accountManager.username, accountManager.password);
     return accountManager;
 }
 
-- (void)loginWithUsername:(NSString *)username password:(NSString *)password {
+#pragma mark -
+#pragma mark load and write data to userDefault methods
+- (BOOL)LoadDataFromUserDefault
+{
+    NSUserDefaults *accountDefaults = [NSUserDefaults standardUserDefaults];
     
+    _sessionID   = [accountDefaults objectForKey:kSessionID];
+    _userID      = [accountDefaults objectForKey:kUserID];
+    _groupID     = [accountDefaults objectForKey:kGroupID];
+    _username    = [accountDefaults objectForKey:kUserName];
+    _nickName    = [accountDefaults objectForKey:kNickName];
+    _schemeName  = [accountDefaults objectForKey:kSchemeName];
+    _password    = [accountDefaults objectForKey:kPassword];
+    _phoneNumber = [accountDefaults objectForKey:kPhoneNumber];
+    _emailAddr   = [accountDefaults objectForKey:kEmailAddr];
+    _sex         = [accountDefaults objectForKey:kSex];
+    _logged      = [accountDefaults boolForKey:kLogged];
+    _firstRun    = [accountDefaults boolForKey:kFirstRun];
+    _enablePush  = [accountDefaults boolForKey:kEnablePush];
+    _rememberdUsernameAtLogin = [accountDefaults boolForKey:kRememberdUsernameAtLogin];
+    _rememberdPasswordAtLogin = [accountDefaults boolForKey:kRememberdPasswordAtLogin];
+    
+    return YES;
 }
-- (void)registerAccountWithUsername:(NSString *)username password:(NSString *)password {
+
+- (BOOL)writeDataToUserDefault {
+    NSUserDefaults *accountDefaults = [NSUserDefaults standardUserDefaults];
     
+    [accountDefaults setObject:_sessionID forKey:kSessionID];
+    [accountDefaults setObject:_userID forKey:kUserID];
+    [accountDefaults setObject:_groupID forKey:kGroupID];
+    [accountDefaults setObject:_username forKey:kUserName];
+    [accountDefaults setObject:_nickName forKey:kNickName];
+    [accountDefaults setObject:_schemeName forKey:kSchemeName];
+    [accountDefaults setObject:_password forKey:kPassword];
+    [accountDefaults setObject:_phoneNumber forKey:kPhoneNumber];
+    [accountDefaults setObject:_emailAddr forKey:kEmailAddr];
+    [accountDefaults setObject:_sex forKey:kSex];
+    [accountDefaults setBool:_logged forKey:kLogged];
+    [accountDefaults setBool:_firstRun forKey:kFirstRun];
+    [accountDefaults setBool:_enablePush forKey:kEnablePush];
+    [accountDefaults setBool:_rememberdUsernameAtLogin forKey:kRememberdUsernameAtLogin];
+    [accountDefaults setBool:_rememberdPasswordAtLogin forKey:kRememberdPasswordAtLogin];
+    
+    return YES;
+}
+
+- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password {
+    if (username && password && [username isEqualToString:_username] && [password isEqualToString:_password]) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)registerAccountWithUsername:(NSString *)username password:(NSString *)password {
+    return YES;
 }
 
 @end
