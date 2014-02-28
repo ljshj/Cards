@@ -7,6 +7,7 @@
 //
 
 #import "HXTHomeViewController.h"
+#import "HXTAccountManager.h"
 
 @interface HXTHomeViewController () <UINavigationControllerDelegate>
 
@@ -30,17 +31,6 @@
     self.navigationController.delegate = self;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
-    
-}
-
-- (void)viewWillDisappear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
-    [super viewWillDisappear:animated];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -58,14 +48,15 @@
 - (IBAction)myPropertyButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
     //没有登录，进入小区浏览界面
-    UIViewController *browseHousingEstateViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"BrowseHousingEstateStoryboardID"];
-    
-    [self.navigationController pushViewController:browseHousingEstateViewController animated:YES];
-    
-    //已登录，进入用户账单界面
-//    UIViewController *userBillViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"UserBillStoryboardID"];
-//    
-//    [self.navigationController pushViewController:userBillViewController animated:YES];
+    if ([[HXTAccountManager sharedInstance] isLogged]) {
+        UIViewController *userBillViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"UserBillStoryboardID"];
+        
+        [self.navigationController pushViewController:userBillViewController animated:YES];
+    } else { //已登录，进入用户账单界面
+        UIViewController *browseHousingEstateViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"BrowseHousingEstateStoryboardID"];
+        
+        [self.navigationController pushViewController:browseHousingEstateViewController animated:YES];
+    }
 }
 
 - (IBAction)iWantButtonPressed:(id)sender {

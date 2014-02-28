@@ -30,14 +30,22 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    self.tabBarController.tabBar.hidden = YES;
-    
     _housingEstateNames = @[@"中铁八局", @"万科A小区", @"置信A区", @"华润AA",
                             @"保利别墅A", @"恒大宅院", @"万达高层", @"置信B区",
                             @"华润凤凰城", @"万科V地", @"保利商业", @"中铁Q区",
                             @"小区13", @"小区14", @"小区15", @"小区16"];
     
     _applyOpenPropertyView.hidden = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +56,6 @@
 
 #pragma --
 #pragma UICollectionView DataSource
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _housingEstateNames.count;
 }
