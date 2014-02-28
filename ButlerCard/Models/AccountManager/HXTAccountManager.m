@@ -70,7 +70,7 @@
     [accountDefaults setBool:_enablePush forKey:kEnablePush];
     [accountDefaults setBool:_rememberdUsernameAtLogin forKey:kRememberdUsernameAtLogin];
     [accountDefaults setBool:_rememberdPasswordAtLogin forKey:kRememberdPasswordAtLogin];
-    
+    [accountDefaults synchronize];
     return YES;
 }
 
@@ -83,6 +83,12 @@
 }
 
 - (BOOL)registerAccountWithUsername:(NSString *)username password:(NSString *)password {
+    _username = username;
+    _password = password;
+    [[NSUserDefaults standardUserDefaults] setObject:_username forKey:kUserName];
+    [[NSUserDefaults standardUserDefaults] setObject:_password forKey:kPassword];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     return YES;
 }
 

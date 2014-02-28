@@ -7,14 +7,9 @@
 //
 
 #import "HXTBrowseHousingEstateViewController.h"
-#import "WSNineSquares.h"
 
 @interface HXTBrowseHousingEstateViewController ()
-<
-WSNineSquaresDelegate, WSNineSquaresDataSource
->
-
-@property (weak, nonatomic) IBOutlet WSNineSquares *nineSquaresView;
+@property (weak, nonatomic) IBOutlet UICollectionView *housingEstatesCollectionView;
 @property (weak, nonatomic) IBOutlet UIView *applyOpenPropertyView;
 @property (strong, nonatomic) NSArray *housingEstateNames;
 @end
@@ -37,12 +32,10 @@ WSNineSquaresDelegate, WSNineSquaresDataSource
     
 //    self.tabBarController.tabBar.hidden = YES;
     
-    _housingEstateNames = @[@"南阳盛世", @"向阳小区", @"音乐花园", @"小区4",
-                            @"小区5", @"小区6", @"小区7", @"小区8",
-                            @"小区9", @"小区10", @"小区11", @"小区12",
+    _housingEstateNames = @[@"中铁八局", @"万科A小区", @"置信A区", @"华润AA",
+                            @"保利别墅A", @"恒大宅院", @"万达高层", @"置信B区",
+                            @"华润凤凰城", @"万科V地", @"保利商业", @"中铁Q区",
                             @"小区13", @"小区14", @"小区15", @"小区16"];
-    _nineSquaresView.nineSquaresDelegate = self;
-    _nineSquaresView.nineSquaresDateSource = self;
     
     _applyOpenPropertyView.hidden = YES;
 }
@@ -53,48 +46,54 @@ WSNineSquaresDelegate, WSNineSquaresDataSource
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark --
-#pragma mark -- MultiNineSquares delegate
-- (BOOL)nineSquaresWillAddCell:(WSNineSquares *)nineSquares{
-    return YES;
+#pragma --
+#pragma UICollectionView DataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return _housingEstateNames.count;
 }
 
-- (BOOL)nineSquares:(WSNineSquares *)nineSquares willDeleteCell:(WSNineSquaresCell *)cell {
-    return NO;
-}
-
-- (void)nineSquares:(WSNineSquares *)nineSquares cellClicked:(WSNineSquaresCell *)cell {
-    NSLog(@"%s %s %d _housingEstateName = %@", __FILE__, __FUNCTION__, __LINE__, _housingEstateNames[cell.index]);
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *collectionViewCellIdentifier= @"CollectionViewCellIdentifier";
     
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionViewCellIdentifier forIndexPath:indexPath];
+    
+//    UIButton *cellButton = (UIButton *)[cell viewWithTag:100];
+    UILabel  *cellLabel  = (UILabel *)[cell viewWithTag:101];
+    cellLabel.text = _housingEstateNames[indexPath.row];
+    
+    return cell;
+}
+
+#pragma --
+#pragma -- UICollectionView Delegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"didSelectItemAtIndexPath indexPath.section = %d, indexPath.row = %d", indexPath.section, indexPath.row);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (IBAction)houseingEstateButtonPressed:(UIButton *)sender {
+    NSIndexPath *indexPath = [_housingEstatesCollectionView indexPathForCell:(UICollectionViewCell *)sender.superview.superview];
+    NSLog(@"ButtonPressedAtIndexPath indexPath.section = %d, indexPath.row = %d", indexPath.section, indexPath.row);
     UIViewController *loginViewcontroller = [[UIStoryboard storyboardWithName:@"LoginAndRegister" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
- 
-//模态显示
-//    loginViewcontroller.modalPresentationStyle = UIModalPresentationFullScreen;
-//    loginViewcontroller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-//    [self presentViewController:loginViewcontroller animated:YES completion:nil];
+    
+    //模态显示
+    //    loginViewcontroller.modalPresentationStyle = UIModalPresentationFullScreen;
+    //    loginViewcontroller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    //    [self presentViewController:loginViewcontroller animated:YES completion:nil];
     
     [loginViewcontroller setValue:self forKey:@"delegate"];
     [self.navigationController pushViewController:loginViewcontroller animated:YES];
 }
 
 #pragma mark --
-#pragma mark -- nineSquaresView dataSource
-- (NSInteger)numberOfCellsInNineSquares:(WSNineSquares *)nineSquares {
-    return _housingEstateNames.count;
-}
-
-
-#pragma mark --
 #pragma mark -- LoginViewController delegate
 -(void)loginViewController:(UIViewController *)loginViewController loginDidSucessed:(BOOL)sucessed {
     NSLog(@"%s %s %d Login sucessed = %@", __FILE__, __FUNCTION__, __LINE__, sucessed? @"YES": @"NO");
-}
-
-- (WSNineSquaresCell *)nineSquares:(WSNineSquares *)nineSquares initCell:(WSNineSquaresCell *)cell atIndex:(NSInteger)index {
-    cell.title = _housingEstateNames[index];
-    cell.image = [UIImage imageNamed:@"housingEstate.jpg"];
-    
-    return cell;
 }
 
 - (IBAction)appleyOpenPropertyButtonPressed:(id)sender {

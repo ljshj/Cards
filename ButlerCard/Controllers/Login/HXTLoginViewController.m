@@ -36,6 +36,8 @@
 	// Do any additional setup after loading the view.
     _userNameTextField.delegate = self;
     _passwordTextField.delegate = self;
+    _rememberUserNameCheckBox.selected = YES;
+    _rememberPasswordCheckBox.selected = YES;
 }
 
 - (void)didReceiveMemoryWarning

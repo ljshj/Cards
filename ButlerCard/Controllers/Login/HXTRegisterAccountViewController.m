@@ -9,6 +9,7 @@
 #import "HXTRegisterAccountViewController.h"
 #import "HXTCheckBox.h"
 #import "ComboBoxView.h"
+#import "HXTAccountManager.h"
 
 @interface HXTRegisterAccountViewController () <UITextFieldDelegate>
 
@@ -86,15 +87,83 @@
 }
 
 - (IBAction)submitButtonPressed:(UIButton *)sender {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:@"恭喜你注册成功" delegate:nil
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil];
-    [alertView show];
-    if (_delegate && [_delegate respondsToSelector:@selector(registerAccountViewController:registerDidSucessed:)]) {
-        [_delegate registerAccountViewController:self registerDidSucessed:YES];
+    if (!_userNameTextField.text.length) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"用户名不能为空！"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        return;
     }
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    if (!_passwordTextField.text.length) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"密码不能为空！"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        return;
+    }
+    
+    if (!_confirmPasswordTextField.text.length) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"请输入确认密码！"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        return;
+    }
+    
+    if (![_passwordTextField.text isEqualToString:_confirmPasswordTextField.text]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"两次输入米啊吗不匹配！"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        return;
+    }
+    
+    if (!_verificationCodeTextField.text.length) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"请输入验证码！"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        return;
+    }
+    
+    BOOL registerDidSucessed = [[HXTAccountManager sharedInstance] registerAccountWithUsername:_userNameTextField.text password:_passwordTextField.text];
+    
+    if (registerDidSucessed) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"注册成功"
+                                                            message:@"注册成功提示信息，请登录！"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        
+        //将用户名，密码传回登录界面
+        [(UIViewController *)_delegate setValue:_userNameTextField.text forKeyPath:@"userNameTextField.text"];
+        [(UIViewController *)_delegate setValue:_passwordTextField.text forKeyPath:@"passwordTextField.text"];
+        
+        if (_delegate && [_delegate respondsToSelector:@selector(registerAccountViewController:registerDidSucessed:)]) {
+            [_delegate registerAccountViewController:self registerDidSucessed:registerDidSucessed];
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"注册失败"
+                                                            message:@"注册失败原因"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+    
 }
 
 @end
