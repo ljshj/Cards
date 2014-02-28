@@ -69,6 +69,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djK-3C-1eS" customClass="FPPopoverView">
+                                <rect key="frame" x="0.0" y="256" width="320" height="266"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -77,39 +82,35 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dropDownComboBoxView" destination="i7X-xU-1WT" id="TT6-eA-ULT"/>
+                        <outlet property="groupTogetherButton" destination="7AP-Nz-UIi" id="rgi-tV-PXx"/>
+                        <outlet property="iGoButton" destination="Ubd-eA-KJJ" id="nVz-p9-GAx"/>
+                        <outlet property="popoverView" destination="djK-3C-1eS" id="PHR-ca-2Ai"/>
+                        <outlet property="secondHandButton" destination="DVq-1I-Brs" id="DRH-6F-X4T"/>
+                        <outlet property="youComeButton" destination="hZ3-dI-lUx" id="hWt-Sn-4Ry"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXh-5e-CTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="620" y="73"/>
         </scene>
-        <!--View Controller - Pop-->
-        <scene sceneID="QDL-BZ-jnj">
+        <!--View Controller - 我要详细内容-->
+        <scene sceneID="6pZ-Zg-8OA">
             <objects>
-                <viewController storyboardIdentifier="PopoverContentControllerStoryboardID" title="Pop" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HpJ-Ov-xd7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IWantDetailStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="huZ-3N-Bwj" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="f7Y-G5-abV"/>
-                        <viewControllerLayoutGuide type="bottom" id="cHC-py-JAO"/>
+                        <viewControllerLayoutGuide type="top" id="6bn-G5-ATM"/>
+                        <viewControllerLayoutGuide type="bottom" id="eNe-eZ-U9T"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="C53-vl-cad">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+                    <view key="view" contentMode="scaleToFill" id="dLO-EU-yea">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="POP!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuM-QF-fRT">
-                                <rect key="frame" x="81" y="69" width="159" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationItem key="navigationItem" title="我要详细内容" id="ZxZ-km-GrA"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="38I-rZ-d8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mB-cm-Z9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="136"/>
+            <point key="canvasLocation" x="1459" y="73"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hdv-vt-Kjw">
@@ -128,6 +129,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWS-KR-0hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="208" y="73"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nKV-4I-zsV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Swl-dC-Exv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CEM-QN-rRt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="huZ-3N-Bwj" kind="relationship" relationship="rootViewController" id="UVj-XL-YdR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ef-Bt-40z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="73"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

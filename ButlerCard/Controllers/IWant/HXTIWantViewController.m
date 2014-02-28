@@ -8,13 +8,17 @@
 
 #import "HXTIWantViewController.h"
 #import "ComboBoxView.h"
-#import "FPPopoverController.h"
 #import "FPPopoverView.h"
 
 @interface HXTIWantViewController ()
 
-@property (strong, nonatomic) FPPopoverView *popoverView;
+//@property (strong, nonatomic) FPPopoverView *popoverView;
 @property (weak, nonatomic) IBOutlet ComboBoxView *dropDownComboBoxView;
+@property (weak, nonatomic) IBOutlet UIButton *youComeButton;
+@property (weak, nonatomic) IBOutlet UIButton *iGoButton;
+@property (weak, nonatomic) IBOutlet UIButton *groupTogetherButton;
+@property (weak, nonatomic) IBOutlet UIButton *secondHandButton;
+@property (weak, nonatomic) IBOutlet FPPopoverView *popoverView;
 
 @end
 
@@ -37,6 +41,14 @@
     _dropDownComboBoxView.comboBoxDatasource = comboBoxDatasource;
 	_dropDownComboBoxView.backgroundColor = [UIColor clearColor];
 	[_dropDownComboBoxView setContent:[comboBoxDatasource objectAtIndex:0]];
+    
+    [_popoverView setArrowDirection:FPPopoverArrowDirectionUp];
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"test";
+    label.backgroundColor = [UIColor blueColor];
+    [_popoverView addContentView:label];
+    _popoverView.relativeOrigin = CGPointMake(_youComeButton.frame.origin.x + _youComeButton.frame.size.width / 2, _youComeButton.frame.origin.y + _youComeButton.frame.size.height);
+    _popoverView.clipsToBounds = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,53 +57,33 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)popover:(id)sender
-{
-    //the controller we want to present as a popover
-    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PopoverContentControllerStoryboardID"];
-    
-    FPPopoverController *popover = [[FPPopoverController alloc] initWithViewController:controller];
-    
-    //popover.arrowDirection = FPPopoverArrowDirectionAny;
-    popover.tint = FPPopoverDefaultTint;
-    
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        popover.contentSize = CGSizeMake(320, 260);
-    }
-    popover.arrowDirection = FPPopoverArrowDirectionAny;
-    
-    //sender is the UIButton view
-    [popover presentPopoverFromView:sender];
-}
 
 - (IBAction)youComeButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PopoverContentControllerStoryboardID"];
-    if (!_popoverView) {
-        _popoverView = [[FPPopoverView alloc] initWithFrame:CGRectMake(0, ((UIButton *)sender).frame.origin.y + ((UIButton *)sender).frame.size.height, 320, 260)];
-        [self.view addSubview:_popoverView];
-        [_popoverView setArrowDirection:FPPopoverArrowDirectionUp];
-        [_popoverView addContentView:controller.view];
-        _popoverView.relativeOrigin = CGPointMake(((UIButton *)sender).frame.origin.x + ((UIButton *)sender).frame.size.width / 2, ((UIButton *)sender).frame.origin.y + ((UIButton *)sender).frame.size.height);
-        _popoverView.title = controller.title;
-        _popoverView.clipsToBounds = NO;
-    }
+    UIButton *button = (UIButton *)sender;
+    _popoverView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
+    [_popoverView setNeedsDisplay];
 }
 
 - (IBAction)iGoButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    [self popover:sender];
+    UIButton *button = (UIButton *)sender;
+    _popoverView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
+    [_popoverView setNeedsDisplay];
 }
 
 - (IBAction)groupTogetherButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    [self popover:sender];
+    UIButton *button = (UIButton *)sender;
+    _popoverView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
+    [_popoverView setNeedsDisplay];
 }
 
 - (IBAction)secondHandButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    [self popover:sender];
+    UIButton *button = (UIButton *)sender;
+    _popoverView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
+    [_popoverView setNeedsDisplay];
 }
 
 @end

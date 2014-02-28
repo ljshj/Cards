@@ -14,15 +14,13 @@
 #define FP_POPOVER_RADIUS       10.0
 
 
-@interface FPPopoverView(Private)
+@interface FPPopoverView()
+
 -(void)setupViews;
+
 @end
 
-
 @implementation FPPopoverView
-@synthesize title;
-@synthesize relativeOrigin;
-@synthesize tint = _tint;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -30,7 +28,7 @@
     if (self) {
         
         //we need to set the background as clear to see the view below
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor redColor];
         self.clipsToBounds = YES;
         
         self.layer.shadowOpacity = 0.7;
@@ -52,6 +50,36 @@
         [self addSubview:_titleLabel];
         [self setupViews];
     }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        //we need to set the background as clear to see the view below
+        self.backgroundColor = [UIColor redColor];
+        self.clipsToBounds = YES;
+        
+        self.layer.shadowOpacity = 0.7;
+        self.layer.shadowRadius = 5;
+        self.layer.shadowOffset = CGSizeMake(-3, 3);
+        
+        //to get working the animations
+        self.contentMode = UIViewContentModeRedraw;
+        
+        
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _titleLabel.backgroundColor = [UIColor clearColor];
+        _titleLabel.textColor = [UIColor whiteColor];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:16];
+        
+        self.tint = FPPopoverDefaultTint;
+        
+        [self addSubview:_titleLabel];
+        [self setupViews];
+    }
+    
     return self;
 }
 
