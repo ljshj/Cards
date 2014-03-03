@@ -8,7 +8,7 @@
         <!--Home View Controller-->
         <scene sceneID="guK-29-BZW">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="dHP-Nd-9Cb" customClass="HXTHomeViewController" sceneMemberID="viewController">
+                <viewController id="dHP-Nd-9Cb" customClass="HXTHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="usY-4L-De7"/>
                         <viewControllerLayoutGuide type="bottom" id="yf4-Qb-jnH"/>
@@ -74,7 +74,6 @@
                     <navigationItem key="navigationItem" id="2FR-eI-eZB">
                         <barButtonItem key="backBarButtonItem" title="返回" id="hvA-ap-LJz"/>
                     </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZk-vx-e2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,7 +113,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="mDg-IE-PUS"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpz-yq-MAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,7 +160,9 @@
         <scene sceneID="r7D-qR-x4Q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3i4-Go-HmA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="信息" id="BK9-n3-ZQO"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="信息" image="letter_closed" id="BK9-n3-ZQO">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BD3-Al-IIf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -181,7 +181,7 @@
         <scene sceneID="9II-xH-DN3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PiR-5R-iME" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="主页" image="home.png" id="qMB-3E-sYC"/>
+                    <tabBarItem key="tabBarItem" title="主页" image="house" id="qMB-3E-sYC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pDI-cL-V3C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -200,7 +200,7 @@
         <scene sceneID="ZUy-G9-WMH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0O2-9c-WIU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="购物车" id="4Bb-vz-dqq"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="购物车" image="trolley" id="4Bb-vz-dqq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5uA-Ad-rjN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -219,7 +219,7 @@
         <scene sceneID="B6F-mI-vG6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KY7-Zn-7HO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="账户" id="nOn-rQ-Hsw"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="账户" image="people" id="nOn-rQ-Hsw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLg-v1-h69">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -236,7 +236,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="home.png" width="240" height="150"/>
+        <image name="house" width="26" height="26"/>
+        <image name="letter_closed" width="26" height="26"/>
+        <image name="people" width="26" height="26"/>
+        <image name="trolley" width="26" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -167,7 +167,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的物业" id="Sji-5N-vXc"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="applyOpenPropertyView" destination="YQt-pN-ZQr" id="KUo-vB-JTn"/>
                         <outlet property="housingEstatesCollectionView" destination="IdL-FK-uMw" id="G6o-0c-Jui"/>

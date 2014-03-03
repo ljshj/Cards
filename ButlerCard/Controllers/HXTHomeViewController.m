@@ -40,9 +40,9 @@
 #pragma mark --
 #pragma mark -- UINavigationController Delegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if (viewController == self) {
-        self.tabBarController.tabBar.hidden = NO;
-    }
+//    if (viewController == self) {
+//        self.tabBarController.tabBar.hidden = NO;
+//    }
 }
 
 - (IBAction)myPropertyButtonPressed:(id)sender {
