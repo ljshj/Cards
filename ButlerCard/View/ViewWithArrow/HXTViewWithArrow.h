@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HXTViewWithArrow : UIView
-
-@property(strong, nonatomic) UIView *contentView;
 @property(assign, nonatomic) CGPoint relativeOrigin;
-
 @end
