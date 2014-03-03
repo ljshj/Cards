@@ -8,7 +8,7 @@
 
 #import "HXTIWantViewController.h"
 #import "ComboBoxView.h"
-#import "FPPopoverView.h"
+#import "HXTViewWithArrow.h"
 
 @interface HXTIWantViewController ()
 
@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *iGoButton;
 @property (weak, nonatomic) IBOutlet UIButton *groupTogetherButton;
 @property (weak, nonatomic) IBOutlet UIButton *secondHandButton;
-@property (weak, nonatomic) IBOutlet FPPopoverView *popoverView;
+@property (weak, nonatomic) IBOutlet HXTViewWithArrow *popoverView;
 
 @end
 
@@ -42,13 +42,11 @@
 	_dropDownComboBoxView.backgroundColor = [UIColor clearColor];
 	[_dropDownComboBoxView setContent:[comboBoxDatasource objectAtIndex:0]];
     
-    [_popoverView setArrowDirection:FPPopoverArrowDirectionUp];
     UILabel *label = [[UILabel alloc] init];
     label.text = @"test";
     label.backgroundColor = [UIColor blueColor];
-    [_popoverView addContentView:label];
+    _popoverView.contentView = label;
     _popoverView.relativeOrigin = CGPointMake(_youComeButton.frame.origin.x + _youComeButton.frame.size.width / 2, _youComeButton.frame.origin.y + _youComeButton.frame.size.height);
-    _popoverView.clipsToBounds = NO;
 }
 
 - (void)didReceiveMemoryWarning

@@ -76,7 +76,7 @@
 #pragma --
 #pragma -- UICollectionView Delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didSelectItemAtIndexPath indexPath.section = %d, indexPath.row = %d", indexPath.section, indexPath.row);
+    NSLog(@"didSelectItemAtIndexPath indexPath.section = %i, indexPath.row = %d", indexPath.section, indexPath.row);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,7 +85,7 @@
 
 - (IBAction)houseingEstateButtonPressed:(UIButton *)sender {
     NSIndexPath *indexPath = [_housingEstatesCollectionView indexPathForCell:(UICollectionViewCell *)sender.superview.superview];
-    NSLog(@"ButtonPressedAtIndexPath indexPath.section = %d, indexPath.row = %d", indexPath.section, indexPath.row);
+    NSLog(@"ButtonPressedAtIndexPath indexPath.section = %i, indexPath.row = %d", indexPath.section, indexPath.row);
     UIViewController *loginViewcontroller = [[UIStoryboard storyboardWithName:@"LoginAndRegister" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
     
     //模态显示

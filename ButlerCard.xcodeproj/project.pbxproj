@@ -12,11 +12,11 @@
 		B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */; };
 		B2380E1518B701D400D895DA /* HXTBrowseHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2380E1418B701D400D895DA /* HXTBrowseHousingEstateViewController.m */; };
 		B2380E1718B7273B00D895DA /* housingEstate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2380E1618B7273B00D895DA /* housingEstate.jpg */; };
+		B246B6BE18C46CAD0069ACE5 /* HXTViewWithArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */; };
 		B25F6FC818BB1DD2001421A3 /* HXTUserBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25F6FC718BB1DD2001421A3 /* HXTUserBillViewController.m */; };
 		B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BED218B5EF93003A14DA /* ComboBoxView.m */; };
 		B287BED618B5F22A003A14DA /* list_ico_d.png in Resources */ = {isa = PBXBuildFile; fileRef = B287BED518B5F22A003A14DA /* list_ico_d.png */; };
 		B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */; };
-		B28BD1EF18C0674200746E7F /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B28BD1EB18C0674200746E7F /* FPPopoverView.m */; };
 		B28BD1F418C0740700746E7F /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = B28BD1F318C0740700746E7F /* home.png */; };
 		B2C27D8C18B48432003AA091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8B18B48432003AA091 /* Foundation.framework */; };
 		B2C27D8E18B48432003AA091 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8D18B48432003AA091 /* CoreGraphics.framework */; };
@@ -63,6 +63,8 @@
 		B2380E1318B701D400D895DA /* HXTBrowseHousingEstateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTBrowseHousingEstateViewController.h; path = Controllers/MyProperty/HXTBrowseHousingEstateViewController.h; sourceTree = "<group>"; };
 		B2380E1418B701D400D895DA /* HXTBrowseHousingEstateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTBrowseHousingEstateViewController.m; path = Controllers/MyProperty/HXTBrowseHousingEstateViewController.m; sourceTree = "<group>"; };
 		B2380E1618B7273B00D895DA /* housingEstate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = housingEstate.jpg; path = Images/housingEstate.jpg; sourceTree = "<group>"; };
+		B246B6BC18C46CAD0069ACE5 /* HXTViewWithArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTViewWithArrow.h; path = View/ViewWithArrow/HXTViewWithArrow.h; sourceTree = "<group>"; };
+		B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTViewWithArrow.m; path = View/ViewWithArrow/HXTViewWithArrow.m; sourceTree = "<group>"; };
 		B25F6FC618BB1DD2001421A3 /* HXTUserBillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTUserBillViewController.h; path = Controllers/MyProperty/HXTUserBillViewController.h; sourceTree = "<group>"; };
 		B25F6FC718BB1DD2001421A3 /* HXTUserBillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTUserBillViewController.m; path = Controllers/MyProperty/HXTUserBillViewController.m; sourceTree = "<group>"; };
 		B287BED118B5EF93003A14DA /* ComboBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComboBoxView.h; path = View/ComboBoxView.h; sourceTree = "<group>"; };
@@ -70,8 +72,6 @@
 		B287BED518B5F22A003A14DA /* list_ico_d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = list_ico_d.png; path = Images/list_ico_d.png; sourceTree = "<group>"; };
 		B287BEDF18B607F8003A14DA /* HXTYouComeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTYouComeViewController.h; path = YouCome/HXTYouComeViewController.h; sourceTree = "<group>"; };
 		B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTYouComeViewController.m; path = YouCome/HXTYouComeViewController.m; sourceTree = "<group>"; };
-		B28BD1EA18C0674200746E7F /* FPPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverView.h; sourceTree = "<group>"; };
-		B28BD1EB18C0674200746E7F /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
 		B28BD1F318C0740700746E7F /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Images/home.png; sourceTree = "<group>"; };
 		B2C27D8818B48432003AA091 /* ButlerCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButlerCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C27D8B18B48432003AA091 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -154,6 +154,15 @@
 			name = "我的物业";
 			sourceTree = "<group>";
 		};
+		B246B6BB18C46BDA0069ACE5 /* ViewWithArrow */ = {
+			isa = PBXGroup;
+			children = (
+				B246B6BC18C46CAD0069ACE5 /* HXTViewWithArrow.h */,
+				B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */,
+			);
+			name = ViewWithArrow;
+			sourceTree = "<group>";
+		};
 		B27E019618BF2BF700815868 /* 二手 */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,16 +194,6 @@
 				B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */,
 			);
 			name = "你来";
-			sourceTree = "<group>";
-		};
-		B28BD1E718C0674200746E7F /* Popover */ = {
-			isa = PBXGroup;
-			children = (
-				B28BD1EA18C0674200746E7F /* FPPopoverView.h */,
-				B28BD1EB18C0674200746E7F /* FPPopoverView.m */,
-			);
-			name = Popover;
-			path = View/Popover;
 			sourceTree = "<group>";
 		};
 		B2C27D7F18B48432003AA091 = {
@@ -273,7 +272,7 @@
 		B2C27DC018B48484003AA091 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B28BD1E718C0674200746E7F /* Popover */,
+				B246B6BB18C46BDA0069ACE5 /* ViewWithArrow */,
 				B2CBEFC818B74B2F00651A30 /* Checkbox */,
 				B287BED418B5F216003A14DA /* images */,
 				B287BED118B5EF93003A14DA /* ComboBoxView.h */,
@@ -463,10 +462,10 @@
 				B2380DFA18B6F55100D895DA /* HXTIGoWithTypeViewController.m in Sources */,
 				B2C27D9818B48432003AA091 /* main.m in Sources */,
 				B2E31FDD18BC49A700165F89 /* HXTCheckBox.m in Sources */,
+				B246B6BE18C46CAD0069ACE5 /* HXTViewWithArrow.m in Sources */,
 				B2380E1518B701D400D895DA /* HXTBrowseHousingEstateViewController.m in Sources */,
 				B2E31FE018BC90F000165F89 /* HXTAccountManager.m in Sources */,
 				B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */,
-				B28BD1EF18C0674200746E7F /* FPPopoverView.m in Sources */,
 				B2D4881018B5E1F600F331D3 /* HXTIWantViewController.m in Sources */,
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
 				B2CBEFDA18B7582F00651A30 /* HXTRegisterAccountViewController.m in Sources */,
