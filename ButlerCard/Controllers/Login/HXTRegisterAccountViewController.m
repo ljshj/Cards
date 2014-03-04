@@ -41,7 +41,7 @@
     NSArray *comboBoxDatasource = @[@"小区1", @"小区2", @"小区3", @"小区4", @"小区5"];
     _dropDownComboBoxView.comboBoxDatasource = comboBoxDatasource;
 	_dropDownComboBoxView.backgroundColor = [UIColor clearColor];
-	[_dropDownComboBoxView setContent:[comboBoxDatasource objectAtIndex:0]];
+    _dropDownComboBoxView.selectedItemIndex = 0;
     
     _userNameTextField.delegate = self;
     _passwordTextField.delegate = self;

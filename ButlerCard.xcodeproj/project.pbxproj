@@ -15,9 +15,7 @@
 		B246B6BE18C46CAD0069ACE5 /* HXTViewWithArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */; };
 		B25F6FC818BB1DD2001421A3 /* HXTUserBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25F6FC718BB1DD2001421A3 /* HXTUserBillViewController.m */; };
 		B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BED218B5EF93003A14DA /* ComboBoxView.m */; };
-		B287BED618B5F22A003A14DA /* list_ico_d.png in Resources */ = {isa = PBXBuildFile; fileRef = B287BED518B5F22A003A14DA /* list_ico_d.png */; };
 		B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */; };
-		B28BD1F418C0740700746E7F /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = B28BD1F318C0740700746E7F /* home.png */; };
 		B2C27D8C18B48432003AA091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8B18B48432003AA091 /* Foundation.framework */; };
 		B2C27D8E18B48432003AA091 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8D18B48432003AA091 /* CoreGraphics.framework */; };
 		B2C27D9018B48432003AA091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8F18B48432003AA091 /* UIKit.framework */; };
@@ -69,10 +67,8 @@
 		B25F6FC718BB1DD2001421A3 /* HXTUserBillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTUserBillViewController.m; path = Controllers/MyProperty/HXTUserBillViewController.m; sourceTree = "<group>"; };
 		B287BED118B5EF93003A14DA /* ComboBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComboBoxView.h; path = View/ComboBoxView.h; sourceTree = "<group>"; };
 		B287BED218B5EF93003A14DA /* ComboBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComboBoxView.m; path = View/ComboBoxView.m; sourceTree = "<group>"; };
-		B287BED518B5F22A003A14DA /* list_ico_d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = list_ico_d.png; path = Images/list_ico_d.png; sourceTree = "<group>"; };
 		B287BEDF18B607F8003A14DA /* HXTYouComeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTYouComeViewController.h; path = YouCome/HXTYouComeViewController.h; sourceTree = "<group>"; };
 		B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTYouComeViewController.m; path = YouCome/HXTYouComeViewController.m; sourceTree = "<group>"; };
-		B28BD1F318C0740700746E7F /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Images/home.png; sourceTree = "<group>"; };
 		B2C27D8818B48432003AA091 /* ButlerCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButlerCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C27D8B18B48432003AA091 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2C27D8D18B48432003AA091 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,9 +169,7 @@
 		B287BED418B5F216003A14DA /* images */ = {
 			isa = PBXGroup;
 			children = (
-				B28BD1F318C0740700746E7F /* home.png */,
 				B2380E1618B7273B00D895DA /* housingEstate.jpg */,
-				B287BED518B5F22A003A14DA /* list_ico_d.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -432,10 +426,8 @@
 			files = (
 				B2E31FD918BC498100165F89 /* checkbox_checked.png in Resources */,
 				B2C27DA418B48432003AA091 /* Images.xcassets in Resources */,
-				B28BD1F418C0740700746E7F /* home.png in Resources */,
 				B2C27D9618B48432003AA091 /* InfoPlist.strings in Resources */,
 				B2E31FDA18BC498100165F89 /* checkbox_unchecked.png in Resources */,
-				B287BED618B5F22A003A14DA /* list_ico_d.png in Resources */,
 				B2380E1718B7273B00D895DA /* housingEstate.jpg in Resources */,
 				B2C27D9F18B48432003AA091 /* Root.storyboard in Resources */,
 				B2D4880818B5DF1000F331D3 /* IWant.storyboard in Resources */,
