@@ -1,12 +1,12 @@
 //
-//  HXTIWantViewController.m
+//  HXTMyEasyLifeViewController.m
 //  ButlerCard
 //
 //  Created by johnny tang on 2/20/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#import "HXTIWantViewController.h"
+#import "HXTMyEasyLifeViewController.h"
 #import "ComboBoxView.h"
 #import "HXTViewWithArrow.h"
 
@@ -14,10 +14,10 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     DisplayGroupIsShowYouCome = 0,
     DisplayGroupIsIGo,
     DisplayGroupIsGroupTogether,
-    DisplayGroupIsSecondHand,
+    DisplayGroupIsGoYou,
 };
 
-@interface HXTIWantViewController ()
+@interface HXTMyEasyLifeViewController ()
 
 @property (weak, nonatomic) IBOutlet ComboBoxView *dropDownComboBoxView;
 @property (weak, nonatomic) IBOutlet UIButton *youComeButton;
@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 
 @end
 
-@implementation HXTIWantViewController
+@implementation HXTMyEasyLifeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -139,10 +139,10 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     }
 }
 
-- (IBAction)secondHandButtonPressed:(id)sender {
+- (IBAction)goYouButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    if (_groupNeedDisplay != DisplayGroupIsSecondHand) {
-        _groupNeedDisplay = DisplayGroupIsSecondHand;
+    if (_groupNeedDisplay != DisplayGroupIsGoYou) {
+        _groupNeedDisplay = DisplayGroupIsGoYou;
         UIButton *button = (UIButton *)sender;
         _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
         [_arrowView setNeedsDisplay];

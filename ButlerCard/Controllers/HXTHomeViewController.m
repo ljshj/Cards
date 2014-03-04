@@ -59,17 +59,17 @@
     }
 }
 
-- (IBAction)iWantButtonPressed:(id)sender {
+- (IBAction)myEasyLifeButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    UIViewController *iWantViewcontroller = [[UIStoryboard storyboardWithName:@"IWant" bundle:nil] instantiateViewControllerWithIdentifier:@"IwantStoryboardID"];
+    UIViewController *iWantViewcontroller = [[UIStoryboard storyboardWithName:@"MyEasyLife" bundle:nil] instantiateViewControllerWithIdentifier:@"MyEasyLifeStoryboardID"];
     [self.navigationController pushViewController:iWantViewcontroller animated:YES];
 }
 
-- (IBAction)myButlerButtonPressed:(id)sender {
+- (IBAction)myFarmButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
 }
 
-- (IBAction)electricitySuppliersButtonPressed:(id)sender {
+- (IBAction)myPiggyBankButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
 }
 

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Want View Controller - 我要-->
+        <!--My Easy Life View Controller - 我的小日子-->
         <scene sceneID="NGJ-LX-R9z">
             <objects>
-                <viewController storyboardIdentifier="IwantStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k30-ec-sj4" customClass="HXTIWantViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyEasyLifeStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k30-ec-sj4" customClass="HXTMyEasyLifeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sNi-xv-fuz"/>
                         <viewControllerLayoutGuide type="bottom" id="9lt-UQ-rTG"/>
@@ -57,11 +57,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="二手">
+                                <state key="normal" title="走你">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="secondHandButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="7ef-0M-c2a"/>
+                                    <action selector="goYouButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="PEr-3U-o2V"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7X-xU-1WT" customClass="ComboBoxView">
@@ -116,7 +116,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="我要" id="DiW-jA-gXM">
+                    <navigationItem key="navigationItem" title="我的小日子" id="DiW-jA-gXM">
                         <barButtonItem key="backBarButtonItem" title="返回" id="7yO-bG-Shh"/>
                     </navigationItem>
                     <connections>
