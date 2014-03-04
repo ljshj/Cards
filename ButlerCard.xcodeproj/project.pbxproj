@@ -17,6 +17,7 @@
 		B2A4440A18C5BEF0008A4592 /* HXTMyEasyLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440918C5BEF0008A4592 /* HXTMyEasyLifeViewController.m */; };
 		B2A4440F18C5BF1A008A4592 /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440C18C5BF1A008A4592 /* HXTIGoViewController.m */; };
 		B2A4441018C5BF1A008A4592 /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440E18C5BF1A008A4592 /* HXTIGoWithTypeViewController.m */; };
+		B2A4441318C5CAD5008A4592 /* MyFarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */; };
 		B2C27D8C18B48432003AA091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8B18B48432003AA091 /* Foundation.framework */; };
 		B2C27D8E18B48432003AA091 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8D18B48432003AA091 /* CoreGraphics.framework */; };
 		B2C27D9018B48432003AA091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8F18B48432003AA091 /* UIKit.framework */; };
@@ -71,6 +72,7 @@
 		B2A4440C18C5BF1A008A4592 /* HXTIGoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTIGoViewController.m; path = Controllers/MyEasyLife/IGo/HXTIGoViewController.m; sourceTree = "<group>"; };
 		B2A4440D18C5BF1A008A4592 /* HXTIGoWithTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTIGoWithTypeViewController.h; path = Controllers/MyEasyLife/IGo/HXTIGoWithTypeViewController.h; sourceTree = "<group>"; };
 		B2A4440E18C5BF1A008A4592 /* HXTIGoWithTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTIGoWithTypeViewController.m; path = Controllers/MyEasyLife/IGo/HXTIGoWithTypeViewController.m; sourceTree = "<group>"; };
+		B2A4441218C5CAD5008A4592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyFarm.storyboard; sourceTree = "<group>"; };
 		B2C27D8818B48432003AA091 /* ButlerCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButlerCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C27D8B18B48432003AA091 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2C27D8D18B48432003AA091 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -275,6 +277,7 @@
 				B2C27DC118B48C41003AA091 /* LoginAndRegister.storyboard */,
 				B2D4880618B5DF1000F331D3 /* MyEasyLife.storyboard */,
 				B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */,
+				B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				B2D4880818B5DF1000F331D3 /* MyEasyLife.storyboard in Resources */,
 				B2C27DC218B48C41003AA091 /* LoginAndRegister.storyboard in Resources */,
 				B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */,
+				B2A4441318C5CAD5008A4592 /* MyFarm.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +499,14 @@
 				B2380E0418B6FC3B00D895DA /* Base */,
 			);
 			name = MyProperty.storyboard;
+			sourceTree = "<group>";
+		};
+		B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2A4441218C5CAD5008A4592 /* Base */,
+			);
+			name = MyFarm.storyboard;
 			sourceTree = "<group>";
 		};
 		B2C27D9418B48432003AA091 /* InfoPlist.strings */ = {

@@ -55,18 +55,21 @@
     } else { //已登录，进入用户账单界面
         UIViewController *browseHousingEstateViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"BrowseHousingEstateStoryboardID"];
         
+//        [self presentViewController:browseHousingEstateViewController animated:YES completion:nil];
         [self.navigationController pushViewController:browseHousingEstateViewController animated:YES];
     }
 }
 
 - (IBAction)myEasyLifeButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    UIViewController *iWantViewcontroller = [[UIStoryboard storyboardWithName:@"MyEasyLife" bundle:nil] instantiateViewControllerWithIdentifier:@"MyEasyLifeStoryboardID"];
-    [self.navigationController pushViewController:iWantViewcontroller animated:YES];
+    UIViewController *myEasyLifeViewcontroller = [[UIStoryboard storyboardWithName:@"MyEasyLife" bundle:nil] instantiateViewControllerWithIdentifier:@"MyEasyLifeStoryboardID"];
+    [self.navigationController pushViewController:myEasyLifeViewcontroller animated:YES];
 }
 
 - (IBAction)myFarmButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
+    UIViewController *myFarmViewcontroller = [[UIStoryboard storyboardWithName:@"MyFarm" bundle:nil] instantiateViewControllerWithIdentifier:@"MyFarmStoryboardID"];
+    [self.navigationController pushViewController:myFarmViewcontroller animated:YES];
 }
 
 - (IBAction)myPiggyBankButtonPressed:(id)sender {

@@ -71,7 +71,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2FR-eI-eZB"/>
+                    <navigationItem key="navigationItem" id="2FR-eI-eZB">
+                        <barButtonItem key="backBarButtonItem" title="主页" id="6ZD-Hj-Gxb"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZk-vx-e2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,6 +186,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pDI-cL-V3C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
