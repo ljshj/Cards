@@ -64,9 +64,9 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 	_dropDownComboBoxView.backgroundColor = [UIColor whiteColor];
     _dropDownComboBoxView.selectedItemIndex = 0;
     
-    _arrowView.relativeOrigin = CGPointMake(_youComeButton.frame.origin.x + _youComeButton.frame.size.width / 2, _youComeButton.frame.origin.y + _youComeButton.frame.size.height);
-    
     _groupNeedDisplay = DisplayGroupIsShowYouCome;
+    _arrowView.relativeOrigin = CGPointMake(_youComeButton.frame.origin.x + _youComeButton.frame.size.width / 2,
+                                            _youComeButton.frame.origin.y + _youComeButton.frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning

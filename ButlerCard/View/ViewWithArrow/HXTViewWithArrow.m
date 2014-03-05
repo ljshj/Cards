@@ -13,6 +13,7 @@
 #define kArrowWidth  20
 @interface HXTViewWithArrow ()
 @property(strong, nonatomic) UIView *contentView;
+@property(assign, nonatomic) CGRect defaultFrame;
 @end
 
 @implementation HXTViewWithArrow
@@ -26,6 +27,10 @@
         //we need to set the background as clear to see the view below
         self.backgroundColor = [UIColor clearColor];
         self.clipsToBounds = YES;
+        for (UIView *aSubView in self.subviews) {
+            _contentView = aSubView;
+        }
+        _defaultFrame = self.frame;
     }
     return self;
 }
@@ -39,9 +44,15 @@
         for (UIView *aSubView in self.subviews) {
             _contentView = aSubView;
         }
+        _defaultFrame = self.frame;
     }
     
     return self;
+}
+
+- (void)setRelativeOrigin:(CGPoint)relativeOrigin {
+    _relativeOrigin = relativeOrigin;
+    self.frame = CGRectMake(CGRectGetMinX(_defaultFrame), _relativeOrigin.y + 5, CGRectGetWidth(_defaultFrame), CGRectGetHeight(_defaultFrame));
 }
 
 // Only override drawRect: if you perform custom drawing.
