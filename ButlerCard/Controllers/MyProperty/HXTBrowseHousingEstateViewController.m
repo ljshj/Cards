@@ -36,6 +36,7 @@
                             @"小区13", @"小区14", @"小区15", @"小区16"];
     
     _applyOpenPropertyView.hidden = YES;
+    self.navigationItem.rightBarButtonItem.title = @"重庆";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
