@@ -12,7 +12,6 @@
 @property (strong, nonatomic) NSString *currentLocation;
 @property (strong, nonatomic) NSDictionary *regions;
 @property (strong, nonatomic) NSArray  *topCities;
-@property (strong, nonatomic) NSArray  *provinces;
 @end
 
 @implementation HXTSelectARegionFirstLevelViewController
@@ -37,16 +36,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     _topCities = @[@"全国", @"北京", @"上海", @"广州", @"深圳", @"天津", @"重庆", @"南京", @"杭州", @"成都", @"武汉", @"西安"];
-    _regions =   [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"region" ofType:@"plist"]];
-    _provinces = _regions.allKeys;
-    
-    for (NSUInteger i = 0; i < _regions.allKeys.count; i++) {
-        NSLog(@"%@", _regions.allKeys[i]);
-    }
-    
-    for (NSString *item in _provinces) {
-        NSLog(@"%@", item);
-    }
+    _regions =   [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"regions" ofType:@"plist"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,6 +55,12 @@
     [super viewWillDisappear:animated];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SelectARegionSecondLevelIdentifier"]) {
+        NSLog(@"############# segue SelectARegionSecondLevelIdentifier");
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -76,7 +72,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return _provinces.count;
+    return _regions.allKeys.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -86,7 +82,9 @@
     
     // Configure the cell...
     
-    cell.textLabel.text = _provinces[indexPath.row];
+    NSString *key = [NSString stringWithFormat:@"%d", indexPath.row];
+    NSDictionary *province = _regions[key];
+    cell.textLabel.text = province.allKeys[0];
     return cell;
 }
 

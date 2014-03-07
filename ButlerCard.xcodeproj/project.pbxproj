@@ -13,7 +13,7 @@
 		B2380E1718B7273B00D895DA /* housingEstate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2380E1618B7273B00D895DA /* housingEstate.jpg */; };
 		B246B6BE18C46CAD0069ACE5 /* HXTViewWithArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */; };
 		B24AC90D18C8540F002AA4D9 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = B24AC90C18C8540F002AA4D9 /* region.plist */; };
-		B24AC90F18C8554D002AA4D9 /* area copy.plist in Resources */ = {isa = PBXBuildFile; fileRef = B24AC90E18C8554D002AA4D9 /* area copy.plist */; };
+		B24AC90F18C8554D002AA4D9 /* regions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B24AC90E18C8554D002AA4D9 /* regions.plist */; };
 		B25F6FC818BB1DD2001421A3 /* HXTUserBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25F6FC718BB1DD2001421A3 /* HXTUserBillViewController.m */; };
 		B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BED218B5EF93003A14DA /* ComboBoxView.m */; };
 		B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */; };
@@ -66,7 +66,7 @@
 		B246B6BC18C46CAD0069ACE5 /* HXTViewWithArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTViewWithArrow.h; path = View/ViewWithArrow/HXTViewWithArrow.h; sourceTree = "<group>"; };
 		B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTViewWithArrow.m; path = View/ViewWithArrow/HXTViewWithArrow.m; sourceTree = "<group>"; };
 		B24AC90C18C8540F002AA4D9 /* region.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = region.plist; path = Models/Data/region.plist; sourceTree = "<group>"; };
-		B24AC90E18C8554D002AA4D9 /* area copy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "area copy.plist"; path = "Models/Data/area copy.plist"; sourceTree = "<group>"; };
+		B24AC90E18C8554D002AA4D9 /* regions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = regions.plist; path = Models/Data/regions.plist; sourceTree = "<group>"; };
 		B25F6FC618BB1DD2001421A3 /* HXTUserBillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTUserBillViewController.h; path = Controllers/MyProperty/HXTUserBillViewController.h; sourceTree = "<group>"; };
 		B25F6FC718BB1DD2001421A3 /* HXTUserBillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTUserBillViewController.m; path = Controllers/MyProperty/HXTUserBillViewController.m; sourceTree = "<group>"; };
 		B287BED118B5EF93003A14DA /* ComboBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComboBoxView.h; path = View/ComboBoxView.h; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		B24AC90318C84927002AA4D9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B24AC90E18C8554D002AA4D9 /* area copy.plist */,
+				B24AC90E18C8554D002AA4D9 /* regions.plist */,
 				B24AC90C18C8540F002AA4D9 /* region.plist */,
 			);
 			name = Data;
@@ -447,7 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E31FD918BC498100165F89 /* checkbox_checked.png in Resources */,
-				B24AC90F18C8554D002AA4D9 /* area copy.plist in Resources */,
+				B24AC90F18C8554D002AA4D9 /* regions.plist in Resources */,
 				B24AC90D18C8540F002AA4D9 /* region.plist in Resources */,
 				B2C27DA418B48432003AA091 /* Images.xcassets in Resources */,
 				B2C27D9618B48432003AA091 /* InfoPlist.strings in Resources */,

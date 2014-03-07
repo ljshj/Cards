@@ -253,7 +253,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="q2l-56-96T" kind="push" id="ajb-pe-exq"/>
+                                    <segue destination="q2l-56-96T" kind="push" identifier="SelectARegionSecondLevelIdentifier" id="ajb-pe-exq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
