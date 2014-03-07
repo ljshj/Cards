@@ -10,7 +10,7 @@
 
 @interface HXTSelectARegionFirstLevelViewController ()
 @property (strong, nonatomic) NSString *currentLocation;
-@property (strong, nonatomic) NSDictionary *regions;
+@property (strong, nonatomic) NSDictionary *provinces;
 @property (strong, nonatomic) NSArray  *topCities;
 @end
 
@@ -35,8 +35,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    _topCities = @[@"全国", @"北京", @"上海", @"广州", @"深圳", @"天津", @"重庆", @"南京", @"杭州", @"成都", @"武汉", @"西安"];
-    _regions =   [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"regions" ofType:@"plist"]];
+    _topCities = [[NSArray alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"hotCities" ofType:@"plist"]];
+    _provinces =   [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"provinces" ofType:@"plist"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,18 +72,18 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return _regions.allKeys.count;
+    return _provinces.allKeys.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ProvincesCellIdentifier";
+    static NSString *CellIdentifier = @"ProvinceCellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
     NSString *key = [NSString stringWithFormat:@"%d", indexPath.row];
-    NSDictionary *province = _regions[key];
+    NSDictionary *province = _provinces[key];
     cell.textLabel.text = province.allKeys[0];
     return cell;
 }
