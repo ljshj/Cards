@@ -18,6 +18,8 @@
 		B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BED218B5EF93003A14DA /* ComboBoxView.m */; };
 		B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */; };
 		B2904C1118C962E400F89EE0 /* hotCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2904C1018C962E400F89EE0 /* hotCities.plist */; };
+		B2904C1318C96F6000F89EE0 /* provinces_bck.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2904C1218C96F6000F89EE0 /* provinces_bck.plist */; };
+		B2904C1618C973ED00F89EE0 /* HXTSelectARegionSecondLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2904C1518C973ED00F89EE0 /* HXTSelectARegionSecondLevelViewController.m */; };
 		B2A4440A18C5BEF0008A4592 /* HXTMyEasyLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440918C5BEF0008A4592 /* HXTMyEasyLifeViewController.m */; };
 		B2A4440F18C5BF1A008A4592 /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440C18C5BF1A008A4592 /* HXTIGoViewController.m */; };
 		B2A4441018C5BF1A008A4592 /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440E18C5BF1A008A4592 /* HXTIGoWithTypeViewController.m */; };
@@ -75,6 +77,9 @@
 		B287BEDF18B607F8003A14DA /* HXTYouComeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTYouComeViewController.h; path = YouCome/HXTYouComeViewController.h; sourceTree = "<group>"; };
 		B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTYouComeViewController.m; path = YouCome/HXTYouComeViewController.m; sourceTree = "<group>"; };
 		B2904C1018C962E400F89EE0 /* hotCities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hotCities.plist; path = Models/Data/hotCities.plist; sourceTree = "<group>"; };
+		B2904C1218C96F6000F89EE0 /* provinces_bck.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = provinces_bck.plist; path = Models/Data/provinces_bck.plist; sourceTree = "<group>"; };
+		B2904C1418C973ED00F89EE0 /* HXTSelectARegionSecondLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTSelectARegionSecondLevelViewController.h; path = Controllers/MyProperty/HXTSelectARegionSecondLevelViewController.h; sourceTree = "<group>"; };
+		B2904C1518C973ED00F89EE0 /* HXTSelectARegionSecondLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTSelectARegionSecondLevelViewController.m; path = Controllers/MyProperty/HXTSelectARegionSecondLevelViewController.m; sourceTree = "<group>"; };
 		B2A4440818C5BEF0008A4592 /* HXTMyEasyLifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTMyEasyLifeViewController.h; path = Controllers/MyEasyLife/HXTMyEasyLifeViewController.h; sourceTree = "<group>"; };
 		B2A4440918C5BEF0008A4592 /* HXTMyEasyLifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTMyEasyLifeViewController.m; path = Controllers/MyEasyLife/HXTMyEasyLifeViewController.m; sourceTree = "<group>"; };
 		B2A4440B18C5BF1A008A4592 /* HXTIGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTIGoViewController.h; path = Controllers/MyEasyLife/IGo/HXTIGoViewController.h; sourceTree = "<group>"; };
@@ -159,6 +164,8 @@
 				B25F6FC718BB1DD2001421A3 /* HXTUserBillViewController.m */,
 				B2032BBE18C8205F00EDAFD8 /* HXTSelectARegionFirstLevelViewController.h */,
 				B2032BBF18C8205F00EDAFD8 /* HXTSelectARegionFirstLevelViewController.m */,
+				B2904C1418C973ED00F89EE0 /* HXTSelectARegionSecondLevelViewController.h */,
+				B2904C1518C973ED00F89EE0 /* HXTSelectARegionSecondLevelViewController.m */,
 			);
 			name = "我的物业";
 			sourceTree = "<group>";
@@ -175,9 +182,10 @@
 		B24AC90318C84927002AA4D9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B24AC90E18C8554D002AA4D9 /* provinces.plist */,
-				B24AC90C18C8540F002AA4D9 /* region.plist */,
 				B2904C1018C962E400F89EE0 /* hotCities.plist */,
+				B24AC90E18C8554D002AA4D9 /* provinces.plist */,
+				B2904C1218C96F6000F89EE0 /* provinces_bck.plist */,
+				B24AC90C18C8540F002AA4D9 /* region.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -460,6 +468,7 @@
 				B2D4880818B5DF1000F331D3 /* MyEasyLife.storyboard in Resources */,
 				B2904C1118C962E400F89EE0 /* hotCities.plist in Resources */,
 				B2C27DC218B48C41003AA091 /* LoginAndRegister.storyboard in Resources */,
+				B2904C1318C96F6000F89EE0 /* provinces_bck.plist in Resources */,
 				B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */,
 				B2A4441318C5CAD5008A4592 /* MyFarm.storyboard in Resources */,
 			);
@@ -488,6 +497,7 @@
 				B2E31FE018BC90F000165F89 /* HXTAccountManager.m in Sources */,
 				B2032BC018C8205F00EDAFD8 /* HXTSelectARegionFirstLevelViewController.m in Sources */,
 				B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */,
+				B2904C1618C973ED00F89EE0 /* HXTSelectARegionSecondLevelViewController.m in Sources */,
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
 				B2A4440A18C5BEF0008A4592 /* HXTMyEasyLifeViewController.m in Sources */,
 				B2CBEFDA18B7582F00651A30 /* HXTRegisterAccountViewController.m in Sources */,

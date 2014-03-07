@@ -4,6 +4,147 @@
 <dict>
 	<key>0</key>
 	<dict>
+		<key>北京市</key>
+		<dict>
+			<key>0</key>
+			<dict>
+				<key>北京市</key>
+				<array>
+					<string>东城区</string>
+					<string>西城区</string>
+					<string>朝阳区</string>
+					<string>丰台区</string>
+					<string>石景山区</string>
+					<string>海淀区</string>
+					<string>门头沟区</string>
+					<string>房山区</string>
+					<string>通州区</string>
+					<string>顺义区</string>
+					<string>昌平区</string>
+					<string>大兴区</string>
+					<string>怀柔区</string>
+					<string>平谷区</string>
+					<string>密云县</string>
+					<string>延庆县</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	<key>1</key>
+	<dict>
+		<key>天津市</key>
+		<dict>
+			<key>0</key>
+			<dict>
+				<key>天津市</key>
+				<array>
+					<string>和平区</string>
+					<string>河东区</string>
+					<string>河西区</string>
+					<string>南开区</string>
+					<string>河北区</string>
+					<string>红桥区</string>
+					<string>塘沽区</string>
+					<string>汉沽区</string>
+					<string>大港区</string>
+					<string>东丽区</string>
+					<string>西青区</string>
+					<string>津南区</string>
+					<string>北辰区</string>
+					<string>武清区</string>
+					<string>宝坻区</string>
+					<string>宁河县</string>
+					<string>静海县</string>
+					<string>蓟县</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>上海市</key>
+		<dict>
+			<key>0</key>
+			<dict>
+				<key>上海市</key>
+				<array>
+					<string>黄浦区</string>
+					<string>卢湾区</string>
+					<string>徐汇区</string>
+					<string>长宁区</string>
+					<string>静安区</string>
+					<string>普陀区</string>
+					<string>闸北区</string>
+					<string>虹口区</string>
+					<string>杨浦区</string>
+					<string>闵行区</string>
+					<string>宝山区</string>
+					<string>嘉定区</string>
+					<string>浦东新区</string>
+					<string>金山区</string>
+					<string>松江区</string>
+					<string>青浦区</string>
+					<string>南汇区</string>
+					<string>奉贤区</string>
+					<string>崇明县</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>重庆市</key>
+		<dict>
+			<key>0</key>
+			<dict>
+				<key>重庆市</key>
+				<array>
+					<string>万州区</string>
+					<string>涪陵区</string>
+					<string>渝中区</string>
+					<string>大渡口区</string>
+					<string>江北区</string>
+					<string>沙坪坝区</string>
+					<string>九龙坡区</string>
+					<string>南岸区</string>
+					<string>北碚区</string>
+					<string>万盛区</string>
+					<string>双桥区</string>
+					<string>渝北区</string>
+					<string>巴南区</string>
+					<string>黔江区</string>
+					<string>长寿区</string>
+					<string>江津区</string>
+					<string>合川区</string>
+					<string>永川区</string>
+					<string>南川区</string>
+					<string>綦江县</string>
+					<string>潼南县</string>
+					<string>铜梁县</string>
+					<string>大足县</string>
+					<string>荣昌县</string>
+					<string>璧山县</string>
+					<string>梁平县</string>
+					<string>城口县</string>
+					<string>丰都县</string>
+					<string>垫江县</string>
+					<string>武隆县</string>
+					<string>忠县</string>
+					<string>开县</string>
+					<string>云阳县</string>
+					<string>奉节县</string>
+					<string>巫山县</string>
+					<string>巫溪县</string>
+					<string>石柱土家族自治县</string>
+					<string>秀山土家族苗族自治县</string>
+					<string>酉阳土家族苗族自治县</string>
+					<string>彭水苗族土家族自治县</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	<key>4</key>
+	<dict>
 		<key>河北省</key>
 		<dict>
 			<key>0</key>
@@ -246,7 +387,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>1</key>
+	<key>5</key>
 	<dict>
 		<key>山西省</key>
 		<dict>
@@ -437,7 +578,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>2</key>
+	<key>6</key>
 	<dict>
 		<key>内蒙古自治区</key>
 		<dict>
@@ -616,7 +757,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>3</key>
+	<key>7</key>
 	<dict>
 		<key>辽宁省</key>
 		<dict>
@@ -806,7 +947,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>4</key>
+	<key>8</key>
 	<dict>
 		<key>吉林省</key>
 		<dict>
@@ -926,7 +1067,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>5</key>
+	<key>9</key>
 	<dict>
 		<key>黑龙江省</key>
 		<dict>
@@ -1142,7 +1283,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>6</key>
+	<key>10</key>
 	<dict>
 		<key>江苏省</key>
 		<dict>
@@ -1332,7 +1473,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>7</key>
+	<key>11</key>
 	<dict>
 		<key>浙江省</key>
 		<dict>
@@ -1494,7 +1635,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>8</key>
+	<key>12</key>
 	<dict>
 		<key>安徽省</key>
 		<dict>
@@ -1707,7 +1848,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>9</key>
+	<key>13</key>
 	<dict>
 		<key>福建省</key>
 		<dict>
@@ -1852,7 +1993,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>10</key>
+	<key>14</key>
 	<dict>
 		<key>江西省</key>
 		<dict>
@@ -2023,7 +2164,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>11</key>
+	<key>15</key>
 	<dict>
 		<key>山东省</key>
 		<dict>
@@ -2271,7 +2412,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>12</key>
+	<key>16</key>
 	<dict>
 		<key>河南省</key>
 		<dict>
@@ -2544,7 +2685,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>13</key>
+	<key>17</key>
 	<dict>
 		<key>湖北省</key>
 		<dict>
@@ -2754,7 +2895,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>14</key>
+	<key>18</key>
 	<dict>
 		<key>湖南省</key>
 		<dict>
@@ -2966,7 +3107,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>15</key>
+	<key>19</key>
 	<dict>
 		<key>广东省</key>
 		<dict>
@@ -3221,7 +3362,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>16</key>
+	<key>20</key>
 	<dict>
 		<key>广西壮族自治区</key>
 		<dict>
@@ -3420,7 +3561,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>17</key>
+	<key>21</key>
 	<dict>
 		<key>海南省</key>
 		<dict>
@@ -3569,7 +3710,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>18</key>
+	<key>22</key>
 	<dict>
 		<key>四川省</key>
 		<dict>
@@ -3882,7 +4023,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>19</key>
+	<key>23</key>
 	<dict>
 		<key>贵州省</key>
 		<dict>
@@ -4030,7 +4171,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>20</key>
+	<key>24</key>
 	<dict>
 		<key>云南省</key>
 		<dict>
@@ -4261,7 +4402,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>21</key>
+	<key>25</key>
 	<dict>
 		<key>西藏自治区</key>
 		<dict>
@@ -4382,7 +4523,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>22</key>
+	<key>26</key>
 	<dict>
 		<key>陕西省</key>
 		<dict>
@@ -4555,7 +4696,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>23</key>
+	<key>27</key>
 	<dict>
 		<key>甘肃省</key>
 		<dict>
@@ -4732,7 +4873,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>24</key>
+	<key>28</key>
 	<dict>
 		<key>青海省</key>
 		<dict>
@@ -4824,7 +4965,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>25</key>
+	<key>29</key>
 	<dict>
 		<key>宁夏回族自治区</key>
 		<dict>
@@ -4881,7 +5022,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>26</key>
+	<key>30</key>
 	<dict>
 		<key>新疆维吾尔自治区</key>
 		<dict>
@@ -5093,7 +5234,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>27</key>
+	<key>31</key>
 	<dict>
 		<key>台湾省</key>
 		<dict>
@@ -5253,7 +5394,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>28</key>
+	<key>32</key>
 	<dict>
 		<key>香港特别行政区</key>
 		<dict>
@@ -5266,7 +5407,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>29</key>
+	<key>33</key>
 	<dict>
 		<key>澳门特别行政区</key>
 		<dict>
