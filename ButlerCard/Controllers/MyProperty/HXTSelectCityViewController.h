@@ -1,5 +1,5 @@
 //
-//  HXTSelectARegionFirstLevelViewController.h
+//  HXTSelectCityViewController.h
 //  ButlerCard
 //
 //  Created by johnny tang on 3/6/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HXTSelectARegionFirstLevelViewController : UITableViewController
+@interface HXTSelectCityViewController : UITableViewController
 
 @end

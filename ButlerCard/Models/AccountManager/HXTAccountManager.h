@@ -18,6 +18,7 @@
 #define kPhoneNumber              @"PhoneNumber"
 #define kEmailAddr                @"EmailAddr"
 #define kSex                      @"Sex"
+#define kCurrentCity              @"CurrentCity"
 #define kLogged                   @"Logged"
 #define kFirstRun                 @"FirstRun"
 #define kEnablePush               @"EnablePush"
@@ -49,6 +50,7 @@
 @property (copy,   nonatomic) NSString *phoneNumber;
 @property (copy,   nonatomic) NSString *emailAddr;
 @property (copy,   nonatomic) NSString *sex;
+@property (copy,   nonatomic) NSString *currentCity;
 
 @property (assign, nonatomic, getter = isLogged) BOOL logged;
 @property (assign, nonatomic, getter = isFirstRun) BOOL firstRun;

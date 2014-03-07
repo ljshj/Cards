@@ -17,7 +17,8 @@
         accountManager = [[HXTAccountManager alloc] init];
         [accountManager LoadDataFromUserDefault];
     }
-    if (!accountManager.username || !accountManager.password) {
+    if (!accountManager.currentCity ||!accountManager.username || !accountManager.password) {
+        accountManager.currentCity = @"成都";
         accountManager.username = @"username";
         accountManager.password = @"password";
         [accountManager writeDataToUserDefault];
@@ -43,6 +44,7 @@
     _phoneNumber = [accountDefaults objectForKey:kPhoneNumber];
     _emailAddr   = [accountDefaults objectForKey:kEmailAddr];
     _sex         = [accountDefaults objectForKey:kSex];
+    _currentCity = [accountDefaults objectForKey:kCurrentCity];
     _logged      = [accountDefaults boolForKey:kLogged];
     _firstRun    = [accountDefaults boolForKey:kFirstRun];
     _enablePush  = [accountDefaults boolForKey:kEnablePush];
@@ -65,6 +67,7 @@
     [accountDefaults setObject:_phoneNumber forKey:kPhoneNumber];
     [accountDefaults setObject:_emailAddr forKey:kEmailAddr];
     [accountDefaults setObject:_sex forKey:kSex];
+    [accountDefaults setObject:_currentCity forKey:kCurrentCity];
     [accountDefaults setBool:_logged forKey:kLogged];
     [accountDefaults setBool:_firstRun forKey:kFirstRun];
     [accountDefaults setBool:_enablePush forKey:kEnablePush];

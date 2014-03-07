@@ -7,6 +7,7 @@
 //
 
 #import "HXTBrowseHousingEstateViewController.h"
+#import "HXTAccountManager.h"
 
 @interface HXTBrowseHousingEstateViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *housingEstatesCollectionView;
@@ -36,7 +37,15 @@
                             @"小区13", @"小区14", @"小区15", @"小区16"];
     
     _applyOpenPropertyView.hidden = YES;
-    self.navigationItem.rightBarButtonItem.title = @"重庆";
+    
+    [[HXTAccountManager sharedInstance] addObserver:self forKeyPath:@"currentCity" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
+    self.navigationItem.rightBarButtonItem.title = [HXTAccountManager sharedInstance].currentCity;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"currentCity"] && object == [HXTAccountManager sharedInstance]) {
+        self.navigationItem.rightBarButtonItem.title = [HXTAccountManager sharedInstance].currentCity;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {

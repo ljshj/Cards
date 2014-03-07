@@ -227,11 +227,11 @@
             </objects>
             <point key="canvasLocation" x="1033" y="104"/>
         </scene>
-        <!--SelectA Region First Level View Controller - 选择地区-->
+        <!--Select City View Controller - 选择地区-->
         <scene sceneID="QUV-8h-Frq">
             <objects>
-                <tableViewController title="选择地区" id="Jo7-SC-jev" customClass="HXTSelectARegionFirstLevelViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nT4-Pn-PZ8">
+                <tableViewController title="选择地区" id="Jo7-SC-jev" customClass="HXTSelectCityViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nT4-Pn-PZ8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -301,10 +301,10 @@
             </objects>
             <point key="canvasLocation" x="1456" y="104"/>
         </scene>
-        <!--SelectA Region Second Level View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="UTq-fK-uzf">
             <objects>
-                <tableViewController id="q2l-56-96T" customClass="HXTSelectARegionSecondLevelViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SelectCitySecondLevelViewControllerStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q2l-56-96T" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dut-am-r0A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
