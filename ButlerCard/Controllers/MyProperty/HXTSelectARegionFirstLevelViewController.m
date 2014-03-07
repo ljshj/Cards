@@ -1,20 +1,21 @@
 //
-//  HXTSelectARegionViewController.m
+//  HXTSelectARegionFirstLevelViewController.m
 //  ButlerCard
 //
 //  Created by johnny tang on 3/6/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#import "HXTSelectARegionViewController.h"
+#import "HXTSelectARegionFirstLevelViewController.h"
 
-@interface HXTSelectARegionViewController ()
+@interface HXTSelectARegionFirstLevelViewController ()
 @property (strong, nonatomic) NSString *currentLocation;
+@property (strong, nonatomic) NSDictionary *regions;
 @property (strong, nonatomic) NSArray  *topCities;
 @property (strong, nonatomic) NSArray  *provinces;
 @end
 
-@implementation HXTSelectARegionViewController
+@implementation HXTSelectARegionFirstLevelViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,7 +37,16 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     _topCities = @[@"全国", @"北京", @"上海", @"广州", @"深圳", @"天津", @"重庆", @"南京", @"杭州", @"成都", @"武汉", @"西安"];
-    _provinces = @[@"全国", @"北京", @"上海", @"广州", @"深圳", @"天津", @"重庆", @"南京", @"杭州", @"成都", @"武汉", @"西安"];
+    _regions =   [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"region" ofType:@"plist"]];
+    _provinces = _regions.allKeys;
+    
+    for (NSUInteger i = 0; i < _regions.allKeys.count; i++) {
+        NSLog(@"%@", _regions.allKeys[i]);
+    }
+    
+    for (NSString *item in _provinces) {
+        NSLog(@"%@", item);
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,25 +69,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return _provinces.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"ProvincesCellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
+    cell.textLabel.text = _provinces[indexPath.row];
     return cell;
 }
 
