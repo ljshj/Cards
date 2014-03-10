@@ -7,7 +7,7 @@
 //
 
 #import "HXTMyHousingEstateViewController.h"
-#import "HXTMyPropertyModel.h"
+#import "HXTMyProperties.h"
 
 @interface HXTMyHousingEstateViewController ()
 
@@ -52,7 +52,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [HXTMyPropertyModel sharedInstance].myHousingEstate.count;
+    return [HXTMyProperties sharedInstance].myHousingEstate.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,7 +65,7 @@
     imageView.image = [UIImage imageNamed:@"housingEstate.jpg"];
     
     UILabel     *label     = (UILabel *)[cell viewWithTag:102];
-    label.text = [HXTMyPropertyModel sharedInstance].myHousingEstate[indexPath.row];
+    label.text = [HXTMyProperties sharedInstance].myHousingEstate[indexPath.row];
     
     return cell;
 }

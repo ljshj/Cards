@@ -8,7 +8,7 @@
 
 #import "HXTBrowseHousingEstateViewController.h"
 #import "HXTAccountManager.h"
-#import "HXTMyPropertyModel.h"
+#import "HXTMyProperties.h"
 
 @interface HXTBrowseHousingEstateViewController ()
 @property (weak, nonatomic) IBOutlet UISearchBar *propertySearchBar;
@@ -33,7 +33,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    _housingEstateNamesToShow = [[NSMutableArray alloc] initWithArray:[HXTMyPropertyModel sharedInstance].housingEstateNames];
+    _housingEstateNamesToShow = [[NSMutableArray alloc] initWithArray:[HXTMyProperties sharedInstance].housingEstateNames];
     
     _applyOpenPropertyView.hidden = YES;
     
@@ -85,13 +85,13 @@
 - (void)startSearch:(NSString *)searchString {
     if (searchString == nil || (id)searchString==[NSNull null] ||
         searchString.length <= 0 || [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length<=0) {
-        [_housingEstateNamesToShow addObjectsFromArray:[HXTMyPropertyModel sharedInstance].housingEstateNames];
+        [_housingEstateNamesToShow addObjectsFromArray:[HXTMyProperties sharedInstance].housingEstateNames];
     } else {
         [_housingEstateNamesToShow removeAllObjects];
-        for (NSUInteger i = 0; i < [HXTMyPropertyModel sharedInstance].housingEstateNames.count; i++) {
-            NSRange range = [[HXTMyPropertyModel sharedInstance].housingEstateNames[i] rangeOfString:searchString];
+        for (NSUInteger i = 0; i < [HXTMyProperties sharedInstance].housingEstateNames.count; i++) {
+            NSRange range = [[HXTMyProperties sharedInstance].housingEstateNames[i] rangeOfString:searchString];
             if (range.location != NSNotFound) {
-                [_housingEstateNamesToShow addObject:[HXTMyPropertyModel sharedInstance].housingEstateNames[i]];
+                [_housingEstateNamesToShow addObject:[HXTMyProperties sharedInstance].housingEstateNames[i]];
             }
         }
     }

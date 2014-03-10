@@ -1,5 +1,5 @@
 //
-//  HXTMyPropertyModel.h
+//  HXTMyProperties.h
 //  ButlerCard
 //
 //  Created by johnny tang on 3/10/14.
@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HXTMyPropertyModel : NSObject
+@interface HXTMyProperties : NSObject
 
 @property (strong, nonatomic) NSArray *housingEstateNames;
 @property (strong, nonatomic) NSArray *myHousingEstate;
 
-+ (HXTMyPropertyModel *)sharedInstance;
++ (HXTMyProperties *)sharedInstance;
 @end

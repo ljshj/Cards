@@ -1,19 +1,19 @@
 //
-//  HXTMyPropertyModel.m
+//  HXTMyProperties.m
 //  ButlerCard
 //
 //  Created by johnny tang on 3/10/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#import "HXTMyPropertyModel.h"
+#import "HXTMyProperties.h"
 
-@implementation HXTMyPropertyModel
+@implementation HXTMyProperties
 
-+ (HXTMyPropertyModel *)sharedInstance {
-    static HXTMyPropertyModel *myProprtyModel;
++ (HXTMyProperties *)sharedInstance {
+    static HXTMyProperties *myProprtyModel;
     if (!myProprtyModel) {
-        myProprtyModel = [[HXTMyPropertyModel alloc] init];
+        myProprtyModel = [[HXTMyProperties alloc] init];
         myProprtyModel.housingEstateNames = @[@"中铁八局", @"万科A小区", @"置信A区", @"华润AA",
                                               @"保利别墅A", @"恒大宅院", @"万达高层", @"置信B区",
                                               @"华润凤凰城", @"万科V地", @"保利商业", @"中铁Q区",
