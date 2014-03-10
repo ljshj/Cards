@@ -57,12 +57,12 @@
 
 - (IBAction)myPropertyButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    //没有登录，进入小区浏览界面
-    if ([[HXTAccountManager sharedInstance] isLogged]) {
-        UIViewController *userBillViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"UserBillStoryboardID"];
+    
+    if ([[HXTAccountManager sharedInstance] isLogged]) { //已登录，进入用户账单界面
+        UITableViewController *myhouseEstateTableViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"MyHousingEstateStoryboardID"];
         
-        [self.navigationController pushViewController:userBillViewController animated:YES];
-    } else { //已登录，进入用户账单界面
+        [self.navigationController pushViewController:myhouseEstateTableViewController animated:YES];
+    } else { //没有登录，进入小区浏览界面
         UIViewController *browseHousingEstateViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"BrowseHousingEstateStoryboardID"];
         
 //        [self presentViewController:browseHousingEstateViewController animated:YES completion:nil];

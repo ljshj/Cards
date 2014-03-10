@@ -11,6 +11,7 @@
 @interface HXTMyPropertyModel : NSObject
 
 @property (strong, nonatomic) NSArray *housingEstateNames;
+@property (strong, nonatomic) NSArray *myHousingEstate;
 
 + (HXTMyPropertyModel *)sharedInstance;
 @end
