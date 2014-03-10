@@ -19,6 +19,8 @@
 		B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */; };
 		B2904C1118C962E400F89EE0 /* hotCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2904C1018C962E400F89EE0 /* hotCities.plist */; };
 		B2904C1318C96F6000F89EE0 /* provinces_bck.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2904C1218C96F6000F89EE0 /* provinces_bck.plist */; };
+		B296575418CD64F400CE5C0F /* HXTMyPropertyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B296575318CD64F400CE5C0F /* HXTMyPropertyModel.m */; };
+		B296575518CD64F400CE5C0F /* HXTMyPropertyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B296575318CD64F400CE5C0F /* HXTMyPropertyModel.m */; };
 		B2A4440A18C5BEF0008A4592 /* HXTMyEasyLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440918C5BEF0008A4592 /* HXTMyEasyLifeViewController.m */; };
 		B2A4440F18C5BF1A008A4592 /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440C18C5BF1A008A4592 /* HXTIGoViewController.m */; };
 		B2A4441018C5BF1A008A4592 /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440E18C5BF1A008A4592 /* HXTIGoWithTypeViewController.m */; };
@@ -77,6 +79,8 @@
 		B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTYouComeViewController.m; path = YouCome/HXTYouComeViewController.m; sourceTree = "<group>"; };
 		B2904C1018C962E400F89EE0 /* hotCities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hotCities.plist; path = Models/Data/hotCities.plist; sourceTree = "<group>"; };
 		B2904C1218C96F6000F89EE0 /* provinces_bck.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = provinces_bck.plist; path = Models/Data/provinces_bck.plist; sourceTree = "<group>"; };
+		B296575218CD64F400CE5C0F /* HXTMyPropertyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTMyPropertyModel.h; path = Models/MyProperty/HXTMyPropertyModel.h; sourceTree = "<group>"; };
+		B296575318CD64F400CE5C0F /* HXTMyPropertyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTMyPropertyModel.m; path = Models/MyProperty/HXTMyPropertyModel.m; sourceTree = "<group>"; };
 		B2A4440818C5BEF0008A4592 /* HXTMyEasyLifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTMyEasyLifeViewController.h; path = Controllers/MyEasyLife/HXTMyEasyLifeViewController.h; sourceTree = "<group>"; };
 		B2A4440918C5BEF0008A4592 /* HXTMyEasyLifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTMyEasyLifeViewController.m; path = Controllers/MyEasyLife/HXTMyEasyLifeViewController.m; sourceTree = "<group>"; };
 		B2A4440B18C5BF1A008A4592 /* HXTIGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTIGoViewController.h; path = Controllers/MyEasyLife/IGo/HXTIGoViewController.h; sourceTree = "<group>"; };
@@ -214,6 +218,15 @@
 				B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */,
 			);
 			name = "你来";
+			sourceTree = "<group>";
+		};
+		B296575118CD624A00CE5C0F /* MyProperty--我的物业 */ = {
+			isa = PBXGroup;
+			children = (
+				B296575218CD64F400CE5C0F /* HXTMyPropertyModel.h */,
+				B296575318CD64F400CE5C0F /* HXTMyPropertyModel.m */,
+			);
+			name = "MyProperty--我的物业";
 			sourceTree = "<group>";
 		};
 		B2C27D7F18B48432003AA091 = {
@@ -357,6 +370,7 @@
 		B2F63CE418BC399A00BFBE60 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B296575118CD624A00CE5C0F /* MyProperty--我的物业 */,
 				B24AC90318C84927002AA4D9 /* Data */,
 				B2F63CE518BC39BD00BFBE60 /* AccountManager --登录/注册/忘记密码 */,
 			);
@@ -495,6 +509,7 @@
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
 				B2A4440A18C5BEF0008A4592 /* HXTMyEasyLifeViewController.m in Sources */,
 				B2CBEFDA18B7582F00651A30 /* HXTRegisterAccountViewController.m in Sources */,
+				B296575418CD64F400CE5C0F /* HXTMyPropertyModel.m in Sources */,
 				B2D4880518B5DABA00F331D3 /* HXTHomeViewController.m in Sources */,
 				B25F6FC818BB1DD2001421A3 /* HXTUserBillViewController.m in Sources */,
 				B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */,
@@ -507,6 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B296575518CD64F400CE5C0F /* HXTMyPropertyModel.m in Sources */,
 				B2E31FE118BC90F000165F89 /* HXTAccountManager.m in Sources */,
 				B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */,
 			);

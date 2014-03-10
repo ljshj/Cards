@@ -89,7 +89,7 @@
         if (_delegate && [_delegate respondsToSelector:@selector(loginViewController:loginDidSucessed:)]) {
             [_delegate loginViewController:self loginDidSucessed:loginDidSucessed];
         }
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [self.navigationController popToRootViewControllerAnimated:NO];
     } else {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败"
                                                             message:@"无效用户名或密码"

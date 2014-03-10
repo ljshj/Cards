@@ -79,7 +79,7 @@
 
 - (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password {
     if (username && password && [username isEqualToString:_username] && [password isEqualToString:_password]) {
-        _logged = YES;
+        self.logged = YES;
         return YES;
     }
     

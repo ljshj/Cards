@@ -206,8 +206,11 @@ typedef NS_ENUM(NSUInteger, sectionType) {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"SelectARegionSecondLevelIdentifier"]) {
+        
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+        
         if (selectedIndexPath.section == sectionTypeProvinces) {
+            
             _selectCitySecondLevelViewController = segue.destinationViewController;
             NSString *key = [NSString stringWithFormat:@"%d", selectedIndexPath.row];
             NSDictionary *provinceWithIndex = _provinces[key];

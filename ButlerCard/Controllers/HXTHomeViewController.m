@@ -29,6 +29,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationController.delegate = self;
+    
+    [[HXTAccountManager sharedInstance] addObserver:self forKeyPath:@"logged" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"logged"] && object == [HXTAccountManager sharedInstance] && [HXTAccountManager sharedInstance].logged) {
+//        UIViewController *userBillViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"UserBillStoryboardID"];
+//        
+//        [self.navigationController pushViewController:userBillViewController animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning

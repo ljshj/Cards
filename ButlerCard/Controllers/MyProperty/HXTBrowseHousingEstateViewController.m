@@ -8,11 +8,13 @@
 
 #import "HXTBrowseHousingEstateViewController.h"
 #import "HXTAccountManager.h"
+#import "HXTMyPropertyModel.h"
 
 @interface HXTBrowseHousingEstateViewController ()
+@property (weak, nonatomic) IBOutlet UISearchBar *propertySearchBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *housingEstatesCollectionView;
 @property (weak, nonatomic) IBOutlet UIView *applyOpenPropertyView;
-@property (strong, nonatomic) NSArray *housingEstateNames;
+@property (copy, nonatomic) NSMutableArray *housingEstateNamesToShow;
 @end
 
 @implementation HXTBrowseHousingEstateViewController
@@ -31,10 +33,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    _housingEstateNames = @[@"中铁八局", @"万科A小区", @"置信A区", @"华润AA",
-                            @"保利别墅A", @"恒大宅院", @"万达高层", @"置信B区",
-                            @"华润凤凰城", @"万科V地", @"保利商业", @"中铁Q区",
-                            @"小区13", @"小区14", @"小区15", @"小区16"];
+    _housingEstateNamesToShow = [[NSMutableArray alloc] initWithArray:[HXTMyPropertyModel sharedInstance].housingEstateNames];
     
     _applyOpenPropertyView.hidden = YES;
     
@@ -42,10 +41,12 @@
     self.navigationItem.rightBarButtonItem.title = [HXTAccountManager sharedInstance].currentCity;
 }
 
+#pragma --
+#pragma -- key value abserver
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"currentCity"] && object == [HXTAccountManager sharedInstance]) {
         self.navigationItem.rightBarButtonItem.title = [HXTAccountManager sharedInstance].currentCity;
-    }
+    } 
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -57,16 +58,52 @@
 //    self.tabBarController.tabBar.hidden = NO;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    _propertySearchBar.text = nil;
+    [_propertySearchBar resignFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma --
-#pragma UICollectionView DataSource
+#pragma -- mark
+#pragma -- UISearchBar Delegate
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    NSLog(@"1searchBar.text = %@ searchText = %@", searchBar.text, searchText);
+    [self startSearch:searchBar.text];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    NSLog(@"3searchBar.text = %@", searchBar.text);
+    [self startSearch:searchBar.text];
+}
+
+- (void)startSearch:(NSString *)searchString {
+    if (searchString == nil || (id)searchString==[NSNull null] ||
+        searchString.length <= 0 || [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length<=0) {
+        [_housingEstateNamesToShow addObjectsFromArray:[HXTMyPropertyModel sharedInstance].housingEstateNames];
+    } else {
+        [_housingEstateNamesToShow removeAllObjects];
+        for (NSUInteger i = 0; i < [HXTMyPropertyModel sharedInstance].housingEstateNames.count; i++) {
+            NSRange range = [[HXTMyPropertyModel sharedInstance].housingEstateNames[i] rangeOfString:searchString];
+            if (range.location != NSNotFound) {
+                [_housingEstateNamesToShow addObject:[HXTMyPropertyModel sharedInstance].housingEstateNames[i]];
+            }
+        }
+    }
+    
+    [_housingEstatesCollectionView reloadData];
+}
+
+#pragma -- mark
+#pragma -- UICollectionView DataSource
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _housingEstateNames.count;
+    return _housingEstateNamesToShow.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -77,7 +114,7 @@
     
 //    UIButton *cellButton = (UIButton *)[cell viewWithTag:100];
     UILabel  *cellLabel  = (UILabel *)[cell viewWithTag:101];
-    cellLabel.text = _housingEstateNames[indexPath.row];
+    cellLabel.text = _housingEstateNamesToShow[indexPath.row];
     
     return cell;
 }
