@@ -33,7 +33,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    _housingEstateNamesToShow = [[NSMutableArray alloc] initWithArray:[HXTMyProperties sharedInstance].housingEstateNames];
+    _housingEstateNamesToShow = [[NSMutableArray alloc] initWithArray:[HXTMyProperties sharedInstance].allHousingEstateNames];
     
     _applyOpenPropertyView.hidden = YES;
     
@@ -85,13 +85,13 @@
 - (void)startSearch:(NSString *)searchString {
     if (searchString == nil || (id)searchString==[NSNull null] ||
         searchString.length <= 0 || [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length<=0) {
-        [_housingEstateNamesToShow addObjectsFromArray:[HXTMyProperties sharedInstance].housingEstateNames];
+        [_housingEstateNamesToShow addObjectsFromArray:[HXTMyProperties sharedInstance].allHousingEstateNames];
     } else {
         [_housingEstateNamesToShow removeAllObjects];
-        for (NSUInteger i = 0; i < [HXTMyProperties sharedInstance].housingEstateNames.count; i++) {
-            NSRange range = [[HXTMyProperties sharedInstance].housingEstateNames[i] rangeOfString:searchString];
+        for (NSUInteger i = 0; i < [HXTMyProperties sharedInstance].allHousingEstateNames.count; i++) {
+            NSRange range = [[HXTMyProperties sharedInstance].allHousingEstateNames[i] rangeOfString:searchString];
             if (range.location != NSNotFound) {
-                [_housingEstateNamesToShow addObject:[HXTMyProperties sharedInstance].housingEstateNames[i]];
+                [_housingEstateNamesToShow addObject:[HXTMyProperties sharedInstance].allHousingEstateNames[i]];
             }
         }
     }

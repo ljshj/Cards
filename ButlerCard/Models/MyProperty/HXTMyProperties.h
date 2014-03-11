@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HXTPropertyCell.h"
 
 @interface HXTMyProperties : NSObject
 
-@property (strong, nonatomic) NSArray *housingEstateNames;
-@property (strong, nonatomic) NSArray *myHousingEstate;
+@property (strong, nonatomic) NSMutableArray *allHousingEstateNames;
+@property (strong, nonatomic) NSMutableArray *properties;
 
 + (HXTMyProperties *)sharedInstance;
 @end

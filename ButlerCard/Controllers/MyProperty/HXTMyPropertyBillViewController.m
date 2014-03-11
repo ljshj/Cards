@@ -35,7 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark --
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -91,7 +90,6 @@
     return nil;
 }
 
-#pragma mark --
 #pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

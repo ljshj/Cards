@@ -52,7 +52,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [HXTMyProperties sharedInstance].myHousingEstate.count;
+    return [HXTMyProperties sharedInstance].properties.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,7 +65,8 @@
     imageView.image = [UIImage imageNamed:@"housingEstate.jpg"];
     
     UILabel     *label     = (UILabel *)[cell viewWithTag:102];
-    label.text = [HXTMyProperties sharedInstance].myHousingEstate[indexPath.row];
+    HXTPropertyCell *propertyCell = [HXTMyProperties sharedInstance].properties[indexPath.row];
+    label.text = [NSString stringWithFormat:@"%@ %d栋%d单元%d", propertyCell.house.housingEstatename, propertyCell.house.buildingNo, propertyCell.house.unitNo, propertyCell.house.roomNo];
     
     return cell;
 }
@@ -109,7 +110,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -119,6 +120,6 @@
     // Pass the selected object to the new view controller.
 }
 
- */
+
 
 @end
