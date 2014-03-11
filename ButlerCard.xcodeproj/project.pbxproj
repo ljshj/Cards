@@ -15,8 +15,9 @@
 		B24AC90D18C8540F002AA4D9 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = B24AC90C18C8540F002AA4D9 /* region.plist */; };
 		B24AC90F18C8554D002AA4D9 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = B24AC90E18C8554D002AA4D9 /* provinces.plist */; };
 		B26C5EEB18CEB63800854EF8 /* HXTPropertyBillDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B26C5EEA18CEB63800854EF8 /* HXTPropertyBillDetailCell.m */; };
+		B26C5EEE18CF072400854EF8 /* HXTTheGroceryStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B26C5EED18CF072400854EF8 /* HXTTheGroceryStoreViewController.m */; };
+		B26C5EEF18CF072400854EF8 /* HXTTheGroceryStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B26C5EED18CF072400854EF8 /* HXTTheGroceryStoreViewController.m */; };
 		B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BED218B5EF93003A14DA /* ComboBoxView.m */; };
-		B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */; };
 		B2904C1118C962E400F89EE0 /* hotCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2904C1018C962E400F89EE0 /* hotCities.plist */; };
 		B2904C1318C96F6000F89EE0 /* provinces_bck.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2904C1218C96F6000F89EE0 /* provinces_bck.plist */; };
 		B296575418CD64F400CE5C0F /* HXTMyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B296575318CD64F400CE5C0F /* HXTMyProperties.m */; };
@@ -83,10 +84,10 @@
 		B24AC90E18C8554D002AA4D9 /* provinces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = provinces.plist; path = Models/Data/provinces.plist; sourceTree = "<group>"; };
 		B26C5EE918CEB63800854EF8 /* HXTPropertyBillDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTPropertyBillDetailCell.h; path = Models/MyProperty/HXTPropertyBillDetailCell.h; sourceTree = "<group>"; };
 		B26C5EEA18CEB63800854EF8 /* HXTPropertyBillDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTPropertyBillDetailCell.m; path = Models/MyProperty/HXTPropertyBillDetailCell.m; sourceTree = "<group>"; };
+		B26C5EEC18CF072400854EF8 /* HXTTheGroceryStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTTheGroceryStoreViewController.h; path = Controllers/MyEasyLife/YouCome/HXTTheGroceryStoreViewController.h; sourceTree = "<group>"; };
+		B26C5EED18CF072400854EF8 /* HXTTheGroceryStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTTheGroceryStoreViewController.m; path = Controllers/MyEasyLife/YouCome/HXTTheGroceryStoreViewController.m; sourceTree = "<group>"; };
 		B287BED118B5EF93003A14DA /* ComboBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComboBoxView.h; path = View/ComboBoxView.h; sourceTree = "<group>"; };
 		B287BED218B5EF93003A14DA /* ComboBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComboBoxView.m; path = View/ComboBoxView.m; sourceTree = "<group>"; };
-		B287BEDF18B607F8003A14DA /* HXTYouComeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTYouComeViewController.h; path = YouCome/HXTYouComeViewController.h; sourceTree = "<group>"; };
-		B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTYouComeViewController.m; path = YouCome/HXTYouComeViewController.m; sourceTree = "<group>"; };
 		B2904C1018C962E400F89EE0 /* hotCities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hotCities.plist; path = Models/Data/hotCities.plist; sourceTree = "<group>"; };
 		B2904C1218C96F6000F89EE0 /* provinces_bck.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = provinces_bck.plist; path = Models/Data/provinces_bck.plist; sourceTree = "<group>"; };
 		B296575218CD64F400CE5C0F /* HXTMyProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTMyProperties.h; path = Models/MyProperty/HXTMyProperties.h; sourceTree = "<group>"; };
@@ -230,8 +231,8 @@
 		B287BEDE18B60778003A14DA /* 你来 */ = {
 			isa = PBXGroup;
 			children = (
-				B287BEDF18B607F8003A14DA /* HXTYouComeViewController.h */,
-				B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */,
+				B26C5EEC18CF072400854EF8 /* HXTTheGroceryStoreViewController.h */,
+				B26C5EED18CF072400854EF8 /* HXTTheGroceryStoreViewController.m */,
 			);
 			name = "你来";
 			sourceTree = "<group>";
@@ -393,8 +394,8 @@
 			children = (
 				B2A4440818C5BEF0008A4592 /* HXTMyEasyLifeViewController.h */,
 				B2A4440918C5BEF0008A4592 /* HXTMyEasyLifeViewController.m */,
-				B2380DF718B6F4DC00D895DA /* 我去 */,
 				B287BEDE18B60778003A14DA /* 你来 */,
+				B2380DF718B6F4DC00D895DA /* 我去 */,
 				B287BED718B5F87B003A14DA /* 伙拼 */,
 				B27E019618BF2BF700815868 /* 二手 */,
 			);
@@ -562,7 +563,6 @@
 				B2E31FE018BC90F000165F89 /* HXTAccountManager.m in Sources */,
 				B296576518CDAB6600CE5C0F /* HXTPropertyCell.m in Sources */,
 				B2032BC018C8205F00EDAFD8 /* HXTSelectCityViewController.m in Sources */,
-				B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */,
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
 				B296577518CDBADF00CE5C0F /* HXTPropertyBillCell.m in Sources */,
 				B296576118CD9D8600CE5C0F /* HXTMyPropertyBillViewController.m in Sources */,
@@ -572,6 +572,7 @@
 				B2D4880518B5DABA00F331D3 /* HXTHomeViewController.m in Sources */,
 				B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */,
 				B296575818CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m in Sources */,
+				B26C5EEE18CF072400854EF8 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2A4441018C5BF1A008A4592 /* HXTIGoWithTypeViewController.m in Sources */,
 				B2CBEFD718B74CAA00651A30 /* HXTLoginViewController.m in Sources */,
 			);
@@ -586,6 +587,7 @@
 				B296576218CD9D8700CE5C0F /* HXTMyPropertyBillViewController.m in Sources */,
 				B296577618CDBADF00CE5C0F /* HXTPropertyBillCell.m in Sources */,
 				B296576618CDAB6600CE5C0F /* HXTPropertyCell.m in Sources */,
+				B26C5EEF18CF072400854EF8 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B296576E18CDB8E300CE5C0F /* HXTHouse.m in Sources */,
 				B2E31FE118BC90F000165F89 /* HXTAccountManager.m in Sources */,
 				B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */,

@@ -99,7 +99,6 @@
     [_housingEstatesCollectionView reloadData];
 }
 
-#pragma -- mark
 #pragma -- UICollectionView DataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -119,7 +118,6 @@
     return cell;
 }
 
-#pragma --
 #pragma -- UICollectionView Delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"didSelectItemAtIndexPath indexPath.section = %d, indexPath.row = %d", (int)indexPath.section, (int)indexPath.row);

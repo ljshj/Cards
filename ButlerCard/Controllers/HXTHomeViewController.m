@@ -28,6 +28,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //   [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"arrow_left"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"arrow_left"]];
+    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"arrow_left"]];
+    
     self.navigationController.delegate = self;
     
     [[HXTAccountManager sharedInstance] addObserver:self forKeyPath:@"logged" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
