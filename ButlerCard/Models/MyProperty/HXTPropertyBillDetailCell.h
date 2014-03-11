@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HXTPropertyBillDetailCell : NSObject
+typedef NS_ENUM(NSUInteger, BillState) {
+    BillStateNeedToPay = 0, //缴费
+    BillStateProcessing,    //处理中
+    BillStatePaid,          //已缴费
+};
 
+@interface HXTPropertyBillDetailCell : NSObject
+@property (assign, nonatomic) NSUInteger year;
+@property (assign, nonatomic) NSUInteger month;
+@property (assign, nonatomic) float      money;
+@property (assign, nonatomic) BillState  state;
 @end

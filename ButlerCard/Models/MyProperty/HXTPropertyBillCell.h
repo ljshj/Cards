@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class HXTPropertyBillDetailCell;
+
 @interface HXTPropertyBillCell : NSObject
 @property (assign, nonatomic) float     money;
 @property (assign, nonatomic) BOOL      bindCard;
+@property (strong, nonatomic) NSMutableArray *billDetails;
 @end
