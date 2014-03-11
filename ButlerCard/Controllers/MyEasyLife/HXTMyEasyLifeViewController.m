@@ -94,17 +94,15 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     return cell;
 }
 
-#pragma --
 #pragma -- UICollectionView Delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didSelectItemAtIndexPath indexPath.section = %i, indexPath.row = %d", indexPath.section, indexPath.row);
+    NSLog(@"didSelectItemAtIndexPath indexPath.section = %li, indexPath.row = %li", indexPath.section, indexPath.row);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     
 }
 
-#pragma --
 #pragma -- Button presssed methords
 - (IBAction)youComeButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);

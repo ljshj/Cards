@@ -70,17 +70,112 @@
     switch (indexPath.section) {
         case 0:{
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PropertyServiceCellIdentifier forIndexPath:indexPath];
+            
+            //显示小区名称及地址
+            UILabel *label = (UILabel *)[cell viewWithTag:102];
+            label.text = [NSString stringWithFormat:@"%@ %ld栋%ld单元%ld", _propertyCell.house.housingEstatename, _propertyCell.house.buildingNo, _propertyCell.house.unitNo, _propertyCell.house.roomNo];
             return cell;
             break;
         }
         case 1: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-            return cell;
+            switch (indexPath.row) {
+                case 0: { // 物管费
+                    if (_propertyCell.propertyManagementFees.bindCard) {
+                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:201];
+                        feesNameLabel.text = @"物管费";
+                        
+                        UILabel *moneyLabel = (UILabel *)[cell viewWithTag:202];
+                        moneyLabel.text = [NSString stringWithFormat:@"%.2f", _propertyCell.propertyManagementFees.money];
+                        return cell;
+                    } else {
+                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:301];
+                        feesNameLabel.text = @"物管费";
+                        return cell;
+                    }
+                    break;
+                }
+                case 1: { //停车费
+                    if (_propertyCell.parkingFees.bindCard) {
+                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:201];
+                        feesNameLabel.text = @"停车费";
+                        
+                        UILabel *moneyLabel = (UILabel *)[cell viewWithTag:202];
+                        moneyLabel.text = [NSString stringWithFormat:@"%.2f", _propertyCell.parkingFees.money];
+                        return cell;
+                    } else {
+                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:301];
+                        feesNameLabel.text = @"停车费";
+                        return cell;
+                    }
+                    break;
+                }
+                default:
+                    return nil;
+                    break;
+            }
             break;
         }
         case 2:{
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
-            return cell;
+            switch (indexPath.row) {
+                case 0: { // 水费
+                    if (_propertyCell.waterFees.bindCard) {
+                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:201];
+                        feesNameLabel.text = @"水费";
+                        
+                        UILabel *moneyLabel = (UILabel *)[cell viewWithTag:202];
+                        moneyLabel.text = [NSString stringWithFormat:@"%.2f", _propertyCell.waterFees.money];
+                        return cell;
+                    } else {
+                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:301];
+                        feesNameLabel.text = @"水费";
+                        return cell;
+                    }
+                    break;
+                }
+                case 1: { //电费
+                    if (_propertyCell.electricityFees.bindCard) {
+                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:201];
+                        feesNameLabel.text = @"电费";
+                        
+                        UILabel *moneyLabel = (UILabel *)[cell viewWithTag:202];
+                        moneyLabel.text = [NSString stringWithFormat:@"%.2f", _propertyCell.electricityFees.money];
+                        return cell;
+                    } else {
+                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:301];
+                        feesNameLabel.text = @"电费";
+                        return cell;
+                    }
+                    break;
+                }
+                case 2: { //气费
+                    if (_propertyCell.gasFrees.bindCard) {
+                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:201];
+                        feesNameLabel.text = @"气费";
+                        
+                        UILabel *moneyLabel = (UILabel *)[cell viewWithTag:202];
+                        moneyLabel.text = [NSString stringWithFormat:@"%.2f", _propertyCell.gasFrees.money];
+                        return cell;
+                    } else {
+                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:301];
+                        feesNameLabel.text = @"气费";
+                        return cell;
+                    }
+                    break;
+                }
+                default:
+                    return nil;
+                    break;
+            }
             break;
         }
         default:

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HXTPropertyCell.h"
 
 @interface HXTMyPropertyBillViewController : UIViewController
-
+@property (strong, nonatomic) HXTPropertyCell *propertyCell;
 @end

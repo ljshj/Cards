@@ -66,7 +66,7 @@
     
     UILabel     *label     = (UILabel *)[cell viewWithTag:102];
     HXTPropertyCell *propertyCell = [HXTMyProperties sharedInstance].properties[indexPath.row];
-    label.text = [NSString stringWithFormat:@"%@ %d栋%d单元%d", propertyCell.house.housingEstatename, propertyCell.house.buildingNo, propertyCell.house.unitNo, propertyCell.house.roomNo];
+    label.text = [NSString stringWithFormat:@"%@ %ld栋%ld单元%ld", propertyCell.house.housingEstatename, propertyCell.house.buildingNo, propertyCell.house.unitNo, propertyCell.house.roomNo];
     
     return cell;
 }
@@ -118,6 +118,9 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    HXTPropertyCell *propertyCell = [HXTMyProperties sharedInstance].properties[selectedIndexPath.row];
+    [segue.destinationViewController setValue:propertyCell forKey:@"propertyCell"];
 }
 
 

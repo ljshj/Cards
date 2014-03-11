@@ -52,9 +52,9 @@
         propertyA.house.buildingNo = 2;
         propertyA.house.unitNo = 3;
         propertyA.house.roomNo = 301;
-        propertyA.propertyManagementFees.money = 120;
+        propertyA.propertyManagementFees.money = 220.1;
         propertyA.propertyManagementFees.bindCard = YES;
-        propertyA.parkingFees.money = -200;
+        propertyA.parkingFees.money = -300.23;
         propertyA.parkingFees.bindCard = YES;
         propertyA.waterFees.money = 400;
         propertyA.waterFees.bindCard = YES;

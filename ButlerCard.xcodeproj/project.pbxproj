@@ -335,11 +335,10 @@
 		B2C27DC018B48484003AA091 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B2E50CEA18CEA1A800D17D2C /* ComboBox */,
 				B246B6BB18C46BDA0069ACE5 /* ViewWithArrow */,
 				B2CBEFC818B74B2F00651A30 /* Checkbox */,
 				B287BED418B5F216003A14DA /* images */,
-				B287BED118B5EF93003A14DA /* ComboBoxView.h */,
-				B287BED218B5EF93003A14DA /* ComboBoxView.m */,
 				B2C27D9D18B48432003AA091 /* Root.storyboard */,
 				B2C27DC118B48C41003AA091 /* LoginAndRegister.storyboard */,
 				B2D4880618B5DF1000F331D3 /* MyEasyLife.storyboard */,
@@ -408,6 +407,15 @@
 			name = "物业账单";
 			sourceTree = "<group>";
 		};
+		B2E50CEA18CEA1A800D17D2C /* ComboBox */ = {
+			isa = PBXGroup;
+			children = (
+				B287BED118B5EF93003A14DA /* ComboBoxView.h */,
+				B287BED218B5EF93003A14DA /* ComboBoxView.m */,
+			);
+			name = ComboBox;
+			sourceTree = "<group>";
+		};
 		B2F63CE418BC399A00BFBE60 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,7 +480,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HXT;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "johnny tang";
 				TargetAttributes = {
 					B2C27D8718B48432003AA091 = {
@@ -644,7 +652,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -683,7 +690,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -745,7 +751,6 @@
 		B2C27DBE18B48432003AA091 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ButlerCard.app/ButlerCard";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -768,7 +773,6 @@
 		B2C27DBF18B48432003AA091 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ButlerCard.app/ButlerCard";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

@@ -139,7 +139,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
             
             // Configure the cell...
             
-            NSString *key = [NSString stringWithFormat:@"%d", indexPath.row];
+            NSString *key = [NSString stringWithFormat:@"%li", indexPath.row];
             NSDictionary *province = _provinces[key];
             cell.textLabel.text = province.allKeys[0];
             return cell;
@@ -153,7 +153,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
         
         // Configure the cell...
         
-        NSString *key = [NSString stringWithFormat:@"%d", indexPath.row];
+        NSString *key = [NSString stringWithFormat:@"%li", indexPath.row];
         NSDictionary *city = _selectedProvince[key];
         cell.textLabel.text = city.allKeys[0];
         return cell;
@@ -187,7 +187,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
         }
     } else { // _selectCitySecondLevelViewController.tableView
         if (_selectCitySecondLevelViewController) {
-            NSString *key = [NSString stringWithFormat:@"%d", indexPath.row];
+            NSString *key = [NSString stringWithFormat:@"%li", indexPath.row];
             NSDictionary *city = _selectedProvince[key];
             [HXTAccountManager sharedInstance].currentCity = city.allKeys[0];;
             
@@ -212,7 +212,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
         if (selectedIndexPath.section == sectionTypeProvinces) {
             
             _selectCitySecondLevelViewController = segue.destinationViewController;
-            NSString *key = [NSString stringWithFormat:@"%d", selectedIndexPath.row];
+            NSString *key = [NSString stringWithFormat:@"%li", selectedIndexPath.row];
             NSDictionary *provinceWithIndex = _provinces[key];
             _selectedProvince = provinceWithIndex[provinceWithIndex.allKeys[0]];
             
