@@ -14,6 +14,7 @@
 		B246B6BE18C46CAD0069ACE5 /* HXTViewWithArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */; };
 		B24AC90D18C8540F002AA4D9 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = B24AC90C18C8540F002AA4D9 /* region.plist */; };
 		B24AC90F18C8554D002AA4D9 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = B24AC90E18C8554D002AA4D9 /* provinces.plist */; };
+		B26C5EEB18CEB63800854EF8 /* HXTPropertyBillDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B26C5EEA18CEB63800854EF8 /* HXTPropertyBillDetailCell.m */; };
 		B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BED218B5EF93003A14DA /* ComboBoxView.m */; };
 		B287BEE118B607F8003A14DA /* HXTYouComeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BEE018B607F8003A14DA /* HXTYouComeViewController.m */; };
 		B2904C1118C962E400F89EE0 /* hotCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2904C1018C962E400F89EE0 /* hotCities.plist */; };
@@ -80,6 +81,8 @@
 		B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTViewWithArrow.m; path = View/ViewWithArrow/HXTViewWithArrow.m; sourceTree = "<group>"; };
 		B24AC90C18C8540F002AA4D9 /* region.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = region.plist; path = Models/Data/region.plist; sourceTree = "<group>"; };
 		B24AC90E18C8554D002AA4D9 /* provinces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = provinces.plist; path = Models/Data/provinces.plist; sourceTree = "<group>"; };
+		B26C5EE918CEB63800854EF8 /* HXTPropertyBillDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTPropertyBillDetailCell.h; path = Models/MyProperty/HXTPropertyBillDetailCell.h; sourceTree = "<group>"; };
+		B26C5EEA18CEB63800854EF8 /* HXTPropertyBillDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTPropertyBillDetailCell.m; path = Models/MyProperty/HXTPropertyBillDetailCell.m; sourceTree = "<group>"; };
 		B287BED118B5EF93003A14DA /* ComboBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComboBoxView.h; path = View/ComboBoxView.h; sourceTree = "<group>"; };
 		B287BED218B5EF93003A14DA /* ComboBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComboBoxView.m; path = View/ComboBoxView.m; sourceTree = "<group>"; };
 		B287BEDF18B607F8003A14DA /* HXTYouComeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTYouComeViewController.h; path = YouCome/HXTYouComeViewController.h; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 				B296576C18CDB8E300CE5C0F /* HXTHouse.m */,
 				B296577318CDBADF00CE5C0F /* HXTPropertyBillCell.h */,
 				B296577418CDBADF00CE5C0F /* HXTPropertyBillCell.m */,
+				B26C5EE918CEB63800854EF8 /* HXTPropertyBillDetailCell.h */,
+				B26C5EEA18CEB63800854EF8 /* HXTPropertyBillDetailCell.m */,
 			);
 			name = "MyProperty--我的物业";
 			sourceTree = "<group>";
@@ -548,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C27D9818B48432003AA091 /* main.m in Sources */,
+				B26C5EEB18CEB63800854EF8 /* HXTPropertyBillDetailCell.m in Sources */,
 				B2E31FDD18BC49A700165F89 /* HXTCheckBox.m in Sources */,
 				B296576D18CDB8E300CE5C0F /* HXTHouse.m in Sources */,
 				B2A4440F18C5BF1A008A4592 /* HXTIGoViewController.m in Sources */,
