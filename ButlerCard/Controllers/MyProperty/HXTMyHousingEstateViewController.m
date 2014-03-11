@@ -66,7 +66,7 @@
     
     UILabel     *label     = (UILabel *)[cell viewWithTag:102];
     HXTPropertyCell *propertyCell = [HXTMyProperties sharedInstance].properties[indexPath.row];
-    label.text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", propertyCell.house.housingEstatename, propertyCell.house.buildingNo, propertyCell.house.unitNo, propertyCell.house.roomNo];
+    label.text = [NSString stringWithFormat:@"%@ %ld栋%ld单元%ld", propertyCell.house.housingEstatename, (unsigned long)(propertyCell.house.buildingNo), (unsigned long)propertyCell.house.unitNo, (unsigned long)propertyCell.house.roomNo];
     
     return cell;
 }

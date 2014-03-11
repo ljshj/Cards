@@ -96,7 +96,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 
 #pragma -- UICollectionView Delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didSelectItemAtIndexPath indexPath.section = %li, indexPath.row = %li", indexPath.section, indexPath.row);
+    NSLog(@"didSelectItemAtIndexPath indexPath.section = %d, indexPath.row = %d", (int)indexPath.section, (int)indexPath.row);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {

@@ -73,7 +73,7 @@
             
             //显示小区名称及地址
             UILabel *label = (UILabel *)[cell viewWithTag:102];
-            label.text = [NSString stringWithFormat:@"%@ %ld栋%ld单元%ld", _propertyCell.house.housingEstatename, _propertyCell.house.buildingNo, _propertyCell.house.unitNo, _propertyCell.house.roomNo];
+            label.text = [NSString stringWithFormat:@"%@ %ld栋%ld单元%ld", _propertyCell.house.housingEstatename, (unsigned long)_propertyCell.house.buildingNo, (unsigned long)_propertyCell.house.unitNo, (unsigned long)_propertyCell.house.roomNo];
             return cell;
             break;
         }

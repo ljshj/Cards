@@ -139,7 +139,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
             
             // Configure the cell...
             
-            NSString *key = [NSString stringWithFormat:@"%li", indexPath.row];
+            NSString *key = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
             NSDictionary *province = _provinces[key];
             cell.textLabel.text = province.allKeys[0];
             return cell;
@@ -153,7 +153,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
         
         // Configure the cell...
         
-        NSString *key = [NSString stringWithFormat:@"%li", indexPath.row];
+        NSString *key = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
         NSDictionary *city = _selectedProvince[key];
         cell.textLabel.text = city.allKeys[0];
         return cell;
@@ -187,7 +187,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
         }
     } else { // _selectCitySecondLevelViewController.tableView
         if (_selectCitySecondLevelViewController) {
-            NSString *key = [NSString stringWithFormat:@"%li", indexPath.row];
+            NSString *key = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
             NSDictionary *city = _selectedProvince[key];
             [HXTAccountManager sharedInstance].currentCity = city.allKeys[0];;
             
@@ -197,7 +197,6 @@ typedef NS_ENUM(NSUInteger, sectionType) {
     }
 }
 
-#pragma mark --
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -212,7 +211,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
         if (selectedIndexPath.section == sectionTypeProvinces) {
             
             _selectCitySecondLevelViewController = segue.destinationViewController;
-            NSString *key = [NSString stringWithFormat:@"%li", selectedIndexPath.row];
+            NSString *key = [NSString stringWithFormat:@"%ld", (long)selectedIndexPath.row];
             NSDictionary *provinceWithIndex = _provinces[key];
             _selectedProvince = provinceWithIndex[provinceWithIndex.allKeys[0]];
             

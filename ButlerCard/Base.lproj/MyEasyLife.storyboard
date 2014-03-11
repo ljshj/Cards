@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9JY-Dc-Jkj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9JY-Dc-Jkj">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--My Easy Life View Controller - 我的小日子-->
@@ -17,108 +17,167 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ3-dI-lUx">
-                                <rect key="frame" x="20" y="208" width="60" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="你来">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="youComeButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="kc9-es-hVq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubd-eA-KJJ">
-                                <rect key="frame" x="88" y="208" width="60" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="我去">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="iGoButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="fIZ-Vc-iOG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AP-Nz-UIi">
-                                <rect key="frame" x="156" y="208" width="60" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="伙拼">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="groupTogetherButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="DES-9u-Twl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVq-1I-Brs">
-                                <rect key="frame" x="224" y="208" width="60" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="走你">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goYouButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="PEr-3U-o2V"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7X-xU-1WT" customClass="ComboBoxView">
-                                <rect key="frame" x="20" y="82" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djK-3C-1eS" customClass="HXTViewWithArrow">
-                                <rect key="frame" x="0.0" y="253" width="320" height="266"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6k-VF-XI0">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XWn-Rd-0Q2">
-                                        <rect key="frame" x="0.0" y="20" width="320" height="246"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="kUs-cV-MdP">
-                                            <size key="itemSize" width="80" height="40"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCellIdentifier" id="RE6-P1-JkL">
-                                                <rect key="frame" x="20" y="20" width="80" height="40"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cell项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zt-D6-b1m">
-                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </collectionViewCell>
-                                        </cells>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ3-dI-lUx">
+                                        <rect key="frame" x="20" y="49" width="60" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="你来">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <outlet property="dataSource" destination="k30-ec-sj4" id="iLw-Ru-mnz"/>
-                                            <outlet property="delegate" destination="k30-ec-sj4" id="v9K-D1-MZQ"/>
+                                            <action selector="youComeButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="kc9-es-hVq"/>
                                         </connections>
-                                    </collectionView>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubd-eA-KJJ">
+                                        <rect key="frame" x="95" y="49" width="60" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="hJ7-hl-CVD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="我去">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="iGoButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="fIZ-Vc-iOG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AP-Nz-UIi">
+                                        <rect key="frame" x="169" y="49" width="60" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="BNt-3c-Jg2"/>
+                                            <constraint firstAttribute="height" constant="40" id="eXM-Jf-7wh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="伙拼">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="groupTogetherButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="DES-9u-Twl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVq-1I-Brs">
+                                        <rect key="frame" x="240" y="49" width="60" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="走你">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goYouButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="PEr-3U-o2V"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7X-xU-1WT" customClass="ComboBoxView">
+                                        <rect key="frame" x="20" y="6" width="103" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="w5r-Uw-9aY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djK-3C-1eS" customClass="HXTViewWithArrow">
+                                        <rect key="frame" x="0.0" y="103" width="320" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XWn-Rd-0Q2">
+                                                <rect key="frame" x="0.0" y="-3" width="320" height="246"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="kUs-cV-MdP">
+                                                    <size key="itemSize" width="80" height="40"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCellIdentifier" id="RE6-P1-JkL">
+                                                        <rect key="frame" x="20" y="20" width="80" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zt-D6-b1m">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="8Zt-D6-b1m" firstAttribute="top" secondItem="RE6-P1-JkL" secondAttribute="top" id="Flf-Ez-eAI"/>
+                                                            <constraint firstAttribute="trailing" secondItem="8Zt-D6-b1m" secondAttribute="trailing" id="IVJ-HX-0Md"/>
+                                                            <constraint firstItem="8Zt-D6-b1m" firstAttribute="leading" secondItem="RE6-P1-JkL" secondAttribute="leading" id="LmB-c0-dIN"/>
+                                                            <constraint firstAttribute="bottom" secondItem="8Zt-D6-b1m" secondAttribute="bottom" id="zhA-Hx-Wyn"/>
+                                                        </constraints>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="k30-ec-sj4" id="iLw-Ru-mnz"/>
+                                                    <outlet property="delegate" destination="k30-ec-sj4" id="v9K-D1-MZQ"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="mrF-t9-Lnv"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ubd-eA-KJJ" firstAttribute="leading" secondItem="hZ3-dI-lUx" secondAttribute="trailing" constant="15" id="12A-cy-Rwl"/>
+                                    <constraint firstItem="djK-3C-1eS" firstAttribute="top" secondItem="DVq-1I-Brs" secondAttribute="bottom" constant="14" id="2zG-lO-U2d"/>
+                                    <constraint firstItem="DVq-1I-Brs" firstAttribute="bottom" secondItem="7AP-Nz-UIi" secondAttribute="bottom" id="4Bf-mN-X2g"/>
+                                    <constraint firstItem="i7X-xU-1WT" firstAttribute="leading" secondItem="hZ3-dI-lUx" secondAttribute="leading" id="6y3-IM-eRS"/>
+                                    <constraint firstItem="i7X-xU-1WT" firstAttribute="top" secondItem="J6k-VF-XI0" secondAttribute="top" constant="6" id="9Fb-uv-049"/>
+                                    <constraint firstItem="hZ3-dI-lUx" firstAttribute="leading" secondItem="J6k-VF-XI0" secondAttribute="leading" constant="20" symbolic="YES" id="Egc-ds-KDO"/>
+                                    <constraint firstAttribute="trailing" secondItem="DVq-1I-Brs" secondAttribute="trailing" constant="20" symbolic="YES" id="FMu-7T-bH1"/>
+                                    <constraint firstItem="hZ3-dI-lUx" firstAttribute="bottom" secondItem="Ubd-eA-KJJ" secondAttribute="bottom" id="G7c-8S-QH5"/>
+                                    <constraint firstAttribute="bottom" secondItem="7AP-Nz-UIi" secondAttribute="bottom" constant="366" id="Leo-np-bIa"/>
+                                    <constraint firstAttribute="trailing" secondItem="djK-3C-1eS" secondAttribute="trailing" id="Men-J3-MyP"/>
+                                    <constraint firstItem="hZ3-dI-lUx" firstAttribute="top" secondItem="Ubd-eA-KJJ" secondAttribute="top" id="PmY-2z-tty"/>
+                                    <constraint firstItem="Ubd-eA-KJJ" firstAttribute="top" secondItem="i7X-xU-1WT" secondAttribute="bottom" constant="13" id="Sh2-kh-r1W"/>
+                                    <constraint firstItem="DVq-1I-Brs" firstAttribute="top" secondItem="7AP-Nz-UIi" secondAttribute="top" id="T1o-BM-Zed"/>
+                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="bottom" secondItem="Ubd-eA-KJJ" secondAttribute="bottom" id="Tyi-IZ-hOY"/>
+                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="leading" secondItem="J6k-VF-XI0" secondAttribute="leading" constant="169" id="V8v-YD-pHJ"/>
+                                    <constraint firstItem="hZ3-dI-lUx" firstAttribute="baseline" secondItem="Ubd-eA-KJJ" secondAttribute="baseline" id="WQG-4q-chu"/>
+                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="top" secondItem="J6k-VF-XI0" secondAttribute="top" constant="49" id="a1Q-cc-EZ9"/>
+                                    <constraint firstItem="DVq-1I-Brs" firstAttribute="leading" secondItem="7AP-Nz-UIi" secondAttribute="trailing" constant="11" id="ac3-sv-oGg"/>
+                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="baseline" secondItem="Ubd-eA-KJJ" secondAttribute="baseline" id="beQ-qv-gal"/>
+                                    <constraint firstItem="DVq-1I-Brs" firstAttribute="baseline" secondItem="7AP-Nz-UIi" secondAttribute="baseline" id="gPz-EK-mw1"/>
+                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="leading" secondItem="Ubd-eA-KJJ" secondAttribute="trailing" constant="14" id="lZS-hm-8G2"/>
+                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="top" secondItem="Ubd-eA-KJJ" secondAttribute="top" id="onA-8c-DoR"/>
+                                    <constraint firstItem="djK-3C-1eS" firstAttribute="leading" secondItem="J6k-VF-XI0" secondAttribute="leading" id="sbl-pb-LKS"/>
+                                    <constraint firstAttribute="trailing" secondItem="7AP-Nz-UIi" secondAttribute="trailing" constant="91" id="vrw-qv-aYP"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J6k-VF-XI0" firstAttribute="leading" secondItem="6zo-Id-osq" secondAttribute="leading" id="Qas-q3-IRg"/>
+                            <constraint firstItem="J6k-VF-XI0" firstAttribute="top" secondItem="sNi-xv-fuz" secondAttribute="bottom" id="Ugm-9E-0wp"/>
+                            <constraint firstItem="9lt-UQ-rTG" firstAttribute="top" secondItem="J6k-VF-XI0" secondAttribute="bottom" id="W1q-W8-nvW"/>
+                            <constraint firstAttribute="trailing" secondItem="J6k-VF-XI0" secondAttribute="trailing" id="WBt-42-2aB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的小日子" id="DiW-jA-gXM">
                         <barButtonItem key="backBarButtonItem" title="返回" id="7yO-bG-Shh"/>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="arrowView" destination="djK-3C-1eS" id="se3-SR-fGb"/>
                         <outlet property="dropDownComboBoxView" destination="i7X-xU-1WT" id="TT6-eA-ULT"/>
@@ -131,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXh-5e-CTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="73"/>
+            <point key="canvasLocation" x="1054" y="73"/>
         </scene>
         <!--View Controller - 我要详细内容-->
         <scene sceneID="6pZ-Zg-8OA">
@@ -155,6 +214,7 @@
         <!--Navigation Controller-->
         <scene sceneID="QUy-Za-EwL">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdl-VW-nSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9JY-Dc-Jkj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3lt-vh-grq">
@@ -166,7 +226,6 @@
                         <segue destination="k30-ec-sj4" kind="relationship" relationship="rootViewController" id="810-Q6-gEi"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mdl-VW-nSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="620" y="73"/>
         </scene>
