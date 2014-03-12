@@ -1,18 +1,18 @@
 //
-//  HXTMyPropertyBillViewController.m
+//  HXTMyPropertyViewController.m
 //  ButlerCard
 //
 //  Created by johnny tang on 3/10/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#import "HXTMyPropertyBillViewController.h"
+#import "HXTMyPropertyViewController.h"
 
-@interface HXTMyPropertyBillViewController ()
+@interface HXTMyPropertyViewController ()
 
 @end
 
-@implementation HXTMyPropertyBillViewController
+@implementation HXTMyPropertyViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

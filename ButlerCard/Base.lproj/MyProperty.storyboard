@@ -377,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vev-Mf-wsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="-300"/>
+            <point key="canvasLocation" x="2191" y="-900"/>
         </scene>
         <!--View Controller - 缴费-->
         <scene sceneID="iZy-tw-IEm">
@@ -396,69 +396,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fdx-dd-Jr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="353"/>
+            <point key="canvasLocation" x="1651" y="-229"/>
         </scene>
-        <!--My Housing Estate View Controller - 我的小区-->
-        <scene sceneID="JVc-M9-4cD">
-            <objects>
-                <tableViewController storyboardIdentifier="MyHousingEstateStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b7D-Zq-CeY" customClass="HXTMyHousingEstateViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rAU-7U-oaG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyHousingEstateCellIdentifier" id="MQX-Fw-9kf">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MQX-Fw-9kf" id="nzz-n6-rwo">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="housingEstate.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Lrh-GM-XFc">
-                                            <rect key="frame" x="10" y="2" width="40" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="C9i-LX-AgF"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中铁小区8栋2单元302" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoL-pk-gtC">
-                                            <rect key="frame" x="58" y="2" width="229" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="Lrh-GM-XFc" secondAttribute="bottom" constant="1" id="FIt-XO-5V3"/>
-                                        <constraint firstAttribute="trailing" secondItem="SoL-pk-gtC" secondAttribute="trailing" id="KfY-i7-p5Y"/>
-                                        <constraint firstItem="SoL-pk-gtC" firstAttribute="top" secondItem="Lrh-GM-XFc" secondAttribute="top" id="Rpd-sA-Eql"/>
-                                        <constraint firstItem="SoL-pk-gtC" firstAttribute="bottom" secondItem="Lrh-GM-XFc" secondAttribute="bottom" id="a8t-XG-tmb"/>
-                                        <constraint firstItem="Lrh-GM-XFc" firstAttribute="leading" secondItem="nzz-n6-rwo" secondAttribute="leading" constant="10" id="go7-Ki-jSV"/>
-                                        <constraint firstItem="SoL-pk-gtC" firstAttribute="leading" secondItem="Lrh-GM-XFc" secondAttribute="trailing" constant="8" symbolic="YES" id="uVK-Tq-gq0"/>
-                                        <constraint firstItem="Lrh-GM-XFc" firstAttribute="top" secondItem="nzz-n6-rwo" secondAttribute="top" constant="2" id="ug2-Ik-BDV"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="chU-se-kV9" kind="push" id="9Ba-02-JO4"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="b7D-Zq-CeY" id="Xf7-xl-j2b"/>
-                            <outlet property="delegate" destination="b7D-Zq-CeY" id="9ow-Ch-CTa"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="我的小区" id="Ms5-Ls-eh7"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IBG-oW-osI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="926" y="-558"/>
-        </scene>
-        <!--My Property Bill View Controller - 我的物业账单-->
+        <!--My Property View Controller - 我的物业-->
         <scene sceneID="RLW-OH-9xa">
             <objects>
-                <viewController id="chU-se-kV9" customClass="HXTMyPropertyBillViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPropertiesStoryboardID" id="chU-se-kV9" customClass="HXTMyPropertyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RLq-Yr-38A"/>
                         <viewControllerLayoutGuide type="bottom" id="uBR-N5-t8y"/>
@@ -599,11 +542,11 @@
                             <constraint firstItem="Fzv-8A-wHF" firstAttribute="top" secondItem="8No-Pp-0lT" secondAttribute="top" id="vtW-9W-x5E"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="我的物业账单" id="3D1-Z7-Ttl"/>
+                    <navigationItem key="navigationItem" title="我的物业" id="3D1-Z7-Ttl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VBh-2T-CDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1358" y="-558"/>
+            <point key="canvasLocation" x="1074" y="-1264"/>
         </scene>
         <!--Table View Controller - 我的物业账单详情-->
         <scene sceneID="R5p-mK-MBZ">
@@ -632,7 +575,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0v-Th-GpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="-966"/>
+            <point key="canvasLocation" x="1657" y="-996"/>
         </scene>
         <!--View Controller - 物业服务-->
         <scene sceneID="3sl-YQ-W2w">
@@ -658,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZvU-jv-77Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="-1624"/>
+            <point key="canvasLocation" x="1657" y="-1668"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MGU-ac-dfs">
@@ -679,22 +622,22 @@
             <point key="canvasLocation" x="81" y="132"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="hAF-EL-tXI">
+        <scene sceneID="yOa-pe-8QU">
             <objects>
-                <navigationController storyboardIdentifier="MyPropertiesNavigationStoryboardID" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bKA-MM-2sh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MyPropertiesNavigationStoryboardID" automaticallyAdjustsScrollViewInsets="NO" id="HZJ-u3-g8C" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DSm-S2-m0K">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="40a-mP-tas">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="b7D-Zq-CeY" kind="relationship" relationship="rootViewController" id="0aJ-3y-8JS"/>
+                        <segue destination="chU-se-kV9" kind="relationship" relationship="rootViewController" id="3z1-iT-oeX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jk8-EV-seo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="in8-UP-rn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="-558"/>
+            <point key="canvasLocation" x="548" y="-1264"/>
         </scene>
     </scenes>
     <resources>

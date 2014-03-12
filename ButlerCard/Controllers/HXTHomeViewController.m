@@ -60,6 +60,10 @@
 //    }
 }
 
+- (IBAction)myAccountButtonPressed:(id)sender {
+    self.tabBarController.selectedIndex = 3;
+}
+
 - (IBAction)myPropertyButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
     

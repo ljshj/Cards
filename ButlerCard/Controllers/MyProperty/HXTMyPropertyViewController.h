@@ -1,5 +1,5 @@
 //
-//  HXTMyPropertyBillViewController.h
+//  HXTMyPropertyViewController.h
 //  ButlerCard
 //
 //  Created by johnny tang on 3/10/14.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "HXTPropertyCell.h"
 
-@interface HXTMyPropertyBillViewController : UIViewController
+@interface HXTMyPropertyViewController : UIViewController
 @property (strong, nonatomic) HXTPropertyCell *propertyCell;
 @end

@@ -24,8 +24,8 @@
 		B296575518CD64F400CE5C0F /* HXTMyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B296575318CD64F400CE5C0F /* HXTMyProperties.m */; };
 		B296575818CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296575718CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m */; };
 		B296575918CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296575718CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m */; };
-		B296576118CD9D8600CE5C0F /* HXTMyPropertyBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296576018CD9D8600CE5C0F /* HXTMyPropertyBillViewController.m */; };
-		B296576218CD9D8700CE5C0F /* HXTMyPropertyBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296576018CD9D8600CE5C0F /* HXTMyPropertyBillViewController.m */; };
+		B296576118CD9D8600CE5C0F /* HXTMyPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296576018CD9D8600CE5C0F /* HXTMyPropertyViewController.m */; };
+		B296576218CD9D8700CE5C0F /* HXTMyPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296576018CD9D8600CE5C0F /* HXTMyPropertyViewController.m */; };
 		B296576518CDAB6600CE5C0F /* HXTPropertyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B296576418CDAB6600CE5C0F /* HXTPropertyCell.m */; };
 		B296576618CDAB6600CE5C0F /* HXTPropertyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B296576418CDAB6600CE5C0F /* HXTPropertyCell.m */; };
 		B296576D18CDB8E300CE5C0F /* HXTHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = B296576C18CDB8E300CE5C0F /* HXTHouse.m */; };
@@ -94,8 +94,8 @@
 		B296575318CD64F400CE5C0F /* HXTMyProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTMyProperties.m; path = Models/MyProperty/HXTMyProperties.m; sourceTree = "<group>"; };
 		B296575618CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTMyHousingEstateViewController.h; path = Controllers/MyProperty/HXTMyHousingEstateViewController.h; sourceTree = "<group>"; };
 		B296575718CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTMyHousingEstateViewController.m; path = Controllers/MyProperty/HXTMyHousingEstateViewController.m; sourceTree = "<group>"; };
-		B296575F18CD9D8600CE5C0F /* HXTMyPropertyBillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTMyPropertyBillViewController.h; path = Controllers/MyProperty/HXTMyPropertyBillViewController.h; sourceTree = "<group>"; };
-		B296576018CD9D8600CE5C0F /* HXTMyPropertyBillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTMyPropertyBillViewController.m; path = Controllers/MyProperty/HXTMyPropertyBillViewController.m; sourceTree = "<group>"; };
+		B296575F18CD9D8600CE5C0F /* HXTMyPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTMyPropertyViewController.h; path = Controllers/MyProperty/HXTMyPropertyViewController.h; sourceTree = "<group>"; };
+		B296576018CD9D8600CE5C0F /* HXTMyPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTMyPropertyViewController.m; path = Controllers/MyProperty/HXTMyPropertyViewController.m; sourceTree = "<group>"; };
 		B296576318CDAB6600CE5C0F /* HXTPropertyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTPropertyCell.h; path = Models/MyProperty/HXTPropertyCell.h; sourceTree = "<group>"; };
 		B296576418CDAB6600CE5C0F /* HXTPropertyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTPropertyCell.m; path = Models/MyProperty/HXTPropertyCell.m; sourceTree = "<group>"; };
 		B296576B18CDB8E300CE5C0F /* HXTHouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTHouse.h; path = Models/MyProperty/HXTHouse.h; sourceTree = "<group>"; };
@@ -180,6 +180,10 @@
 		B2380E0218B6FB7800D895DA /* 我的物业 */ = {
 			isa = PBXGroup;
 			children = (
+				B296575618CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.h */,
+				B296575718CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m */,
+				B296575F18CD9D8600CE5C0F /* HXTMyPropertyViewController.h */,
+				B296576018CD9D8600CE5C0F /* HXTMyPropertyViewController.m */,
 				B2E50CE918CEA12100D17D2C /* 物业账单 */,
 				B296575A18CD9CE500CE5C0F /* 选择小区和城市 */,
 			);
@@ -405,10 +409,6 @@
 		B2E50CE918CEA12100D17D2C /* 物业账单 */ = {
 			isa = PBXGroup;
 			children = (
-				B296575618CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.h */,
-				B296575718CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m */,
-				B296575F18CD9D8600CE5C0F /* HXTMyPropertyBillViewController.h */,
-				B296576018CD9D8600CE5C0F /* HXTMyPropertyBillViewController.m */,
 			);
 			name = "物业账单";
 			sourceTree = "<group>";
@@ -565,7 +565,7 @@
 				B2032BC018C8205F00EDAFD8 /* HXTSelectCityViewController.m in Sources */,
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
 				B296577518CDBADF00CE5C0F /* HXTPropertyBillCell.m in Sources */,
-				B296576118CD9D8600CE5C0F /* HXTMyPropertyBillViewController.m in Sources */,
+				B296576118CD9D8600CE5C0F /* HXTMyPropertyViewController.m in Sources */,
 				B2A4440A18C5BEF0008A4592 /* HXTMyEasyLifeViewController.m in Sources */,
 				B2CBEFDA18B7582F00651A30 /* HXTRegisterAccountViewController.m in Sources */,
 				B296575418CD64F400CE5C0F /* HXTMyProperties.m in Sources */,
@@ -584,7 +584,7 @@
 			files = (
 				B296575518CD64F400CE5C0F /* HXTMyProperties.m in Sources */,
 				B296575918CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m in Sources */,
-				B296576218CD9D8700CE5C0F /* HXTMyPropertyBillViewController.m in Sources */,
+				B296576218CD9D8700CE5C0F /* HXTMyPropertyViewController.m in Sources */,
 				B296577618CDBADF00CE5C0F /* HXTPropertyBillCell.m in Sources */,
 				B296576618CDAB6600CE5C0F /* HXTPropertyCell.m in Sources */,
 				B26C5EEF18CF072400854EF8 /* HXTTheGroceryStoreViewController.m in Sources */,
