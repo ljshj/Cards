@@ -30,20 +30,12 @@
 	// Do any additional setup after loading the view.
     
     //   [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"arrow_left"] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"arrow_left"]];
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"arrow_left"]];
+    //Not suppot iOS 6
+//    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"arrow_left"]];
+//    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"arrow_left"]];
     
     self.navigationController.delegate = self;
     
-    [[HXTAccountManager sharedInstance] addObserver:self forKeyPath:@"logged" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"logged"] && object == [HXTAccountManager sharedInstance] && [HXTAccountManager sharedInstance].logged) {
-//        UIViewController *userBillViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"UserBillStoryboardID"];
-//        
-//        [self.navigationController pushViewController:userBillViewController animated:YES];
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,7 +44,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark --
 #pragma mark -- UINavigationController Delegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
 //    if (viewController == self) {
@@ -68,9 +59,9 @@
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
     
     if ([[HXTAccountManager sharedInstance] isLogged]) { //已登录，进入用户账单界面
-        UITableViewController *myhouseEstateTableViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"MyHousingEstateStoryboardID"];
+        UITableViewController *myPropertyViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"MyPropertiesStoryboardID"];
         
-        [self.navigationController pushViewController:myhouseEstateTableViewController animated:YES];
+        [self.navigationController pushViewController:myPropertyViewController animated:YES];
     } else { //没有登录，进入小区浏览界面
         UIViewController *browseHousingEstateViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"BrowseHousingEstateStoryboardID"];
         

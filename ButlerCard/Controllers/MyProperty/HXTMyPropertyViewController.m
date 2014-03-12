@@ -7,8 +7,11 @@
 //
 
 #import "HXTMyPropertyViewController.h"
+#import "HXTMyProperties.h"
 
 @interface HXTMyPropertyViewController ()
+
+@property (strong, nonatomic) NSMutableArray  *expandedIndexs;
 
 @end
 
@@ -27,6 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _expandedIndexs = [[NSMutableArray alloc] initWithCapacity:0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,25 +44,18 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 3;
+    return [HXTMyProperties sharedInstance].properties.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    switch (section) {
-        case 0:
-            return 1;
-            break;
-        case 1:
-            return 2;
-            break;
-        case 2:
-            return 3;
-            break;
-        default:
-            return 0;
+    for (NSNumber *index in _expandedIndexs) {
+        if (index.intValue ==  section) {
+            return 7;
+        }
     }
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,129 +63,98 @@
     static NSString *PropertyServiceCellIdentifier    = @"PropertyServiceCellIdentifier";
     static NSString *ProtertyItemDetailCellIdentifier = @"ProtertyItemDetailCellIdentifier";
     static NSString *ProtertyItemBindCellIdentifier   = @"ProtertyItemBindCellIdentifier";
+    static NSString *PaymentCellIdentifier            = @"PaymentCellIdentifier";
+
     
-    switch (indexPath.section) {
-        case 0:{
+    switch (indexPath.row) {
+        case 0: {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PropertyServiceCellIdentifier forIndexPath:indexPath];
-            
-            //显示小区名称及地址
-            UILabel *label = (UILabel *)[cell viewWithTag:102];
-            label.text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", _propertyCell.house.housingEstatename, (unsigned long)_propertyCell.house.buildingNo, (unsigned long)_propertyCell.house.unitNo, (unsigned long)_propertyCell.house.roomNo];
+            cell.contentView.tag = indexPath.section;
             return cell;
-            break;
         }
+            break;
         case 1: {
-            switch (indexPath.row) {
-                case 0: { // 物管费
-                    if (_propertyCell.propertyManagementFees.bindCard) {
-                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:201];
-                        feesNameLabel.text = @"物管费";
-                        
-                        UILabel *moneyLabel = (UILabel *)[cell viewWithTag:202];
-                        moneyLabel.text = [NSString stringWithFormat:@"%.2f", _propertyCell.propertyManagementFees.money];
-                        return cell;
-                    } else {
-                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
-                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:301];
-                        feesNameLabel.text = @"物管费";
-                        return cell;
-                    }
-                    break;
-                }
-                case 1: { //停车费
-                    if (_propertyCell.parkingFees.bindCard) {
-                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:201];
-                        feesNameLabel.text = @"停车费";
-                        
-                        UILabel *moneyLabel = (UILabel *)[cell viewWithTag:202];
-                        moneyLabel.text = [NSString stringWithFormat:@"%.2f", _propertyCell.parkingFees.money];
-                        return cell;
-                    } else {
-                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
-                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:301];
-                        feesNameLabel.text = @"停车费";
-                        return cell;
-                    }
-                    break;
-                }
-                default:
-                    return nil;
-                    break;
-            }
-            break;
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+            return cell;
         }
-        case 2:{
-            switch (indexPath.row) {
-                case 0: { // 水费
-                    if (_propertyCell.waterFees.bindCard) {
-                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:201];
-                        feesNameLabel.text = @"水费";
-                        
-                        UILabel *moneyLabel = (UILabel *)[cell viewWithTag:202];
-                        moneyLabel.text = [NSString stringWithFormat:@"%.2f", _propertyCell.waterFees.money];
-                        return cell;
-                    } else {
-                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
-                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:301];
-                        feesNameLabel.text = @"水费";
-                        return cell;
-                    }
-                    break;
-                }
-                case 1: { //电费
-                    if (_propertyCell.electricityFees.bindCard) {
-                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:201];
-                        feesNameLabel.text = @"电费";
-                        
-                        UILabel *moneyLabel = (UILabel *)[cell viewWithTag:202];
-                        moneyLabel.text = [NSString stringWithFormat:@"%.2f", _propertyCell.electricityFees.money];
-                        return cell;
-                    } else {
-                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
-                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:301];
-                        feesNameLabel.text = @"电费";
-                        return cell;
-                    }
-                    break;
-                }
-                case 2: { //气费
-                    if (_propertyCell.gasFrees.bindCard) {
-                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:201];
-                        feesNameLabel.text = @"气费";
-                        
-                        UILabel *moneyLabel = (UILabel *)[cell viewWithTag:202];
-                        moneyLabel.text = [NSString stringWithFormat:@"%.2f", _propertyCell.gasFrees.money];
-                        return cell;
-                    } else {
-                        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
-                        UILabel *feesNameLabel = (UILabel *)[cell viewWithTag:301];
-                        feesNameLabel.text = @"气费";
-                        return cell;
-                    }
-                    break;
-                }
-                default:
-                    return nil;
-                    break;
-            }
             break;
+        case 2: {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+            return cell;
         }
+            break;
+        case 3: {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+            return cell;
+        }
+            break;
+        case 4: {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+            return cell;
+        }
+            break;
+        case 5: {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+            return cell;
+        }
+            break;
+        case 6: {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PaymentCellIdentifier forIndexPath:indexPath];
+            return cell;
+        }
+            break;
+            
         default:
+            NSLog(@"Error##############%s %s %d Wrong indexPath!!!", __FILE__, __FUNCTION__, __LINE__);
+            return nil;
             break;
     }
     
-    return nil;
 }
 
 #pragma mark - Table view delegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-        return 5;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 60;
+    } else {
+        return 44;
+    }
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 20;
+}
+
+#pragma mark - UI actions
+
+- (IBAction)showDetailButtonPressed:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    
+    UIView *view = sender;
+    while (view != nil && ![view isKindOfClass:[UITableViewCell class]]) {
+        view = view.superview;
+    }
+    UITableViewCell *cell = (UITableViewCell *)view;
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSLog(@"indexPath section = %d,indexPath row = %d", indexPath.section, indexPath.row);
+    
+    
+    if (sender.selected) {
+        [_expandedIndexs addObject:@(indexPath.section)];
+    } else {
+        
+        for (NSNumber *index in _expandedIndexs) {
+            if (index.intValue ==  indexPath.section) {
+                [_expandedIndexs removeObject:index];
+                break;
+            }
+        }
+    }
+    
+    [self.tableView reloadData];
+}
+
 
 @end

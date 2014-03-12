@@ -22,8 +22,6 @@
 		B2904C1318C96F6000F89EE0 /* provinces_bck.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2904C1218C96F6000F89EE0 /* provinces_bck.plist */; };
 		B296575418CD64F400CE5C0F /* HXTMyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B296575318CD64F400CE5C0F /* HXTMyProperties.m */; };
 		B296575518CD64F400CE5C0F /* HXTMyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B296575318CD64F400CE5C0F /* HXTMyProperties.m */; };
-		B296575818CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296575718CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m */; };
-		B296575918CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296575718CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m */; };
 		B296576118CD9D8600CE5C0F /* HXTMyPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296576018CD9D8600CE5C0F /* HXTMyPropertyViewController.m */; };
 		B296576218CD9D8700CE5C0F /* HXTMyPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296576018CD9D8600CE5C0F /* HXTMyPropertyViewController.m */; };
 		B296576518CDAB6600CE5C0F /* HXTPropertyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B296576418CDAB6600CE5C0F /* HXTPropertyCell.m */; };
@@ -92,8 +90,6 @@
 		B2904C1218C96F6000F89EE0 /* provinces_bck.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = provinces_bck.plist; path = Models/Data/provinces_bck.plist; sourceTree = "<group>"; };
 		B296575218CD64F400CE5C0F /* HXTMyProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTMyProperties.h; path = Models/MyProperty/HXTMyProperties.h; sourceTree = "<group>"; };
 		B296575318CD64F400CE5C0F /* HXTMyProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTMyProperties.m; path = Models/MyProperty/HXTMyProperties.m; sourceTree = "<group>"; };
-		B296575618CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTMyHousingEstateViewController.h; path = Controllers/MyProperty/HXTMyHousingEstateViewController.h; sourceTree = "<group>"; };
-		B296575718CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTMyHousingEstateViewController.m; path = Controllers/MyProperty/HXTMyHousingEstateViewController.m; sourceTree = "<group>"; };
 		B296575F18CD9D8600CE5C0F /* HXTMyPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTMyPropertyViewController.h; path = Controllers/MyProperty/HXTMyPropertyViewController.h; sourceTree = "<group>"; };
 		B296576018CD9D8600CE5C0F /* HXTMyPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTMyPropertyViewController.m; path = Controllers/MyProperty/HXTMyPropertyViewController.m; sourceTree = "<group>"; };
 		B296576318CDAB6600CE5C0F /* HXTPropertyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTPropertyCell.h; path = Models/MyProperty/HXTPropertyCell.h; sourceTree = "<group>"; };
@@ -180,11 +176,8 @@
 		B2380E0218B6FB7800D895DA /* 我的物业 */ = {
 			isa = PBXGroup;
 			children = (
-				B296575618CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.h */,
-				B296575718CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m */,
 				B296575F18CD9D8600CE5C0F /* HXTMyPropertyViewController.h */,
 				B296576018CD9D8600CE5C0F /* HXTMyPropertyViewController.m */,
-				B2E50CE918CEA12100D17D2C /* 物业账单 */,
 				B296575A18CD9CE500CE5C0F /* 选择小区和城市 */,
 			);
 			name = "我的物业";
@@ -406,13 +399,6 @@
 			name = "我的小日子";
 			sourceTree = "<group>";
 		};
-		B2E50CE918CEA12100D17D2C /* 物业账单 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "物业账单";
-			sourceTree = "<group>";
-		};
 		B2E50CEA18CEA1A800D17D2C /* ComboBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,7 +557,6 @@
 				B296575418CD64F400CE5C0F /* HXTMyProperties.m in Sources */,
 				B2D4880518B5DABA00F331D3 /* HXTHomeViewController.m in Sources */,
 				B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */,
-				B296575818CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m in Sources */,
 				B26C5EEE18CF072400854EF8 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2A4441018C5BF1A008A4592 /* HXTIGoWithTypeViewController.m in Sources */,
 				B2CBEFD718B74CAA00651A30 /* HXTLoginViewController.m in Sources */,
@@ -583,7 +568,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B296575518CD64F400CE5C0F /* HXTMyProperties.m in Sources */,
-				B296575918CD8E3F00CE5C0F /* HXTMyHousingEstateViewController.m in Sources */,
 				B296576218CD9D8700CE5C0F /* HXTMyPropertyViewController.m in Sources */,
 				B296577618CDBADF00CE5C0F /* HXTPropertyBillCell.m in Sources */,
 				B296576618CDAB6600CE5C0F /* HXTPropertyCell.m in Sources */,
