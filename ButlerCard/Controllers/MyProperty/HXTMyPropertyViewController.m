@@ -60,22 +60,33 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *PropertyServiceCellIdentifier    = @"PropertyServiceCellIdentifier";
-    static NSString *ProtertyItemDetailCellIdentifier = @"ProtertyItemDetailCellIdentifier";
-    static NSString *ProtertyItemBindCellIdentifier   = @"ProtertyItemBindCellIdentifier";
-    static NSString *PaymentCellIdentifier            = @"PaymentCellIdentifier";
-
+    static NSString *PropertyServiceCellIdentifier    = @"PropertyServiceCellIdentifier";    //物业服务单元
+    static NSString *ProtertyItemDetailCellIdentifier = @"ProtertyItemDetailCellIdentifier"; //详情单元
+    static NSString *ProtertyItemBindCellIdentifier   = @"ProtertyItemBindCellIdentifier";   //绑定单元
+    static NSString *PaymentCellIdentifier            = @"PaymentCellIdentifier";            //缴费单元
+    
+    HXTPropertyCell *property = [HXTMyProperties sharedInstance].properties[indexPath.section];
     
     switch (indexPath.row) {
-        case 0: {
+        case 0: { //物业服务
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PropertyServiceCellIdentifier forIndexPath:indexPath];
             cell.contentView.tag = indexPath.section;
+            
+            ((UILabel *)[cell viewWithTag:103]).text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, property.house.buildingNo, property.house.unitNo, property.house.roomNo];
             return cell;
         }
             break;
-        case 1: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-            return cell;
+        case 1: { //物管费
+            if (property.propertyManagementFees.bindCard) {
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+                ((UILabel *)[cell viewWithTag:101]).text = @"物管费";
+                ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.propertyManagementFees.money];
+                return cell;
+            } else {
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                ((UILabel *)[cell viewWithTag:101]).text = @"物管费";
+                return cell;
+            }
         }
             break;
         case 2: {
@@ -138,8 +149,6 @@
     UITableViewCell *cell = (UITableViewCell *)view;
     
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    NSLog(@"indexPath section = %d,indexPath row = %d", indexPath.section, indexPath.row);
-    
     
     if (sender.selected) {
         [_expandedIndexs addObject:@(indexPath.section)];

@@ -178,7 +178,7 @@
 			children = (
 				B296575F18CD9D8600CE5C0F /* HXTMyPropertyViewController.h */,
 				B296576018CD9D8600CE5C0F /* HXTMyPropertyViewController.m */,
-				B296575A18CD9CE500CE5C0F /* 选择小区和城市 */,
+				B296575A18CD9CE500CE5C0F /* 选择城市和小区 */,
 			);
 			name = "我的物业";
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 			name = "MyProperty--我的物业";
 			sourceTree = "<group>";
 		};
-		B296575A18CD9CE500CE5C0F /* 选择小区和城市 */ = {
+		B296575A18CD9CE500CE5C0F /* 选择城市和小区 */ = {
 			isa = PBXGroup;
 			children = (
 				B2380E1318B701D400D895DA /* HXTBrowseHousingEstateViewController.h */,
@@ -259,7 +259,7 @@
 				B2032BBE18C8205F00EDAFD8 /* HXTSelectCityViewController.h */,
 				B2032BBF18C8205F00EDAFD8 /* HXTSelectCityViewController.m */,
 			);
-			name = "选择小区和城市";
+			name = "选择城市和小区";
 			sourceTree = "<group>";
 		};
 		B2C27D7F18B48432003AA091 = {
