@@ -96,7 +96,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 
 #pragma -- UICollectionView Delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didSelectItemAtIndexPath indexPath.section = %d, indexPath.row = %d", (int)indexPath.section, (int)indexPath.row);
+    NSLog(@"didSelectItemAtIndexPath indexPath.section = %li, indexPath.row = %li", (long)indexPath.section, (long)indexPath.row);
     switch (_groupNeedDisplay) {
         case DisplayGroupIsShowYouCome: {
             UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TheGroceryStoreStoryboardID"];

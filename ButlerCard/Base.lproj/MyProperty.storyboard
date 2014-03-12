@@ -17,6 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GV7-mB-4fe" customClass="UIControl">
+                                <rect key="frame" x="0.0" y="110" width="320" height="410"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="backgroudTouchUpInside:" destination="Ccr-La-GJZ" eventType="touchUpInside" id="Rxq-fd-Rhx"/>
+                                </connections>
+                            </view>
                             <searchBar contentMode="redraw" placeholder="search" translatesAutoresizingMaskIntoConstraints="NO" id="fxi-H2-nVB">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -180,17 +188,21 @@
                         <constraints>
                             <constraint firstItem="fxi-H2-nVB" firstAttribute="leading" secondItem="ale-PD-u2t" secondAttribute="leading" id="0Gs-sH-SL8"/>
                             <constraint firstItem="IdL-FK-uMw" firstAttribute="leading" secondItem="fxi-H2-nVB" secondAttribute="leading" id="0bn-2G-eQ3"/>
+                            <constraint firstItem="GV7-mB-4fe" firstAttribute="leading" secondItem="ale-PD-u2t" secondAttribute="leading" id="18m-wk-qt9"/>
                             <constraint firstItem="fxi-H2-nVB" firstAttribute="top" secondItem="JP9-ta-hWU" secondAttribute="bottom" constant="2" id="1ux-gi-ccs"/>
                             <constraint firstItem="YQt-pN-ZQr" firstAttribute="top" secondItem="ale-PD-u2t" secondAttribute="top" constant="250" id="2jW-Ds-uMa"/>
                             <constraint firstItem="IdL-FK-uMw" firstAttribute="top" secondItem="ys9-RK-Bci" secondAttribute="bottom" id="55M-UI-02R"/>
+                            <constraint firstAttribute="trailing" secondItem="GV7-mB-4fe" secondAttribute="trailing" id="98B-jH-SzW"/>
                             <constraint firstItem="YQt-pN-ZQr" firstAttribute="centerX" secondItem="xY3-3G-yVu" secondAttribute="centerX" id="9MO-aU-Lz5"/>
                             <constraint firstItem="tWj-St-4Mi" firstAttribute="top" secondItem="IdL-FK-uMw" secondAttribute="bottom" constant="59" id="AwT-2U-uHL"/>
                             <constraint firstItem="YQt-pN-ZQr" firstAttribute="leading" secondItem="ale-PD-u2t" secondAttribute="leading" constant="20" symbolic="YES" id="Eph-w4-aNI"/>
+                            <constraint firstItem="GV7-mB-4fe" firstAttribute="top" secondItem="fxi-H2-nVB" secondAttribute="bottom" id="Gfh-2l-hDH"/>
                             <constraint firstAttribute="trailing" secondItem="YQt-pN-ZQr" secondAttribute="trailing" constant="20" symbolic="YES" id="Rcp-L4-in2"/>
                             <constraint firstItem="xY3-3G-yVu" firstAttribute="trailing" secondItem="ys9-RK-Bci" secondAttribute="trailing" id="Vbo-Fi-wBx"/>
                             <constraint firstItem="IdL-FK-uMw" firstAttribute="trailing" secondItem="fxi-H2-nVB" secondAttribute="trailing" id="WfC-h4-nNa"/>
                             <constraint firstItem="tnV-g5-fCv" firstAttribute="leading" secondItem="ale-PD-u2t" secondAttribute="leading" constant="64" id="bLg-tn-9Ry"/>
                             <constraint firstAttribute="bottom" secondItem="tnV-g5-fCv" secondAttribute="bottom" constant="26" id="eNH-iX-XNG"/>
+                            <constraint firstAttribute="bottom" secondItem="GV7-mB-4fe" secondAttribute="bottom" constant="48" id="gY6-aS-30B"/>
                             <constraint firstAttribute="bottom" secondItem="xY3-3G-yVu" secondAttribute="bottom" constant="48" id="is1-sY-7du"/>
                             <constraint firstItem="ys9-RK-Bci" firstAttribute="leading" secondItem="ale-PD-u2t" secondAttribute="leading" constant="10" id="plc-Bl-36s"/>
                             <constraint firstItem="YQt-pN-ZQr" firstAttribute="bottom" secondItem="IdL-FK-uMw" secondAttribute="bottom" id="qaU-WR-nZz"/>
@@ -210,6 +222,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="applyOpenPropertyView" destination="YQt-pN-ZQr" id="KUo-vB-JTn"/>
+                        <outlet property="coverView" destination="GV7-mB-4fe" id="xAe-OT-boO"/>
                         <outlet property="housingEstatesCollectionView" destination="IdL-FK-uMw" id="G6o-0c-Jui"/>
                         <outlet property="propertySearchBar" destination="fxi-H2-nVB" id="0eZ-c0-Dfq"/>
                         <outlet property="searchDisplayController" destination="Fbp-av-d6F" id="a2P-hY-83r"/>

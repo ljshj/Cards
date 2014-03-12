@@ -11,6 +11,7 @@
 #import "HXTMyProperties.h"
 
 @interface HXTBrowseHousingEstateViewController ()
+@property (weak, nonatomic) IBOutlet UIControl *coverView;
 @property (weak, nonatomic) IBOutlet UISearchBar *propertySearchBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *housingEstatesCollectionView;
 @property (weak, nonatomic) IBOutlet UIView *applyOpenPropertyView;
@@ -41,7 +42,6 @@
     self.navigationItem.rightBarButtonItem.title = [HXTAccountManager sharedInstance].currentCity;
 }
 
-#pragma --
 #pragma -- key value abserver
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"currentCity"] && object == [HXTAccountManager sharedInstance]) {
@@ -59,7 +59,6 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    _propertySearchBar.text = nil;
     [_propertySearchBar resignFirstResponder];
 }
 
@@ -69,8 +68,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma -- mark
 #pragma -- UISearchBar Delegate
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    [self.view bringSubviewToFront:_coverView];
+}
+
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     NSLog(@"1searchBar.text = %@ searchText = %@", searchBar.text, searchText);
     [self startSearch:searchBar.text];
@@ -78,8 +81,8 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
+    [self.view sendSubviewToBack:_coverView];
     NSLog(@"3searchBar.text = %@", searchBar.text);
-    [self startSearch:searchBar.text];
 }
 
 - (void)startSearch:(NSString *)searchString {
@@ -118,9 +121,11 @@
     return cell;
 }
 
+
 #pragma -- UICollectionView Delegate
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didSelectItemAtIndexPath indexPath.section = %d, indexPath.row = %d", (int)indexPath.section, (int)indexPath.row);
+    NSLog(@"didSelectItemAtIndexPath indexPath.section = %li, indexPath.row = %li", (long)indexPath.section, (long)indexPath.row);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -129,7 +134,7 @@
 
 - (IBAction)houseingEstateButtonPressed:(UIButton *)sender {
     NSIndexPath *indexPath = [_housingEstatesCollectionView indexPathForCell:(UICollectionViewCell *)sender.superview.superview];
-    NSLog(@"ButtonPressedAtIndexPath indexPath.section = %ld, indexPath.row = %ld", (long)indexPath.section, (long)indexPath.row);
+    NSLog(@"ButtonPressedAtIndexPath indexPath.section = %li, indexPath.row = %li", (long)indexPath.section, (long)indexPath.row);
     UIViewController *loginViewcontroller = [[UIStoryboard storyboardWithName:@"LoginAndRegister" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
     
     //模态显示
@@ -145,6 +150,12 @@
 #pragma mark -- LoginViewController delegate
 -(void)loginViewController:(UIViewController *)loginViewController loginDidSucessed:(BOOL)sucessed {
     NSLog(@"%s %s %d Login sucessed = %@", __FILE__, __FUNCTION__, __LINE__, sucessed? @"YES": @"NO");
+}
+
+
+- (IBAction)backgroudTouchUpInside:(id)sender {
+    [_propertySearchBar resignFirstResponder];
+    [self.view sendSubviewToBack:_coverView];
 }
 
 - (IBAction)appleyOpenPropertyButtonPressed:(id)sender {
