@@ -56,7 +56,7 @@
 
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [NSString stringWithFormat:@"%li年", 2014 - section];
+    return [NSString stringWithFormat:@"%li年", 2014L - section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,7 +65,7 @@
     
     UIView *yearLabel = [cell viewWithTag:101];
     if ([yearLabel isKindOfClass:[UILabel class]]) {
-        ((UILabel *)yearLabel).text = [NSString stringWithFormat:@"%li月", 12 - indexPath.row];
+        ((UILabel *)yearLabel).text = [NSString stringWithFormat:@"%ld月", 12L - indexPath.row];
     }
     // Configure the cell...
     
@@ -117,9 +117,6 @@
     return 22;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 22;
-}
 
 /*
 #pragma mark - Navigation
