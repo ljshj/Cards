@@ -10,6 +10,7 @@
 
 @interface HXTHouse : NSObject
 @property (copy,   nonatomic) NSString   *housingEstatename;
+@property (copy,   nonatomic) NSString   *imageName;
 @property (assign, nonatomic) NSUInteger buildingNo;
 @property (assign, nonatomic) NSUInteger unitNo;
 @property (assign, nonatomic) NSUInteger roomNo;

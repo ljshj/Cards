@@ -17,17 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="・管家卡" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weN-7v-mVG">
-                                <rect key="frame" x="20" y="40" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srh-sM-lIZ">
-                                <rect key="frame" x="48" y="178" width="81" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srh-sM-lIZ">
+                                <rect key="frame" x="48" y="254" width="81" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="24N-MY-vg2"/>
+                                    <constraint firstAttribute="height" constant="60" id="p4i-Aa-lKq"/>
+                                </constraints>
                                 <state key="normal" title="我的物业">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,10 +32,14 @@
                                     <action selector="myPropertyButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="Rcy-QV-cZz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-WU-xKE">
-                                <rect key="frame" x="179" y="178" width="81" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-WU-xKE">
+                                <rect key="frame" x="179" y="254" width="81" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="jpX-RT-HKt"/>
+                                    <constraint firstAttribute="width" constant="81" id="rzl-bt-jH2"/>
+                                </constraints>
                                 <state key="normal" title="我的小日子">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -46,10 +47,14 @@
                                     <action selector="myEasyLifeButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="TPa-Un-Z0w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sv-IW-BVv">
-                                <rect key="frame" x="48" y="275" width="81" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sv-IW-BVv">
+                                <rect key="frame" x="48" y="446" width="81" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="i4t-9I-Vej"/>
+                                    <constraint firstAttribute="width" constant="81" id="m45-Je-bOr"/>
+                                </constraints>
                                 <state key="normal" title="我的农场">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -57,10 +62,14 @@
                                     <action selector="myFarmButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="r8b-xY-uMT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu1-HL-J5v">
-                                <rect key="frame" x="179" y="275" width="81" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu1-HL-J5v">
+                                <rect key="frame" x="179" y="446" width="81" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ojX-r2-ZQ9"/>
+                                    <constraint firstAttribute="width" constant="81" id="qao-DH-Hrv"/>
+                                </constraints>
                                 <state key="normal" title="我的存钱罐">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -68,10 +77,14 @@
                                     <action selector="myPiggyBankButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="KWS-Br-zTw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEe-sU-cWb">
-                                <rect key="frame" x="48" y="94" width="81" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEe-sU-cWb">
+                                <rect key="frame" x="48" y="78" width="81" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Mj2-Se-2jA"/>
+                                    <constraint firstAttribute="width" constant="81" id="l1M-hB-Rc3"/>
+                                </constraints>
                                 <state key="normal" title="我的账户">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -81,6 +94,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WEe-sU-cWb" firstAttribute="leading" secondItem="xRp-wG-DGX" secondAttribute="leading" constant="48" id="1do-Bl-IGa"/>
+                            <constraint firstAttribute="trailing" secondItem="nu1-HL-J5v" secondAttribute="trailing" constant="60" id="DhV-ac-Yt1"/>
+                            <constraint firstItem="srh-sM-lIZ" firstAttribute="leading" secondItem="xRp-wG-DGX" secondAttribute="leading" constant="48" id="DxO-CG-IKW"/>
+                            <constraint firstAttribute="trailing" secondItem="Pqa-WU-xKE" secondAttribute="trailing" constant="60" id="Kho-pr-veG"/>
+                            <constraint firstItem="yf4-Qb-jnH" firstAttribute="top" secondItem="nu1-HL-J5v" secondAttribute="bottom" constant="13" id="PET-Iq-bek"/>
+                            <constraint firstItem="yf4-Qb-jnH" firstAttribute="top" secondItem="9Sv-IW-BVv" secondAttribute="bottom" constant="13" id="PhR-AL-rf5"/>
+                            <constraint firstItem="WEe-sU-cWb" firstAttribute="top" secondItem="usY-4L-De7" secondAttribute="bottom" constant="14" id="TbB-Ts-mn8"/>
+                            <constraint firstItem="9Sv-IW-BVv" firstAttribute="leading" secondItem="xRp-wG-DGX" secondAttribute="leading" constant="48" id="VtS-ff-exO"/>
+                            <constraint firstAttribute="centerY" secondItem="Pqa-WU-xKE" secondAttribute="centerY" id="Y22-NL-VL7"/>
+                            <constraint firstAttribute="centerY" secondItem="srh-sM-lIZ" secondAttribute="centerY" id="Zix-Rz-6th"/>
+                            <constraint firstItem="WEe-sU-cWb" firstAttribute="top" secondItem="usY-4L-De7" secondAttribute="bottom" constant="14" id="jSq-DU-jF7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2FR-eI-eZB">
                         <barButtonItem key="backBarButtonItem" title=" " id="6ZD-Hj-Gxb"/>

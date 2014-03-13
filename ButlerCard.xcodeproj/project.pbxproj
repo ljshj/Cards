@@ -50,6 +50,9 @@
 		B2C27DC218B48C41003AA091 /* LoginAndRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C27DC118B48C41003AA091 /* LoginAndRegister.storyboard */; };
 		B2CBEFD718B74CAA00651A30 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBEFD618B74CAA00651A30 /* HXTLoginViewController.m */; };
 		B2CBEFDA18B7582F00651A30 /* HXTRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBEFD918B7582F00651A30 /* HXTRegisterAccountViewController.m */; };
+		B2CE1BD818D1865D007A754D /* MyPropertyTableviewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2CE1BD718D1865D007A754D /* MyPropertyTableviewHeader.xib */; };
+		B2CE1BDB18D18F42007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE1BDA18D18F42007A754D /* HXTPropertyItemDetailTableViewController.m */; };
+		B2CE1BDC18D18F42007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE1BDA18D18F42007A754D /* HXTPropertyItemDetailTableViewController.m */; };
 		B2D4880518B5DABA00F331D3 /* HXTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D4880418B5DABA00F331D3 /* HXTHomeViewController.m */; };
 		B2D4880818B5DF1000F331D3 /* MyEasyLife.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D4880618B5DF1000F331D3 /* MyEasyLife.storyboard */; };
 		B2E31FD918BC498100165F89 /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E31FD718BC498100165F89 /* checkbox_checked.png */; };
@@ -127,6 +130,9 @@
 		B2CBEFD618B74CAA00651A30 /* HXTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTLoginViewController.m; path = Controllers/Login/HXTLoginViewController.m; sourceTree = "<group>"; };
 		B2CBEFD818B7582F00651A30 /* HXTRegisterAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTRegisterAccountViewController.h; path = Controllers/Login/HXTRegisterAccountViewController.h; sourceTree = "<group>"; };
 		B2CBEFD918B7582F00651A30 /* HXTRegisterAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTRegisterAccountViewController.m; path = Controllers/Login/HXTRegisterAccountViewController.m; sourceTree = "<group>"; };
+		B2CE1BD718D1865D007A754D /* MyPropertyTableviewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyPropertyTableviewHeader.xib; path = Controllers/MyProperty/MyPropertyTableviewHeader.xib; sourceTree = "<group>"; };
+		B2CE1BD918D18F42007A754D /* HXTPropertyItemDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTPropertyItemDetailTableViewController.h; path = Controllers/MyProperty/HXTPropertyItemDetailTableViewController.h; sourceTree = "<group>"; };
+		B2CE1BDA18D18F42007A754D /* HXTPropertyItemDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTPropertyItemDetailTableViewController.m; path = Controllers/MyProperty/HXTPropertyItemDetailTableViewController.m; sourceTree = "<group>"; };
 		B2D4880318B5DABA00F331D3 /* HXTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTHomeViewController.h; path = Controllers/HXTHomeViewController.h; sourceTree = "<group>"; };
 		B2D4880418B5DABA00F331D3 /* HXTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTHomeViewController.m; path = Controllers/HXTHomeViewController.m; sourceTree = "<group>"; };
 		B2D4880718B5DF1000F331D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyEasyLife.storyboard; sourceTree = "<group>"; };
@@ -178,6 +184,9 @@
 			children = (
 				B296575F18CD9D8600CE5C0F /* HXTMyPropertyViewController.h */,
 				B296576018CD9D8600CE5C0F /* HXTMyPropertyViewController.m */,
+				B2CE1BD918D18F42007A754D /* HXTPropertyItemDetailTableViewController.h */,
+				B2CE1BDA18D18F42007A754D /* HXTPropertyItemDetailTableViewController.m */,
+				B2CE1BD718D1865D007A754D /* MyPropertyTableviewHeader.xib */,
 				B296575A18CD9CE500CE5C0F /* 选择城市和小区 */,
 			);
 			name = "我的物业";
@@ -519,6 +528,7 @@
 				B2904C1118C962E400F89EE0 /* hotCities.plist in Resources */,
 				B2C27DC218B48C41003AA091 /* LoginAndRegister.storyboard in Resources */,
 				B2904C1318C96F6000F89EE0 /* provinces_bck.plist in Resources */,
+				B2CE1BD818D1865D007A754D /* MyPropertyTableviewHeader.xib in Resources */,
 				B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */,
 				B2A4441318C5CAD5008A4592 /* MyFarm.storyboard in Resources */,
 			);
@@ -552,6 +562,7 @@
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
 				B296577518CDBADF00CE5C0F /* HXTPropertyBillCell.m in Sources */,
 				B296576118CD9D8600CE5C0F /* HXTMyPropertyViewController.m in Sources */,
+				B2CE1BDB18D18F42007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
 				B2A4440A18C5BEF0008A4592 /* HXTMyEasyLifeViewController.m in Sources */,
 				B2CBEFDA18B7582F00651A30 /* HXTRegisterAccountViewController.m in Sources */,
 				B296575418CD64F400CE5C0F /* HXTMyProperties.m in Sources */,
@@ -572,6 +583,7 @@
 				B296577618CDBADF00CE5C0F /* HXTPropertyBillCell.m in Sources */,
 				B296576618CDAB6600CE5C0F /* HXTPropertyCell.m in Sources */,
 				B26C5EEF18CF072400854EF8 /* HXTTheGroceryStoreViewController.m in Sources */,
+				B2CE1BDC18D18F42007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
 				B296576E18CDB8E300CE5C0F /* HXTHouse.m in Sources */,
 				B2E31FE118BC90F000165F89 /* HXTAccountManager.m in Sources */,
 				B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */,

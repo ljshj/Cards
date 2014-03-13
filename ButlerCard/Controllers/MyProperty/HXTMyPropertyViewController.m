@@ -85,7 +85,7 @@
                 ((UIButton *)button).selected = isExpanded ? YES : NO;
             }
 
-            ((UILabel *)[cell viewWithTag:103]).text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, property.house.buildingNo, property.house.unitNo, property.house.roomNo];
+            ((UILabel *)[cell viewWithTag:103]).text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, (long)property.house.buildingNo, (long)property.house.unitNo, (long)property.house.roomNo];
             return cell;
         }
             break;
@@ -181,6 +181,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 20;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - UI actions
