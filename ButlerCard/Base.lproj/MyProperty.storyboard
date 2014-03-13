@@ -360,6 +360,25 @@
             </objects>
             <point key="canvasLocation" x="1358" y="132"/>
         </scene>
+        <!--View Controller - 缴费-->
+        <scene sceneID="Rxg-L9-LB4">
+            <objects>
+                <viewController id="LPQ-63-w2k" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6zX-tU-kdQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="32u-Ef-mOa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mqu-Ts-V3F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="缴费" id="qVP-kI-NUV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ob-8c-Mtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843" y="-343"/>
+        </scene>
         <!--My Property View Controller - 我的物业-->
         <scene sceneID="05V-e1-hS3">
             <objects>
@@ -406,6 +425,10 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <segue destination="rCK-Hb-Ay7" kind="push" id="IX0-wA-i8q"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProtertyItemDetailCellIdentifier" id="LiK-Ut-vv0">
                                 <rect key="frame" x="0.0" y="146" width="320" height="44"/>
@@ -435,6 +458,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zcJ-fU-yOc" kind="push" id="TWN-lQ-yd2"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProtertyItemBindCellIdentifier" id="WKt-nA-UIr">
                                 <rect key="frame" x="0.0" y="190" width="320" height="44"/>
@@ -458,6 +484,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="V7w-cy-Qz8" kind="push" id="RC3-D4-yai"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentCellIdentifier" id="nTu-N0-vfQ">
                                 <rect key="frame" x="0.0" y="234" width="320" height="44"/>
@@ -466,15 +495,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="缴费" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-nh-0Jx">
-                                            <rect key="frame" x="139" y="11" width="34" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="缴费" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-nh-0Jx">
+                                            <rect key="frame" x="110" y="0.0" width="100" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="LPQ-63-w2k" kind="push" id="Zca-jU-nZ0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -482,11 +514,80 @@
                             <outlet property="delegate" destination="WJD-nw-qmQ" id="ZwP-zW-3So"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="我的物业" id="FDu-Ri-jBf"/>
+                    <navigationItem key="navigationItem" title="我的物业" id="FDu-Ri-jBf">
+                        <barButtonItem key="rightBarButtonItem" image="plus" id="hgU-cf-bmT"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFx-Pm-zYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1256" y="-1286"/>
+        </scene>
+        <!--View Controller - 添加绑定-->
+        <scene sceneID="RVJ-p9-hpJ">
+            <objects>
+                <viewController id="V7w-cy-Qz8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wdO-m4-Qio"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ac-Ku-ecW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bAS-FO-Uq6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="添加绑定" id="37z-b0-A15"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrZ-dQ-80p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843" y="-988"/>
+        </scene>
+        <!--View Controller - 物业服务-->
+        <scene sceneID="Obn-a8-Oi4">
+            <objects>
+                <viewController id="rCK-Hb-Ay7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0BG-c5-Nv6"/>
+                        <viewControllerLayoutGuide type="bottom" id="sHw-av-Pfg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b4f-tg-Hja">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="物业服务" id="gcs-zm-bVe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQX-Ez-7xF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843" y="-2278"/>
+        </scene>
+        <!--Table View Controller - 我的物业详情-->
+        <scene sceneID="Cvo-DD-Ava">
+            <objects>
+                <tableViewController id="zcJ-fU-yOc" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kkH-ew-cgw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PropertyDetailCellIdentifier" id="G3S-kh-fKI">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G3S-kh-fKI" id="3R5-wz-kB6">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zcJ-fU-yOc" id="MJw-gu-abV"/>
+                            <outlet property="delegate" destination="zcJ-fU-yOc" id="3qh-Tl-H3D"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="我的物业详情" id="ktZ-4i-P07"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kon-bN-tW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843" y="-1632"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MGU-ac-dfs">
@@ -529,6 +630,7 @@
         <image name="down" width="26" height="26"/>
         <image name="house" width="26" height="26"/>
         <image name="housingEstate.jpg" width="320" height="240"/>
+        <image name="plus" width="26" height="26"/>
         <image name="up" width="26" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

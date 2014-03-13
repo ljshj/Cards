@@ -50,8 +50,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    for (NSNumber *index in _expandedIndexs) {
-        if (index.intValue ==  section) {
+    for (NSNumber *expandedIndex in _expandedIndexs) {
+        if (expandedIndex.intValue ==  section) {
             return 7;
         }
     }
@@ -72,6 +72,19 @@
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PropertyServiceCellIdentifier forIndexPath:indexPath];
             cell.contentView.tag = indexPath.section;
             
+            BOOL isExpanded = NO;
+            for (NSNumber *expandedIndex in _expandedIndexs) {
+                if (expandedIndex.intValue ==  indexPath.section) {
+                    isExpanded = YES;
+                    break;
+                }
+            }
+            
+            UIView *button = [cell viewWithTag:104];
+            if ([button isKindOfClass:[UIButton class]]) {
+                ((UIButton *)button).selected = isExpanded ? YES : NO;
+            }
+
             ((UILabel *)[cell viewWithTag:103]).text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, property.house.buildingNo, property.house.unitNo, property.house.roomNo];
             return cell;
         }
@@ -89,27 +102,59 @@
             }
         }
             break;
-        case 2: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-            return cell;
+        case 2: { //停车费
+            if (property.parkingFees.bindCard) {
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+                ((UILabel *)[cell viewWithTag:101]).text = @"停车费";
+                ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.parkingFees.money];
+                return cell;
+            } else {
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                ((UILabel *)[cell viewWithTag:101]).text = @"停车费";
+                return cell;
+            }
         }
             break;
-        case 3: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
-            return cell;
+        case 3: { //水费
+            if (property.waterFees.bindCard) {
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+                ((UILabel *)[cell viewWithTag:101]).text = @"水费";
+                ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.waterFees.money];
+                return cell;
+            } else {
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                ((UILabel *)[cell viewWithTag:101]).text = @"水费";
+                return cell;
+            }
         }
             break;
-        case 4: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
-            return cell;
+        case 4: { //电费
+            if (property.electricityFees.bindCard) {
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+                ((UILabel *)[cell viewWithTag:101]).text = @"电费";
+                ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.electricityFees.money];
+                return cell;
+            } else {
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                ((UILabel *)[cell viewWithTag:101]).text = @"电费";
+                return cell;
+            }
         }
             break;
-        case 5: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
-            return cell;
+        case 5: { //气费
+            if (property.gasFrees.bindCard) {
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+                ((UILabel *)[cell viewWithTag:101]).text = @"气费";
+                ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.gasFrees.money];
+                return cell;
+            } else {
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                ((UILabel *)[cell viewWithTag:101]).text = @"气费";
+                return cell;
+            }
         }
             break;
-        case 6: {
+        case 6: { //缴费按钮
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PaymentCellIdentifier forIndexPath:indexPath];
             return cell;
         }
@@ -121,6 +166,7 @@
             break;
     }
     
+    return  nil;
 }
 
 #pragma mark - Table view delegate
@@ -143,7 +189,7 @@
     sender.selected = !sender.selected;
     
     UIView *view = sender;
-    while (view != nil && ![view isKindOfClass:[UITableViewCell class]]) {
+    while (view && ![view isKindOfClass:[UITableViewCell class]]) {
         view = view.superview;
     }
     UITableViewCell *cell = (UITableViewCell *)view;
@@ -154,15 +200,16 @@
         [_expandedIndexs addObject:@(indexPath.section)];
     } else {
         
-        for (NSNumber *index in _expandedIndexs) {
-            if (index.intValue ==  indexPath.section) {
-                [_expandedIndexs removeObject:index];
+        for (NSNumber *expandedIndex in _expandedIndexs) {
+            if (expandedIndex.intValue ==  indexPath.section) {
+                [_expandedIndexs removeObject:expandedIndex];
                 break;
             }
         }
     }
     
     [self.tableView reloadData];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 

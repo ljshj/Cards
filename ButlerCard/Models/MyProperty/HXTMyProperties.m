@@ -64,6 +64,42 @@
         propertyA.gasFrees.bindCard = NO;
         
         [myProprtyModel.properties addObject:propertyA];
+        
+        propertyA = [[HXTPropertyCell alloc] init];
+        propertyA.house.housingEstatename = @"置信A区";
+        propertyA.house.buildingNo = 2;
+        propertyA.house.unitNo = 3;
+        propertyA.house.roomNo = 301;
+        propertyA.propertyManagementFees.money = 220.1;
+        propertyA.propertyManagementFees.bindCard = YES;
+        propertyA.parkingFees.money = -300.23;
+        propertyA.parkingFees.bindCard = YES;
+        propertyA.waterFees.money = 400;
+        propertyA.waterFees.bindCard = YES;
+        propertyA.electricityFees.money = -500;
+        propertyA.electricityFees.bindCard = NO;
+        propertyA.gasFrees.money = 0;
+        propertyA.gasFrees.bindCard = NO;
+        
+        [myProprtyModel.properties addObject:propertyA];
+        
+        propertyA = [[HXTPropertyCell alloc] init];
+        propertyA.house.housingEstatename = @"华润AA";
+        propertyA.house.buildingNo = 2;
+        propertyA.house.unitNo = 3;
+        propertyA.house.roomNo = 301;
+        propertyA.propertyManagementFees.money = 220.1;
+        propertyA.propertyManagementFees.bindCard = YES;
+        propertyA.parkingFees.money = -300.23;
+        propertyA.parkingFees.bindCard = YES;
+        propertyA.waterFees.money = 400;
+        propertyA.waterFees.bindCard = YES;
+        propertyA.electricityFees.money = -500;
+        propertyA.electricityFees.bindCard = NO;
+        propertyA.gasFrees.money = 0;
+        propertyA.gasFrees.bindCard = NO;
+        
+        [myProprtyModel.properties addObject:propertyA];
     }
     
     return myProprtyModel;

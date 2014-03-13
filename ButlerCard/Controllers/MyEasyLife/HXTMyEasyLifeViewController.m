@@ -25,7 +25,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 @property (weak, nonatomic) IBOutlet UIButton *groupTogetherButton;
 @property (weak, nonatomic) IBOutlet UIButton *secondHandButton;
 @property (weak, nonatomic) IBOutlet HXTViewWithArrow *arrowView;
-@property (weak, nonatomic) IBOutlet UICollectionView *iWantCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (assign, nonatomic) DisplayGroup groupNeedDisplay;
 @property (strong, nonatomic) NSArray *DisplayGroupItems;
@@ -75,7 +75,6 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     // Dispose of any resources that can be recreated.
 }
 
-#pragma --
 #pragma UICollectionView DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [_DisplayGroupItems[_groupNeedDisplay] count];
@@ -120,7 +119,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
         UIButton *button = (UIButton *)sender;
         _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
         [_arrowView setNeedsDisplay];
-        [_iWantCollectionView reloadData];
+        [_collectionView reloadData];
     }
 }
 
@@ -131,7 +130,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
         UIButton *button = (UIButton *)sender;
         _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
         [_arrowView setNeedsDisplay];
-        [_iWantCollectionView reloadData];
+        [_collectionView reloadData];
     }
 }
 
@@ -142,7 +141,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
         UIButton *button = (UIButton *)sender;
         _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
         [_arrowView setNeedsDisplay];
-        [_iWantCollectionView reloadData];
+        [_collectionView reloadData];
     }
 }
 
@@ -153,7 +152,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
         UIButton *button = (UIButton *)sender;
         _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
         [_arrowView setNeedsDisplay];
-        [_iWantCollectionView reloadData];
+        [_collectionView reloadData];
     }
 }
 

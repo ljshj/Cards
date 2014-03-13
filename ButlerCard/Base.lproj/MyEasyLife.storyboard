@@ -289,10 +289,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sNi-xv-fuz" firstAttribute="top" secondItem="J6k-VF-XI0" secondAttribute="top" id="QUp-6Q-zR8"/>
                             <constraint firstItem="J6k-VF-XI0" firstAttribute="leading" secondItem="6zo-Id-osq" secondAttribute="leading" id="Qas-q3-IRg"/>
                             <constraint firstItem="9lt-UQ-rTG" firstAttribute="top" secondItem="J6k-VF-XI0" secondAttribute="bottom" id="W1q-W8-nvW"/>
                             <constraint firstAttribute="trailing" secondItem="J6k-VF-XI0" secondAttribute="trailing" id="WBt-42-2aB"/>
-                            <constraint firstItem="J6k-VF-XI0" firstAttribute="top" secondItem="sNi-xv-fuz" secondAttribute="bottom" id="lfp-f6-A6Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的小日子" id="DiW-jA-gXM">
@@ -301,10 +301,10 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="arrowView" destination="djK-3C-1eS" id="se3-SR-fGb"/>
+                        <outlet property="collectionView" destination="XWn-Rd-0Q2" id="SVD-kr-KPA"/>
                         <outlet property="dropDownComboBoxView" destination="i7X-xU-1WT" id="TT6-eA-ULT"/>
                         <outlet property="groupTogetherButton" destination="7AP-Nz-UIi" id="rgi-tV-PXx"/>
                         <outlet property="iGoButton" destination="Ubd-eA-KJJ" id="nVz-p9-GAx"/>
-                        <outlet property="iWantCollectionView" destination="XWn-Rd-0Q2" id="oA1-7b-eNv"/>
                         <outlet property="secondHandButton" destination="DVq-1I-Brs" id="DRH-6F-X4T"/>
                         <outlet property="youComeButton" destination="hZ3-dI-lUx" id="hWt-Sn-4Ry"/>
                     </connections>
