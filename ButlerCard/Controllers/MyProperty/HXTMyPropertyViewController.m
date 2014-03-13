@@ -7,9 +7,12 @@
 //
 
 #import "HXTMyPropertyViewController.h"
+#import "HXTPropertyTableViewHeaderFooterView.h"
 #import "HXTMyProperties.h"
 
-@interface HXTMyPropertyViewController ()
+#define kHeaderFooterViewReuseIdentifier @"HeaderFooterViewReuseIdentifier"
+
+@interface HXTMyPropertyViewController () <HXTPropertyTableViewHeaderFooterViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray  *expandedIndexs;
 
@@ -31,6 +34,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     _expandedIndexs = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"MyPropertyTableViewHeaderFooterView" bundle:[NSBundle mainBundle]]forHeaderFooterViewReuseIdentifier:kHeaderFooterViewReuseIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,6 +62,7 @@
     }
     return 1;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -171,6 +177,54 @@
 
 #pragma mark - Table view delegate
 
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    
+    HXTPropertyTableViewHeaderFooterView *tableViewHeaderFooterView = (HXTPropertyTableViewHeaderFooterView *)[tableView headerViewForSection:section];
+    tableViewHeaderFooterView.tag = section;
+    
+    //设置Header显示小区地址
+    HXTPropertyCell *property = [HXTMyProperties sharedInstance].properties[section];
+    UILabel *label = (UILabel *)[tableViewHeaderFooterView viewWithTag:103];
+    label.text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, (long)property.house.buildingNo, (long)property.house.unitNo, (long)property.house.roomNo];
+    
+    BOOL needExpand = NO;
+    for (NSNumber *expandedIndex in _expandedIndexs) {
+        if (expandedIndex.intValue ==  tableViewHeaderFooterView.tag) {
+            needExpand = YES;
+            break;
+        }
+    }
+    
+    if (needExpand) {
+        tableViewHeaderFooterView.expanded = YES;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    HXTPropertyTableViewHeaderFooterView *tableViewHeaderFooterView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:kHeaderFooterViewReuseIdentifier];
+    tableViewHeaderFooterView.delegate = self;
+    tableViewHeaderFooterView.tag = section;
+    
+     //设置Header显示小区地址
+    HXTPropertyCell *property = [HXTMyProperties sharedInstance].properties[section];
+    UILabel *label = (UILabel *)[tableViewHeaderFooterView viewWithTag:103];
+    label.text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, (long)property.house.buildingNo, (long)property.house.unitNo, (long)property.house.roomNo];
+    
+    BOOL needExpand = NO;
+    for (NSNumber *expandedIndex in _expandedIndexs) {
+        if (expandedIndex.intValue ==  tableViewHeaderFooterView.tag) {
+            needExpand = YES;
+            break;
+        }
+    }
+    
+    if (needExpand) {
+        tableViewHeaderFooterView.expanded = YES;
+    }
+    
+    return tableViewHeaderFooterView;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         return 60;
@@ -180,32 +234,26 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 20;
+    return 60;
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - UI actions
 
-- (IBAction)showDetailButtonPressed:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    
-    UIView *view = sender;
-    while (view && ![view isKindOfClass:[UITableViewCell class]]) {
-        view = view.superview;
-    }
-    UITableViewCell *cell = (UITableViewCell *)view;
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    
-    if (sender.selected) {
-        [_expandedIndexs addObject:@(indexPath.section)];
-    } else {
-        
+
+#pragma mark - HXTPropertyTableViewHeaderFooterView Delegate
+
+-(void)HXTPropertyTableViewHeaderFooterView:(HXTPropertyTableViewHeaderFooterView *)tableViewHeaderFooterView expanded:(BOOL)expanded{
+    if (expanded) {
+        NSLog(@"expanded! tableViewHeaderFooterView.tag = %ld", (long)tableViewHeaderFooterView.tag);
+        [_expandedIndexs addObject:@(tableViewHeaderFooterView.tag)];
+    }else {
+        NSLog(@"not expanded! tableViewHeaderFooterView.tag = %ld", (long)tableViewHeaderFooterView.tag);
         for (NSNumber *expandedIndex in _expandedIndexs) {
-            if (expandedIndex.intValue ==  indexPath.section) {
+            if (expandedIndex.intValue ==  tableViewHeaderFooterView.tag) {
                 [_expandedIndexs removeObject:expandedIndex];
                 break;
             }
@@ -213,7 +261,36 @@
     }
     
     [self.tableView reloadData];
-    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+}
+
+#pragma mark - UI actions
+
+- (IBAction)showDetailButtonPressed:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    
+//    UIView *view = sender;
+//    while (view && ![view isKindOfClass:[UITableViewCell class]]) {
+//        view = view.superview;
+//    }
+//    UITableViewCell *cell = (UITableViewCell *)view;
+//    
+//    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//    
+//    if (sender.selected) {
+//        [_expandedIndexs addObject:@(indexPath.section)];
+//    } else {
+//        
+//        for (NSNumber *expandedIndex in _expandedIndexs) {
+//            if (expandedIndex.intValue ==  indexPath.section) {
+//                [_expandedIndexs removeObject:expandedIndex];
+//                break;
+//            }
+//        }
+//    }
+//    
+//    [self.tableView reloadData];
+//    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 

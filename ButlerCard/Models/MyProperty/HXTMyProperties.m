@@ -34,7 +34,7 @@
         aProperty.house.imageName = @"house";
         aProperty.house.buildingNo = 1;
         aProperty.house.unitNo = 2;
-        aProperty.house.roomNo = 302;
+        aProperty.house.roomNo = 301;
         aProperty.propertyManagementFees.money = 120;
         aProperty.propertyManagementFees.bindCard = YES;
         aProperty.parkingFees.money = -200;
@@ -53,7 +53,7 @@
         aProperty.house.imageName = @"house";
         aProperty.house.buildingNo = 2;
         aProperty.house.unitNo = 3;
-        aProperty.house.roomNo = 301;
+        aProperty.house.roomNo = 302;
         aProperty.propertyManagementFees.money = 220.1;
         aProperty.propertyManagementFees.bindCard = YES;
         aProperty.parkingFees.money = -300.23;
@@ -72,7 +72,7 @@
         aProperty.house.imageName = @"house";
         aProperty.house.buildingNo = 2;
         aProperty.house.unitNo = 3;
-        aProperty.house.roomNo = 301;
+        aProperty.house.roomNo = 303;
         aProperty.propertyManagementFees.money = 220.1;
         aProperty.propertyManagementFees.bindCard = YES;
         aProperty.parkingFees.money = -300.23;
@@ -91,7 +91,7 @@
         aProperty.house.imageName = @"house";
         aProperty.house.buildingNo = 2;
         aProperty.house.unitNo = 3;
-        aProperty.house.roomNo = 301;
+        aProperty.house.roomNo = 304;
         aProperty.propertyManagementFees.money = 220.1;
         aProperty.propertyManagementFees.bindCard = YES;
         aProperty.parkingFees.money = -300.23;
