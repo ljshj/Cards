@@ -21,6 +21,12 @@
 		B2A4440F18C5BF1A008A4592 /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440C18C5BF1A008A4592 /* HXTIGoViewController.m */; };
 		B2A4441018C5BF1A008A4592 /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A4440E18C5BF1A008A4592 /* HXTIGoWithTypeViewController.m */; };
 		B2A4441318C5CAD5008A4592 /* MyFarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */; };
+		B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */; };
+		B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */; };
+		B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */; };
+		B2AA7EAF18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */; };
+		B2AA7EB018D2AAE800F4EF88 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */; };
+		B2AA7EB118D2AAE800F4EF88 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */; };
 		B2C27D8C18B48432003AA091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8B18B48432003AA091 /* Foundation.framework */; };
 		B2C27D8E18B48432003AA091 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8D18B48432003AA091 /* CoreGraphics.framework */; };
 		B2C27D9018B48432003AA091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8F18B48432003AA091 /* UIKit.framework */; };
@@ -35,8 +41,6 @@
 		B2C27DB518B48432003AA091 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2C27DB318B48432003AA091 /* InfoPlist.strings */; };
 		B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C27DB618B48432003AA091 /* ButlerCardTests.m */; };
 		B2C27DC218B48C41003AA091 /* LoginAndRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C27DC118B48C41003AA091 /* LoginAndRegister.storyboard */; };
-		B2CBEFD718B74CAA00651A30 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBEFD618B74CAA00651A30 /* HXTLoginViewController.m */; };
-		B2CBEFDA18B7582F00651A30 /* HXTRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBEFD918B7582F00651A30 /* HXTRegisterAccountViewController.m */; };
 		B2CE1BE518D2A744007A754D /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C27D9D18B48432003AA091 /* Root.storyboard */; };
 		B2CE1C0318D2A912007A754D /* HXTBindCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE1BEB18D2A912007A754D /* HXTBindCardViewController.m */; };
 		B2CE1C0418D2A912007A754D /* HXTBindCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE1BEB18D2A912007A754D /* HXTBindCardViewController.m */; };
@@ -67,8 +71,6 @@
 		B2E31FD918BC498100165F89 /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E31FD718BC498100165F89 /* checkbox_checked.png */; };
 		B2E31FDA18BC498100165F89 /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E31FD818BC498100165F89 /* checkbox_unchecked.png */; };
 		B2E31FDD18BC49A700165F89 /* HXTCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E31FDC18BC49A700165F89 /* HXTCheckBox.m */; };
-		B2E31FE018BC90F000165F89 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E31FDF18BC90F000165F89 /* HXTAccountManager.m */; };
-		B2E31FE118BC90F000165F89 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E31FDF18BC90F000165F89 /* HXTAccountManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,12 @@
 		B2A4440D18C5BF1A008A4592 /* HXTIGoWithTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTIGoWithTypeViewController.h; path = Controllers/MyEasyLife/IGo/HXTIGoWithTypeViewController.h; sourceTree = "<group>"; };
 		B2A4440E18C5BF1A008A4592 /* HXTIGoWithTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTIGoWithTypeViewController.m; path = Controllers/MyEasyLife/IGo/HXTIGoWithTypeViewController.m; sourceTree = "<group>"; };
 		B2A4441218C5CAD5008A4592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyFarm.storyboard; sourceTree = "<group>"; };
+		B2AA7EA418D2AAE800F4EF88 /* HXTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTLoginViewController.h; sourceTree = "<group>"; };
+		B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTLoginViewController.m; sourceTree = "<group>"; };
+		B2AA7EA618D2AAE800F4EF88 /* HXTRegisterAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTRegisterAccountViewController.h; sourceTree = "<group>"; };
+		B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTRegisterAccountViewController.m; sourceTree = "<group>"; };
+		B2AA7EA918D2AAE800F4EF88 /* HXTAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTAccountManager.h; sourceTree = "<group>"; };
+		B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTAccountManager.m; sourceTree = "<group>"; };
 		B2C27D8818B48432003AA091 /* ButlerCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButlerCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C27D8B18B48432003AA091 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2C27D8D18B48432003AA091 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,10 +127,6 @@
 		B2C27DB418B48432003AA091 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B2C27DB618B48432003AA091 /* ButlerCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButlerCardTests.m; sourceTree = "<group>"; };
 		B2C27DC118B48C41003AA091 /* LoginAndRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndRegister.storyboard; sourceTree = "<group>"; };
-		B2CBEFD518B74CAA00651A30 /* HXTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTLoginViewController.h; path = Controllers/Login/HXTLoginViewController.h; sourceTree = "<group>"; };
-		B2CBEFD618B74CAA00651A30 /* HXTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTLoginViewController.m; path = Controllers/Login/HXTLoginViewController.m; sourceTree = "<group>"; };
-		B2CBEFD818B7582F00651A30 /* HXTRegisterAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTRegisterAccountViewController.h; path = Controllers/Login/HXTRegisterAccountViewController.h; sourceTree = "<group>"; };
-		B2CBEFD918B7582F00651A30 /* HXTRegisterAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTRegisterAccountViewController.m; path = Controllers/Login/HXTRegisterAccountViewController.m; sourceTree = "<group>"; };
 		B2CE1BEA18D2A912007A754D /* HXTBindCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTBindCardViewController.h; sourceTree = "<group>"; };
 		B2CE1BEB18D2A912007A754D /* HXTBindCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTBindCardViewController.m; sourceTree = "<group>"; };
 		B2CE1BEC18D2A912007A754D /* HXTBrowseHousingEstateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTBrowseHousingEstateViewController.h; sourceTree = "<group>"; };
@@ -153,8 +157,6 @@
 		B2E31FD818BC498100165F89 /* checkbox_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_unchecked.png; path = ButlerCard/View/CheckBox/checkbox_unchecked.png; sourceTree = SOURCE_ROOT; };
 		B2E31FDB18BC49A700165F89 /* HXTCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTCheckBox.h; path = ButlerCard/View/CheckBox/HXTCheckBox.h; sourceTree = SOURCE_ROOT; };
 		B2E31FDC18BC49A700165F89 /* HXTCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTCheckBox.m; path = ButlerCard/View/CheckBox/HXTCheckBox.m; sourceTree = SOURCE_ROOT; };
-		B2E31FDE18BC90F000165F89 /* HXTAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTAccountManager.h; path = Models/AccountManager/HXTAccountManager.h; sourceTree = "<group>"; };
-		B2E31FDF18BC90F000165F89 /* HXTAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTAccountManager.m; path = Models/AccountManager/HXTAccountManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,46 @@
 			name = "你来";
 			sourceTree = "<group>";
 		};
+		B2AA7EA218D2AACB00F4EF88 /* AccountManager--账户管理 */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA7EA318D2AAE800F4EF88 /* Controller */,
+				B2AA7EA818D2AAE800F4EF88 /* Model */,
+				B2AA7EAB18D2AAE800F4EF88 /* View */,
+			);
+			name = "AccountManager--账户管理";
+			sourceTree = "<group>";
+		};
+		B2AA7EA318D2AAE800F4EF88 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA7EA418D2AAE800F4EF88 /* HXTLoginViewController.h */,
+				B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */,
+				B2AA7EA618D2AAE800F4EF88 /* HXTRegisterAccountViewController.h */,
+				B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */,
+			);
+			name = Controller;
+			path = AccountManager/Controller;
+			sourceTree = "<group>";
+		};
+		B2AA7EA818D2AAE800F4EF88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA7EA918D2AAE800F4EF88 /* HXTAccountManager.h */,
+				B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */,
+			);
+			name = Model;
+			path = AccountManager/Model;
+			sourceTree = "<group>";
+		};
+		B2AA7EAB18D2AAE800F4EF88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = AccountManager/View;
+			sourceTree = "<group>";
+		};
 		B2C27D7F18B48432003AA091 = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +318,7 @@
 		B2C27D9118B48432003AA091 /* ButlerCard */ = {
 			isa = PBXGroup;
 			children = (
+				B2AA7EA218D2AACB00F4EF88 /* AccountManager--账户管理 */,
 				B2CE1BE818D2A8F4007A754D /* MyProperties--我的物业 */,
 				B2F63CE418BC399A00BFBE60 /* Model */,
 				B2C27DC018B48484003AA091 /* View */,
@@ -345,17 +388,6 @@
 			path = View/QCheckbox;
 			sourceTree = "<group>";
 		};
-		B2CBEFD418B74C3900651A30 /* 登录/注册/忘记密码 */ = {
-			isa = PBXGroup;
-			children = (
-				B2CBEFD518B74CAA00651A30 /* HXTLoginViewController.h */,
-				B2CBEFD618B74CAA00651A30 /* HXTLoginViewController.m */,
-				B2CBEFD818B7582F00651A30 /* HXTRegisterAccountViewController.h */,
-				B2CBEFD918B7582F00651A30 /* HXTRegisterAccountViewController.m */,
-			);
-			name = "登录/注册/忘记密码";
-			sourceTree = "<group>";
-		};
 		B2CE1BE818D2A8F4007A754D /* MyProperties--我的物业 */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,7 +450,6 @@
 			children = (
 				B2D4880318B5DABA00F331D3 /* HXTHomeViewController.h */,
 				B2D4880418B5DABA00F331D3 /* HXTHomeViewController.m */,
-				B2CBEFD418B74C3900651A30 /* 登录/注册/忘记密码 */,
 				B2D4880A18B5E15E00F331D3 /* 我的小日子 */,
 			);
 			name = Controllers;
@@ -450,18 +481,8 @@
 			isa = PBXGroup;
 			children = (
 				B24AC90318C84927002AA4D9 /* Data */,
-				B2F63CE518BC39BD00BFBE60 /* AccountManager --登录/注册/忘记密码 */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		B2F63CE518BC39BD00BFBE60 /* AccountManager --登录/注册/忘记密码 */ = {
-			isa = PBXGroup;
-			children = (
-				B2E31FDE18BC90F000165F89 /* HXTAccountManager.h */,
-				B2E31FDF18BC90F000165F89 /* HXTAccountManager.m */,
-			);
-			name = "AccountManager --登录/注册/忘记密码";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -584,23 +605,23 @@
 				B2A4440F18C5BF1A008A4592 /* HXTIGoViewController.m in Sources */,
 				B2CE1C0318D2A912007A754D /* HXTBindCardViewController.m in Sources */,
 				B246B6BE18C46CAD0069ACE5 /* HXTViewWithArrow.m in Sources */,
-				B2E31FE018BC90F000165F89 /* HXTAccountManager.m in Sources */,
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
 				B2CE1C1318D2A912007A754D /* HXTPropertyBillDetailCell.m in Sources */,
 				B2CE1C1118D2A912007A754D /* HXTPropertyBillCell.m in Sources */,
 				B2CE1C0D18D2A912007A754D /* HXTHouse.m in Sources */,
 				B2A4440A18C5BEF0008A4592 /* HXTMyEasyLifeViewController.m in Sources */,
-				B2CBEFDA18B7582F00651A30 /* HXTRegisterAccountViewController.m in Sources */,
 				B2CE1C0718D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
 				B2CE1C0918D2A912007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
 				B2CE1C0B18D2A912007A754D /* HXTSelectCityViewController.m in Sources */,
+				B2AA7EB018D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
 				B2D4880518B5DABA00F331D3 /* HXTHomeViewController.m in Sources */,
 				B2CE1C1718D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
 				B2CE1C0F18D2A912007A754D /* HXTMyProperties.m in Sources */,
+				B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
 				B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */,
 				B26C5EEE18CF072400854EF8 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2A4441018C5BF1A008A4592 /* HXTIGoWithTypeViewController.m in Sources */,
-				B2CBEFD718B74CAA00651A30 /* HXTLoginViewController.m in Sources */,
+				B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
 				B2CE1C0518D2A912007A754D /* HXTBrowseHousingEstateViewController.m in Sources */,
 				B2CE1C1518D2A912007A754D /* HXTPropertyCell.m in Sources */,
 			);
@@ -615,13 +636,15 @@
 				B2CE1C0C18D2A912007A754D /* HXTSelectCityViewController.m in Sources */,
 				B2CE1C1618D2A912007A754D /* HXTPropertyCell.m in Sources */,
 				B2CE1C0A18D2A912007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
+				B2AA7EB118D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
 				B2CE1C1418D2A912007A754D /* HXTPropertyBillDetailCell.m in Sources */,
 				B2CE1C1818D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
 				B26C5EEF18CF072400854EF8 /* HXTTheGroceryStoreViewController.m in Sources */,
+				B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
 				B2CE1C0818D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
+				B2AA7EAF18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
 				B2CE1C1218D2A912007A754D /* HXTPropertyBillCell.m in Sources */,
 				B2CE1C1018D2A912007A754D /* HXTMyProperties.m in Sources */,
-				B2E31FE118BC90F000165F89 /* HXTAccountManager.m in Sources */,
 				B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */,
 				B2CE1C0618D2A912007A754D /* HXTBrowseHousingEstateViewController.m in Sources */,
 			);
