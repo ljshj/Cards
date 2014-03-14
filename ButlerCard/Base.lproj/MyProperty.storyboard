@@ -644,7 +644,7 @@
         <!--View Controller - 物业服务-->
         <scene sceneID="Obn-a8-Oi4">
             <objects>
-                <viewController id="rCK-Hb-Ay7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PropertyServiceStoryboardID" id="rCK-Hb-Ay7" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0BG-c5-Nv6"/>
                         <viewControllerLayoutGuide type="bottom" id="sHw-av-Pfg"/>

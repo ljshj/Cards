@@ -25,11 +25,11 @@
                                     <constraint firstAttribute="width" constant="81" id="24N-MY-vg2"/>
                                     <constraint firstAttribute="height" constant="60" id="p4i-Aa-lKq"/>
                                 </constraints>
-                                <state key="normal" title="我的物业">
+                                <state key="normal" title="物业缴费">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="myPropertyButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="Rcy-QV-cZz"/>
+                                    <action selector="propertyFeePressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="k3T-mT-IRW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-WU-xKE">
@@ -85,11 +85,11 @@
                                     <constraint firstAttribute="height" constant="60" id="Mj2-Se-2jA"/>
                                     <constraint firstAttribute="width" constant="81" id="l1M-hB-Rc3"/>
                                 </constraints>
-                                <state key="normal" title="我的账户">
+                                <state key="normal" title="物业服务">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="myAccountButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="uVy-Y4-oac"/>
+                                    <action selector="propertyServiceButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="D7C-nn-KwQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -193,11 +193,11 @@
             </objects>
             <point key="canvasLocation" x="1818" y="1779"/>
         </scene>
-        <!--Navigation Controller - 信息-->
+        <!--Navigation Controller - 购物车-->
         <scene sceneID="r7D-qR-x4Q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3i4-Go-HmA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="信息" image="letter_closed" id="BK9-n3-ZQO">
+                    <tabBarItem key="tabBarItem" tag="2" title="购物车" image="trolley" id="BK9-n3-ZQO">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -237,11 +237,11 @@
             </objects>
             <point key="canvasLocation" x="1292" y="-222"/>
         </scene>
-        <!--Navigation Controller - 购物车-->
+        <!--Navigation Controller - 收藏-->
         <scene sceneID="ZUy-G9-WMH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0O2-9c-WIU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="购物车" image="trolley" id="4Bb-vz-dqq"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="收藏" image="letter_closed" id="4Bb-vz-dqq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5uA-Ad-rjN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -256,11 +256,11 @@
             </objects>
             <point key="canvasLocation" x="1292" y="431"/>
         </scene>
-        <!--Navigation Controller - 账户-->
+        <!--Navigation Controller - 我的管家-->
         <scene sceneID="B6F-mI-vG6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KY7-Zn-7HO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="3" title="账户" image="people" id="nOn-rQ-Hsw"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="我的管家" image="people" id="nOn-rQ-Hsw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLg-v1-h69">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

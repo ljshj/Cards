@@ -57,16 +57,15 @@
     // Return the number of rows in the section.
     for (NSNumber *expandedIndex in _expandedIndexs) {
         if (expandedIndex.intValue ==  section) {
-            return 7;
+            return 6;
         }
     }
-    return 1;
+    return 0;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *PropertyServiceCellIdentifier    = @"PropertyServiceCellIdentifier";    //物业服务单元
     static NSString *ProtertyItemDetailCellIdentifier = @"ProtertyItemDetailCellIdentifier"; //详情单元
     static NSString *ProtertyItemBindCellIdentifier   = @"ProtertyItemBindCellIdentifier";   //绑定单元
     static NSString *PaymentCellIdentifier            = @"PaymentCellIdentifier";            //缴费单元
@@ -74,28 +73,7 @@
     HXTPropertyCell *property = [HXTMyProperties sharedInstance].properties[indexPath.section];
     
     switch (indexPath.row) {
-        case 0: { //物业服务
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PropertyServiceCellIdentifier forIndexPath:indexPath];
-            cell.contentView.tag = indexPath.section;
-            
-            BOOL isExpanded = NO;
-            for (NSNumber *expandedIndex in _expandedIndexs) {
-                if (expandedIndex.intValue ==  indexPath.section) {
-                    isExpanded = YES;
-                    break;
-                }
-            }
-            
-            UIView *button = [cell viewWithTag:104];
-            if ([button isKindOfClass:[UIButton class]]) {
-                ((UIButton *)button).selected = isExpanded ? YES : NO;
-            }
-
-            ((UILabel *)[cell viewWithTag:103]).text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, (long)property.house.buildingNo, (long)property.house.unitNo, (long)property.house.roomNo];
-            return cell;
-        }
-            break;
-        case 1: { //物管费
+        case 0: { //物管费
             if (property.propertyManagementFees.bindCard) {
                 UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
                 ((UILabel *)[cell viewWithTag:101]).text = @"物管费";
@@ -108,7 +86,7 @@
             }
         }
             break;
-        case 2: { //停车费
+        case 1: { //停车费
             if (property.parkingFees.bindCard) {
                 UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
                 ((UILabel *)[cell viewWithTag:101]).text = @"停车费";
@@ -121,7 +99,7 @@
             }
         }
             break;
-        case 3: { //水费
+        case 2: { //水费
             if (property.waterFees.bindCard) {
                 UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
                 ((UILabel *)[cell viewWithTag:101]).text = @"水费";
@@ -134,7 +112,7 @@
             }
         }
             break;
-        case 4: { //电费
+        case 3: { //电费
             if (property.electricityFees.bindCard) {
                 UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
                 ((UILabel *)[cell viewWithTag:101]).text = @"电费";
@@ -147,7 +125,7 @@
             }
         }
             break;
-        case 5: { //气费
+        case 4: { //气费
             if (property.gasFrees.bindCard) {
                 UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
                 ((UILabel *)[cell viewWithTag:101]).text = @"气费";
@@ -160,7 +138,7 @@
             }
         }
             break;
-        case 6: { //缴费按钮
+        case 5: { //缴费按钮
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PaymentCellIdentifier forIndexPath:indexPath];
             return cell;
         }
@@ -197,6 +175,8 @@
     
     if (needExpand) {
         tableViewHeaderFooterView.expanded = YES;
+    } else {
+        tableViewHeaderFooterView.expanded = NO;
     }
 }
 
@@ -220,23 +200,24 @@
     
     if (needExpand) {
         tableViewHeaderFooterView.expanded = YES;
+    } else {
+        tableViewHeaderFooterView.expanded = NO;
     }
     
     return tableViewHeaderFooterView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        return 60;
-    } else {
-        return 44;
-    }
+    return 44;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 60;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -260,8 +241,26 @@
         }
     }
     
-    [self.tableView reloadData];
-//    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:tableViewHeaderFooterView.tag] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if (expanded) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:tableViewHeaderFooterView.tag];
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        if ([self.tableView cellForRowAtIndexPath:indexPath]) {
+            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        }
+    }
+//    else {
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:5 inSection:tableViewHeaderFooterView.tag > 0 ? tableViewHeaderFooterView.tag - 1 : 0];
+//        if ([self.tableView cellForRowAtIndexPath:indexPath]) {
+//            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+//        }
+//    }
+}
+
+
+-(void)HXTPropertyTableViewHeaderFooterView:(HXTPropertyTableViewHeaderFooterView *)tableViewHeaderFooterView ApplyPropertyService:(BOOL)apply {
+    UIViewController *propertyServiceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PropertyServiceStoryboardID"];
+    [self.navigationController pushViewController:propertyServiceViewController animated:YES];
 }
 
 #pragma mark - UI actions

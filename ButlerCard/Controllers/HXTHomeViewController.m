@@ -50,12 +50,12 @@
 //        self.tabBarController.tabBar.hidden = NO;
 //    }
 }
-
-- (IBAction)myAccountButtonPressed:(id)sender {
-    self.tabBarController.selectedIndex = 3;
+- (IBAction)propertyServiceButtonPressed:(id)sender {
+    NSLog(@"物业服务");
 }
 
-- (IBAction)myPropertyButtonPressed:(id)sender {
+
+- (IBAction)propertyFeePressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
     
     if ([[HXTAccountManager sharedInstance] isLogged]) { //已登录，进入用户账单界面

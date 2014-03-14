@@ -13,11 +13,13 @@
 @protocol HXTPropertyTableViewHeaderFooterViewDelegate <NSObject>
 @optional
 -(void)HXTPropertyTableViewHeaderFooterView:(HXTPropertyTableViewHeaderFooterView *)tableViewHeaderFooterView expanded:(BOOL)expanded;
+-(void)HXTPropertyTableViewHeaderFooterView:(HXTPropertyTableViewHeaderFooterView *)tableViewHeaderFooterView ApplyPropertyService:(BOOL)apply;
 
 @end
 
 @interface HXTPropertyTableViewHeaderFooterView : UITableViewHeaderFooterView
 
 @property (nonatomic, assign) id <HXTPropertyTableViewHeaderFooterViewDelegate>   delegate;
+@property (weak, nonatomic) IBOutlet UILabel *title;
 @property (nonatomic, assign) BOOL expanded;
 @end

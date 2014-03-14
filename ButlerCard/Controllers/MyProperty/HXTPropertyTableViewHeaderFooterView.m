@@ -32,8 +32,11 @@
 }
 
 - (void)setExpanded:(BOOL)expanded {
-    _expanded = expanded;
-    _expandButton.selected = _expanded;
+    _expandButton.selected = expanded;
+}
+
+- (BOOL)expanded {
+    return _expandButton.selected;
 }
 
 /*
@@ -45,11 +48,18 @@
 }
 */
 
+- (IBAction)propertyServiceButtonPressed:(UIButton *)sender {
+    NSLog(@"PropertyServiceButtonPressed!");
+    if (_delegate && [_delegate respondsToSelector:@selector(HXTPropertyTableViewHeaderFooterView:ApplyPropertyService:)]) {
+        [_delegate HXTPropertyTableViewHeaderFooterView:self ApplyPropertyService:YES];
+    }
+}
+
 - (IBAction)expandButtonPressed:(UIButton *)sender {
     sender.selected = !sender.selected;
-    _expanded = sender.selected;
+    
     if (_delegate && [_delegate respondsToSelector:@selector(HXTPropertyTableViewHeaderFooterView:expanded:)]) {
-        [_delegate HXTPropertyTableViewHeaderFooterView:self expanded:_expanded];
+        [_delegate HXTPropertyTableViewHeaderFooterView:self expanded:sender.selected];
     }
 }
 @end
