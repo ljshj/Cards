@@ -196,14 +196,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B2AA7EA218D2AACB00F4EF88 /* AccountManager--账户管理 */ = {
+		B2AA7EA218D2AACB00F4EF88 /* AccountManager-账户管理 */ = {
 			isa = PBXGroup;
 			children = (
 				B2AA7EA318D2AAE800F4EF88 /* Controller */,
 				B2AA7EA818D2AAE800F4EF88 /* Model */,
 				B2AA7EAB18D2AAE800F4EF88 /* View */,
 			);
-			name = "AccountManager--账户管理";
+			name = "AccountManager-账户管理";
 			sourceTree = "<group>";
 		};
 		B2AA7EA318D2AAE800F4EF88 /* Controller */ = {
@@ -236,14 +236,14 @@
 			path = AccountManager/View;
 			sourceTree = "<group>";
 		};
-		B2AA7EB218D2AC4B00F4EF88 /* MyEasyLife--我的小日子 */ = {
+		B2AA7EB218D2AC4B00F4EF88 /* MyEasyLife------我的小日子 */ = {
 			isa = PBXGroup;
 			children = (
 				B2AA7EB318D2AC6300F4EF88 /* Controller */,
 				B2AA7EBE18D2AC6300F4EF88 /* Model */,
 				B2AA7EBF18D2AC6300F4EF88 /* View */,
 			);
-			name = "MyEasyLife--我的小日子";
+			name = "MyEasyLife------我的小日子";
 			sourceTree = "<group>";
 		};
 		B2AA7EB318D2AC6300F4EF88 /* Controller */ = {
@@ -360,23 +360,23 @@
 			path = ComboBox;
 			sourceTree = "<group>";
 		};
-		B2AA7EF518D2AF7A00F4EF88 /* Home--主页 */ = {
+		B2AA7EF518D2AF7A00F4EF88 /* Home----------主页 */ = {
 			isa = PBXGroup;
 			children = (
 				B2AA7EF618D2AFAD00F4EF88 /* HXTHomeViewController.h */,
 				B2AA7EF718D2AFAD00F4EF88 /* HXTHomeViewController.m */,
 			);
-			name = "Home--主页";
+			name = "Home----------主页";
 			sourceTree = "<group>";
 		};
-		B2C016E418D2BA0F0058F1BF /* ChooseHouse --选择小区/住房/城市 */ = {
+		B2C016E418D2BA0F0058F1BF /* ChooseHouse ---选择小区/住房/城市 */ = {
 			isa = PBXGroup;
 			children = (
 				B2C016E518D2BA310058F1BF /* Controller */,
 				B2C016E818D2BA310058F1BF /* Model */,
 				B2C016E918D2BA310058F1BF /* View */,
 			);
-			name = "ChooseHouse --选择小区/住房/城市";
+			name = "ChooseHouse ---选择小区/住房/城市";
 			sourceTree = "<group>";
 		};
 		B2C016E518D2BA310058F1BF /* Controller */ = {
@@ -453,11 +453,11 @@
 			isa = PBXGroup;
 			children = (
 				B2AA7EC818D2AE2E00F4EF88 /* Global */,
-				B2AA7EF518D2AF7A00F4EF88 /* Home--主页 */,
-				B2AA7EB218D2AC4B00F4EF88 /* MyEasyLife--我的小日子 */,
-				B2AA7EA218D2AACB00F4EF88 /* AccountManager--账户管理 */,
-				B2CE1BE818D2A8F4007A754D /* MyProperties--我的物业 */,
-				B2C016E418D2BA0F0058F1BF /* ChooseHouse --选择小区/住房/城市 */,
+				B2AA7EF518D2AF7A00F4EF88 /* Home----------主页 */,
+				B2CE1BE818D2A8F4007A754D /* MyProperties----我的物业 */,
+				B2AA7EB218D2AC4B00F4EF88 /* MyEasyLife------我的小日子 */,
+				B2AA7EA218D2AACB00F4EF88 /* AccountManager-账户管理 */,
+				B2C016E418D2BA0F0058F1BF /* ChooseHouse ---选择小区/住房/城市 */,
 				B2C27D9D18B48432003AA091 /* Home.storyboard */,
 				B2C016DA18D2B2040058F1BF /* AccountManager.storyboard */,
 				B2C016E018D2B3EB0058F1BF /* ChooseHouse.storyboard */,
@@ -499,14 +499,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B2CE1BE818D2A8F4007A754D /* MyProperties--我的物业 */ = {
+		B2CE1BE818D2A8F4007A754D /* MyProperties----我的物业 */ = {
 			isa = PBXGroup;
 			children = (
 				B2CE1BE918D2A912007A754D /* Controller */,
 				B2CE1BF418D2A912007A754D /* Model */,
 				B2CE1BFF18D2A912007A754D /* View */,
 			);
-			name = "MyProperties--我的物业";
+			name = "MyProperties----我的物业";
 			sourceTree = "<group>";
 		};
 		B2CE1BE918D2A912007A754D /* Controller */ = {
