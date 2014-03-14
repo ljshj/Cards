@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */; };
-		B2380E1718B7273B00D895DA /* housingEstate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2380E1618B7273B00D895DA /* housingEstate.jpg */; };
-		B246B6BE18C46CAD0069ACE5 /* HXTViewWithArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */; };
-		B24AC90D18C8540F002AA4D9 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = B24AC90C18C8540F002AA4D9 /* region.plist */; };
-		B24AC90F18C8554D002AA4D9 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = B24AC90E18C8554D002AA4D9 /* provinces.plist */; };
-		B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B287BED218B5EF93003A14DA /* ComboBoxView.m */; };
-		B2904C1118C962E400F89EE0 /* hotCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2904C1018C962E400F89EE0 /* hotCities.plist */; };
-		B2904C1318C96F6000F89EE0 /* provinces_bck.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2904C1218C96F6000F89EE0 /* provinces_bck.plist */; };
 		B2A4441318C5CAD5008A4592 /* MyFarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */; };
 		B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */; };
 		B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */; };
@@ -30,13 +23,33 @@
 		B2AA7EC518D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EBA18D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m */; };
 		B2AA7EC618D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EBD18D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m */; };
 		B2AA7EC718D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EBD18D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m */; };
+		B2AA7EDC18D2AE4000F4EF88 /* hotCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ECB18D2AE4000F4EF88 /* hotCities.plist */; };
+		B2AA7EDD18D2AE4000F4EF88 /* hotCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ECB18D2AE4000F4EF88 /* hotCities.plist */; };
+		B2AA7EDE18D2AE4000F4EF88 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ECC18D2AE4000F4EF88 /* provinces.plist */; };
+		B2AA7EDF18D2AE4000F4EF88 /* provinces.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ECC18D2AE4000F4EF88 /* provinces.plist */; };
+		B2AA7EE018D2AE4000F4EF88 /* provinces_bck.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ECD18D2AE4000F4EF88 /* provinces_bck.plist */; };
+		B2AA7EE118D2AE4000F4EF88 /* provinces_bck.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ECD18D2AE4000F4EF88 /* provinces_bck.plist */; };
+		B2AA7EE218D2AE4000F4EF88 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ECE18D2AE4000F4EF88 /* region.plist */; };
+		B2AA7EE318D2AE4000F4EF88 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ECE18D2AE4000F4EF88 /* region.plist */; };
+		B2AA7EE418D2AE4000F4EF88 /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ED118D2AE4000F4EF88 /* checkbox_checked.png */; };
+		B2AA7EE518D2AE4000F4EF88 /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ED118D2AE4000F4EF88 /* checkbox_checked.png */; };
+		B2AA7EE618D2AE4000F4EF88 /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ED218D2AE4000F4EF88 /* checkbox_unchecked.png */; };
+		B2AA7EE718D2AE4000F4EF88 /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ED218D2AE4000F4EF88 /* checkbox_unchecked.png */; };
+		B2AA7EE818D2AE4000F4EF88 /* HXTCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7ED418D2AE4000F4EF88 /* HXTCheckBox.m */; };
+		B2AA7EE918D2AE4000F4EF88 /* HXTCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7ED418D2AE4000F4EF88 /* HXTCheckBox.m */; };
+		B2AA7EEA18D2AE4000F4EF88 /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7ED618D2AE4000F4EF88 /* ComboBoxView.m */; };
+		B2AA7EEB18D2AE4000F4EF88 /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7ED618D2AE4000F4EF88 /* ComboBoxView.m */; };
+		B2AA7EEC18D2AE4000F4EF88 /* housingEstate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ED818D2AE4000F4EF88 /* housingEstate.jpg */; };
+		B2AA7EED18D2AE4000F4EF88 /* housingEstate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ED818D2AE4000F4EF88 /* housingEstate.jpg */; };
+		B2AA7EEE18D2AE4000F4EF88 /* HXTViewWithArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EDB18D2AE4000F4EF88 /* HXTViewWithArrow.m */; };
+		B2AA7EEF18D2AE4000F4EF88 /* HXTViewWithArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EDB18D2AE4000F4EF88 /* HXTViewWithArrow.m */; };
 		B2C27D8C18B48432003AA091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8B18B48432003AA091 /* Foundation.framework */; };
 		B2C27D8E18B48432003AA091 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8D18B48432003AA091 /* CoreGraphics.framework */; };
 		B2C27D9018B48432003AA091 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8F18B48432003AA091 /* UIKit.framework */; };
 		B2C27D9618B48432003AA091 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2C27D9418B48432003AA091 /* InfoPlist.strings */; };
 		B2C27D9818B48432003AA091 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C27D9718B48432003AA091 /* main.m */; };
 		B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C27D9B18B48432003AA091 /* HXTAppDelegate.m */; };
-		B2C27D9F18B48432003AA091 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C27D9D18B48432003AA091 /* Root.storyboard */; };
+		B2C27D9F18B48432003AA091 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C27D9D18B48432003AA091 /* Home.storyboard */; };
 		B2C27DA418B48432003AA091 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C27DA318B48432003AA091 /* Images.xcassets */; };
 		B2C27DAB18B48432003AA091 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27DAA18B48432003AA091 /* XCTest.framework */; };
 		B2C27DAC18B48432003AA091 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C27D8B18B48432003AA091 /* Foundation.framework */; };
@@ -44,7 +57,7 @@
 		B2C27DB518B48432003AA091 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2C27DB318B48432003AA091 /* InfoPlist.strings */; };
 		B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C27DB618B48432003AA091 /* ButlerCardTests.m */; };
 		B2C27DC218B48C41003AA091 /* AccountManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C27DC118B48C41003AA091 /* AccountManager.storyboard */; };
-		B2CE1BE518D2A744007A754D /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C27D9D18B48432003AA091 /* Root.storyboard */; };
+		B2CE1BE518D2A744007A754D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C27D9D18B48432003AA091 /* Home.storyboard */; };
 		B2CE1C0318D2A912007A754D /* HXTBindCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE1BEB18D2A912007A754D /* HXTBindCardViewController.m */; };
 		B2CE1C0418D2A912007A754D /* HXTBindCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE1BEB18D2A912007A754D /* HXTBindCardViewController.m */; };
 		B2CE1C0518D2A912007A754D /* HXTBrowseHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE1BED18D2A912007A754D /* HXTBrowseHousingEstateViewController.m */; };
@@ -71,9 +84,6 @@
 		B2CE1C1A18D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2CE1C0218D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib */; };
 		B2D4880518B5DABA00F331D3 /* HXTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D4880418B5DABA00F331D3 /* HXTHomeViewController.m */; };
 		B2D4880818B5DF1000F331D3 /* MyEasyLife.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D4880618B5DF1000F331D3 /* MyEasyLife.storyboard */; };
-		B2E31FD918BC498100165F89 /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E31FD718BC498100165F89 /* checkbox_checked.png */; };
-		B2E31FDA18BC498100165F89 /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2E31FD818BC498100165F89 /* checkbox_unchecked.png */; };
-		B2E31FDD18BC49A700165F89 /* HXTCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E31FDC18BC49A700165F89 /* HXTCheckBox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,15 +98,6 @@
 
 /* Begin PBXFileReference section */
 		B2380E0418B6FC3B00D895DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyProperty.storyboard; sourceTree = "<group>"; };
-		B2380E1618B7273B00D895DA /* housingEstate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = housingEstate.jpg; path = Images/housingEstate.jpg; sourceTree = "<group>"; };
-		B246B6BC18C46CAD0069ACE5 /* HXTViewWithArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTViewWithArrow.h; path = View/ViewWithArrow/HXTViewWithArrow.h; sourceTree = "<group>"; };
-		B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTViewWithArrow.m; path = View/ViewWithArrow/HXTViewWithArrow.m; sourceTree = "<group>"; };
-		B24AC90C18C8540F002AA4D9 /* region.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = region.plist; path = Models/Data/region.plist; sourceTree = "<group>"; };
-		B24AC90E18C8554D002AA4D9 /* provinces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = provinces.plist; path = Models/Data/provinces.plist; sourceTree = "<group>"; };
-		B287BED118B5EF93003A14DA /* ComboBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComboBoxView.h; path = View/ComboBoxView.h; sourceTree = "<group>"; };
-		B287BED218B5EF93003A14DA /* ComboBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComboBoxView.m; path = View/ComboBoxView.m; sourceTree = "<group>"; };
-		B2904C1018C962E400F89EE0 /* hotCities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = hotCities.plist; path = Models/Data/hotCities.plist; sourceTree = "<group>"; };
-		B2904C1218C96F6000F89EE0 /* provinces_bck.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = provinces_bck.plist; path = Models/Data/provinces_bck.plist; sourceTree = "<group>"; };
 		B2A4441218C5CAD5008A4592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyFarm.storyboard; sourceTree = "<group>"; };
 		B2AA7EA418D2AAE800F4EF88 /* HXTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTLoginViewController.h; sourceTree = "<group>"; };
 		B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTLoginViewController.m; sourceTree = "<group>"; };
@@ -112,6 +113,19 @@
 		B2AA7EBA18D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTIGoWithTypeViewController.m; sourceTree = "<group>"; };
 		B2AA7EBC18D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTTheGroceryStoreViewController.h; sourceTree = "<group>"; };
 		B2AA7EBD18D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTTheGroceryStoreViewController.m; sourceTree = "<group>"; };
+		B2AA7ECB18D2AE4000F4EF88 /* hotCities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hotCities.plist; sourceTree = "<group>"; };
+		B2AA7ECC18D2AE4000F4EF88 /* provinces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces.plist; sourceTree = "<group>"; };
+		B2AA7ECD18D2AE4000F4EF88 /* provinces_bck.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces_bck.plist; sourceTree = "<group>"; };
+		B2AA7ECE18D2AE4000F4EF88 /* region.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = region.plist; sourceTree = "<group>"; };
+		B2AA7ED118D2AE4000F4EF88 /* checkbox_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_checked.png; sourceTree = "<group>"; };
+		B2AA7ED218D2AE4000F4EF88 /* checkbox_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_unchecked.png; sourceTree = "<group>"; };
+		B2AA7ED318D2AE4000F4EF88 /* HXTCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTCheckBox.h; sourceTree = "<group>"; };
+		B2AA7ED418D2AE4000F4EF88 /* HXTCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTCheckBox.m; sourceTree = "<group>"; };
+		B2AA7ED518D2AE4000F4EF88 /* ComboBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboBoxView.h; sourceTree = "<group>"; };
+		B2AA7ED618D2AE4000F4EF88 /* ComboBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboBoxView.m; sourceTree = "<group>"; };
+		B2AA7ED818D2AE4000F4EF88 /* housingEstate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = housingEstate.jpg; sourceTree = "<group>"; };
+		B2AA7EDA18D2AE4000F4EF88 /* HXTViewWithArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTViewWithArrow.h; sourceTree = "<group>"; };
+		B2AA7EDB18D2AE4000F4EF88 /* HXTViewWithArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTViewWithArrow.m; sourceTree = "<group>"; };
 		B2C27D8818B48432003AA091 /* ButlerCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButlerCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C27D8B18B48432003AA091 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2C27D8D18B48432003AA091 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,7 +136,7 @@
 		B2C27D9918B48432003AA091 /* ButlerCard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ButlerCard-Prefix.pch"; sourceTree = "<group>"; };
 		B2C27D9A18B48432003AA091 /* HXTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXTAppDelegate.h; sourceTree = "<group>"; };
 		B2C27D9B18B48432003AA091 /* HXTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTAppDelegate.m; sourceTree = "<group>"; };
-		B2C27D9E18B48432003AA091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Root.storyboard; sourceTree = "<group>"; };
+		B2C27D9E18B48432003AA091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		B2C27DA318B48432003AA091 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B2C27DA918B48432003AA091 /* ButlerCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButlerCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C27DAA18B48432003AA091 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -156,10 +170,6 @@
 		B2D4880318B5DABA00F331D3 /* HXTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTHomeViewController.h; path = Controllers/HXTHomeViewController.h; sourceTree = "<group>"; };
 		B2D4880418B5DABA00F331D3 /* HXTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTHomeViewController.m; path = Controllers/HXTHomeViewController.m; sourceTree = "<group>"; };
 		B2D4880718B5DF1000F331D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyEasyLife.storyboard; sourceTree = "<group>"; };
-		B2E31FD718BC498100165F89 /* checkbox_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_checked.png; path = ButlerCard/View/CheckBox/checkbox_checked.png; sourceTree = SOURCE_ROOT; };
-		B2E31FD818BC498100165F89 /* checkbox_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_unchecked.png; path = ButlerCard/View/CheckBox/checkbox_unchecked.png; sourceTree = SOURCE_ROOT; };
-		B2E31FDB18BC49A700165F89 /* HXTCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTCheckBox.h; path = ButlerCard/View/CheckBox/HXTCheckBox.h; sourceTree = SOURCE_ROOT; };
-		B2E31FDC18BC49A700165F89 /* HXTCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTCheckBox.m; path = ButlerCard/View/CheckBox/HXTCheckBox.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,34 +196,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B246B6BB18C46BDA0069ACE5 /* ViewWithArrow */ = {
-			isa = PBXGroup;
-			children = (
-				B246B6BC18C46CAD0069ACE5 /* HXTViewWithArrow.h */,
-				B246B6BD18C46CAD0069ACE5 /* HXTViewWithArrow.m */,
-			);
-			name = ViewWithArrow;
-			sourceTree = "<group>";
-		};
-		B24AC90318C84927002AA4D9 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				B2904C1018C962E400F89EE0 /* hotCities.plist */,
-				B24AC90E18C8554D002AA4D9 /* provinces.plist */,
-				B2904C1218C96F6000F89EE0 /* provinces_bck.plist */,
-				B24AC90C18C8540F002AA4D9 /* region.plist */,
-			);
-			name = Data;
-			sourceTree = "<group>";
-		};
-		B287BED418B5F216003A14DA /* images */ = {
-			isa = PBXGroup;
-			children = (
-				B2380E1618B7273B00D895DA /* housingEstate.jpg */,
-			);
-			name = images;
-			sourceTree = "<group>";
-		};
 		B2AA7EA218D2AACB00F4EF88 /* AccountManager--账户管理 */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +294,76 @@
 			path = MyEasyLife/View;
 			sourceTree = "<group>";
 		};
+		B2AA7EC818D2AE2E00F4EF88 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA7EC918D2AE4000F4EF88 /* Models */,
+				B2AA7ECF18D2AE4000F4EF88 /* View */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
+		B2AA7EC918D2AE4000F4EF88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA7ECA18D2AE4000F4EF88 /* Data */,
+			);
+			name = Models;
+			path = Global/Models;
+			sourceTree = "<group>";
+		};
+		B2AA7ECA18D2AE4000F4EF88 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA7ECB18D2AE4000F4EF88 /* hotCities.plist */,
+				B2AA7ECC18D2AE4000F4EF88 /* provinces.plist */,
+				B2AA7ECD18D2AE4000F4EF88 /* provinces_bck.plist */,
+				B2AA7ECE18D2AE4000F4EF88 /* region.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B2AA7ECF18D2AE4000F4EF88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA7ED018D2AE4000F4EF88 /* CheckBox */,
+				B2AA7ED518D2AE4000F4EF88 /* ComboBoxView.h */,
+				B2AA7ED618D2AE4000F4EF88 /* ComboBoxView.m */,
+				B2AA7ED718D2AE4000F4EF88 /* Images */,
+				B2AA7ED918D2AE4000F4EF88 /* ViewWithArrow */,
+			);
+			name = View;
+			path = Global/View;
+			sourceTree = "<group>";
+		};
+		B2AA7ED018D2AE4000F4EF88 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA7ED118D2AE4000F4EF88 /* checkbox_checked.png */,
+				B2AA7ED218D2AE4000F4EF88 /* checkbox_unchecked.png */,
+				B2AA7ED318D2AE4000F4EF88 /* HXTCheckBox.h */,
+				B2AA7ED418D2AE4000F4EF88 /* HXTCheckBox.m */,
+			);
+			path = CheckBox;
+			sourceTree = "<group>";
+		};
+		B2AA7ED718D2AE4000F4EF88 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA7ED818D2AE4000F4EF88 /* housingEstate.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		B2AA7ED918D2AE4000F4EF88 /* ViewWithArrow */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA7EDA18D2AE4000F4EF88 /* HXTViewWithArrow.h */,
+				B2AA7EDB18D2AE4000F4EF88 /* HXTViewWithArrow.m */,
+			);
+			path = ViewWithArrow;
+			sourceTree = "<group>";
+		};
 		B2C27D7F18B48432003AA091 = {
 			isa = PBXGroup;
 			children = (
@@ -345,12 +397,17 @@
 		B2C27D9118B48432003AA091 /* ButlerCard */ = {
 			isa = PBXGroup;
 			children = (
+				B2AA7EC818D2AE2E00F4EF88 /* Global */,
 				B2AA7EB218D2AC4B00F4EF88 /* MyEasyLife--我的小日子 */,
 				B2AA7EA218D2AACB00F4EF88 /* AccountManager--账户管理 */,
 				B2CE1BE818D2A8F4007A754D /* MyProperties--我的物业 */,
-				B2F63CE418BC399A00BFBE60 /* Model */,
 				B2C27DC018B48484003AA091 /* View */,
 				B2D4880218B5DA9E00F331D3 /* Controllers */,
+				B2C27D9D18B48432003AA091 /* Home.storyboard */,
+				B2C27DC118B48C41003AA091 /* AccountManager.storyboard */,
+				B2D4880618B5DF1000F331D3 /* MyEasyLife.storyboard */,
+				B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */,
+				B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */,
 				B2C27D9A18B48432003AA091 /* HXTAppDelegate.h */,
 				B2C27D9B18B48432003AA091 /* HXTAppDelegate.m */,
 				B2C27DA318B48432003AA091 /* Images.xcassets */,
@@ -391,29 +448,8 @@
 		B2C27DC018B48484003AA091 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B2E50CEA18CEA1A800D17D2C /* ComboBox */,
-				B246B6BB18C46BDA0069ACE5 /* ViewWithArrow */,
-				B2CBEFC818B74B2F00651A30 /* Checkbox */,
-				B287BED418B5F216003A14DA /* images */,
-				B2C27D9D18B48432003AA091 /* Root.storyboard */,
-				B2C27DC118B48C41003AA091 /* AccountManager.storyboard */,
-				B2D4880618B5DF1000F331D3 /* MyEasyLife.storyboard */,
-				B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */,
-				B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		B2CBEFC818B74B2F00651A30 /* Checkbox */ = {
-			isa = PBXGroup;
-			children = (
-				B2E31FD718BC498100165F89 /* checkbox_checked.png */,
-				B2E31FD818BC498100165F89 /* checkbox_unchecked.png */,
-				B2E31FDB18BC49A700165F89 /* HXTCheckBox.h */,
-				B2E31FDC18BC49A700165F89 /* HXTCheckBox.m */,
-			);
-			name = Checkbox;
-			path = View/QCheckbox;
 			sourceTree = "<group>";
 		};
 		B2CE1BE818D2A8F4007A754D /* MyProperties--我的物业 */ = {
@@ -480,23 +516,6 @@
 				B2D4880418B5DABA00F331D3 /* HXTHomeViewController.m */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		B2E50CEA18CEA1A800D17D2C /* ComboBox */ = {
-			isa = PBXGroup;
-			children = (
-				B287BED118B5EF93003A14DA /* ComboBoxView.h */,
-				B287BED218B5EF93003A14DA /* ComboBoxView.m */,
-			);
-			name = ComboBox;
-			sourceTree = "<group>";
-		};
-		B2F63CE418BC399A00BFBE60 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B24AC90318C84927002AA4D9 /* Data */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,19 +598,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2E31FD918BC498100165F89 /* checkbox_checked.png in Resources */,
-				B24AC90F18C8554D002AA4D9 /* provinces.plist in Resources */,
-				B24AC90D18C8540F002AA4D9 /* region.plist in Resources */,
+				B2AA7EEC18D2AE4000F4EF88 /* housingEstate.jpg in Resources */,
+				B2AA7EE218D2AE4000F4EF88 /* region.plist in Resources */,
+				B2AA7EDE18D2AE4000F4EF88 /* provinces.plist in Resources */,
 				B2C27DA418B48432003AA091 /* Images.xcassets in Resources */,
 				B2C27D9618B48432003AA091 /* InfoPlist.strings in Resources */,
-				B2E31FDA18BC498100165F89 /* checkbox_unchecked.png in Resources */,
-				B2380E1718B7273B00D895DA /* housingEstate.jpg in Resources */,
-				B2C27D9F18B48432003AA091 /* Root.storyboard in Resources */,
+				B2AA7EDC18D2AE4000F4EF88 /* hotCities.plist in Resources */,
+				B2C27D9F18B48432003AA091 /* Home.storyboard in Resources */,
 				B2D4880818B5DF1000F331D3 /* MyEasyLife.storyboard in Resources */,
+				B2AA7EE418D2AE4000F4EF88 /* checkbox_checked.png in Resources */,
 				B2CE1C1918D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */,
-				B2904C1118C962E400F89EE0 /* hotCities.plist in Resources */,
+				B2AA7EE618D2AE4000F4EF88 /* checkbox_unchecked.png in Resources */,
+				B2AA7EE018D2AE4000F4EF88 /* provinces_bck.plist in Resources */,
 				B2C27DC218B48C41003AA091 /* AccountManager.storyboard in Resources */,
-				B2904C1318C96F6000F89EE0 /* provinces_bck.plist in Resources */,
 				B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */,
 				B2A4441318C5CAD5008A4592 /* MyFarm.storyboard in Resources */,
 			);
@@ -601,7 +620,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2CE1BE518D2A744007A754D /* Root.storyboard in Resources */,
+				B2CE1BE518D2A744007A754D /* Home.storyboard in Resources */,
+				B2AA7EED18D2AE4000F4EF88 /* housingEstate.jpg in Resources */,
+				B2AA7EE318D2AE4000F4EF88 /* region.plist in Resources */,
+				B2AA7EE118D2AE4000F4EF88 /* provinces_bck.plist in Resources */,
+				B2AA7EDD18D2AE4000F4EF88 /* hotCities.plist in Resources */,
+				B2AA7EE518D2AE4000F4EF88 /* checkbox_checked.png in Resources */,
+				B2AA7EE718D2AE4000F4EF88 /* checkbox_unchecked.png in Resources */,
+				B2AA7EDF18D2AE4000F4EF88 /* provinces.plist in Resources */,
 				B2C27DB518B48432003AA091 /* InfoPlist.strings in Resources */,
 				B2CE1C1A18D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */,
 			);
@@ -616,15 +642,16 @@
 			files = (
 				B2C27D9818B48432003AA091 /* main.m in Sources */,
 				B2AA7EC618D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m in Sources */,
-				B2E31FDD18BC49A700165F89 /* HXTCheckBox.m in Sources */,
+				B2AA7EEA18D2AE4000F4EF88 /* ComboBoxView.m in Sources */,
 				B2CE1C0318D2A912007A754D /* HXTBindCardViewController.m in Sources */,
 				B2AA7EC418D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m in Sources */,
-				B246B6BE18C46CAD0069ACE5 /* HXTViewWithArrow.m in Sources */,
+				B2AA7EEE18D2AE4000F4EF88 /* HXTViewWithArrow.m in Sources */,
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
 				B2CE1C1318D2A912007A754D /* HXTPropertyBillDetailCell.m in Sources */,
 				B2CE1C1118D2A912007A754D /* HXTPropertyBillCell.m in Sources */,
 				B2CE1C0D18D2A912007A754D /* HXTHouse.m in Sources */,
 				B2CE1C0718D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
+				B2AA7EE818D2AE4000F4EF88 /* HXTCheckBox.m in Sources */,
 				B2CE1C0918D2A912007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
 				B2CE1C0B18D2A912007A754D /* HXTSelectCityViewController.m in Sources */,
 				B2AA7EB018D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
@@ -632,7 +659,6 @@
 				B2CE1C1718D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
 				B2CE1C0F18D2A912007A754D /* HXTMyProperties.m in Sources */,
 				B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
-				B287BED318B5EF93003A14DA /* ComboBoxView.m in Sources */,
 				B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
 				B2CE1C0518D2A912007A754D /* HXTBrowseHousingEstateViewController.m in Sources */,
 				B2AA7EC218D2AC6300F4EF88 /* HXTIGoViewController.m in Sources */,
@@ -646,16 +672,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CE1C0E18D2A912007A754D /* HXTHouse.m in Sources */,
+				B2AA7EEF18D2AE4000F4EF88 /* HXTViewWithArrow.m in Sources */,
 				B2CE1C0418D2A912007A754D /* HXTBindCardViewController.m in Sources */,
 				B2CE1C0C18D2A912007A754D /* HXTSelectCityViewController.m in Sources */,
 				B2CE1C1618D2A912007A754D /* HXTPropertyCell.m in Sources */,
 				B2CE1C0A18D2A912007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
 				B2AA7EC718D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2AA7EB118D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
+				B2AA7EEB18D2AE4000F4EF88 /* ComboBoxView.m in Sources */,
 				B2CE1C1418D2A912007A754D /* HXTPropertyBillDetailCell.m in Sources */,
 				B2AA7EC518D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m in Sources */,
 				B2CE1C1818D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
 				B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
+				B2AA7EE918D2AE4000F4EF88 /* HXTCheckBox.m in Sources */,
 				B2CE1C0818D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
 				B2AA7EAF18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
 				B2CE1C1218D2A912007A754D /* HXTPropertyBillCell.m in Sources */,
@@ -702,12 +731,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		B2C27D9D18B48432003AA091 /* Root.storyboard */ = {
+		B2C27D9D18B48432003AA091 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B2C27D9E18B48432003AA091 /* Base */,
 			);
-			name = Root.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		B2C27DB318B48432003AA091 /* InfoPlist.strings */ = {
