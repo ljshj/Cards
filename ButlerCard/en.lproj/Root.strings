@@ -1,0 +1,30 @@
+
+/* Class = "IBUITabBarItem"; title = "收藏"; ObjectID = "4Bb-vz-dqq"; */
+"4Bb-vz-dqq.title" = "收藏";
+
+/* Class = "IBUIBarButtonItem"; title = " "; ObjectID = "6ZD-Hj-Gxb"; */
+"6ZD-Hj-Gxb.title" = " ";
+
+/* Class = "IBUIButton"; normalTitle = "我的农场"; ObjectID = "9Sv-IW-BVv"; */
+"9Sv-IW-BVv.normalTitle" = "我的农场";
+
+/* Class = "IBUITabBarItem"; title = "购物车"; ObjectID = "BK9-n3-ZQO"; */
+"BK9-n3-ZQO.title" = "购物车";
+
+/* Class = "IBUIButton"; normalTitle = "我的小日子"; ObjectID = "Pqa-WU-xKE"; */
+"Pqa-WU-xKE.normalTitle" = "我的小日子";
+
+/* Class = "IBUIButton"; normalTitle = "物业服务"; ObjectID = "WEe-sU-cWb"; */
+"WEe-sU-cWb.normalTitle" = "物业服务";
+
+/* Class = "IBUITabBarItem"; title = "我的管家"; ObjectID = "nOn-rQ-Hsw"; */
+"nOn-rQ-Hsw.title" = "我的管家";
+
+/* Class = "IBUIButton"; normalTitle = "我的存钱罐"; ObjectID = "nu1-HL-J5v"; */
+"nu1-HL-J5v.normalTitle" = "我的存钱罐";
+
+/* Class = "IBUITabBarItem"; title = "主页"; ObjectID = "qMB-3E-sYC"; */
+"qMB-3E-sYC.title" = "主页";
+
+/* Class = "IBUIButton"; normalTitle = "物业缴费"; ObjectID = "srh-sM-lIZ"; */
+"srh-sM-lIZ.normalTitle" = "物业缴费";
