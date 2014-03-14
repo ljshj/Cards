@@ -67,8 +67,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *ProtertyItemDetailCellIdentifier = @"ProtertyItemDetailCellIdentifier"; //详情单元
-    static NSString *ProtertyItemBindCellIdentifier   = @"ProtertyItemBindCellIdentifier";   //绑定单元
-    static NSString *PaymentCellIdentifier            = @"PaymentCellIdentifier";            //缴费单元
+    static NSString *PaymentCellIdentifier            = @"FunctionCellIdentifier";            //缴费单元
     
     HXTPropertyCell *property = [HXTMyProperties sharedInstance].properties[indexPath.section];
     
@@ -80,7 +79,7 @@
                 ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.propertyManagementFees.money];
                 return cell;
             } else {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
                 ((UILabel *)[cell viewWithTag:101]).text = @"物管费";
                 return cell;
             }
@@ -93,7 +92,7 @@
                 ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.parkingFees.money];
                 return cell;
             } else {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
                 ((UILabel *)[cell viewWithTag:101]).text = @"停车费";
                 return cell;
             }
@@ -106,7 +105,7 @@
                 ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.waterFees.money];
                 return cell;
             } else {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
                 ((UILabel *)[cell viewWithTag:101]).text = @"水费";
                 return cell;
             }
@@ -119,7 +118,7 @@
                 ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.electricityFees.money];
                 return cell;
             } else {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
                 ((UILabel *)[cell viewWithTag:101]).text = @"电费";
                 return cell;
             }
@@ -132,7 +131,7 @@
                 ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.gasFrees.money];
                 return cell;
             } else {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemBindCellIdentifier forIndexPath:indexPath];
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
                 ((UILabel *)[cell viewWithTag:101]).text = @"气费";
                 return cell;
             }
@@ -208,15 +207,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 60;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0;
+    if (indexPath.row < 5) {
+        return 44;
+    } else {
+        return 148;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -264,33 +259,6 @@
 }
 
 #pragma mark - UI actions
-
-- (IBAction)showDetailButtonPressed:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    
-//    UIView *view = sender;
-//    while (view && ![view isKindOfClass:[UITableViewCell class]]) {
-//        view = view.superview;
-//    }
-//    UITableViewCell *cell = (UITableViewCell *)view;
-//    
-//    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//    
-//    if (sender.selected) {
-//        [_expandedIndexs addObject:@(indexPath.section)];
-//    } else {
-//        
-//        for (NSNumber *expandedIndex in _expandedIndexs) {
-//            if (expandedIndex.intValue ==  indexPath.section) {
-//                [_expandedIndexs removeObject:expandedIndex];
-//                break;
-//            }
-//        }
-//    }
-//    
-//    [self.tableView reloadData];
-//    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-}
 
 
 @end
