@@ -1,5 +1,5 @@
 //
-//  HXTPropertyBillDetailCell.h
+//  HXTPropertyFeeDetailCell.h
 //  ButlerCard
 //
 //  Created by johnny tang on 3/11/14.
@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, BillState) {
-    BillStateNeedToPay = 0, //缴费
-    BillStateProcessing,    //处理中
-    BillStatePaid,          //已缴费
+typedef NS_ENUM(NSUInteger, FeeState) {
+    FeeStateNeedToPay = 0, //缴费
+    FeeStateProcessing,    //处理中
+    FeeStatePaid,          //已缴费
 };
 
-@interface HXTPropertyBillDetailCell : NSObject
+@interface HXTPropertyFeeDetailCell : NSObject
 @property (assign, nonatomic) NSUInteger year;
 @property (assign, nonatomic) NSUInteger month;
 @property (assign, nonatomic) float      money;
-@property (assign, nonatomic) BillState  state;
+@property (assign, nonatomic) FeeState  state;
 @end

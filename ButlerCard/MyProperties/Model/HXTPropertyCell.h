@@ -8,13 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "HXTHouse.h"
-#import "HXTPropertyBillCell.h"
+#import "HXTPropertyFeeCell.h"
+
 
 @interface HXTPropertyCell : NSObject
 @property (strong, nonatomic) HXTHouse     *house;
-@property (strong, nonatomic) HXTPropertyBillCell *propertyManagementFees; //物业费
-@property (strong, nonatomic) HXTPropertyBillCell *parkingFees;            //停车费
-@property (strong, nonatomic) HXTPropertyBillCell *waterFees;              //水费
-@property (strong, nonatomic) HXTPropertyBillCell *electricityFees;        //电费
-@property (strong, nonatomic) HXTPropertyBillCell *gasFrees;               //气费
+@property (strong, nonatomic) NSMutableArray *fees;
 @end

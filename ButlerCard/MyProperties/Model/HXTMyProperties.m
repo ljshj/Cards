@@ -9,6 +9,8 @@
 #import "HXTMyProperties.h"
 #import "HXTPropertyCell.h"
 
+static HXTMyProperties *myProprtyModel;
+
 @implementation HXTMyProperties
 
 - (id) init {
@@ -21,7 +23,6 @@
 }
 
 + (HXTMyProperties *)sharedInstance {
-    static HXTMyProperties *myProprtyModel;
     if (!myProprtyModel) {
         myProprtyModel = [[HXTMyProperties alloc] init];
         [myProprtyModel.allHousingEstateNames addObjectsFromArray:@[@"中铁八局", @"万科A小区", @"置信A区", @"华润AA",
@@ -35,17 +36,10 @@
         aProperty.house.buildingNo = 1;
         aProperty.house.unitNo = 2;
         aProperty.house.roomNo = 301;
-        aProperty.propertyManagementFees.money = 120;
-        aProperty.propertyManagementFees.bindCard = YES;
-        aProperty.parkingFees.money = -200;
-        aProperty.parkingFees.bindCard = YES;
-        aProperty.waterFees.money = 400;
-        aProperty.waterFees.bindCard = YES;
-        aProperty.electricityFees.money = -500;
-        aProperty.electricityFees.bindCard = YES;
-        aProperty.gasFrees.money = 0;
-        aProperty.gasFrees.bindCard = NO;
-        
+        for (NSUInteger i = 0; i < 5; i++) {
+            HXTPropertyFeeCell *aFeeCell = [[HXTPropertyFeeCell alloc] init];
+            [aProperty.fees addObject:aFeeCell];
+        }
         [myProprtyModel.properties addObject:aProperty];
         
         aProperty = [[HXTPropertyCell alloc] init];
@@ -54,17 +48,10 @@
         aProperty.house.buildingNo = 2;
         aProperty.house.unitNo = 3;
         aProperty.house.roomNo = 302;
-        aProperty.propertyManagementFees.money = 220.1;
-        aProperty.propertyManagementFees.bindCard = YES;
-        aProperty.parkingFees.money = -300.23;
-        aProperty.parkingFees.bindCard = YES;
-        aProperty.waterFees.money = 400;
-        aProperty.waterFees.bindCard = YES;
-        aProperty.electricityFees.money = -500;
-        aProperty.electricityFees.bindCard = NO;
-        aProperty.gasFrees.money = 0;
-        aProperty.gasFrees.bindCard = NO;
-        
+        for (NSUInteger i = 0; i < 5; i++) {
+            HXTPropertyFeeCell *aFeeCell = [[HXTPropertyFeeCell alloc] init];
+            [aProperty.fees addObject:aFeeCell];
+        }
         [myProprtyModel.properties addObject:aProperty];
         
         aProperty = [[HXTPropertyCell alloc] init];
@@ -73,17 +60,10 @@
         aProperty.house.buildingNo = 2;
         aProperty.house.unitNo = 3;
         aProperty.house.roomNo = 303;
-        aProperty.propertyManagementFees.money = 220.1;
-        aProperty.propertyManagementFees.bindCard = YES;
-        aProperty.parkingFees.money = -300.23;
-        aProperty.parkingFees.bindCard = YES;
-        aProperty.waterFees.money = 400;
-        aProperty.waterFees.bindCard = YES;
-        aProperty.electricityFees.money = -500;
-        aProperty.electricityFees.bindCard = NO;
-        aProperty.gasFrees.money = 0;
-        aProperty.gasFrees.bindCard = NO;
-        
+        for (NSUInteger i = 0; i < 5; i++) {
+            HXTPropertyFeeCell *aFeeCell = [[HXTPropertyFeeCell alloc] init];
+            [aProperty.fees addObject:aFeeCell];
+        }
         [myProprtyModel.properties addObject:aProperty];
         
         aProperty = [[HXTPropertyCell alloc] init];
@@ -92,17 +72,10 @@
         aProperty.house.buildingNo = 2;
         aProperty.house.unitNo = 3;
         aProperty.house.roomNo = 304;
-        aProperty.propertyManagementFees.money = 220.1;
-        aProperty.propertyManagementFees.bindCard = YES;
-        aProperty.parkingFees.money = -300.23;
-        aProperty.parkingFees.bindCard = YES;
-        aProperty.waterFees.money = 400;
-        aProperty.waterFees.bindCard = YES;
-        aProperty.electricityFees.money = -500;
-        aProperty.electricityFees.bindCard = NO;
-        aProperty.gasFrees.money = 0;
-        aProperty.gasFrees.bindCard = NO;
-        
+        for (NSUInteger i = 0; i < 5; i++) {
+            HXTPropertyFeeCell *aFeeCell = [[HXTPropertyFeeCell alloc] init];
+            [aProperty.fees addObject:aFeeCell];
+        }
         [myProprtyModel.properties addObject:aProperty];
     }
     

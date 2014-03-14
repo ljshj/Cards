@@ -15,6 +15,7 @@
 @interface HXTMyPropertyViewController () <HXTPropertyTableViewHeaderFooterViewDelegate>
 
 @property (assign, nonatomic) NSInteger expandedSection;
+@property (strong, nonatomic) NSArray *freeNames;
 
 @end
 
@@ -34,9 +35,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    _expandedSection = -1;
-    
     [self.tableView registerNib:[UINib nibWithNibName:@"MyPropertyTableViewHeaderFooterView" bundle:[NSBundle mainBundle]]forHeaderFooterViewReuseIdentifier:kHeaderFooterViewReuseIdentifier];
+    
+    _expandedSection = -1;
+    _freeNames = @[@"未知费用", @"物管费", @"停车费", @"水费", @"电费", @"气费",];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,7 +57,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (_expandedSection == section) {
-        return 6;
+        HXTPropertyCell *property = [HXTMyProperties sharedInstance].properties[section];
+        return property.fees.count + 1; //计算功能行
     } else {
         return 0;
     }
@@ -65,89 +68,27 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *ProtertyItemDetailCellIdentifier = @"ProtertyItemDetailCellIdentifier"; //详情单元
-    static NSString *FunctionCellIdentifier            = @"FunctionCellIdentifier";           //缴费单元
+    static NSString *FunctionCellIdentifier           = @"FunctionCellIdentifier";           //功能单元
     
     HXTPropertyCell *property = [HXTMyProperties sharedInstance].properties[indexPath.section];
-    
-    switch (indexPath.row) {
-        case 0: { //物管费
-            if (property.propertyManagementFees.bindCard) {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                ((UILabel *)[cell viewWithTag:101]).text = @"物管费";
-                ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.propertyManagementFees.money];
-                return cell;
-            } else {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                ((UILabel *)[cell viewWithTag:101]).text = @"物管费";
-                return cell;
-            }
-        }
-            break;
-        case 1: { //停车费
-            if (property.parkingFees.bindCard) {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                ((UILabel *)[cell viewWithTag:101]).text = @"停车费";
-                ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.parkingFees.money];
-                return cell;
-            } else {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                ((UILabel *)[cell viewWithTag:101]).text = @"停车费";
-                return cell;
-            }
-        }
-            break;
-        case 2: { //水费
-            if (property.waterFees.bindCard) {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                ((UILabel *)[cell viewWithTag:101]).text = @"水费";
-                ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.waterFees.money];
-                return cell;
-            } else {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                ((UILabel *)[cell viewWithTag:101]).text = @"水费";
-                return cell;
-            }
-        }
-            break;
-        case 3: { //电费
-            if (property.electricityFees.bindCard) {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                ((UILabel *)[cell viewWithTag:101]).text = @"电费";
-                ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.electricityFees.money];
-                return cell;
-            } else {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                ((UILabel *)[cell viewWithTag:101]).text = @"电费";
-                return cell;
-            }
-        }
-            break;
-        case 4: { //气费
-            if (property.gasFrees.bindCard) {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                ((UILabel *)[cell viewWithTag:101]).text = @"气费";
-                ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"%.2f", property.gasFrees.money];
-                return cell;
-            } else {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
-                ((UILabel *)[cell viewWithTag:101]).text = @"气费";
-                return cell;
-            }
-        }
-            break;
-        case 5: { //缴费按钮
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:FunctionCellIdentifier forIndexPath:indexPath];
-            return cell;
-        }
-            break;
-            
-        default:
-            NSLog(@"Error##############%s %s %d Wrong indexPath!!!", __FILE__, __FUNCTION__, __LINE__);
-            return nil;
-            break;
+    if (indexPath.row < property.fees.count) { //详情单元
+        HXTPropertyFeeCell *feeCell = property.fees[indexPath.row];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProtertyItemDetailCellIdentifier forIndexPath:indexPath];
+        ((UILabel *)[cell viewWithTag:101]).text = _freeNames[feeCell.freeType];
+        
+        NSDateFormatter *df  = [[NSDateFormatter alloc] init];
+        [df setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
+        [df setDateFormat:@"YYYY年MM月d日"];
+        ((UILabel *)[cell viewWithTag:102]).text = [NSString stringWithFormat:@"截止%@", [df stringFromDate:feeCell.deadline]];
+        ((UILabel *)[cell viewWithTag:103]).text = [NSString stringWithFormat:@"%.2f", feeCell.money];
+        return cell;
+    } else if (indexPath.row == property.fees.count) { //功能单元
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:FunctionCellIdentifier forIndexPath:indexPath];
+        return cell;
+    } else {
+        NSLog(@"Error##############%s %s %d Wrong indexPath!!!", __FILE__, __FUNCTION__, __LINE__);
+        return nil;
     }
-    
-    return  nil;
 }
 
 #pragma mark - Table view delegate

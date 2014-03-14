@@ -8,17 +8,17 @@
 
 #import "HXTPropertyCell.h"
 
+@interface HXTPropertyCell ()
+
+@end
+
 @implementation HXTPropertyCell
 
 - (id)init {
     self = [super init];
     if (self) {
         _house = [[HXTHouse alloc] init];
-        _propertyManagementFees = [[HXTPropertyBillCell alloc] init];
-        _parkingFees            = [[HXTPropertyBillCell alloc] init];
-        _waterFees              = [[HXTPropertyBillCell alloc] init];
-        _electricityFees        = [[HXTPropertyBillCell alloc] init];
-        _gasFrees               = [[HXTPropertyBillCell alloc] init];
+        _fees = [[NSMutableArray alloc] initWithCapacity:0];
     }
     
     return self;
