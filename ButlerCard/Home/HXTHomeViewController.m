@@ -63,7 +63,7 @@
         
         [self.navigationController pushViewController:myPropertyViewController animated:YES];
     } else { //没有登录，进入小区浏览界面
-        UIViewController *browseHousingEstateViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"BrowseHousingEstateStoryboardID"];
+        UIViewController *browseHousingEstateViewController = [[UIStoryboard storyboardWithName:@"ChooseHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"ChooseHouseEstateStoryboardID"];
         
 //        [self presentViewController:browseHousingEstateViewController animated:YES completion:nil];
         [self.navigationController pushViewController:browseHousingEstateViewController animated:YES];

@@ -1,24 +1,23 @@
 //
-//  HXTBrowseHousingEstateViewController.m
+//  HXTChooseHousingEstateViewController.m
 //  ButlerCard
 //
 //  Created by johnny tang on 2/21/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#import "HXTBrowseHousingEstateViewController.h"
+#import "HXTChooseHousingEstateViewController.h"
 #import "HXTAccountManager.h"
 #import "HXTMyProperties.h"
 
-@interface HXTBrowseHousingEstateViewController ()
+@interface HXTChooseHousingEstateViewController ()
 @property (weak, nonatomic) IBOutlet UIControl *coverView;
 @property (weak, nonatomic) IBOutlet UISearchBar *propertySearchBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *housingEstatesCollectionView;
-@property (weak, nonatomic) IBOutlet UIView *applyOpenPropertyView;
 @property (copy, nonatomic) NSMutableArray *housingEstateNamesToShow;
 @end
 
-@implementation HXTBrowseHousingEstateViewController
+@implementation HXTChooseHousingEstateViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,8 +34,6 @@
 	// Do any additional setup after loading the view.
     
     _housingEstateNamesToShow = [[NSMutableArray alloc] initWithArray:[HXTMyProperties sharedInstance].allHousingEstateNames];
-    
-    _applyOpenPropertyView.hidden = YES;
     
     [[HXTAccountManager sharedInstance] addObserver:self forKeyPath:@"currentCity" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
     self.navigationItem.rightBarButtonItem.title = [HXTAccountManager sharedInstance].currentCity;
@@ -159,10 +156,7 @@
 }
 
 - (IBAction)appleyOpenPropertyButtonPressed:(id)sender {
-    _applyOpenPropertyView.hidden = NO;
+    
 }
 
-- (IBAction)applyOpenPropertySubmitButtonPressed:(id)sender {
-    _applyOpenPropertyView.hidden = YES;
-}
 @end
