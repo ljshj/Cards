@@ -28,13 +28,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //
-    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar_background"];
+//    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar_background"]; //del: 透明度太高会导致其他界面底层图像显式太明显
     [self.tabBar setSelectedImageTintColor:[UIColor orangeColor]];
     
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) { //iOS 6与iOS 7 TabBar显式机制不一样，需要单独适配
         self.tabBar.backgroundColor = [UIColor whiteColor];
     } else {
-        self.tabBar.backgroundColor = [UIColor clearColor];
+//        self.tabBar.backgroundColor = [UIColor clearColor];
     }
 }
 
