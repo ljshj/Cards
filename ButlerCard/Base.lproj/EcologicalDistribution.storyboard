@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - 我的农场-->
+        <!--View Controller - 生态配送-->
         <scene sceneID="5Qz-1v-Bos">
             <objects>
-                <viewController storyboardIdentifier="MyFarmStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b9S-r3-6iS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EcologicalDistributionStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b9S-r3-6iS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ab4-Ch-eKE"/>
                         <viewControllerLayoutGuide type="bottom" id="24o-c6-Cus"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="我的农场" id="Fn1-tf-Y1r"/>
+                    <navigationItem key="navigationItem" title="生态配送" id="Fn1-tf-Y1r"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ew-0g-Frw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

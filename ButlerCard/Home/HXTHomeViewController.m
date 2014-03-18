@@ -93,15 +93,15 @@
 //周边生活
 - (IBAction)surroundingLifeButtonPressed:(id)sender {
     NSLog(@"周边生活 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    UIViewController *myEasyLifeViewcontroller = [[UIStoryboard storyboardWithName:@"MyEasyLife" bundle:nil] instantiateViewControllerWithIdentifier:@"MyEasyLifeStoryboardID"];
-    [self.navigationController pushViewController:myEasyLifeViewcontroller animated:YES];
+    UIViewController *surroundingLifeViewcontroller = [[UIStoryboard storyboardWithName:@"SurroundingLife" bundle:nil] instantiateViewControllerWithIdentifier:@"SurroundingLifeStoryboardID"];
+    [self.navigationController pushViewController:surroundingLifeViewcontroller animated:YES];
 }
 
 //生态配送
 - (IBAction)ecologicalDistributionButtonPressed:(id)sender {
     NSLog(@"生态配送 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    UIViewController *myFarmViewcontroller = [[UIStoryboard storyboardWithName:@"MyFarm" bundle:nil] instantiateViewControllerWithIdentifier:@"MyFarmStoryboardID"];
-    [self.navigationController pushViewController:myFarmViewcontroller animated:YES];
+    UIViewController *ecologicalDistributionViewcontroller = [[UIStoryboard storyboardWithName:@"EcologicalDistribution" bundle:nil] instantiateViewControllerWithIdentifier:@"EcologicalDistributionStoryboardID"];
+    [self.navigationController pushViewController:ecologicalDistributionViewcontroller animated:YES];
 }
 
 //我的理财

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */; };
-		B2A4441318C5CAD5008A4592 /* MyFarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */; };
+		B2A4441318C5CAD5008A4592 /* EcologicalDistribution.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A4441118C5CAD5008A4592 /* EcologicalDistribution.storyboard */; };
 		B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */; };
 		B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */; };
 		B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */; };
@@ -103,7 +103,7 @@
 
 /* Begin PBXFileReference section */
 		B2380E0418B6FC3B00D895DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyProperty.storyboard; sourceTree = "<group>"; };
-		B2A4441218C5CAD5008A4592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyFarm.storyboard; sourceTree = "<group>"; };
+		B2A4441218C5CAD5008A4592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EcologicalDistribution.storyboard; sourceTree = "<group>"; };
 		B2AA7EA418D2AAE800F4EF88 /* HXTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTLoginViewController.h; sourceTree = "<group>"; };
 		B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTLoginViewController.m; sourceTree = "<group>"; };
 		B2AA7EA618D2AAE800F4EF88 /* HXTRegisterAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTRegisterAccountViewController.h; sourceTree = "<group>"; };
@@ -474,7 +474,7 @@
 				B2C016E018D2B3EB0058F1BF /* ChooseHouse.storyboard */,
 				B2D4880618B5DF1000F331D3 /* SurroundingLife.storyboard */,
 				B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */,
-				B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */,
+				B2A4441118C5CAD5008A4592 /* EcologicalDistribution.storyboard */,
 				B2C27D9A18B48432003AA091 /* HXTAppDelegate.h */,
 				B2C27D9B18B48432003AA091 /* HXTAppDelegate.m */,
 				B2C27DA318B48432003AA091 /* Images.xcassets */,
@@ -667,7 +667,7 @@
 				B2AA7EE618D2AE4000F4EF88 /* checkbox_unchecked.png in Resources */,
 				B2C016F918D2BD1F0058F1BF /* provinces_bck.plist in Resources */,
 				B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */,
-				B2A4441318C5CAD5008A4592 /* MyFarm.storyboard in Resources */,
+				B2A4441318C5CAD5008A4592 /* EcologicalDistribution.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,12 +775,12 @@
 			name = MyProperty.storyboard;
 			sourceTree = "<group>";
 		};
-		B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */ = {
+		B2A4441118C5CAD5008A4592 /* EcologicalDistribution.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B2A4441218C5CAD5008A4592 /* Base */,
 			);
-			name = MyFarm.storyboard;
+			name = EcologicalDistribution.storyboard;
 			sourceTree = "<group>";
 		};
 		B2C016DA18D2B2040058F1BF /* AccountManager.storyboard */ = {

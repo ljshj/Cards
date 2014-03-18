@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--My Easy Life View Controller - 我的小日子-->
+        <!--My Easy Life View Controller - 周边生活-->
         <scene sceneID="NGJ-LX-R9z">
             <objects>
-                <viewController storyboardIdentifier="MyEasyLifeStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k30-ec-sj4" customClass="HXTMyEasyLifeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurroundingLifeStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k30-ec-sj4" customClass="HXTMyEasyLifeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sNi-xv-fuz"/>
                         <viewControllerLayoutGuide type="bottom" id="9lt-UQ-rTG"/>
@@ -295,7 +295,7 @@
                             <constraint firstAttribute="trailing" secondItem="J6k-VF-XI0" secondAttribute="trailing" id="WBt-42-2aB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="我的小日子" id="DiW-jA-gXM">
+                    <navigationItem key="navigationItem" title="周边生活" id="DiW-jA-gXM">
                         <barButtonItem key="backBarButtonItem" title="返回" id="7yO-bG-Shh"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
