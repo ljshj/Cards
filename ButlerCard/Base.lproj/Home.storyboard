@@ -45,7 +45,7 @@
                                 </state>
                                 <state key="selected" backgroundImage="my_easy_life_selected"/>
                                 <connections>
-                                    <action selector="myEasyLifeButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="TPa-Un-Z0w"/>
+                                    <action selector="surroundingLifeButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="kwa-RB-CKW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sv-IW-BVv">
@@ -59,7 +59,7 @@
                                 </state>
                                 <state key="selected" backgroundImage="my_farm_selected"/>
                                 <connections>
-                                    <action selector="myFarmButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="r8b-xY-uMT"/>
+                                    <action selector="ecologicalDistributionButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="1c2-Tw-5ek"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu1-HL-J5v">
@@ -73,7 +73,7 @@
                                 </state>
                                 <state key="selected" backgroundImage="my_piggy_bank_selected"/>
                                 <connections>
-                                    <action selector="myPiggyBankButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="KWS-Br-zTw"/>
+                                    <action selector="myFinancesButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="5xj-sm-oma"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panda" translatesAutoresizingMaskIntoConstraints="NO" id="dAf-wl-Atw">

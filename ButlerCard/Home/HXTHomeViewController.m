@@ -65,14 +65,18 @@
         self.tabBarController.tabBar.hidden = NO;
     }
 }
+
+#pragma mark -- UI actions
+
+//物管服务
 - (IBAction)propertyServiceButtonPressed:(UIButton *)sender {
 //    sender.selected = !sender.selected;
-    NSLog(@"物业服务");
+     NSLog(@"物业服务 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
 }
 
-
+//物业缴费
 - (IBAction)propertyFeePressed:(id)sender {
-    NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
+    NSLog(@"物业缴费 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
     
     if ([[HXTAccountManager sharedInstance] isLogged]) { //已登录，进入用户账单界面
         UITableViewController *myPropertyViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"MyPropertiesStoryboardID"];
@@ -86,20 +90,23 @@
     }
 }
 
-- (IBAction)myEasyLifeButtonPressed:(id)sender {
-    NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
+//周边生活
+- (IBAction)surroundingLifeButtonPressed:(id)sender {
+    NSLog(@"周边生活 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
     UIViewController *myEasyLifeViewcontroller = [[UIStoryboard storyboardWithName:@"MyEasyLife" bundle:nil] instantiateViewControllerWithIdentifier:@"MyEasyLifeStoryboardID"];
     [self.navigationController pushViewController:myEasyLifeViewcontroller animated:YES];
 }
 
-- (IBAction)myFarmButtonPressed:(id)sender {
-    NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
+//生态配送
+- (IBAction)ecologicalDistributionButtonPressed:(id)sender {
+    NSLog(@"生态配送 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
     UIViewController *myFarmViewcontroller = [[UIStoryboard storyboardWithName:@"MyFarm" bundle:nil] instantiateViewControllerWithIdentifier:@"MyFarmStoryboardID"];
     [self.navigationController pushViewController:myFarmViewcontroller animated:YES];
 }
 
-- (IBAction)myPiggyBankButtonPressed:(id)sender {
-    NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
+//我的理财
+- (IBAction)myFinancesButtonPressed:(id)sender {
+    NSLog(@"我的理财 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
 }
 
 @end

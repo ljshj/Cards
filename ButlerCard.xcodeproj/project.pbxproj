@@ -84,7 +84,7 @@
 		B2CE1C1818D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CE1C0118D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m */; };
 		B2CE1C1918D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2CE1C0218D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib */; };
 		B2CE1C1A18D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2CE1C0218D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib */; };
-		B2D4880818B5DF1000F331D3 /* MyEasyLife.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D4880618B5DF1000F331D3 /* MyEasyLife.storyboard */; };
+		B2D4880818B5DF1000F331D3 /* SurroundingLife.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D4880618B5DF1000F331D3 /* SurroundingLife.storyboard */; };
 		B2E4E35018D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E4E34F18D6DE7D00C0C0F5 /* HXTTabBarViewController.m */; };
 		B2E4E35118D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E4E34F18D6DE7D00C0C0F5 /* HXTTabBarViewController.m */; };
 		B2E4E35518D6F67C00C0C0F5 /* UIDevice+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E4E35418D6F67C00C0C0F5 /* UIDevice+Resolutions.m */; };
@@ -173,7 +173,7 @@
 		B2CE1C0018D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTPropertyTableViewHeaderFooterView.h; sourceTree = "<group>"; };
 		B2CE1C0118D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTPropertyTableViewHeaderFooterView.m; sourceTree = "<group>"; };
 		B2CE1C0218D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPropertyTableViewHeaderFooterView.xib; sourceTree = "<group>"; };
-		B2D4880718B5DF1000F331D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyEasyLife.storyboard; sourceTree = "<group>"; };
+		B2D4880718B5DF1000F331D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SurroundingLife.storyboard; sourceTree = "<group>"; };
 		B2E4E34E18D6DE7D00C0C0F5 /* HXTTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTTabBarViewController.h; path = Home/HXTTabBarViewController.h; sourceTree = "<group>"; };
 		B2E4E34F18D6DE7D00C0C0F5 /* HXTTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTTabBarViewController.m; path = Home/HXTTabBarViewController.m; sourceTree = "<group>"; };
 		B2E4E35318D6F67C00C0C0F5 /* UIDevice+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+Resolutions.h"; path = "Global/Public/UIDevice+Resolutions.h"; sourceTree = "<group>"; };
@@ -472,7 +472,7 @@
 				B2C27D9D18B48432003AA091 /* Home.storyboard */,
 				B2C016DA18D2B2040058F1BF /* AccountManager.storyboard */,
 				B2C016E018D2B3EB0058F1BF /* ChooseHouse.storyboard */,
-				B2D4880618B5DF1000F331D3 /* MyEasyLife.storyboard */,
+				B2D4880618B5DF1000F331D3 /* SurroundingLife.storyboard */,
 				B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */,
 				B2A4441118C5CAD5008A4592 /* MyFarm.storyboard */,
 				B2C27D9A18B48432003AA091 /* HXTAppDelegate.h */,
@@ -660,7 +660,7 @@
 				B2C27DA418B48432003AA091 /* Images.xcassets in Resources */,
 				B2C016E218D2B3EB0058F1BF /* ChooseHouse.storyboard in Resources */,
 				B2C27D9F18B48432003AA091 /* Home.storyboard in Resources */,
-				B2D4880818B5DF1000F331D3 /* MyEasyLife.storyboard in Resources */,
+				B2D4880818B5DF1000F331D3 /* SurroundingLife.storyboard in Resources */,
 				B2AA7EE418D2AE4000F4EF88 /* checkbox_checked.png in Resources */,
 				B2CE1C1918D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */,
 				B2C016F718D2BD1F0058F1BF /* provinces.plist in Resources */,
@@ -807,12 +807,12 @@
 			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
-		B2D4880618B5DF1000F331D3 /* MyEasyLife.storyboard */ = {
+		B2D4880618B5DF1000F331D3 /* SurroundingLife.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B2D4880718B5DF1000F331D3 /* Base */,
 			);
-			name = MyEasyLife.storyboard;
+			name = SurroundingLife.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
