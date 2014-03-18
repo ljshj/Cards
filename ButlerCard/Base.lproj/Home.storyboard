@@ -29,7 +29,7 @@
                                 <state key="normal" title="物业缴费" backgroundImage="home_propertyFee">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="selected" backgroundImage="home_propertyFeeSelected"/>
+                                <state key="selected" backgroundImage="home_propertyFee_s"/>
                                 <connections>
                                     <action selector="propertyFeePressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="k3T-mT-IRW"/>
                                 </connections>
@@ -43,7 +43,7 @@
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="home_surroundingLifeSelected"/>
+                                <state key="selected" backgroundImage="home_surroundingLife_s"/>
                                 <connections>
                                     <action selector="surroundingLifeButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="kwa-RB-CKW"/>
                                 </connections>
@@ -57,7 +57,7 @@
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="home_ecologicalDistributionSelected"/>
+                                <state key="selected" backgroundImage="home_ecologicalDistribution_s"/>
                                 <connections>
                                     <action selector="ecologicalDistributionButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="1c2-Tw-5ek"/>
                                 </connections>
@@ -71,7 +71,7 @@
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="home_myFinancesSelected"/>
+                                <state key="selected" backgroundImage="home_myFinances_s"/>
                                 <connections>
                                     <action selector="myFinancesButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="5xj-sm-oma"/>
                                 </connections>
@@ -89,7 +89,7 @@
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="home_propertyServiceSelected"/>
+                                <state key="selected" backgroundImage="home_propertyService_s"/>
                                 <state key="highlighted" backgroundImage="property_service"/>
                                 <connections>
                                     <action selector="propertyServiceButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="D7C-nn-KwQ"/>
@@ -273,16 +273,16 @@
     <resources>
         <image name="background_1136X640" width="320" height="568"/>
         <image name="home_ecologicalDistribution" width="74" height="85"/>
-        <image name="home_ecologicalDistributionSelected" width="74" height="85"/>
+        <image name="home_ecologicalDistribution_s" width="74" height="85"/>
         <image name="home_myFinances" width="73" height="72"/>
-        <image name="home_myFinancesSelected" width="73" height="72"/>
+        <image name="home_myFinances_s" width="73" height="72"/>
         <image name="home_panda" width="110" height="165"/>
         <image name="home_propertyFee" width="69" height="75"/>
-        <image name="home_propertyFeeSelected" width="69" height="75"/>
+        <image name="home_propertyFee_s" width="69" height="75"/>
         <image name="home_propertyService" width="84" height="91"/>
-        <image name="home_propertyServiceSelected" width="84" height="91"/>
+        <image name="home_propertyService_s" width="84" height="91"/>
         <image name="home_surroundingLife" width="87" height="103"/>
-        <image name="home_surroundingLifeSelected" width="87" height="103"/>
+        <image name="home_surroundingLife_s" width="87" height="103"/>
         <image name="property_service" width="84" height="91"/>
         <image name="tabbar_collection" width="25" height="25"/>
         <image name="tabbar_home" width="25" height="25"/>
