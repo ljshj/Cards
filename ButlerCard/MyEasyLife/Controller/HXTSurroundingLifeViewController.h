@@ -1,5 +1,5 @@
 //
-//  HXTMyEasyLifeViewController.h
+//  HXTSurroundingLifeViewController.h
 //  ButlerCard
 //
 //  Created by johnny tang on 2/20/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HXTMyEasyLifeViewController : UIViewController
+@interface HXTSurroundingLifeViewController : UIViewController
 
 @end

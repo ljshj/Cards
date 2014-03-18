@@ -15,8 +15,8 @@
 		B2AA7EAF18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */; };
 		B2AA7EB018D2AAE800F4EF88 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */; };
 		B2AA7EB118D2AAE800F4EF88 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */; };
-		B2AA7EC018D2AC6300F4EF88 /* HXTMyEasyLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EB518D2AC6300F4EF88 /* HXTMyEasyLifeViewController.m */; };
-		B2AA7EC118D2AC6300F4EF88 /* HXTMyEasyLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EB518D2AC6300F4EF88 /* HXTMyEasyLifeViewController.m */; };
+		B2AA7EC018D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EB518D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m */; };
+		B2AA7EC118D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EB518D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m */; };
 		B2AA7EC218D2AC6300F4EF88 /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EB818D2AC6300F4EF88 /* HXTIGoViewController.m */; };
 		B2AA7EC318D2AC6300F4EF88 /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EB818D2AC6300F4EF88 /* HXTIGoViewController.m */; };
 		B2AA7EC418D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EBA18D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m */; };
@@ -110,8 +110,8 @@
 		B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTRegisterAccountViewController.m; sourceTree = "<group>"; };
 		B2AA7EA918D2AAE800F4EF88 /* HXTAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTAccountManager.h; sourceTree = "<group>"; };
 		B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTAccountManager.m; sourceTree = "<group>"; };
-		B2AA7EB418D2AC6300F4EF88 /* HXTMyEasyLifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTMyEasyLifeViewController.h; sourceTree = "<group>"; };
-		B2AA7EB518D2AC6300F4EF88 /* HXTMyEasyLifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTMyEasyLifeViewController.m; sourceTree = "<group>"; };
+		B2AA7EB418D2AC6300F4EF88 /* HXTSurroundingLifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTSurroundingLifeViewController.h; sourceTree = "<group>"; };
+		B2AA7EB518D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTSurroundingLifeViewController.m; sourceTree = "<group>"; };
 		B2AA7EB718D2AC6300F4EF88 /* HXTIGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTIGoViewController.h; sourceTree = "<group>"; };
 		B2AA7EB818D2AC6300F4EF88 /* HXTIGoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTIGoViewController.m; sourceTree = "<group>"; };
 		B2AA7EB918D2AC6300F4EF88 /* HXTIGoWithTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTIGoWithTypeViewController.h; sourceTree = "<group>"; };
@@ -244,21 +244,21 @@
 			path = AccountManager/View;
 			sourceTree = "<group>";
 		};
-		B2AA7EB218D2AC4B00F4EF88 /* MyEasyLife------我的小日子 */ = {
+		B2AA7EB218D2AC4B00F4EF88 /* SurroundingLife-周边生活 */ = {
 			isa = PBXGroup;
 			children = (
 				B2AA7EB318D2AC6300F4EF88 /* Controller */,
 				B2AA7EBE18D2AC6300F4EF88 /* Model */,
 				B2AA7EBF18D2AC6300F4EF88 /* View */,
 			);
-			name = "MyEasyLife------我的小日子";
+			name = "SurroundingLife-周边生活";
 			sourceTree = "<group>";
 		};
 		B2AA7EB318D2AC6300F4EF88 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B2AA7EB418D2AC6300F4EF88 /* HXTMyEasyLifeViewController.h */,
-				B2AA7EB518D2AC6300F4EF88 /* HXTMyEasyLifeViewController.m */,
+				B2AA7EB418D2AC6300F4EF88 /* HXTSurroundingLifeViewController.h */,
+				B2AA7EB518D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m */,
 				B2AA7EB618D2AC6300F4EF88 /* IGo */,
 				B2AA7EBB18D2AC6300F4EF88 /* YouCome */,
 			);
@@ -466,7 +466,7 @@
 				B2AA7EC818D2AE2E00F4EF88 /* Global */,
 				B2AA7EF518D2AF7A00F4EF88 /* Home----------首页 */,
 				B2CE1BE818D2A8F4007A754D /* MyProperties----我的物业 */,
-				B2AA7EB218D2AC4B00F4EF88 /* MyEasyLife------我的小日子 */,
+				B2AA7EB218D2AC4B00F4EF88 /* SurroundingLife-周边生活 */,
 				B2AA7EA218D2AACB00F4EF88 /* AccountManager-账户管理 */,
 				B2C016E418D2BA0F0058F1BF /* ChooseHouse ---选择小区/住房/城市 */,
 				B2C27D9D18B48432003AA091 /* Home.storyboard */,
@@ -720,7 +720,7 @@
 				B2AA7EC218D2AC6300F4EF88 /* HXTIGoViewController.m in Sources */,
 				B2E4E35518D6F67C00C0C0F5 /* UIDevice+Resolutions.m in Sources */,
 				B2CE1C1518D2A912007A754D /* HXTPropertyCell.m in Sources */,
-				B2AA7EC018D2AC6300F4EF88 /* HXTMyEasyLifeViewController.m in Sources */,
+				B2AA7EC018D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,7 +747,7 @@
 				B2AA7EAF18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
 				B2CE1C1218D2A912007A754D /* HXTPropertyFeeCell.m in Sources */,
 				B2CE1C1018D2A912007A754D /* HXTMyProperties.m in Sources */,
-				B2AA7EC118D2AC6300F4EF88 /* HXTMyEasyLifeViewController.m in Sources */,
+				B2AA7EC118D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m in Sources */,
 				B2C016EF18D2BB8F0058F1BF /* HXTSelectCityViewController.m in Sources */,
 				B2AA7EF918D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */,
 				B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */,

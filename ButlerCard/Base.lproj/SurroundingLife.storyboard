@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--My Easy Life View Controller - 周边生活-->
+        <!--Surrounding Life View Controller - 周边生活-->
         <scene sceneID="NGJ-LX-R9z">
             <objects>
-                <viewController storyboardIdentifier="SurroundingLifeStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k30-ec-sj4" customClass="HXTMyEasyLifeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurroundingLifeStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k30-ec-sj4" customClass="HXTSurroundingLifeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sNi-xv-fuz"/>
                         <viewControllerLayoutGuide type="bottom" id="9lt-UQ-rTG"/>

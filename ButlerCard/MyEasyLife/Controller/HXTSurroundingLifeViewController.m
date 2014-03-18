@@ -1,12 +1,12 @@
 //
-//  HXTMyEasyLifeViewController.m
+//  HXTSurroundingLifeViewController.m
 //  ButlerCard
 //
 //  Created by johnny tang on 2/20/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#import "HXTMyEasyLifeViewController.h"
+#import "HXTSurroundingLifeViewController.h"
 #import "ComboBoxView.h"
 #import "HXTViewWithArrow.h"
 
@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     DisplayGroupIsGoYou,
 };
 
-@interface HXTMyEasyLifeViewController ()
+@interface HXTSurroundingLifeViewController ()
 
 @property (weak, nonatomic) IBOutlet ComboBoxView *dropDownComboBoxView;
 @property (weak, nonatomic) IBOutlet UIButton *youComeButton;
@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 
 @end
 
-@implementation HXTMyEasyLifeViewController
+@implementation HXTSurroundingLifeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
