@@ -26,10 +26,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="物业缴费" backgroundImage="property_fee">
+                                <state key="normal" title="物业缴费" backgroundImage="home_propertyFee">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="selected" backgroundImage="property_fee_selected"/>
+                                <state key="selected" backgroundImage="home_propertyFeeSelected"/>
                                 <connections>
                                     <action selector="propertyFeePressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="k3T-mT-IRW"/>
                                 </connections>
@@ -39,11 +39,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="周边生活" backgroundImage="my_easy_life">
+                                <state key="normal" title="周边生活" backgroundImage="home_surroundingLife">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="my_easy_life_selected"/>
+                                <state key="selected" backgroundImage="home_surroundingLifeSelected"/>
                                 <connections>
                                     <action selector="surroundingLifeButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="kwa-RB-CKW"/>
                                 </connections>
@@ -53,11 +53,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="生态配送" backgroundImage="my_farm">
+                                <state key="normal" title="生态配送" backgroundImage="home_ecologicalDistribution">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="my_farm_selected"/>
+                                <state key="selected" backgroundImage="home_ecologicalDistributionSelected"/>
                                 <connections>
                                     <action selector="ecologicalDistributionButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="1c2-Tw-5ek"/>
                                 </connections>
@@ -67,16 +67,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="25" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="我的理财" backgroundImage="my_piggy_bank">
+                                <state key="normal" title="我的理财" backgroundImage="home_myFinances">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="my_piggy_bank_selected"/>
+                                <state key="selected" backgroundImage="home_myFinancesSelected"/>
                                 <connections>
                                     <action selector="myFinancesButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="5xj-sm-oma"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panda" translatesAutoresizingMaskIntoConstraints="NO" id="dAf-wl-Atw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_panda" translatesAutoresizingMaskIntoConstraints="NO" id="dAf-wl-Atw">
                                 <rect key="frame" x="129" y="340" width="120" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -85,11 +85,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="25" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="物管服务" backgroundImage="property_service">
+                                <state key="normal" title="物管服务" backgroundImage="home_propertyService">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="property_service_selected"/>
+                                <state key="selected" backgroundImage="home_propertyServiceSelected"/>
                                 <state key="highlighted" backgroundImage="property_service"/>
                                 <connections>
                                     <action selector="propertyServiceButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="D7C-nn-KwQ"/>
@@ -191,7 +191,7 @@
         <scene sceneID="r7D-qR-x4Q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3i4-Go-HmA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="购物车" image="trolley" id="BK9-n3-ZQO">
+                    <tabBarItem key="tabBarItem" tag="2" title="购物车" image="tabbar_trolley" id="BK9-n3-ZQO">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -212,7 +212,7 @@
         <scene sceneID="9II-xH-DN3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PiR-5R-iME" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" image="home" id="qMB-3E-sYC"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="qMB-3E-sYC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pDI-cL-V3C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -235,7 +235,7 @@
         <scene sceneID="ZUy-G9-WMH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0O2-9c-WIU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="收藏" image="collection" id="4Bb-vz-dqq"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="收藏" image="tabbar_collection" id="4Bb-vz-dqq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5uA-Ad-rjN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -254,7 +254,7 @@
         <scene sceneID="B6F-mI-vG6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KY7-Zn-7HO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="3" title="我的管家" image="myButler" id="nOn-rQ-Hsw"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="我的管家" image="tabbar_myButler" id="nOn-rQ-Hsw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLg-v1-h69">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -272,21 +272,22 @@
     </scenes>
     <resources>
         <image name="background_1136X640" width="320" height="568"/>
-        <image name="collection" width="25" height="25"/>
-        <image name="home" width="25" height="25"/>
-        <image name="myButler" width="25" height="25"/>
-        <image name="my_easy_life" width="87" height="103"/>
-        <image name="my_easy_life_selected" width="87" height="103"/>
-        <image name="my_farm" width="74" height="85"/>
-        <image name="my_farm_selected" width="74" height="85"/>
-        <image name="my_piggy_bank" width="73" height="72"/>
-        <image name="my_piggy_bank_selected" width="73" height="72"/>
-        <image name="panda" width="110" height="165"/>
-        <image name="property_fee" width="69" height="75"/>
-        <image name="property_fee_selected" width="69" height="75"/>
+        <image name="home_ecologicalDistribution" width="74" height="85"/>
+        <image name="home_ecologicalDistributionSelected" width="74" height="85"/>
+        <image name="home_myFinances" width="73" height="72"/>
+        <image name="home_myFinancesSelected" width="73" height="72"/>
+        <image name="home_panda" width="110" height="165"/>
+        <image name="home_propertyFee" width="69" height="75"/>
+        <image name="home_propertyFeeSelected" width="69" height="75"/>
+        <image name="home_propertyService" width="84" height="91"/>
+        <image name="home_propertyServiceSelected" width="84" height="91"/>
+        <image name="home_surroundingLife" width="87" height="103"/>
+        <image name="home_surroundingLifeSelected" width="87" height="103"/>
         <image name="property_service" width="84" height="91"/>
-        <image name="property_service_selected" width="84" height="91"/>
-        <image name="trolley" width="25" height="25"/>
+        <image name="tabbar_collection" width="25" height="25"/>
+        <image name="tabbar_home" width="25" height="25"/>
+        <image name="tabbar_myButler" width="25" height="25"/>
+        <image name="tabbar_trolley" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
