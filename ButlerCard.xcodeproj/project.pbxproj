@@ -15,14 +15,6 @@
 		B2AA7EAF18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */; };
 		B2AA7EB018D2AAE800F4EF88 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */; };
 		B2AA7EB118D2AAE800F4EF88 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */; };
-		B2AA7EC018D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EB518D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m */; };
-		B2AA7EC118D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EB518D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m */; };
-		B2AA7EC218D2AC6300F4EF88 /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EB818D2AC6300F4EF88 /* HXTIGoViewController.m */; };
-		B2AA7EC318D2AC6300F4EF88 /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EB818D2AC6300F4EF88 /* HXTIGoViewController.m */; };
-		B2AA7EC418D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EBA18D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m */; };
-		B2AA7EC518D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EBA18D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m */; };
-		B2AA7EC618D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EBD18D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m */; };
-		B2AA7EC718D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EBD18D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m */; };
 		B2AA7EE418D2AE4000F4EF88 /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ED118D2AE4000F4EF88 /* checkbox_checked.png */; };
 		B2AA7EE518D2AE4000F4EF88 /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ED118D2AE4000F4EF88 /* checkbox_checked.png */; };
 		B2AA7EE618D2AE4000F4EF88 /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = B2AA7ED218D2AE4000F4EF88 /* checkbox_unchecked.png */; };
@@ -37,6 +29,14 @@
 		B2AA7EF418D2AF6200F4EF88 /* ComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EF218D2AF6200F4EF88 /* ComboBoxView.m */; };
 		B2AA7EF818D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EF718D2AFAD00F4EF88 /* HXTHomeViewController.m */; };
 		B2AA7EF918D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EF718D2AFAD00F4EF88 /* HXTHomeViewController.m */; };
+		B2BB18E718D829D700BD9FC9 /* HXTSurroundingLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB18DE18D829D700BD9FC9 /* HXTSurroundingLifeViewController.m */; };
+		B2BB18E818D829D700BD9FC9 /* HXTSurroundingLifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB18DE18D829D700BD9FC9 /* HXTSurroundingLifeViewController.m */; };
+		B2BB18E918D829D700BD9FC9 /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB18E118D829D700BD9FC9 /* HXTIGoViewController.m */; };
+		B2BB18EA18D829D700BD9FC9 /* HXTIGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB18E118D829D700BD9FC9 /* HXTIGoViewController.m */; };
+		B2BB18EB18D829D700BD9FC9 /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB18E318D829D700BD9FC9 /* HXTIGoWithTypeViewController.m */; };
+		B2BB18EC18D829D700BD9FC9 /* HXTIGoWithTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB18E318D829D700BD9FC9 /* HXTIGoWithTypeViewController.m */; };
+		B2BB18ED18D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB18E618D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m */; };
+		B2BB18EE18D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB18E618D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m */; };
 		B2C016DC18D2B2040058F1BF /* AccountManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C016DA18D2B2040058F1BF /* AccountManager.storyboard */; };
 		B2C016E218D2B3EB0058F1BF /* ChooseHouse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C016E018D2B3EB0058F1BF /* ChooseHouse.storyboard */; };
 		B2C016E318D2B3EB0058F1BF /* ChooseHouse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C016E018D2B3EB0058F1BF /* ChooseHouse.storyboard */; };
@@ -110,14 +110,6 @@
 		B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTRegisterAccountViewController.m; sourceTree = "<group>"; };
 		B2AA7EA918D2AAE800F4EF88 /* HXTAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTAccountManager.h; sourceTree = "<group>"; };
 		B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTAccountManager.m; sourceTree = "<group>"; };
-		B2AA7EB418D2AC6300F4EF88 /* HXTSurroundingLifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTSurroundingLifeViewController.h; sourceTree = "<group>"; };
-		B2AA7EB518D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTSurroundingLifeViewController.m; sourceTree = "<group>"; };
-		B2AA7EB718D2AC6300F4EF88 /* HXTIGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTIGoViewController.h; sourceTree = "<group>"; };
-		B2AA7EB818D2AC6300F4EF88 /* HXTIGoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTIGoViewController.m; sourceTree = "<group>"; };
-		B2AA7EB918D2AC6300F4EF88 /* HXTIGoWithTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTIGoWithTypeViewController.h; sourceTree = "<group>"; };
-		B2AA7EBA18D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTIGoWithTypeViewController.m; sourceTree = "<group>"; };
-		B2AA7EBC18D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTTheGroceryStoreViewController.h; sourceTree = "<group>"; };
-		B2AA7EBD18D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTTheGroceryStoreViewController.m; sourceTree = "<group>"; };
 		B2AA7ED118D2AE4000F4EF88 /* checkbox_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_checked.png; sourceTree = "<group>"; };
 		B2AA7ED218D2AE4000F4EF88 /* checkbox_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_unchecked.png; sourceTree = "<group>"; };
 		B2AA7ED318D2AE4000F4EF88 /* HXTCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTCheckBox.h; sourceTree = "<group>"; };
@@ -129,6 +121,14 @@
 		B2AA7EF218D2AF6200F4EF88 /* ComboBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboBoxView.m; sourceTree = "<group>"; };
 		B2AA7EF618D2AFAD00F4EF88 /* HXTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTHomeViewController.h; path = Home/HXTHomeViewController.h; sourceTree = "<group>"; };
 		B2AA7EF718D2AFAD00F4EF88 /* HXTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTHomeViewController.m; path = Home/HXTHomeViewController.m; sourceTree = "<group>"; };
+		B2BB18DD18D829D700BD9FC9 /* HXTSurroundingLifeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTSurroundingLifeViewController.h; sourceTree = "<group>"; };
+		B2BB18DE18D829D700BD9FC9 /* HXTSurroundingLifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTSurroundingLifeViewController.m; sourceTree = "<group>"; };
+		B2BB18E018D829D700BD9FC9 /* HXTIGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTIGoViewController.h; sourceTree = "<group>"; };
+		B2BB18E118D829D700BD9FC9 /* HXTIGoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTIGoViewController.m; sourceTree = "<group>"; };
+		B2BB18E218D829D700BD9FC9 /* HXTIGoWithTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTIGoWithTypeViewController.h; sourceTree = "<group>"; };
+		B2BB18E318D829D700BD9FC9 /* HXTIGoWithTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTIGoWithTypeViewController.m; sourceTree = "<group>"; };
+		B2BB18E518D829D700BD9FC9 /* HXTTheGroceryStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTTheGroceryStoreViewController.h; sourceTree = "<group>"; };
+		B2BB18E618D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTTheGroceryStoreViewController.m; sourceTree = "<group>"; };
 		B2C016DB18D2B2040058F1BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AccountManager.storyboard; sourceTree = "<group>"; };
 		B2C016E118D2B3EB0058F1BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChooseHouse.storyboard; sourceTree = "<group>"; };
 		B2C016E618D2BA310058F1BF /* HXTChooseHousingEstateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTChooseHousingEstateViewController.h; sourceTree = "<group>"; };
@@ -247,59 +247,9 @@
 		B2AA7EB218D2AC4B00F4EF88 /* SurroundingLife-周边生活 */ = {
 			isa = PBXGroup;
 			children = (
-				B2AA7EB318D2AC6300F4EF88 /* Controller */,
-				B2AA7EBE18D2AC6300F4EF88 /* Model */,
-				B2AA7EBF18D2AC6300F4EF88 /* View */,
+				B2BB18DC18D829D700BD9FC9 /* Controller */,
 			);
 			name = "SurroundingLife-周边生活";
-			sourceTree = "<group>";
-		};
-		B2AA7EB318D2AC6300F4EF88 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B2AA7EB418D2AC6300F4EF88 /* HXTSurroundingLifeViewController.h */,
-				B2AA7EB518D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m */,
-				B2AA7EB618D2AC6300F4EF88 /* IGo */,
-				B2AA7EBB18D2AC6300F4EF88 /* YouCome */,
-			);
-			name = Controller;
-			path = MyEasyLife/Controller;
-			sourceTree = "<group>";
-		};
-		B2AA7EB618D2AC6300F4EF88 /* IGo */ = {
-			isa = PBXGroup;
-			children = (
-				B2AA7EB718D2AC6300F4EF88 /* HXTIGoViewController.h */,
-				B2AA7EB818D2AC6300F4EF88 /* HXTIGoViewController.m */,
-				B2AA7EB918D2AC6300F4EF88 /* HXTIGoWithTypeViewController.h */,
-				B2AA7EBA18D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m */,
-			);
-			path = IGo;
-			sourceTree = "<group>";
-		};
-		B2AA7EBB18D2AC6300F4EF88 /* YouCome */ = {
-			isa = PBXGroup;
-			children = (
-				B2AA7EBC18D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.h */,
-				B2AA7EBD18D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m */,
-			);
-			path = YouCome;
-			sourceTree = "<group>";
-		};
-		B2AA7EBE18D2AC6300F4EF88 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			path = MyEasyLife/Model;
-			sourceTree = "<group>";
-		};
-		B2AA7EBF18D2AC6300F4EF88 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			path = MyEasyLife/View;
 			sourceTree = "<group>";
 		};
 		B2AA7EC818D2AE2E00F4EF88 /* Global */ = {
@@ -378,6 +328,38 @@
 				B2E4E34F18D6DE7D00C0C0F5 /* HXTTabBarViewController.m */,
 			);
 			name = "Home----------首页";
+			sourceTree = "<group>";
+		};
+		B2BB18DC18D829D700BD9FC9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB18DD18D829D700BD9FC9 /* HXTSurroundingLifeViewController.h */,
+				B2BB18DE18D829D700BD9FC9 /* HXTSurroundingLifeViewController.m */,
+				B2BB18DF18D829D700BD9FC9 /* IGo */,
+				B2BB18E418D829D700BD9FC9 /* YouCome */,
+			);
+			name = Controller;
+			path = SurroundingLife/Controller;
+			sourceTree = "<group>";
+		};
+		B2BB18DF18D829D700BD9FC9 /* IGo */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB18E018D829D700BD9FC9 /* HXTIGoViewController.h */,
+				B2BB18E118D829D700BD9FC9 /* HXTIGoViewController.m */,
+				B2BB18E218D829D700BD9FC9 /* HXTIGoWithTypeViewController.h */,
+				B2BB18E318D829D700BD9FC9 /* HXTIGoWithTypeViewController.m */,
+			);
+			path = IGo;
+			sourceTree = "<group>";
+		};
+		B2BB18E418D829D700BD9FC9 /* YouCome */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB18E518D829D700BD9FC9 /* HXTTheGroceryStoreViewController.h */,
+				B2BB18E618D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m */,
+			);
+			path = YouCome;
 			sourceTree = "<group>";
 		};
 		B2C016E418D2BA0F0058F1BF /* ChooseHouse ---选择小区/住房/城市 */ = {
@@ -696,9 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C27D9818B48432003AA091 /* main.m in Sources */,
-				B2AA7EC618D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2CE1C0318D2A912007A754D /* HXTBindCardViewController.m in Sources */,
-				B2AA7EC418D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m in Sources */,
 				B2AA7EEE18D2AE4000F4EF88 /* HXTViewWithArrow.m in Sources */,
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
 				B2CE1C1318D2A912007A754D /* HXTPropertyFeeDetailCell.m in Sources */,
@@ -706,9 +686,12 @@
 				B2CE1C0D18D2A912007A754D /* HXTHouse.m in Sources */,
 				B2CE1C0718D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
 				B2E4E35018D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */,
+				B2BB18ED18D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2AA7EE818D2AE4000F4EF88 /* HXTCheckBox.m in Sources */,
 				B2CE1C0918D2A912007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
+				B2BB18E918D829D700BD9FC9 /* HXTIGoViewController.m in Sources */,
 				B2C016EE18D2BB8F0058F1BF /* HXTSelectCityViewController.m in Sources */,
+				B2BB18EB18D829D700BD9FC9 /* HXTIGoWithTypeViewController.m in Sources */,
 				B2AA7EF318D2AF6200F4EF88 /* ComboBoxView.m in Sources */,
 				B2C016EA18D2BA310058F1BF /* HXTChooseHousingEstateViewController.m in Sources */,
 				B2AA7EF818D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */,
@@ -716,11 +699,10 @@
 				B2CE1C1718D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
 				B2CE1C0F18D2A912007A754D /* HXTMyProperties.m in Sources */,
 				B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
+				B2BB18E718D829D700BD9FC9 /* HXTSurroundingLifeViewController.m in Sources */,
 				B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
-				B2AA7EC218D2AC6300F4EF88 /* HXTIGoViewController.m in Sources */,
 				B2E4E35518D6F67C00C0C0F5 /* UIDevice+Resolutions.m in Sources */,
 				B2CE1C1518D2A912007A754D /* HXTPropertyCell.m in Sources */,
-				B2AA7EC018D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,30 +711,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CE1C0E18D2A912007A754D /* HXTHouse.m in Sources */,
+				B2BB18EC18D829D700BD9FC9 /* HXTIGoWithTypeViewController.m in Sources */,
 				B2AA7EEF18D2AE4000F4EF88 /* HXTViewWithArrow.m in Sources */,
 				B2CE1C0418D2A912007A754D /* HXTBindCardViewController.m in Sources */,
 				B2CE1C1618D2A912007A754D /* HXTPropertyCell.m in Sources */,
+				B2BB18EE18D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2CE1C0A18D2A912007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
-				B2AA7EC718D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2AA7EB118D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
 				B2CE1C1418D2A912007A754D /* HXTPropertyFeeDetailCell.m in Sources */,
 				B2E4E35618D6F67C00C0C0F5 /* UIDevice+Resolutions.m in Sources */,
 				B2C016EB18D2BA310058F1BF /* HXTChooseHousingEstateViewController.m in Sources */,
-				B2AA7EC518D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m in Sources */,
+				B2BB18EA18D829D700BD9FC9 /* HXTIGoViewController.m in Sources */,
 				B2CE1C1818D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
 				B2E4E35118D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */,
 				B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
 				B2AA7EE918D2AE4000F4EF88 /* HXTCheckBox.m in Sources */,
 				B2CE1C0818D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
+				B2BB18E818D829D700BD9FC9 /* HXTSurroundingLifeViewController.m in Sources */,
 				B2AA7EAF18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
 				B2CE1C1218D2A912007A754D /* HXTPropertyFeeCell.m in Sources */,
 				B2CE1C1018D2A912007A754D /* HXTMyProperties.m in Sources */,
-				B2AA7EC118D2AC6300F4EF88 /* HXTSurroundingLifeViewController.m in Sources */,
 				B2C016EF18D2BB8F0058F1BF /* HXTSelectCityViewController.m in Sources */,
 				B2AA7EF918D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */,
 				B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */,
 				B2AA7EF418D2AF6200F4EF88 /* ComboBoxView.m in Sources */,
-				B2AA7EC318D2AC6300F4EF88 /* HXTIGoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
