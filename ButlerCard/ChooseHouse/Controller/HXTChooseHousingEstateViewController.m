@@ -132,7 +132,7 @@
 - (IBAction)houseingEstateButtonPressed:(UIButton *)sender {
     NSIndexPath *indexPath = [_housingEstatesCollectionView indexPathForCell:(UICollectionViewCell *)sender.superview.superview];
     NSLog(@"ButtonPressedAtIndexPath indexPath.section = %li, indexPath.row = %li", (long)indexPath.section, (long)indexPath.row);
-    UIViewController *loginViewcontroller = [[UIStoryboard storyboardWithName:@"LoginAndRegister" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
+    UIViewController *loginViewcontroller = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
     
     //模态显示
     //    loginViewcontroller.modalPresentationStyle = UIModalPresentationFullScreen;

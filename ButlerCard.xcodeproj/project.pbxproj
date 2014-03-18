@@ -85,6 +85,10 @@
 		B2CE1C1918D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2CE1C0218D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib */; };
 		B2CE1C1A18D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2CE1C0218D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib */; };
 		B2D4880818B5DF1000F331D3 /* MyEasyLife.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D4880618B5DF1000F331D3 /* MyEasyLife.storyboard */; };
+		B2E4E35018D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E4E34F18D6DE7D00C0C0F5 /* HXTTabBarViewController.m */; };
+		B2E4E35118D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E4E34F18D6DE7D00C0C0F5 /* HXTTabBarViewController.m */; };
+		B2E4E35518D6F67C00C0C0F5 /* UIDevice+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E4E35418D6F67C00C0C0F5 /* UIDevice+Resolutions.m */; };
+		B2E4E35618D6F67C00C0C0F5 /* UIDevice+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E4E35418D6F67C00C0C0F5 /* UIDevice+Resolutions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +174,10 @@
 		B2CE1C0118D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTPropertyTableViewHeaderFooterView.m; sourceTree = "<group>"; };
 		B2CE1C0218D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPropertyTableViewHeaderFooterView.xib; sourceTree = "<group>"; };
 		B2D4880718B5DF1000F331D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyEasyLife.storyboard; sourceTree = "<group>"; };
+		B2E4E34E18D6DE7D00C0C0F5 /* HXTTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTTabBarViewController.h; path = Home/HXTTabBarViewController.h; sourceTree = "<group>"; };
+		B2E4E34F18D6DE7D00C0C0F5 /* HXTTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTTabBarViewController.m; path = Home/HXTTabBarViewController.m; sourceTree = "<group>"; };
+		B2E4E35318D6F67C00C0C0F5 /* UIDevice+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+Resolutions.h"; path = "Global/Public/UIDevice+Resolutions.h"; sourceTree = "<group>"; };
+		B2E4E35418D6F67C00C0C0F5 /* UIDevice+Resolutions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+Resolutions.m"; path = "Global/Public/UIDevice+Resolutions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +305,7 @@
 		B2AA7EC818D2AE2E00F4EF88 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				B2E4E35218D6F62200C0C0F5 /* Public */,
 				B2AA7EC918D2AE4000F4EF88 /* Model */,
 				B2AA7ECF18D2AE4000F4EF88 /* View */,
 			);
@@ -360,13 +369,15 @@
 			path = ComboBox;
 			sourceTree = "<group>";
 		};
-		B2AA7EF518D2AF7A00F4EF88 /* Home----------主页 */ = {
+		B2AA7EF518D2AF7A00F4EF88 /* Home----------首页 */ = {
 			isa = PBXGroup;
 			children = (
 				B2AA7EF618D2AFAD00F4EF88 /* HXTHomeViewController.h */,
 				B2AA7EF718D2AFAD00F4EF88 /* HXTHomeViewController.m */,
+				B2E4E34E18D6DE7D00C0C0F5 /* HXTTabBarViewController.h */,
+				B2E4E34F18D6DE7D00C0C0F5 /* HXTTabBarViewController.m */,
 			);
-			name = "Home----------主页";
+			name = "Home----------首页";
 			sourceTree = "<group>";
 		};
 		B2C016E418D2BA0F0058F1BF /* ChooseHouse ---选择小区/住房/城市 */ = {
@@ -453,7 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				B2AA7EC818D2AE2E00F4EF88 /* Global */,
-				B2AA7EF518D2AF7A00F4EF88 /* Home----------主页 */,
+				B2AA7EF518D2AF7A00F4EF88 /* Home----------首页 */,
 				B2CE1BE818D2A8F4007A754D /* MyProperties----我的物业 */,
 				B2AA7EB218D2AC4B00F4EF88 /* MyEasyLife------我的小日子 */,
 				B2AA7EA218D2AACB00F4EF88 /* AccountManager-账户管理 */,
@@ -550,6 +561,15 @@
 			);
 			name = View;
 			path = MyProperties/View;
+			sourceTree = "<group>";
+		};
+		B2E4E35218D6F62200C0C0F5 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				B2E4E35318D6F67C00C0C0F5 /* UIDevice+Resolutions.h */,
+				B2E4E35418D6F67C00C0C0F5 /* UIDevice+Resolutions.m */,
+			);
+			name = Public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -685,6 +705,7 @@
 				B2CE1C1118D2A912007A754D /* HXTPropertyFeeCell.m in Sources */,
 				B2CE1C0D18D2A912007A754D /* HXTHouse.m in Sources */,
 				B2CE1C0718D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
+				B2E4E35018D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */,
 				B2AA7EE818D2AE4000F4EF88 /* HXTCheckBox.m in Sources */,
 				B2CE1C0918D2A912007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
 				B2C016EE18D2BB8F0058F1BF /* HXTSelectCityViewController.m in Sources */,
@@ -697,6 +718,7 @@
 				B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
 				B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
 				B2AA7EC218D2AC6300F4EF88 /* HXTIGoViewController.m in Sources */,
+				B2E4E35518D6F67C00C0C0F5 /* UIDevice+Resolutions.m in Sources */,
 				B2CE1C1518D2A912007A754D /* HXTPropertyCell.m in Sources */,
 				B2AA7EC018D2AC6300F4EF88 /* HXTMyEasyLifeViewController.m in Sources */,
 			);
@@ -714,9 +736,11 @@
 				B2AA7EC718D2AC6300F4EF88 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2AA7EB118D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
 				B2CE1C1418D2A912007A754D /* HXTPropertyFeeDetailCell.m in Sources */,
+				B2E4E35618D6F67C00C0C0F5 /* UIDevice+Resolutions.m in Sources */,
 				B2C016EB18D2BA310058F1BF /* HXTChooseHousingEstateViewController.m in Sources */,
 				B2AA7EC518D2AC6300F4EF88 /* HXTIGoWithTypeViewController.m in Sources */,
 				B2CE1C1818D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
+				B2E4E35118D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */,
 				B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
 				B2AA7EE918D2AE4000F4EF88 /* HXTCheckBox.m in Sources */,
 				B2CE1C0818D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,

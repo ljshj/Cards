@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TlV-uT-eZj">
     <dependencies>
-        <deployment version="1536" defaultVersion="1552" identifier="iOS"/>
+        <deployment version="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -17,113 +17,108 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srh-sM-lIZ">
-                                <rect key="frame" x="48" y="254" width="81" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_1136X640" translatesAutoresizingMaskIntoConstraints="NO" id="Jpy-UR-7sd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="24N-MY-vg2"/>
-                                    <constraint firstAttribute="height" constant="60" id="p4i-Aa-lKq"/>
-                                </constraints>
-                                <state key="normal" title="物业缴费">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srh-sM-lIZ">
+                                <rect key="frame" x="66" y="138" width="80" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="物业缴费" backgroundImage="property_fee">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <state key="selected" backgroundImage="property_fee_selected"/>
                                 <connections>
                                     <action selector="propertyFeePressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="k3T-mT-IRW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-WU-xKE">
-                                <rect key="frame" x="179" y="254" width="81" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-WU-xKE">
+                                <rect key="frame" x="191" y="200" width="92" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="jpX-RT-HKt"/>
-                                    <constraint firstAttribute="width" constant="81" id="rzl-bt-jH2"/>
-                                </constraints>
-                                <state key="normal" title="我的小日子">
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="我的小日子" backgroundImage="my_easy_life">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="my_easy_life_selected"/>
                                 <connections>
                                     <action selector="myEasyLifeButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="TPa-Un-Z0w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sv-IW-BVv">
-                                <rect key="frame" x="48" y="446" width="81" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sv-IW-BVv">
+                                <rect key="frame" x="183" y="108" width="76" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="i4t-9I-Vej"/>
-                                    <constraint firstAttribute="width" constant="81" id="m45-Je-bOr"/>
-                                </constraints>
-                                <state key="normal" title="我的农场">
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="我的农场" backgroundImage="my_farm">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="my_farm_selected"/>
                                 <connections>
                                     <action selector="myFarmButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="r8b-xY-uMT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu1-HL-J5v">
-                                <rect key="frame" x="179" y="446" width="81" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu1-HL-J5v">
+                                <rect key="frame" x="34" y="221" width="94" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ojX-r2-ZQ9"/>
-                                    <constraint firstAttribute="width" constant="81" id="qao-DH-Hrv"/>
-                                </constraints>
-                                <state key="normal" title="我的存钱罐">
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="25" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="我的存钱罐" backgroundImage="my_piggy_bank">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="my_piggy_bank_selected"/>
                                 <connections>
                                     <action selector="myPiggyBankButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="KWS-Br-zTw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEe-sU-cWb">
-                                <rect key="frame" x="48" y="78" width="81" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panda" translatesAutoresizingMaskIntoConstraints="NO" id="dAf-wl-Atw">
+                                <rect key="frame" x="104" y="319" width="150" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Mj2-Se-2jA"/>
-                                    <constraint firstAttribute="width" constant="81" id="l1M-hB-Rc3"/>
-                                </constraints>
-                                <state key="normal" title="物业服务">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEe-sU-cWb">
+                                <rect key="frame" x="54" y="38" width="85" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="25" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="物管服务" backgroundImage="property_service">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="property_service_selected"/>
+                                <state key="highlighted" backgroundImage="property_service"/>
                                 <connections>
                                     <action selector="propertyServiceButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="D7C-nn-KwQ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="WEe-sU-cWb" firstAttribute="leading" secondItem="xRp-wG-DGX" secondAttribute="leading" constant="48" id="1do-Bl-IGa"/>
-                            <constraint firstAttribute="trailing" secondItem="nu1-HL-J5v" secondAttribute="trailing" constant="60" id="DhV-ac-Yt1"/>
-                            <constraint firstItem="srh-sM-lIZ" firstAttribute="leading" secondItem="xRp-wG-DGX" secondAttribute="leading" constant="48" id="DxO-CG-IKW"/>
-                            <constraint firstAttribute="trailing" secondItem="Pqa-WU-xKE" secondAttribute="trailing" constant="60" id="Kho-pr-veG"/>
-                            <constraint firstItem="yf4-Qb-jnH" firstAttribute="top" secondItem="nu1-HL-J5v" secondAttribute="bottom" constant="13" id="PET-Iq-bek"/>
-                            <constraint firstItem="yf4-Qb-jnH" firstAttribute="top" secondItem="9Sv-IW-BVv" secondAttribute="bottom" constant="13" id="PhR-AL-rf5"/>
-                            <constraint firstItem="WEe-sU-cWb" firstAttribute="top" secondItem="usY-4L-De7" secondAttribute="bottom" constant="14" id="TbB-Ts-mn8"/>
-                            <constraint firstItem="9Sv-IW-BVv" firstAttribute="leading" secondItem="xRp-wG-DGX" secondAttribute="leading" constant="48" id="VtS-ff-exO"/>
-                            <constraint firstAttribute="centerY" secondItem="Pqa-WU-xKE" secondAttribute="centerY" id="Y22-NL-VL7"/>
-                            <constraint firstAttribute="centerY" secondItem="srh-sM-lIZ" secondAttribute="centerY" id="Zix-Rz-6th"/>
-                            <constraint firstItem="WEe-sU-cWb" firstAttribute="top" secondItem="usY-4L-De7" secondAttribute="bottom" constant="14" id="jSq-DU-jF7"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2FR-eI-eZB">
                         <barButtonItem key="backBarButtonItem" title=" " id="6ZD-Hj-Gxb"/>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Jpy-UR-7sd" id="neX-68-2Fd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZk-vx-e2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1818" y="-222"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Cch-OH-eVo">
             <objects>
-                <tabBarController storyboardIdentifier="RootStoryboardID" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TlV-uT-eZj" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="RootStoryboardID" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TlV-uT-eZj" customClass="HXTTabBarViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SLr-CV-gTj">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="PiR-5R-iME" kind="relationship" relationship="viewControllers" id="fSo-Xv-2T5"/>
@@ -214,11 +209,11 @@
             </objects>
             <point key="canvasLocation" x="1292" y="1103"/>
         </scene>
-        <!--Navigation Controller - 主页-->
+        <!--Navigation Controller - 首页-->
         <scene sceneID="9II-xH-DN3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PiR-5R-iME" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="主页" image="house" id="qMB-3E-sYC"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="home" id="qMB-3E-sYC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pDI-cL-V3C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -241,7 +236,7 @@
         <scene sceneID="ZUy-G9-WMH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0O2-9c-WIU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="收藏" image="letter_closed" id="4Bb-vz-dqq"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="收藏" image="collection" id="4Bb-vz-dqq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5uA-Ad-rjN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -260,7 +255,7 @@
         <scene sceneID="B6F-mI-vG6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KY7-Zn-7HO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="3" title="我的管家" image="people" id="nOn-rQ-Hsw"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="我的管家" image="myButler" id="nOn-rQ-Hsw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLg-v1-h69">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -277,10 +272,22 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house" width="26" height="26"/>
-        <image name="letter_closed" width="26" height="26"/>
-        <image name="people" width="26" height="26"/>
-        <image name="trolley" width="26" height="26"/>
+        <image name="background_1136X640" width="320" height="568"/>
+        <image name="collection" width="25" height="25"/>
+        <image name="home" width="25" height="25"/>
+        <image name="myButler" width="25" height="25"/>
+        <image name="my_easy_life" width="87" height="103"/>
+        <image name="my_easy_life_selected" width="87" height="103"/>
+        <image name="my_farm" width="74" height="85"/>
+        <image name="my_farm_selected" width="74" height="85"/>
+        <image name="my_piggy_bank" width="73" height="72"/>
+        <image name="my_piggy_bank_selected" width="73" height="72"/>
+        <image name="panda" width="110" height="165"/>
+        <image name="property_fee" width="69" height="75"/>
+        <image name="property_fee_selected" width="69" height="75"/>
+        <image name="property_service" width="84" height="91"/>
+        <image name="property_service_selected" width="84" height="91"/>
+        <image name="trolley" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

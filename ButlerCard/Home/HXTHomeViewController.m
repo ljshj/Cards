@@ -7,9 +7,11 @@
 //
 
 #import "HXTHomeViewController.h"
+#import "UIDevice+Resolutions.h"
 #import "HXTAccountManager.h"
 
 @interface HXTHomeViewController () <UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 @end
 
@@ -29,13 +31,25 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    //   [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"arrow_left"] forBarMetrics:UIBarMetricsDefault];
-    //Not suppot iOS 6
-//    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"arrow_left"]];
-//    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"arrow_left"]];
-    
     self.navigationController.delegate = self;
+    self.navigationController.navigationBarHidden = YES;
     
+//    UITabBarItem *tabBarItem = [self.tabBarController] ;
+    
+//    UIImage *unselectedImage = [UIImage imageNamed:@"zy_home"];
+//    UIImage *selectedImage = [UIImage imageNamed:@"zy_home_p"];
+    
+    
+    UITabBarItem *updatesItem = [[UITabBarItem alloc] initWithTitle:@"Label 1" image:[UIImage imageNamed:@"zy_home"] tag:0];
+    
+    [updatesItem setFinishedSelectedImage:[UIImage imageNamed:@"zy_home_p"] withFinishedUnselectedImage:[UIImage imageNamed:@"zy_home"]];
+    self.tabBarItem = updatesItem;
+    
+    if ([UIDevice isRunningOniPhone5]) {
+        _backgroundImageView.image = [UIImage imageNamed:@"background_1136X640"];
+    } else {
+        _backgroundImageView.image = [UIImage imageNamed:@"background_960X640"];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,11 +60,13 @@
 
 #pragma mark -- UINavigationController Delegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-//    if (viewController == self) {
-//        self.tabBarController.tabBar.hidden = NO;
-//    }
+    if (viewController == self) {
+        self.navigationController.navigationBarHidden = YES;
+        self.tabBarController.tabBar.hidden = NO;
+    }
 }
-- (IBAction)propertyServiceButtonPressed:(id)sender {
+- (IBAction)propertyServiceButtonPressed:(UIButton *)sender {
+//    sender.selected = !sender.selected;
     NSLog(@"物业服务");
 }
 

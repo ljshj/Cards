@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "letter_closed.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "letter_closed@2x.png"
+      "filename" : "zy_love@2x.png"
     }
   ],
   "info" : {
