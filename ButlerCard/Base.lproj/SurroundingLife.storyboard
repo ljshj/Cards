@@ -341,6 +341,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="arrowView" destination="djK-3C-1eS" id="se3-SR-fGb"/>
+                        <outlet property="chooseCityLabel" destination="bhL-nX-Foh" id="WKt-MH-O5t"/>
                         <outlet property="collectionView" destination="XWn-Rd-0Q2" id="SVD-kr-KPA"/>
                         <outlet property="dropDownComboBoxView" destination="i7X-xU-1WT" id="TT6-eA-ULT"/>
                         <outlet property="groupTogetherButton" destination="7AP-Nz-UIi" id="rgi-tV-PXx"/>

@@ -7,6 +7,7 @@
 //
 
 #import "HXTSurroundingLifeViewController.h"
+#import "HXTAccountManager.h"
 #import "ComboBoxView.h"
 #import "HXTViewWithArrow.h"
 
@@ -19,6 +20,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 
 @interface HXTSurroundingLifeViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *chooseCityLabel;
 @property (weak, nonatomic) IBOutlet ComboBoxView *dropDownComboBoxView;
 @property (weak, nonatomic) IBOutlet UIButton *youComeButton;
 @property (weak, nonatomic) IBOutlet UIButton *iGoButton;
@@ -62,6 +64,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
                                @"二手车", @"其他"]];
     
     NSArray *comboBoxDatasource = @[@"中铁八局", @"万科A小区", @"置信A区", @"华润AA"];
+    
     _dropDownComboBoxView.comboBoxDatasource = comboBoxDatasource;
 	_dropDownComboBoxView.backgroundColor = [UIColor whiteColor];
     _dropDownComboBoxView.selectedItemIndex = 0;
@@ -69,6 +72,27 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     _groupNeedDisplay = DisplayGroupIsShowYouCome;
     _arrowView.relativeOrigin = CGPointMake(_youComeButton.frame.origin.x + _youComeButton.frame.size.width / 2,
                                             _youComeButton.frame.origin.y + _youComeButton.frame.size.height);
+    
+    [[HXTAccountManager sharedInstance] addObserver:self
+                                         forKeyPath:@"defaultHouseingEstate"
+                                            options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld
+                                            context:NULL];
+    if ([HXTAccountManager sharedInstance].defaultHouseingEstate) {
+        _chooseCityLabel.text = [HXTAccountManager sharedInstance].defaultHouseingEstate;
+    } else {
+        _chooseCityLabel.text = @"选择小区";
+    }
+}
+
+#pragma -- key value abserver
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"defaultHouseingEstate"] && object == [HXTAccountManager sharedInstance]) {
+        if ([HXTAccountManager sharedInstance].defaultHouseingEstate) {
+            _chooseCityLabel.text = [HXTAccountManager sharedInstance].defaultHouseingEstate;
+        } else {
+            _chooseCityLabel.text = @"选择小区";
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning

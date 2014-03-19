@@ -39,7 +39,10 @@
     
     _housingEstateNamesToShow = [[NSMutableArray alloc] initWithArray:[HXTMyProperties sharedInstance].allHousingEstateNames];
     
-    [[HXTAccountManager sharedInstance] addObserver:self forKeyPath:@"currentCity" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
+    [[HXTAccountManager sharedInstance] addObserver:self
+                                         forKeyPath:@"currentCity"
+                                            options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld
+                                            context:NULL];
     _cityLabel.text = [HXTAccountManager sharedInstance].currentCity;
 }
 

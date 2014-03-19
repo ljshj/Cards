@@ -160,7 +160,6 @@ typedef NS_ENUM(NSUInteger, sectionType) {
     }
 }
 
-#pragma mark --
 #pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

@@ -8,6 +8,7 @@
 
 #import "HXTChooseHousingEstateTableViewController.h"
 #import "HXTMyProperties.h"
+#import "HXTAccountManager.h"
 
 @interface HXTChooseHousingEstateTableViewController ()
 
@@ -104,6 +105,18 @@
     return YES;
 }
 */
+
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (![[HXTAccountManager sharedInstance].defaultHouseingEstate isEqualToString:[HXTMyProperties sharedInstance].allHousingEstateNames[indexPath.row]]) {
+        [HXTAccountManager sharedInstance].defaultHouseingEstate = [HXTMyProperties sharedInstance].allHousingEstateNames[indexPath.row];
+    }
+    
+    [HXTAccountManager sharedInstance].defaultHouseingEstate = [HXTMyProperties sharedInstance].allHousingEstateNames[indexPath.row];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 /*
 #pragma mark - Navigation
