@@ -34,20 +34,21 @@
 {
     NSUserDefaults *accountDefaults = [NSUserDefaults standardUserDefaults];
     
-    _sessionID   = [accountDefaults objectForKey:kSessionID];
-    _userID      = [accountDefaults objectForKey:kUserID];
-    _groupID     = [accountDefaults objectForKey:kGroupID];
-    _username    = [accountDefaults objectForKey:kUserName];
-    _nickName    = [accountDefaults objectForKey:kNickName];
-    _schemeName  = [accountDefaults objectForKey:kSchemeName];
-    _password    = [accountDefaults objectForKey:kPassword];
-    _phoneNumber = [accountDefaults objectForKey:kPhoneNumber];
-    _emailAddr   = [accountDefaults objectForKey:kEmailAddr];
-    _sex         = [accountDefaults objectForKey:kSex];
-    _currentCity = [accountDefaults objectForKey:kCurrentCity];
-    _logged      = [accountDefaults boolForKey:kLogged];
-    _firstRun    = [accountDefaults boolForKey:kFirstRun];
-    _enablePush  = [accountDefaults boolForKey:kEnablePush];
+    _sessionID                = [accountDefaults objectForKey:kSessionID];
+    _userID                   = [accountDefaults objectForKey:kUserID];
+    _groupID                  = [accountDefaults objectForKey:kGroupID];
+    _username                 = [accountDefaults objectForKey:kUserName];
+    _nickName                 = [accountDefaults objectForKey:kNickName];
+    _schemeName               = [accountDefaults objectForKey:kSchemeName];
+    _password                 = [accountDefaults objectForKey:kPassword];
+    _phoneNumber              = [accountDefaults objectForKey:kPhoneNumber];
+    _emailAddr                = [accountDefaults objectForKey:kEmailAddr];
+    _sex                      = [accountDefaults objectForKey:kSex];
+    _currentCity              = [accountDefaults objectForKey:kCurrentCity];
+    _defaultHouseingEstate    = [accountDefaults objectForKey:kDefaultHouseingEstate];
+    _logged                   = [accountDefaults boolForKey:kLogged];
+    _firstRun                 = [accountDefaults boolForKey:kFirstRun];
+    _enablePush               = [accountDefaults boolForKey:kEnablePush];
     _rememberdUsernameAtLogin = [accountDefaults boolForKey:kRememberdUsernameAtLogin];
     _rememberdPasswordAtLogin = [accountDefaults boolForKey:kRememberdPasswordAtLogin];
     
@@ -68,6 +69,7 @@
     [accountDefaults setObject:_emailAddr forKey:kEmailAddr];
     [accountDefaults setObject:_sex forKey:kSex];
     [accountDefaults setObject:_currentCity forKey:kCurrentCity];
+    [accountDefaults setObject:_defaultHouseingEstate forKey:kDefaultHouseingEstate];
     [accountDefaults setBool:_logged forKey:kLogged];
     [accountDefaults setBool:_firstRun forKey:kFirstRun];
     [accountDefaults setBool:_enablePush forKey:kEnablePush];

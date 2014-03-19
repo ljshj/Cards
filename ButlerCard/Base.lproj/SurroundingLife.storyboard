@@ -329,6 +329,9 @@
                                         <state key="normal" image="navigationBar_down">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="JP7-N4-DLo" kind="push" id="tJJ-lX-LWi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -349,6 +352,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXh-5e-CTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1054" y="73"/>
+        </scene>
+        <!--Choose Housing Estate Table View Controller - 选择小区-->
+        <scene sceneID="7g8-T2-QfP">
+            <objects>
+                <tableViewController title="选择小区" id="JP7-N4-DLo" customClass="HXTChooseHousingEstateTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ruq-4Q-awH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChooseHousingEstateCellIdentifier" id="1oE-Ea-SFC">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1oE-Ea-SFC" id="tW2-Yp-UeE">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JP7-N4-DLo" id="VkK-DO-xSe"/>
+                            <outlet property="delegate" destination="JP7-N4-DLo" id="zJf-2K-an8"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GiF-Dh-VaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1574" y="-135"/>
         </scene>
         <!--The Grocery Store View Controller - 杂货铺-->
         <scene sceneID="qMm-lt-APV">
@@ -461,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuc-kU-h04" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2017" y="-285"/>
+            <point key="canvasLocation" x="1054" y="-585"/>
         </scene>
         <!--View Controller - 话费充值-->
         <scene sceneID="2rn-wB-rQG">
@@ -573,7 +604,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXz-kW-vI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1607" y="-285"/>
+            <point key="canvasLocation" x="620" y="-585"/>
         </scene>
     </scenes>
     <resources>

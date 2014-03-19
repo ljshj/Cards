@@ -175,7 +175,10 @@ typedef NS_ENUM(NSUInteger, sectionType) {
     //    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     if (tableView == self.tableView) {
         if (indexPath.section == sectionTypeCurrentCity) {
-            [HXTAccountManager sharedInstance].currentCity = _currentCity;
+            if (_currentCity && ![_currentCity isEqualToString:[HXTAccountManager sharedInstance].currentCity]) {
+                [HXTAccountManager sharedInstance].currentCity = _currentCity;
+            }
+            
             [self.navigationController popViewControllerAnimated:YES];
         } else if (indexPath.section == sectionTypeTopCities) {
             [HXTAccountManager sharedInstance].currentCity = _topCities[indexPath.row];
