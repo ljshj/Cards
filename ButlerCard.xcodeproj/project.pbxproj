@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */; };
+		B25A8A2218D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
+		B25A8A2318D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
 		B2A4441318C5CAD5008A4592 /* EcologicalDistribution.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A4441118C5CAD5008A4592 /* EcologicalDistribution.storyboard */; };
 		B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */; };
 		B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */; };
@@ -103,6 +105,8 @@
 
 /* Begin PBXFileReference section */
 		B2380E0418B6FC3B00D895DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyProperty.storyboard; sourceTree = "<group>"; };
+		B25A8A2018D92B7F00A8D145 /* HXTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTNavigationController.h; path = Home/HXTNavigationController.h; sourceTree = "<group>"; };
+		B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTNavigationController.m; path = Home/HXTNavigationController.m; sourceTree = "<group>"; };
 		B2A4441218C5CAD5008A4592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EcologicalDistribution.storyboard; sourceTree = "<group>"; };
 		B2AA7EA418D2AAE800F4EF88 /* HXTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTLoginViewController.h; sourceTree = "<group>"; };
 		B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTLoginViewController.m; sourceTree = "<group>"; };
@@ -326,6 +330,8 @@
 				B2AA7EF718D2AFAD00F4EF88 /* HXTHomeViewController.m */,
 				B2E4E34E18D6DE7D00C0C0F5 /* HXTTabBarViewController.h */,
 				B2E4E34F18D6DE7D00C0C0F5 /* HXTTabBarViewController.m */,
+				B25A8A2018D92B7F00A8D145 /* HXTNavigationController.h */,
+				B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */,
 			);
 			name = "Home-----------首页";
 			sourceTree = "<group>";
@@ -686,6 +692,7 @@
 				B2CE1C0D18D2A912007A754D /* HXTHouse.m in Sources */,
 				B2CE1C0718D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
 				B2E4E35018D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */,
+				B25A8A2218D92B7F00A8D145 /* HXTNavigationController.m in Sources */,
 				B2BB18ED18D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2AA7EE818D2AE4000F4EF88 /* HXTCheckBox.m in Sources */,
 				B2CE1C0918D2A912007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
@@ -726,6 +733,7 @@
 				B2E4E35118D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */,
 				B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
 				B2AA7EE918D2AE4000F4EF88 /* HXTCheckBox.m in Sources */,
+				B25A8A2318D92B7F00A8D145 /* HXTNavigationController.m in Sources */,
 				B2CE1C0818D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
 				B2BB18E818D829D700BD9FC9 /* HXTSurroundingLifeViewController.m in Sources */,
 				B2AA7EAF18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,

@@ -190,7 +190,7 @@
         <!--Navigation Controller - 购物车-->
         <scene sceneID="r7D-qR-x4Q">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3i4-Go-HmA" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3i4-Go-HmA" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="2" title="购物车" image="tabbar_trolley" id="BK9-n3-ZQO">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
@@ -211,7 +211,7 @@
         <!--Navigation Controller - 首页-->
         <scene sceneID="9II-xH-DN3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PiR-5R-iME" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PiR-5R-iME" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="qMB-3E-sYC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pDI-cL-V3C">
@@ -234,7 +234,7 @@
         <!--Navigation Controller - 收藏-->
         <scene sceneID="ZUy-G9-WMH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0O2-9c-WIU" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0O2-9c-WIU" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="收藏" image="tabbar_collection" id="4Bb-vz-dqq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5uA-Ad-rjN">
@@ -253,7 +253,7 @@
         <!--Navigation Controller - 我的管家-->
         <scene sceneID="B6F-mI-vG6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KY7-Zn-7HO" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KY7-Zn-7HO" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="3" title="我的管家" image="tabbar_myButler" id="nOn-rQ-Hsw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLg-v1-h69">

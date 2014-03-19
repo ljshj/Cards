@@ -32,18 +32,8 @@
 	// Do any additional setup after loading the view.
     
     self.navigationController.delegate = self;
-    self.navigationController.navigationBarHidden = YES;
+//    self.navigationController.navigationBarHidden = YES;
     
-//    UITabBarItem *tabBarItem = [self.tabBarController] ;
-    
-//    UIImage *unselectedImage = [UIImage imageNamed:@"zy_home"];
-//    UIImage *selectedImage = [UIImage imageNamed:@"zy_home_p"];
-    
-    
-    UITabBarItem *updatesItem = [[UITabBarItem alloc] initWithTitle:@"Label 1" image:[UIImage imageNamed:@"zy_home"] tag:0];
-    
-    [updatesItem setFinishedSelectedImage:[UIImage imageNamed:@"zy_home_p"] withFinishedUnselectedImage:[UIImage imageNamed:@"zy_home"]];
-    self.tabBarItem = updatesItem;
     
     if ([UIDevice isRunningOniPhone5]) {
         _backgroundImageView.image = [UIImage imageNamed:@"background_1136X640"];
@@ -61,7 +51,6 @@
 #pragma mark -- UINavigationController Delegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (viewController == self) {
-        self.navigationController.navigationBarHidden = YES;
         self.tabBarController.tabBar.hidden = NO;
     }
 }
