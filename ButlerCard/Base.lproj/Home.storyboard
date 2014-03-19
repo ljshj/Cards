@@ -31,7 +31,7 @@
                                 </state>
                                 <state key="selected" backgroundImage="home_propertyFee_s"/>
                                 <connections>
-                                    <action selector="propertyFeePressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="k3T-mT-IRW"/>
+                                    <action selector="propertyFeeButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="kwh-E4-Czf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-WU-xKE">
@@ -103,6 +103,11 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="Jpy-UR-7sd" id="neX-68-2Fd"/>
+                        <outlet property="ecologicalDistributionButton" destination="9Sv-IW-BVv" id="1Z6-WJ-L3o"/>
+                        <outlet property="myFinancesButton" destination="nu1-HL-J5v" id="2Dm-NY-nQ6"/>
+                        <outlet property="propertyFeeButton" destination="srh-sM-lIZ" id="8Xc-xw-ohk"/>
+                        <outlet property="propertyServiceButton" destination="WEe-sU-cWb" id="dRs-FQ-Hzl"/>
+                        <outlet property="surroundingLifeButton" destination="Pqa-WU-xKE" id="U7b-lX-FZM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZk-vx-e2p" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,7 +11,13 @@
 #import "HXTAccountManager.h"
 
 @interface HXTHomeViewController () <UINavigationControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UIButton *propertyServiceButton;
+@property (weak, nonatomic) IBOutlet UIButton *propertyFeeButton;
+@property (weak, nonatomic) IBOutlet UIButton *myFinancesButton;
+@property (weak, nonatomic) IBOutlet UIButton *ecologicalDistributionButton;
+@property (weak, nonatomic) IBOutlet UIButton *surroundingLifeButton;
 
 @end
 
@@ -42,6 +48,15 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    _propertyServiceButton.selected = NO;
+    _propertyFeeButton.selected = NO;
+    _myFinancesButton.selected = NO;
+    _ecologicalDistributionButton.selected = NO;
+    _surroundingLifeButton.selected = NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -60,12 +75,13 @@
 
 //物管服务
 - (IBAction)propertyServiceButtonPressed:(UIButton *)sender {
-//    sender.selected = !sender.selected;
+    sender.selected = !sender.selected;
      NSLog(@"物业服务 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
 }
 
 //物业缴费
-- (IBAction)propertyFeePressed:(id)sender {
+- (IBAction)propertyFeeButtonPressed:(UIButton *)sender {
+    sender.selected = !sender.selected;
     NSLog(@"物业缴费 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
     
     if ([[HXTAccountManager sharedInstance] isLogged]) { //已登录，进入用户账单界面
@@ -80,23 +96,28 @@
     }
 }
 
-//周边生活
-- (IBAction)surroundingLifeButtonPressed:(id)sender {
-    NSLog(@"周边生活 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    UIViewController *surroundingLifeViewcontroller = [[UIStoryboard storyboardWithName:@"SurroundingLife" bundle:nil] instantiateViewControllerWithIdentifier:@"SurroundingLifeStoryboardID"];
-    [self.navigationController pushViewController:surroundingLifeViewcontroller animated:YES];
+//我的理财
+- (IBAction)myFinancesButtonPressed:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    NSLog(@"我的理财 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
 }
 
 //生态配送
-- (IBAction)ecologicalDistributionButtonPressed:(id)sender {
+- (IBAction)ecologicalDistributionButtonPressed:(UIButton *)sender {
+    sender.selected = !sender.selected;
     NSLog(@"生态配送 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
     UIViewController *ecologicalDistributionViewcontroller = [[UIStoryboard storyboardWithName:@"EcologicalDistribution" bundle:nil] instantiateViewControllerWithIdentifier:@"EcologicalDistributionStoryboardID"];
     [self.navigationController pushViewController:ecologicalDistributionViewcontroller animated:YES];
 }
 
-//我的理财
-- (IBAction)myFinancesButtonPressed:(id)sender {
-    NSLog(@"我的理财 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
+//周边生活
+- (IBAction)surroundingLifeButtonPressed:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    NSLog(@"周边生活 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
+    UIViewController *surroundingLifeViewcontroller = [[UIStoryboard storyboardWithName:@"SurroundingLife" bundle:nil] instantiateViewControllerWithIdentifier:@"SurroundingLifeStoryboardID"];
+    [self.navigationController pushViewController:surroundingLifeViewcontroller animated:YES];
 }
+
+
 
 @end
