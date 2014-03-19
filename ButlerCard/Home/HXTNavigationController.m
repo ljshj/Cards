@@ -27,8 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationBar.backgroundColor = [UIColor redColor];
-    NSLog(@"self.tabBarItem.tag = %ld", (long)self.tabBarItem.tag );
+    
     switch (self.tabBarItem.tag) {
         case 0:{ //首页
             [self.tabBarItem  setSelectedImage:[UIImage imageNamed:@"tabbar_home_s"]];

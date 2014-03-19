@@ -11,6 +11,8 @@
 #import "HXTMyProperties.h"
 
 @interface HXTChooseHousingEstateViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *chooseCityButton;
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UIControl *coverView;
 @property (weak, nonatomic) IBOutlet UISearchBar *propertySearchBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *housingEstatesCollectionView;
@@ -33,16 +35,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.navigationController.navigationBarHidden = NO;
+    
     _housingEstateNamesToShow = [[NSMutableArray alloc] initWithArray:[HXTMyProperties sharedInstance].allHousingEstateNames];
     
     [[HXTAccountManager sharedInstance] addObserver:self forKeyPath:@"currentCity" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
-    self.navigationItem.rightBarButtonItem.title = [HXTAccountManager sharedInstance].currentCity;
+    _cityLabel.text = [HXTAccountManager sharedInstance].currentCity;
 }
 
 #pragma -- key value abserver
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"currentCity"] && object == [HXTAccountManager sharedInstance]) {
-        self.navigationItem.rightBarButtonItem.title = [HXTAccountManager sharedInstance].currentCity;
+        _cityLabel.text = [HXTAccountManager sharedInstance].currentCity;
     } 
 }
 
@@ -147,6 +151,12 @@
 #pragma mark -- LoginViewController delegate
 -(void)loginViewController:(UIViewController *)loginViewController loginDidSucessed:(BOOL)sucessed {
     NSLog(@"%s %s %d Login sucessed = %@", __FILE__, __FUNCTION__, __LINE__, sucessed? @"YES": @"NO");
+}
+
+
+#pragma mark -- UI Actions
+- (IBAction)backButtonPressed:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

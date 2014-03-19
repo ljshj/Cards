@@ -32,8 +32,8 @@
 	// Do any additional setup after loading the view.
     
     self.navigationController.delegate = self;
-//    self.navigationController.navigationBarHidden = YES;
-    
+    self.navigationController.navigationBarHidden = YES;
+
     
     if ([UIDevice isRunningOniPhone5]) {
         _backgroundImageView.image = [UIImage imageNamed:@"background_1136X640"];
@@ -51,6 +51,7 @@
 #pragma mark -- UINavigationController Delegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (viewController == self) {
+        self.navigationController.navigationBarHidden = YES;
         self.tabBarController.tabBar.hidden = NO;
     }
 }
