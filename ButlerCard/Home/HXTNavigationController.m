@@ -49,6 +49,11 @@
         default:
             break;
     }
+
+    
+    //设置Title属性
+    [self.navigationBar setTitleTextAttributes:@{UITextAttributeFont: [UIFont boldSystemFontOfSize:20],
+                                                 UITextAttributeTextColor: [UIColor whiteColor]}];
 }
 
 - (void)didReceiveMemoryWarning

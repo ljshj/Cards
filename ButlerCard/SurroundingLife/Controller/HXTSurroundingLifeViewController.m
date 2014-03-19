@@ -48,6 +48,8 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.navigationController.navigationBarHidden = NO;
+    
     _DisplayGroupItems = @[@[@"杂货铺", @"外卖", @"维修",
                                @"家政", @"送水", @"开锁",
                                @"缝补", @"洗衣", @"鞋子",
