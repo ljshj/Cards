@@ -169,25 +169,26 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="e6O-5N-3iV">
                             <view key="customView" contentMode="scaleToFill" id="89W-ot-K2x">
-                                <rect key="frame" x="234" y="11" width="70" height="22"/>
+                                <rect key="frame" x="234" y="5" width="70" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="成都市" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtG-10-tZV">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-m6-Gja">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <inset key="imageEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="navigationBar_down">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="chooseCityButtonPressed:" destination="KbO-D9-o9T" eventType="touchUpInside" id="Kqj-Ut-LWn"/>
                                             <segue destination="nDI-RQ-1VH" kind="push" id="TZA-we-2kr"/>
                                         </connections>
                                     </button>
@@ -362,7 +363,7 @@
     <resources>
         <image name="housingEstate.jpg" width="320" height="240"/>
         <image name="navigationBar_back" width="44" height="44"/>
-        <image name="navigationBar_down" width="15" height="9"/>
+        <image name="navigationBar_down" width="15" height="15"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

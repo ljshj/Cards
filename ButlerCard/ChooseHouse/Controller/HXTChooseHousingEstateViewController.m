@@ -52,6 +52,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    _chooseCityButton.selected = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -159,6 +160,9 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)chooseCityButtonPressed:(UIButton *)sender {
+    sender.selected = !sender.selected;
+}
 
 - (IBAction)backgroudTouchUpInside:(id)sender {
     [_propertySearchBar resignFirstResponder];

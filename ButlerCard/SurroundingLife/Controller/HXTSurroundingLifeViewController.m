@@ -113,7 +113,12 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     
 }
 
-#pragma -- Button presssed methords
+#pragma mark -- UI Actions
+
+- (IBAction)backButtonPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)youComeButtonPressed:(id)sender {
     NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
     if (_groupNeedDisplay != DisplayGroupIsShowYouCome) {
@@ -157,5 +162,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
         [_collectionView reloadData];
     }
 }
+
+
 
 @end
