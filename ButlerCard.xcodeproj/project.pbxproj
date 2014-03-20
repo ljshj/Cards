@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2385634318DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385634018DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m */; };
+		2385634418DADA6B005D5AF5 /* CYMyPropertyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385634218DADA6B005D5AF5 /* CYMyPropertyTableViewController.m */; };
+		2385634918DAE03E005D5AF5 /* CYMyBillTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385634818DAE03E005D5AF5 /* CYMyBillTableViewController.m */; };
+		2385635018DAE22E005D5AF5 /* CYMyBillDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385634F18DAE22E005D5AF5 /* CYMyBillDetailCell.m */; };
+		2385635318DAE242005D5AF5 /* CYMyBillMonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385635218DAE242005D5AF5 /* CYMyBillMonthCell.m */; };
 		B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */; };
 		B25A8A2218D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
 		B25A8A2318D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
@@ -106,6 +111,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2385633F18DADA6B005D5AF5 /* CYMyPropertyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyPropertyTableViewCell.h; sourceTree = "<group>"; };
+		2385634018DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyPropertyTableViewCell.m; sourceTree = "<group>"; };
+		2385634118DADA6B005D5AF5 /* CYMyPropertyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyPropertyTableViewController.h; sourceTree = "<group>"; };
+		2385634218DADA6B005D5AF5 /* CYMyPropertyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyPropertyTableViewController.m; sourceTree = "<group>"; };
+		2385634718DAE03E005D5AF5 /* CYMyBillTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyBillTableViewController.h; sourceTree = "<group>"; };
+		2385634818DAE03E005D5AF5 /* CYMyBillTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyBillTableViewController.m; sourceTree = "<group>"; };
+		2385634E18DAE22D005D5AF5 /* CYMyBillDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyBillDetailCell.h; sourceTree = "<group>"; };
+		2385634F18DAE22E005D5AF5 /* CYMyBillDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyBillDetailCell.m; sourceTree = "<group>"; };
+		2385635118DAE242005D5AF5 /* CYMyBillMonthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyBillMonthCell.h; sourceTree = "<group>"; };
+		2385635218DAE242005D5AF5 /* CYMyBillMonthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyBillMonthCell.m; sourceTree = "<group>"; };
 		B2380E0418B6FC3B00D895DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyProperty.storyboard; sourceTree = "<group>"; };
 		B25A8A2018D92B7F00A8D145 /* HXTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTNavigationController.h; path = Home/HXTNavigationController.h; sourceTree = "<group>"; };
 		B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTNavigationController.m; path = Home/HXTNavigationController.m; sourceTree = "<group>"; };
@@ -212,6 +227,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2385633E18DADA6B005D5AF5 /* MyButler---------我的管家 */ = {
+			isa = PBXGroup;
+			children = (
+				2385634518DADA9B005D5AF5 /* Controller */,
+				2385634618DADAA4005D5AF5 /* Model */,
+			);
+			name = "MyButler---------我的管家";
+			path = MyButler;
+			sourceTree = "<group>";
+		};
+		2385634518DADA9B005D5AF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2385634118DADA6B005D5AF5 /* CYMyPropertyTableViewController.h */,
+				2385634218DADA6B005D5AF5 /* CYMyPropertyTableViewController.m */,
+				2385634718DAE03E005D5AF5 /* CYMyBillTableViewController.h */,
+				2385634818DAE03E005D5AF5 /* CYMyBillTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2385634618DADAA4005D5AF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2385633F18DADA6B005D5AF5 /* CYMyPropertyTableViewCell.h */,
+				2385634018DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m */,
+				2385634E18DAE22D005D5AF5 /* CYMyBillDetailCell.h */,
+				2385634F18DAE22E005D5AF5 /* CYMyBillDetailCell.m */,
+				2385635118DAE242005D5AF5 /* CYMyBillMonthCell.h */,
+				2385635218DAE242005D5AF5 /* CYMyBillMonthCell.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B2AA7EA218D2AACB00F4EF88 /* AccountManager--账户管理 */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				B2AA7EC818D2AE2E00F4EF88 /* Global */,
+				2385633E18DADA6B005D5AF5 /* MyButler---------我的管家 */,
 				B2AA7EF518D2AF7A00F4EF88 /* Home-----------首页 */,
 				B2CE1BE818D2A8F4007A754D /* MyProperties-----我的物业 */,
 				B2AA7EB218D2AC4B00F4EF88 /* SurroundingLife--周边生活 */,
@@ -681,6 +731,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2385634418DADA6B005D5AF5 /* CYMyPropertyTableViewController.m in Sources */,
 				B2C27D9818B48432003AA091 /* main.m in Sources */,
 				B2CE1C0318D2A912007A754D /* HXTBindCardViewController.m in Sources */,
 				B2AA7EEE18D2AE4000F4EF88 /* HXTViewWithArrow.m in Sources */,
@@ -690,6 +741,7 @@
 				B2CE1C0D18D2A912007A754D /* HXTHouse.m in Sources */,
 				B2CE1C0718D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
 				B2E4E35018D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */,
+				2385635018DAE22E005D5AF5 /* CYMyBillDetailCell.m in Sources */,
 				B25A8A2218D92B7F00A8D145 /* HXTNavigationController.m in Sources */,
 				B2BB18ED18D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2AA7EE818D2AE4000F4EF88 /* HXTCheckBox.m in Sources */,
@@ -697,16 +749,19 @@
 				B291D55318D97D72008ACE36 /* HXTChooseHousingEstateTableViewController.m in Sources */,
 				B2BB18E918D829D700BD9FC9 /* HXTIGoViewController.m in Sources */,
 				B291D55718D9E78F008ACE36 /* HXTSelectCitySecondLevelViewController.m in Sources */,
+				2385635318DAE242005D5AF5 /* CYMyBillMonthCell.m in Sources */,
 				B2C016EE18D2BB8F0058F1BF /* HXTSelectCityViewController.m in Sources */,
 				B2BB18EB18D829D700BD9FC9 /* HXTIGoWithTypeViewController.m in Sources */,
 				B2C016EA18D2BA310058F1BF /* HXTChooseHousingEstateViewController.m in Sources */,
 				B2AA7EF818D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */,
 				B2AA7EB018D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
 				B2CE1C1718D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
+				2385634918DAE03E005D5AF5 /* CYMyBillTableViewController.m in Sources */,
 				B2CE1C0F18D2A912007A754D /* HXTMyProperties.m in Sources */,
 				B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
 				B2BB18E718D829D700BD9FC9 /* HXTSurroundingLifeViewController.m in Sources */,
 				B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
+				2385634318DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m in Sources */,
 				B2E4E35518D6F67C00C0C0F5 /* UIDevice+Resolutions.m in Sources */,
 				B2CE1C1518D2A912007A754D /* HXTPropertyCell.m in Sources */,
 			);

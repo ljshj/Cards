@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CYMyPropertyTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
+@interface CYMyPropertyTableViewController : UITableViewController
 
 @end
