@@ -115,6 +115,7 @@
     sender.selected = !sender.selected;
     NSLog(@"周边生活 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
     UIViewController *surroundingLifeViewcontroller = [[UIStoryboard storyboardWithName:@"SurroundingLife" bundle:nil] instantiateViewControllerWithIdentifier:@"SurroundingLifeStoryboardID"];
+//    [self presentViewController:surroundingLifeViewcontroller animated:YES completion:^{}];
     [self.navigationController pushViewController:surroundingLifeViewcontroller animated:YES];
 }
 

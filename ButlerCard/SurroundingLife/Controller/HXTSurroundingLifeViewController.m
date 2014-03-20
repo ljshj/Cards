@@ -11,7 +11,8 @@
 #import "HXTViewWithArrow.h"
 
 typedef NS_ENUM(NSUInteger, DisplayGroup) {
-    DisplayGroupIsShowYouCome = 0,
+    DisplayGroupIsNone = 0,
+    DisplayGroupIsShowYouCome = 1,
     DisplayGroupIsIGo,
     DisplayGroupIsGroupTogether,
     DisplayGroupIsGoYou,
@@ -20,10 +21,9 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 @interface HXTSurroundingLifeViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *chooseCityLabel;
-@property (weak, nonatomic) IBOutlet UIButton *youComeButton;
-@property (weak, nonatomic) IBOutlet UIButton *iGoButton;
-@property (weak, nonatomic) IBOutlet UIButton *groupTogetherButton;
-@property (weak, nonatomic) IBOutlet UIButton *secondHandButton;
+@property (weak, nonatomic) IBOutlet UIView *doorServiceAndBookedConsumptionView;
+@property (weak, nonatomic) IBOutlet UIView *houseEstateInteractionAndsecondHandGoodsView;
+@property (weak, nonatomic) IBOutlet UIView *extraFunctionsView;
 @property (weak, nonatomic) IBOutlet HXTViewWithArrow *arrowView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -62,9 +62,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
                                @"二手车", @"其他"]];
     
     
-    _groupNeedDisplay = DisplayGroupIsShowYouCome;
-    _arrowView.relativeOrigin = CGPointMake(_youComeButton.frame.origin.x + _youComeButton.frame.size.width / 2,
-                                            _youComeButton.frame.origin.y + _youComeButton.frame.size.height);
+    _groupNeedDisplay = DisplayGroupIsNone;
     
     [[HXTAccountManager sharedInstance] addObserver:self
                                          forKeyPath:@"defaultHouseingEstate"
@@ -136,30 +134,58 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (IBAction)youComeButtonPressed:(id)sender {
-    NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
+//上门服务
+- (IBAction)doorServiceButtonPressed:(id)sender {
     if (_groupNeedDisplay != DisplayGroupIsShowYouCome) {
         _groupNeedDisplay = DisplayGroupIsShowYouCome;
         UIButton *button = (UIButton *)sender;
+        
         _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
         [_arrowView setNeedsDisplay];
         [_collectionView reloadData];
+        
+        _arrowView.frame = CGRectMake(CGRectGetMinX(_arrowView.frame),
+                                      CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                      CGRectGetWidth(_arrowView.frame),
+                                      CGRectGetHeight(_arrowView.frame));
+        _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                         CGRectGetMaxY(_arrowView.frame),
+                                                                         CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                         CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+        _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                               CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                               CGRectGetWidth(_extraFunctionsView.frame),
+                                               CGRectGetHeight(_extraFunctionsView.frame));
+        
     }
 }
 
-- (IBAction)iGoButtonPressed:(id)sender {
-    NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
+//预定消费
+- (IBAction)bookedConsumptionPressed:(id)sender {
     if (_groupNeedDisplay != DisplayGroupIsIGo) {
         _groupNeedDisplay = DisplayGroupIsIGo;
         UIButton *button = (UIButton *)sender;
         _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
         [_arrowView setNeedsDisplay];
         [_collectionView reloadData];
+        
+        _arrowView.frame = CGRectMake(CGRectGetMinX(_arrowView.frame),
+                                      CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                      CGRectGetWidth(_arrowView.frame),
+                                      CGRectGetHeight(_arrowView.frame));
+        _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                         CGRectGetMaxY(_arrowView.frame),
+                                                                         CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                         CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+        _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                               CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                               CGRectGetWidth(_extraFunctionsView.frame),
+                                               CGRectGetHeight(_extraFunctionsView.frame));
     }
 }
 
-- (IBAction)groupTogetherButtonPressed:(id)sender {
-    NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
+//小区互动
+- (IBAction)houseEstateInteractionButtonPressed:(id)sender {
     if (_groupNeedDisplay != DisplayGroupIsGroupTogether) {
         _groupNeedDisplay = DisplayGroupIsGroupTogether;
         UIButton *button = (UIButton *)sender;
@@ -169,8 +195,8 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     }
 }
 
-- (IBAction)goYouButtonPressed:(id)sender {
-    NSLog(@"%s %s %d", __FILE__, __FUNCTION__, __LINE__);
+//二手物品
+- (IBAction)secondHandGoodsButtonPressed:(id)sender {
     if (_groupNeedDisplay != DisplayGroupIsGoYou) {
         _groupNeedDisplay = DisplayGroupIsGoYou;
         UIButton *button = (UIButton *)sender;

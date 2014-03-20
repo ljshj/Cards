@@ -111,11 +111,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (![[HXTAccountManager sharedInstance].defaultHouseingEstate isEqualToString:[HXTMyProperties sharedInstance].allHousingEstateNames[indexPath.row]]) {
-        [HXTAccountManager sharedInstance].defaultHouseingEstate = [HXTMyProperties sharedInstance].allHousingEstateNames[indexPath.row];
+        [self dismissViewControllerAnimated:YES completion:^{
+            [HXTAccountManager sharedInstance].defaultHouseingEstate = [HXTMyProperties sharedInstance].allHousingEstateNames[indexPath.row];
+        }];
     }
     
-    [HXTAccountManager sharedInstance].defaultHouseingEstate = [HXTMyProperties sharedInstance].allHousingEstateNames[indexPath.row];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UI Actions
+
+- (IBAction)backButtonPressed:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

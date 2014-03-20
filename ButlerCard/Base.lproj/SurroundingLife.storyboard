@@ -17,73 +17,142 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6k-VF-XI0">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOe-6K-qW3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ3-dI-lUx">
-                                        <rect key="frame" x="20" y="50" width="60" height="40"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWj-sx-cIg" userLabel="View --上门&amp;预定">
+                                        <rect key="frame" x="0.0" y="60" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="ZWR-X3-259"/>
-                                            <constraint firstAttribute="height" constant="40" id="piE-Se-dnd"/>
-                                        </constraints>
-                                        <state key="normal" title="你来">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="youComeButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="kc9-es-hVq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubd-eA-KJJ">
-                                        <rect key="frame" x="95" y="50" width="60" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vn-XU-iS0" userLabel="View --上门服务">
+                                                <rect key="frame" x="45" y="0.0" width="80" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="上门服务" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB7-Pe-A64">
+                                                        <rect key="frame" x="5" y="74" width="70" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SurroundingLife_doorService" translatesAutoresizingMaskIntoConstraints="NO" id="WOv-XU-Jar">
+                                                        <rect key="frame" x="5" y="0.0" width="70" height="70"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXz-mH-PWQ" userLabel="Button - 上门服务">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="doorServiceButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="HC4-M8-9kC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vyk-tr-Xb6" userLabel="View --预定消费">
+                                                <rect key="frame" x="190" y="0.0" width="80" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SurroundingLife_bookedConsumption" translatesAutoresizingMaskIntoConstraints="NO" id="5RX-Ja-bq4">
+                                                        <rect key="frame" x="5" y="0.0" width="70" height="70"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="预定消费" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sA-JD-sq4">
+                                                        <rect key="frame" x="5" y="74" width="70" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi8-RD-7LY" userLabel="Button - 预定消费">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="bookedConsumptionPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="hPN-5Z-mBp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGT-6k-3zD" userLabel="View -- 互动&amp;二手">
+                                        <rect key="frame" x="0.0" y="170" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="NDJ-bH-xV2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="我去">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="iGoButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="fIZ-Vc-iOG"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AP-Nz-UIi">
-                                        <rect key="frame" x="169" y="50" width="60" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="OzK-Bz-uwh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="伙拼">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="groupTogetherButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="DES-9u-Twl"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVq-1I-Brs">
-                                        <rect key="frame" x="240" y="50" width="60" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="走你">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goYouButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="PEr-3U-o2V"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djK-3C-1eS" customClass="HXTViewWithArrow">
-                                        <rect key="frame" x="0.0" y="100" width="320" height="240"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlk-Ff-JVG" userLabel="View --小区互动">
+                                                <rect key="frame" x="44" y="0.0" width="80" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SurroundingLife_houseEstateInteraction" translatesAutoresizingMaskIntoConstraints="NO" id="vLN-v8-zYP">
+                                                        <rect key="frame" x="5" y="0.0" width="70" height="70"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="小区互动" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-xr-Emh">
+                                                        <rect key="frame" x="5" y="74" width="70" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8q-WH-zsh" userLabel="Button - 小区互动">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="houseEstateInteractionButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="qbI-Lb-P8L"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0GV-pU-Sg5" userLabel="View --二手物品">
+                                                <rect key="frame" x="189" y="0.0" width="80" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SurroundingLife_secondHandGoods" translatesAutoresizingMaskIntoConstraints="NO" id="oq2-ua-fai">
+                                                        <rect key="frame" x="5" y="0.0" width="70" height="70"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="二手物品" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVp-sB-dhn">
+                                                        <rect key="frame" x="5" y="74" width="70" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yB-Y2-GVK" userLabel="Button - 二手物品">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="secondHandGoodsButtonPressed:" destination="k30-ec-sj4" eventType="touchUpInside" id="tLR-DP-FjR"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djK-3C-1eS" customClass="HXTViewWithArrow">
+                                        <rect key="frame" x="0.0" y="368" width="320" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XWn-Rd-0Q2">
-                                                <rect key="frame" x="0.0" y="20" width="320" height="246"/>
+                                                <rect key="frame" x="0.0" y="30" width="320" height="240"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="kUs-cV-MdP">
@@ -127,165 +196,60 @@
                                             </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="240" id="H1O-eb-r00"/>
-                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tkz-Cz-MZ9">
-                                        <rect key="frame" x="0.0" y="341" width="320" height="114"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTa-xN-zxb" userLabel="View  - 附属功能">
+                                        <rect key="frame" x="0.0" y="280" width="320" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsA-ig-hHQ">
-                                                <rect key="frame" x="10" y="6" width="100" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA6-jG-gmH">
+                                                <rect key="frame" x="34" y="0.0" width="97" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="cNv-0Y-Nry">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    </imageView>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="话费充值" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOB-Wi-2eO">
-                                                        <rect key="frame" x="40" y="0.0" width="60" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5n-mO-kXT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="PeC-0d-tbh" kind="push" id="M4F-Lu-08P"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8J-ci-xa1">
-                                                <rect key="frame" x="200" y="6" width="100" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title=" 话费充值" image="global_callsRecharge">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTm-D0-UEh">
+                                                <rect key="frame" x="183" y="0.0" width="97" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="18O-6A-P5W">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    </imageView>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="快递查询" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFO-yO-CVT">
-                                                        <rect key="frame" x="40" y="0.0" width="60" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4d-CA-El7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="6gQ-Lt-Ihw" kind="push" id="8To-6l-egx"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="79W-Pg-7uW">
-                                                <rect key="frame" x="10" y="57" width="100" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title=" 快递查询" image="global_expressQuery">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWn-VV-1ZQ">
+                                                <rect key="frame" x="34" y="44" width="97" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="BJw-17-2Bs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    </imageView>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="推荐信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgu-bh-Wis">
-                                                        <rect key="frame" x="40" y="0.0" width="60" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alz-J9-ycm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="iNq-kk-Mcc" kind="push" id="EmI-nb-VbG"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zFO-6z-iUw">
-                                                <rect key="frame" x="200" y="57" width="100" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title=" 推荐信息" image="global_recommendation">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGQ-Xz-EnN">
+                                                <rect key="frame" x="183" y="44" width="97" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="7Yi-c6-MKK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    </imageView>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="查询地铁" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olb-Vk-wmo">
-                                                        <rect key="frame" x="40" y="0.0" width="60" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpP-i0-wVj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="cAJ-9l-LVa" kind="push" id="RrL-x6-2jV"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title=" 查询地铁" image="global_subwayQuery">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="Tkz-Cz-MZ9" firstAttribute="trailing" secondItem="djK-3C-1eS" secondAttribute="trailing" id="06S-wt-fLr"/>
-                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="leading" secondItem="Ubd-eA-KJJ" secondAttribute="trailing" constant="14" id="6lx-go-vyO"/>
-                                    <constraint firstItem="djK-3C-1eS" firstAttribute="leading" secondItem="J6k-VF-XI0" secondAttribute="leading" id="9iV-2Z-iIN"/>
-                                    <constraint firstAttribute="trailing" secondItem="DVq-1I-Brs" secondAttribute="trailing" constant="20" symbolic="YES" id="B6G-kE-n79"/>
-                                    <constraint firstItem="Ubd-eA-KJJ" firstAttribute="baseline" secondItem="hZ3-dI-lUx" secondAttribute="baseline" id="GLa-Zq-454"/>
-                                    <constraint firstItem="hZ3-dI-lUx" firstAttribute="top" secondItem="Ubd-eA-KJJ" secondAttribute="top" id="HQw-bU-gXg"/>
-                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="top" secondItem="J6k-VF-XI0" secondAttribute="top" constant="50" id="JsN-RP-aNm"/>
-                                    <constraint firstItem="DVq-1I-Brs" firstAttribute="top" secondItem="7AP-Nz-UIi" secondAttribute="top" id="OOl-VL-2qa"/>
-                                    <constraint firstItem="hZ3-dI-lUx" firstAttribute="bottom" secondItem="Ubd-eA-KJJ" secondAttribute="bottom" id="VIw-TP-Yxn"/>
-                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="leading" secondItem="J6k-VF-XI0" secondAttribute="leading" constant="169" id="Vzb-GC-iCo"/>
-                                    <constraint firstItem="DVq-1I-Brs" firstAttribute="baseline" secondItem="7AP-Nz-UIi" secondAttribute="baseline" id="XjK-6Q-CjA"/>
-                                    <constraint firstItem="Ubd-eA-KJJ" firstAttribute="leading" secondItem="hZ3-dI-lUx" secondAttribute="trailing" constant="15" id="Yr0-jK-Dtn"/>
-                                    <constraint firstAttribute="trailing" secondItem="7AP-Nz-UIi" secondAttribute="trailing" constant="91" id="ZRv-Go-vHK"/>
-                                    <constraint firstAttribute="bottom" secondItem="7AP-Nz-UIi" secondAttribute="bottom" constant="365" id="Znb-gH-AI0"/>
-                                    <constraint firstItem="djK-3C-1eS" firstAttribute="top" secondItem="DVq-1I-Brs" secondAttribute="bottom" constant="10" id="ZoQ-Rl-mBr"/>
-                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="top" secondItem="Ubd-eA-KJJ" secondAttribute="top" id="aTa-PD-jKE"/>
-                                    <constraint firstItem="Tkz-Cz-MZ9" firstAttribute="top" secondItem="djK-3C-1eS" secondAttribute="bottom" constant="1" id="adq-Lx-deJ"/>
-                                    <constraint firstItem="Tkz-Cz-MZ9" firstAttribute="leading" secondItem="djK-3C-1eS" secondAttribute="leading" id="cOx-g1-Au5"/>
-                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="baseline" secondItem="Ubd-eA-KJJ" secondAttribute="baseline" id="fig-hs-yuB"/>
-                                    <constraint firstAttribute="trailing" secondItem="djK-3C-1eS" secondAttribute="trailing" id="frN-UZ-VlW"/>
-                                    <constraint firstItem="DVq-1I-Brs" firstAttribute="leading" secondItem="7AP-Nz-UIi" secondAttribute="trailing" constant="11" id="gkZ-24-fTn"/>
-                                    <constraint firstItem="7AP-Nz-UIi" firstAttribute="bottom" secondItem="Ubd-eA-KJJ" secondAttribute="bottom" id="gxK-7P-d5Y"/>
-                                    <constraint firstItem="DVq-1I-Brs" firstAttribute="bottom" secondItem="7AP-Nz-UIi" secondAttribute="bottom" id="jNo-mb-E0A"/>
-                                    <constraint firstAttribute="bottom" secondItem="Tkz-Cz-MZ9" secondAttribute="bottom" id="qlk-eg-lv1"/>
-                                </constraints>
+                                <color key="backgroundColor" white="0.94514142335766427" alpha="1" colorSpace="calibratedWhite"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="J6k-VF-XI0" firstAttribute="leading" secondItem="6zo-Id-osq" secondAttribute="leading" id="2EX-eq-v4Z"/>
-                            <constraint firstAttribute="trailing" secondItem="J6k-VF-XI0" secondAttribute="trailing" id="Y2g-WC-082"/>
-                            <constraint firstItem="J6k-VF-XI0" firstAttribute="top" secondItem="sNi-xv-fuz" secondAttribute="bottom" id="a4a-rb-eaj"/>
-                            <constraint firstItem="9lt-UQ-rTG" firstAttribute="top" secondItem="J6k-VF-XI0" secondAttribute="bottom" id="yIf-tk-MJQ"/>
+                            <constraint firstAttribute="trailing" secondItem="rOe-6K-qW3" secondAttribute="trailing" id="1hB-r5-vXW"/>
+                            <constraint firstItem="rOe-6K-qW3" firstAttribute="leading" secondItem="6zo-Id-osq" secondAttribute="leading" id="dqh-G2-4Cb"/>
+                            <constraint firstItem="rOe-6K-qW3" firstAttribute="top" secondItem="6zo-Id-osq" secondAttribute="top" id="h7n-Y8-GtT"/>
+                            <constraint firstAttribute="bottom" secondItem="rOe-6K-qW3" secondAttribute="bottom" id="kk1-ni-Npa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="周边生活" id="DiW-jA-gXM">
@@ -323,7 +287,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="JP7-N4-DLo" kind="push" id="tJJ-lX-LWi"/>
+                                            <segue destination="czc-hy-h1Y" kind="modal" id="OEz-tf-HJm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -331,15 +295,15 @@
                             </view>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="arrowView" destination="djK-3C-1eS" id="se3-SR-fGb"/>
                         <outlet property="chooseCityLabel" destination="bhL-nX-Foh" id="WKt-MH-O5t"/>
                         <outlet property="collectionView" destination="XWn-Rd-0Q2" id="SVD-kr-KPA"/>
-                        <outlet property="groupTogetherButton" destination="7AP-Nz-UIi" id="rgi-tV-PXx"/>
-                        <outlet property="iGoButton" destination="Ubd-eA-KJJ" id="nVz-p9-GAx"/>
-                        <outlet property="secondHandButton" destination="DVq-1I-Brs" id="DRH-6F-X4T"/>
-                        <outlet property="youComeButton" destination="hZ3-dI-lUx" id="hWt-Sn-4Ry"/>
+                        <outlet property="doorServiceAndBookedConsumptionView" destination="LWj-sx-cIg" id="ngO-6o-eVc"/>
+                        <outlet property="extraFunctionsView" destination="bTa-xN-zxb" id="ctD-gC-hPc"/>
+                        <outlet property="houseEstateInteractionAndsecondHandGoodsView" destination="xGT-6k-3zD" id="sFn-AM-epc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXh-5e-CTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,32 +311,46 @@
             <point key="canvasLocation" x="1054" y="73"/>
         </scene>
         <!--Choose Housing Estate Table View Controller - 选择小区-->
-        <scene sceneID="7g8-T2-QfP">
+        <scene sceneID="e2v-lI-6pq">
             <objects>
-                <tableViewController title="选择小区" id="JP7-N4-DLo" customClass="HXTChooseHousingEstateTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ruq-4Q-awH">
+                <tableViewController id="OS2-cP-Sje" customClass="HXTChooseHousingEstateTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eMJ-FQ-GO1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChooseHousingEstateCellIdentifier" id="1oE-Ea-SFC">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChooseHousingEstateCellIdentifier" id="RDL-0B-7th">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1oE-Ea-SFC" id="tW2-Yp-UeE">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RDL-0B-7th" id="QQd-3A-o7W">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="JP7-N4-DLo" id="VkK-DO-xSe"/>
-                            <outlet property="delegate" destination="JP7-N4-DLo" id="zJf-2K-an8"/>
+                            <outlet property="dataSource" destination="OS2-cP-Sje" id="Wea-HA-b89"/>
+                            <outlet property="delegate" destination="OS2-cP-Sje" id="M34-ml-PFo"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="选择小区" id="0Il-Fz-iNT">
+                        <barButtonItem key="leftBarButtonItem" id="LpC-D5-aCd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tkc-0a-PlE">
+                                <rect key="frame" x="16" y="0.0" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="navigationBar_back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="OS2-cP-Sje" eventType="touchUpInside" id="sXN-wj-6Cn"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GiF-Dh-VaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W0v-3P-B0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="-135"/>
+            <point key="canvasLocation" x="1881" y="73"/>
         </scene>
         <!--The Grocery Store View Controller - 杂货铺-->
         <scene sceneID="qMm-lt-APV">
@@ -487,82 +465,6 @@
             </objects>
             <point key="canvasLocation" x="1054" y="-585"/>
         </scene>
-        <!--View Controller - 话费充值-->
-        <scene sceneID="2rn-wB-rQG">
-            <objects>
-                <viewController id="PeC-0d-tbh" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NzD-mO-SdT"/>
-                        <viewControllerLayoutGuide type="bottom" id="mVQ-0o-L4e"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OZG-bj-8pZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="话费充值" id="sHL-Oz-WUh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qjh-61-cK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="501" y="759"/>
-        </scene>
-        <!--View Controller - 推荐信息-->
-        <scene sceneID="AKX-aT-UCE">
-            <objects>
-                <viewController id="iNq-kk-Mcc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1RQ-8D-s6z"/>
-                        <viewControllerLayoutGuide type="bottom" id="g3P-Pg-BmW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="byg-wF-gzK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="推荐信息" id="rZ9-kc-OFR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Emw-h0-njV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="874" y="759"/>
-        </scene>
-        <!--View Controller - 快递查询-->
-        <scene sceneID="Ome-Ly-9i1">
-            <objects>
-                <viewController id="6gQ-Lt-Ihw" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LjG-rq-N2X"/>
-                        <viewControllerLayoutGuide type="bottom" id="jiP-aB-x4N"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0A3-ee-fd4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="快递查询" id="fpL-2c-J7X"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1qs-ZM-SGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1242" y="759"/>
-        </scene>
-        <!--View Controller - 查询地铁-->
-        <scene sceneID="L5T-HB-vLp">
-            <objects>
-                <viewController id="cAJ-9l-LVa" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kKg-4c-8Dl"/>
-                        <viewControllerLayoutGuide type="bottom" id="TpC-gz-eWf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FEB-Va-o5V">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="查询地铁" id="NPY-sY-sPu"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sz0-I4-Yfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1615" y="759"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="QUy-Za-EwL">
             <objects>
@@ -599,11 +501,36 @@
             </objects>
             <point key="canvasLocation" x="620" y="-585"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uid-sQ-Zpk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="czc-hy-h1Y" customClass="HXTNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q3a-Ix-NBt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OS2-cP-Sje" kind="relationship" relationship="rootViewController" id="vNd-8Y-aYO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugy-Ao-NCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="73"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="SurroundingLife_bookedConsumption" width="67" height="67"/>
+        <image name="SurroundingLife_doorService" width="67" height="67"/>
+        <image name="SurroundingLife_houseEstateInteraction" width="67" height="67"/>
+        <image name="SurroundingLife_secondHandGoods" width="67" height="67"/>
+        <image name="global_callsRecharge" width="25" height="25"/>
+        <image name="global_expressQuery" width="25" height="25"/>
+        <image name="global_recommendation" width="25" height="25"/>
+        <image name="global_subwayQuery" width="25" height="25"/>
         <image name="navigationBar_back" width="44" height="44"/>
         <image name="navigationBar_down" width="15" height="15"/>
-        <image name="plus" width="26" height="26"/>
         <image name="star" width="26" height="26"/>
         <image name="超市" width="171" height="150"/>
     </resources>

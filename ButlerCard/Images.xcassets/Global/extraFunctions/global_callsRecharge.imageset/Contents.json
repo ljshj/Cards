@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "Screen Shot 2014-03-19 at 10.45.13.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Screen Shot 2014-03-19 at 10.38.47.png"
+      "filename" : "zbsh_hfczicon@2x.png"
     }
   ],
   "info" : {
