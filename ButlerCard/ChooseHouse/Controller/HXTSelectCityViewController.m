@@ -45,6 +45,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.navigationController.navigationBarHidden = NO;
     _currentCity = [HXTAccountManager sharedInstance].currentCity;
     _topCities   = [[NSArray alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"hotCities" ofType:@"plist"]];
     _provinces   = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"provinces" ofType:@"plist"]];
@@ -171,17 +172,24 @@ typedef NS_ENUM(NSUInteger, sectionType) {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
     if (tableView == self.tableView) {
         if (indexPath.section == sectionTypeCurrentCity) {
-            if (_currentCity && ![_currentCity isEqualToString:[HXTAccountManager sharedInstance].currentCity]) {
-                [HXTAccountManager sharedInstance].currentCity = _currentCity;
-            }
             
-            [self.navigationController popViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:^{
+                if (_currentCity && ![_currentCity isEqualToString:[HXTAccountManager sharedInstance].currentCity]) {
+                    [HXTAccountManager sharedInstance].currentCity = _currentCity;
+                }
+            }];
+            
         } else if (indexPath.section == sectionTypeTopCities) {
             [HXTAccountManager sharedInstance].currentCity = _topCities[indexPath.row];
-            [self.navigationController popViewControllerAnimated:YES];
+            
+            [self dismissViewControllerAnimated:YES completion:^{
+                if (_currentCity && ![_currentCity isEqualToString:[HXTAccountManager sharedInstance].currentCity]) {
+                    [HXTAccountManager sharedInstance].currentCity = _currentCity;
+                }
+            }];
         } else if (indexPath.section == sectionTypeProvinces) {
            ;
         } else {
@@ -189,15 +197,21 @@ typedef NS_ENUM(NSUInteger, sectionType) {
         }
     } else { // _selectCitySecondLevelViewController.tableView
         if (_selectCitySecondLevelViewController) {
-            NSString *key = [NSString stringWithFormat:@"%li", (long)indexPath.row];
-            NSDictionary *city = _selectedProvince[key];
-            [HXTAccountManager sharedInstance].currentCity = city.allKeys[0];;
-            
-            [_selectCitySecondLevelViewController.navigationController popViewControllerAnimated:NO];
-            [self.navigationController popViewControllerAnimated:YES];
+            [_selectCitySecondLevelViewController dismissViewControllerAnimated:YES completion:^{
+                NSString *key = [NSString stringWithFormat:@"%li", (long)indexPath.row];
+                NSDictionary *city = _selectedProvince[key];
+                [HXTAccountManager sharedInstance].currentCity = city.allKeys[0];
+            }];
         }
     }
 }
+
+#pragma mark -- UI Actions
+
+- (IBAction)backButtonPressed:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark - Navigation
 
@@ -210,7 +224,14 @@ typedef NS_ENUM(NSUInteger, sectionType) {
         if (selectedIndexPath.section == sectionTypeProvinces) {
             
             _selectCitySecondLevelViewController = segue.destinationViewController;
+            
+            //设置Title为所选择的省份
             NSString *key = [NSString stringWithFormat:@"%li", (long)selectedIndexPath.row];
+            NSDictionary *province = _provinces[key];
+            _selectCitySecondLevelViewController.navigationItem.title  = province.allKeys[0];
+            
+            //获取当前省份城市数据。
+            key = [NSString stringWithFormat:@"%li", (long)selectedIndexPath.row];
             NSDictionary *provinceWithIndex = _provinces[key];
             _selectedProvince = provinceWithIndex[provinceWithIndex.allKeys[0]];
             

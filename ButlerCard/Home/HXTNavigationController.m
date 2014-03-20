@@ -49,7 +49,9 @@
         default:
             break;
     }
-
+    
+    //设置navigationBar背景色
+    self.navigationBar.barTintColor = [UIColor orangeColor];
     
     //设置Title属性
     [self.navigationBar setTitleTextAttributes:@{UITextAttributeFont: [UIFont boldSystemFontOfSize:20],

@@ -135,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="654" y="755"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - 购物车-->
         <scene sceneID="PVN-gz-WMe">
             <objects>
                 <viewController id="Gj0-A8-Ts1" sceneMemberID="viewController">
@@ -148,13 +148,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mDg-IE-PUS"/>
+                    <navigationItem key="navigationItem" title="购物车" id="mDg-IE-PUS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpz-yq-MAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1818" y="1103"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - 收藏-->
         <scene sceneID="mOr-gN-kEV">
             <objects>
                 <viewController id="MVq-PH-mpz" sceneMemberID="viewController">
@@ -167,13 +167,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="H8L-z4-2Qt"/>
+                    <navigationItem key="navigationItem" title="收藏" id="H8L-z4-2Qt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PW5-5o-lkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1818" y="431"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - 我的管家-->
         <scene sceneID="sxS-tl-Prd">
             <objects>
                 <viewController id="h96-Yo-m4S" sceneMemberID="viewController">
@@ -186,7 +186,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0WH-BM-3ap"/>
+                    <navigationItem key="navigationItem" title="我的管家" id="0WH-BM-3ap"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ou6-hb-ng4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,7 +222,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pDI-cL-V3C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>

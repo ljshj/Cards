@@ -189,7 +189,7 @@
                                         </state>
                                         <connections>
                                             <action selector="chooseCityButtonPressed:" destination="KbO-D9-o9T" eventType="touchUpInside" id="Kqj-Ut-LWn"/>
-                                            <segue destination="nDI-RQ-1VH" kind="push" id="TZA-we-2kr"/>
+                                            <segue destination="bgN-nH-UGk" kind="modal" id="vfh-Jh-tFD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -230,7 +230,7 @@
         <!--Select City View Controller - 选择地区-->
         <scene sceneID="RIR-wk-lDd">
             <objects>
-                <tableViewController title="选择地区" id="nDI-RQ-1VH" customClass="HXTSelectCityViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ChooseCityStoryboardID" title="选择地区" id="nDI-RQ-1VH" customClass="HXTSelectCityViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mte-Xo-cZ4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,16 +296,29 @@
                             <outlet property="delegate" destination="nDI-RQ-1VH" id="Kac-RJ-5h2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jzZ-QU-t3v"/>
+                    <navigationItem key="navigationItem" title="选择地区" id="jzZ-QU-t3v">
+                        <barButtonItem key="leftBarButtonItem" id="rM4-29-Jvh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZXG-wI-Fes">
+                                <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="navigationBar_back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="nDI-RQ-1VH" eventType="touchUpInside" id="HbR-pq-dOp"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TT7-KE-j05" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452" y="132"/>
+            <point key="canvasLocation" x="1869" y="132"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Select City Second Level View Controller - 四川省-->
         <scene sceneID="4z7-Xc-1fy">
             <objects>
-                <tableViewController storyboardIdentifier="SelectCitySecondLevelViewControllerStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RWv-pV-Xau" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SelectCitySecondLevelViewControllerStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RWv-pV-Xau" customClass="HXTSelectCitySecondLevelViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="swr-7M-BLf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,11 +347,24 @@
                             <outlet property="delegate" destination="RWv-pV-Xau" id="Qi5-E5-isP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zGV-DT-Nrt"/>
+                    <navigationItem key="navigationItem" title="四川省" id="zGV-DT-Nrt">
+                        <barButtonItem key="leftBarButtonItem" id="pxS-pc-Ld8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SQe-jj-jTi">
+                                <rect key="frame" x="16" y="5" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="navigationBar_back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="RWv-pV-Xau" eventType="touchUpInside" id="50s-5b-plN"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQT-ri-jMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="132"/>
+            <point key="canvasLocation" x="2302" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="unw-sE-oeN">
@@ -358,6 +384,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fkh-kD-yut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="608" y="132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ydY-vK-P6y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bgN-nH-UGk" customClass="HXTNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xP4-v8-Ffu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nDI-RQ-1VH" kind="relationship" relationship="rootViewController" id="upA-Kz-FjS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzO-9z-OJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="132"/>
         </scene>
     </scenes>
     <resources>

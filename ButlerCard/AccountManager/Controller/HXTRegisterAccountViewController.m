@@ -8,7 +8,6 @@
 
 #import "HXTRegisterAccountViewController.h"
 #import "HXTCheckBox.h"
-#import "ComboBoxView.h"
 #import "HXTAccountManager.h"
 
 @interface HXTRegisterAccountViewController () <UITextFieldDelegate>
@@ -19,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *verificationCodeTextField;
 @property (weak, nonatomic) IBOutlet HXTCheckBox *chooseHousingEstateCheckBox;
 @property (weak, nonatomic) IBOutlet HXTCheckBox *approveUserAgreementCheckBox;
-@property (weak, nonatomic) IBOutlet ComboBoxView *dropDownComboBoxView;
 
 @end
 
@@ -38,10 +36,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSArray *comboBoxDatasource = @[@"小区1", @"小区2", @"小区3", @"小区4", @"小区5"];
-    _dropDownComboBoxView.comboBoxDatasource = comboBoxDatasource;
-	_dropDownComboBoxView.backgroundColor = [UIColor clearColor];
-    _dropDownComboBoxView.selectedItemIndex = 0;
     
     _userNameTextField.delegate = self;
     _passwordTextField.delegate = self;

@@ -47,6 +47,7 @@
 }
 
 #pragma -- key value abserver
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"currentCity"] && object == [HXTAccountManager sharedInstance]) {
         _cityLabel.text = [HXTAccountManager sharedInstance].currentCity;
@@ -142,23 +143,19 @@
     NSLog(@"ButtonPressedAtIndexPath indexPath.section = %li, indexPath.row = %li", (long)indexPath.section, (long)indexPath.row);
     UIViewController *loginViewcontroller = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
     
-    //模态显示
-    //    loginViewcontroller.modalPresentationStyle = UIModalPresentationFullScreen;
-    //    loginViewcontroller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    //    [self presentViewController:loginViewcontroller animated:YES completion:nil];
-    
     [loginViewcontroller setValue:self forKey:@"delegate"];
     [self.navigationController pushViewController:loginViewcontroller animated:YES];
 }
 
-#pragma mark --
 #pragma mark -- LoginViewController delegate
+
 -(void)loginViewController:(UIViewController *)loginViewController loginDidSucessed:(BOOL)sucessed {
     NSLog(@"%s %s %d Login sucessed = %@", __FILE__, __FUNCTION__, __LINE__, sucessed? @"YES": @"NO");
 }
 
 
 #pragma mark -- UI Actions
+
 - (IBAction)backButtonPressed:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -174,6 +171,16 @@
 
 - (IBAction)appleyOpenPropertyButtonPressed:(id)sender {
     
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ChooseCityStoryboardID"]) {
+        //模态显示动画
+//        ((UIViewController *)segue.destinationViewController).modalPresentationStyle = UIModalPresentationPageSheet;
+//        ((UIViewController *)segue.destinationViewController).modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    }
 }
 
 @end

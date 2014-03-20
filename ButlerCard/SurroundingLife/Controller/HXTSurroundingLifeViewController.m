@@ -8,7 +8,6 @@
 
 #import "HXTSurroundingLifeViewController.h"
 #import "HXTAccountManager.h"
-#import "ComboBoxView.h"
 #import "HXTViewWithArrow.h"
 
 typedef NS_ENUM(NSUInteger, DisplayGroup) {
@@ -21,7 +20,6 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 @interface HXTSurroundingLifeViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *chooseCityLabel;
-@property (weak, nonatomic) IBOutlet ComboBoxView *dropDownComboBoxView;
 @property (weak, nonatomic) IBOutlet UIButton *youComeButton;
 @property (weak, nonatomic) IBOutlet UIButton *iGoButton;
 @property (weak, nonatomic) IBOutlet UIButton *groupTogetherButton;
@@ -63,11 +61,6 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
                                @"书籍", @"电器", @"饰品",
                                @"二手车", @"其他"]];
     
-    NSArray *comboBoxDatasource = @[@"中铁八局", @"万科A小区", @"置信A区", @"华润AA"];
-    
-    _dropDownComboBoxView.comboBoxDatasource = comboBoxDatasource;
-	_dropDownComboBoxView.backgroundColor = [UIColor whiteColor];
-    _dropDownComboBoxView.selectedItemIndex = 0;
     
     _groupNeedDisplay = DisplayGroupIsShowYouCome;
     _arrowView.relativeOrigin = CGPointMake(_youComeButton.frame.origin.x + _youComeButton.frame.size.width / 2,

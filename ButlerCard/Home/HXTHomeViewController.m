@@ -39,7 +39,6 @@
     
     self.navigationController.delegate = self;
     self.navigationController.navigationBarHidden = YES;
-
     
     if ([UIDevice isRunningOniPhone5]) {
         _backgroundImageView.image = [UIImage imageNamed:@"background_1136X640"];
@@ -50,11 +49,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     _propertyServiceButton.selected = NO;
     _propertyFeeButton.selected = NO;
     _myFinancesButton.selected = NO;
     _ecologicalDistributionButton.selected = NO;
     _surroundingLifeButton.selected = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,7 +68,6 @@
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (viewController == self) {
         self.navigationController.navigationBarHidden = YES;
-        self.tabBarController.tabBar.hidden = NO;
     }
 }
 

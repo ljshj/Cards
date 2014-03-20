@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XVw-lA-uBP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XVw-lA-uBP">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Login View Controller - 用户登录-->
@@ -215,11 +215,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLq-Qw-Qjx" customClass="ComboBoxView">
-                                <rect key="frame" x="20" y="320" width="160" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnZ-zw-g09" userLabel="CheckBox - 同意用户协议" customClass="HXTCheckBox">
                                 <rect key="frame" x="79" y="414" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -272,7 +267,6 @@
                         <outlet property="approveUserAgreementCheckBox" destination="JnZ-zw-g09" id="nJ4-ao-O7j"/>
                         <outlet property="chooseHousingEstateCheckBox" destination="yGP-O7-7Dy" id="meb-3W-ahM"/>
                         <outlet property="confirmPasswordTextField" destination="HK8-gJ-752" id="pmk-Og-h8a"/>
-                        <outlet property="dropDownComboBoxView" destination="ZLq-Qw-Qjx" id="Ahy-eU-buK"/>
                         <outlet property="passwordTextField" destination="LKL-la-jRL" id="G2c-Ra-fKy"/>
                         <outlet property="userNameTextField" destination="z6j-rs-4Yc" id="UHT-d0-8v6"/>
                         <outlet property="verificationCodeTextField" destination="yyj-Of-gc6" id="QRs-9g-IqX"/>
