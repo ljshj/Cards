@@ -13,12 +13,12 @@
                         <viewControllerLayoutGuide type="top" id="sNi-xv-fuz"/>
                         <viewControllerLayoutGuide type="bottom" id="9lt-UQ-rTG"/>
                     </layoutGuides>
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="6zo-Id-osq">
+                    <view key="view" contentMode="scaleToFill" id="6zo-Id-osq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOe-6K-qW3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="740"/>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOe-6K-qW3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWj-sx-cIg" userLabel="View --上门&amp;预定">
@@ -26,7 +26,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vn-XU-iS0" userLabel="View --上门服务">
-                                                <rect key="frame" x="45" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="50" y="0.0" width="80" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="上门服务" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB7-Pe-A64">
@@ -89,7 +89,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlk-Ff-JVG" userLabel="View --小区互动">
-                                                <rect key="frame" x="44" y="10" width="80" height="95"/>
+                                                <rect key="frame" x="50" y="10" width="80" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SurroundingLife_houseEstateInteraction" translatesAutoresizingMaskIntoConstraints="NO" id="vLN-v8-zYP">
@@ -117,7 +117,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0GV-pU-Sg5" userLabel="View --二手物品">
-                                                <rect key="frame" x="189" y="10" width="80" height="95"/>
+                                                <rect key="frame" x="195" y="10" width="80" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SurroundingLife_secondHandGoods" translatesAutoresizingMaskIntoConstraints="NO" id="oq2-ua-fai">
@@ -242,14 +242,15 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.94514142335766427" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="740" id="fim-nT-nJM"/>
-                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="k30-ec-sj4" id="8tJ-W2-HZX"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rOe-6K-qW3" secondAttribute="trailing" id="1hB-r5-vXW"/>
+                            <constraint firstAttribute="bottom" secondItem="rOe-6K-qW3" secondAttribute="bottom" id="GVg-Zg-8GT"/>
                             <constraint firstItem="rOe-6K-qW3" firstAttribute="leading" secondItem="6zo-Id-osq" secondAttribute="leading" id="dqh-G2-4Cb"/>
                             <constraint firstItem="rOe-6K-qW3" firstAttribute="top" secondItem="6zo-Id-osq" secondAttribute="top" id="h7n-Y8-GtT"/>
                         </constraints>

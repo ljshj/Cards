@@ -67,8 +67,6 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
     
     
     _functionsGroupNeedDisplay = FunctionsGroupIsNone;
-    _subFunctionsArrowView.hidden = YES;
-    
     [[HXTAccountManager sharedInstance] addObserver:self
                                          forKeyPath:@"defaultHouseingEstate"
                                             options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld
@@ -78,6 +76,8 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
     } else {
         _chooseCityLabel.text = @"选择小区";
     }
+    
+    NSLog(@"default width = %f height = %f", CGRectGetWidth(_scrollView.frame), CGRectGetHeight(_scrollView.frame));
 }
 
 #pragma -- key value abserver
@@ -97,6 +97,11 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    _subFunctionsArrowView.hidden = YES;
+}
+
 #pragma UICollectionView DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (_functionsGroupNeedDisplay != FunctionsGroupIsNone) {
@@ -112,7 +117,6 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionViewCellIdentifier forIndexPath:indexPath];
     
-    //    UIButton *cellButton = (UIButton *)[cell viewWithTag:100];
     UILabel  *cellLabel  = (UILabel *)[cell viewWithTag:100];
     cellLabel.text = _FunctionsGroupItems[_functionsGroupNeedDisplay][indexPath.row];
     
@@ -153,6 +157,7 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
         CGPoint lastRelativeOriginPoint = _subFunctionsArrowView.relativeOrigin;
         _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
         NSUInteger subFunctionsArrowViewHeight = [self caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:FunctionsGroupIsDoorService];
+        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + subFunctionsArrowViewHeight);
         
         if (_functionsGroupNeedDisplay == FunctionsGroupIsBookedConsumption) {
             
@@ -209,7 +214,7 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
          _functionsGroupNeedDisplay = FunctionsGroupIsDoorService;
         
     } else {
-        
+        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
         _functionsGroupNeedDisplay = FunctionsGroupIsNone;
         [UIView animateWithDuration:kDurationTime
                               delay:0.0f
@@ -245,7 +250,7 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
         CGPoint lastRelativeOriginPoint = _subFunctionsArrowView.relativeOrigin;
         _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
         NSUInteger subFunctionsArrowViewHeight = [self caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:FunctionsGroupIsBookedConsumption];
-        
+        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + subFunctionsArrowViewHeight);
         if (_functionsGroupNeedDisplay == FunctionsGroupIsDoorService) {
             [UIView animateWithDuration:kDurationTime
                                   delay:0.0f
@@ -297,6 +302,7 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
         }
         _functionsGroupNeedDisplay = FunctionsGroupIsBookedConsumption;
     }else {
+        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
         _functionsGroupNeedDisplay = FunctionsGroupIsNone;
         [UIView animateWithDuration:kDurationTime
                               delay:0.0f
@@ -333,6 +339,8 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
         CGPoint lastRelativeOriginPoint = _subFunctionsArrowView.relativeOrigin;
         _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
         NSUInteger subFunctionsArrowViewHeight = [self caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:FunctionsGroupIsHouseEstateInteraction];
+        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + subFunctionsArrowViewHeight);
+        
         if (_functionsGroupNeedDisplay == FunctionsGroupIsSecondHandGoods) {
             [UIView animateWithDuration:kDurationTime
                                   delay:0.0f
@@ -379,6 +387,7 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
         }
         _functionsGroupNeedDisplay = FunctionsGroupIsHouseEstateInteraction;
     }else {
+        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
         _functionsGroupNeedDisplay = FunctionsGroupIsNone;
         [UIView animateWithDuration:kDurationTime
                               delay:0.0f
@@ -414,6 +423,8 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
         CGPoint lastRelativeOriginPoint = _subFunctionsArrowView.relativeOrigin;
         _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
         NSUInteger subFunctionsArrowViewHeight = [self caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:FunctionsGroupIsSecondHandGoods];
+        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + subFunctionsArrowViewHeight);
+        
         if (_functionsGroupNeedDisplay == FunctionsGroupIsHouseEstateInteraction) {
             [UIView animateWithDuration:kDurationTime
                                   delay:0.0f
@@ -461,6 +472,7 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
         }
         _functionsGroupNeedDisplay = FunctionsGroupIsSecondHandGoods;
     }else {
+        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
         _functionsGroupNeedDisplay = FunctionsGroupIsNone;
         [UIView animateWithDuration:kDurationTime
                               delay:0.0f
@@ -487,6 +499,12 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
                              _subFunctionsArrowView.hidden = YES;
                          }];
     }
+}
+
+#pragma mark -- scroview delegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    NSLog(@"x = %f y = %f width = %f, height = %f ", CGRectGetMidX(_subFunctionsArrowView.frame), CGRectGetMidY(_subFunctionsArrowView.frame), CGRectGetWidth(_subFunctionsArrowView.frame), CGRectGetHeight(_subFunctionsArrowView.frame));
 }
 
 #pragma mark -- local functions
