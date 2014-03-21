@@ -35,7 +35,7 @@
     _dataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
     NSLog(@"_dataArray == %@",_dataArray);
 
-    NSLog(@"_dataArray.count == %d",_dataArray.count);
+    NSLog(@"_dataArray.count == %lu",(unsigned long)_dataArray.count);
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

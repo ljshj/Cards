@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "want_icon_sale.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "want_icon_sale@2x.png"
+      "filename" : "Screen Shot 2014-03-21 at 12.21.12.png"
     }
   ],
   "info" : {

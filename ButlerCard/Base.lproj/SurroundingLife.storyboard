@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9JY-Dc-Jkj">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -12,16 +13,16 @@
                         <viewControllerLayoutGuide type="top" id="sNi-xv-fuz"/>
                         <viewControllerLayoutGuide type="bottom" id="9lt-UQ-rTG"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6zo-Id-osq">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="6zo-Id-osq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOe-6K-qW3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOe-6K-qW3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="740"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWj-sx-cIg" userLabel="View --上门&amp;预定">
-                                        <rect key="frame" x="0.0" y="60" width="320" height="110"/>
+                                        <rect key="frame" x="0.0" y="60" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vn-XU-iS0" userLabel="View --上门服务">
@@ -88,7 +89,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlk-Ff-JVG" userLabel="View --小区互动">
-                                                <rect key="frame" x="44" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="44" y="10" width="80" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SurroundingLife_houseEstateInteraction" translatesAutoresizingMaskIntoConstraints="NO" id="vLN-v8-zYP">
@@ -116,7 +117,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0GV-pU-Sg5" userLabel="View --二手物品">
-                                                <rect key="frame" x="189" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="189" y="10" width="80" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SurroundingLife_secondHandGoods" translatesAutoresizingMaskIntoConstraints="NO" id="oq2-ua-fai">
@@ -147,39 +148,39 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djK-3C-1eS" customClass="HXTViewWithArrow">
-                                        <rect key="frame" x="0.0" y="368" width="320" height="240"/>
+                                        <rect key="frame" x="0.0" y="394" width="320" height="172"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XWn-Rd-0Q2">
-                                                <rect key="frame" x="0.0" y="20" width="320" height="250"/>
+                                                <rect key="frame" x="0.0" y="12" width="320" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="kUs-cV-MdP">
-                                                    <size key="itemSize" width="80" height="40"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kUs-cV-MdP">
+                                                    <size key="itemSize" width="100" height="40"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="0.0"/>
+                                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCellIdentifier" id="RE6-P1-JkL">
-                                                        <rect key="frame" x="20" y="20" width="80" height="40"/>
+                                                        <rect key="frame" x="10" y="0.0" width="100" height="40"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zt-D6-b1m">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子功能" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zt-D6-b1m">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </view>
-                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstItem="8Zt-D6-b1m" firstAttribute="top" secondItem="RE6-P1-JkL" secondAttribute="top" id="Flf-Ez-eAI"/>
                                                             <constraint firstAttribute="trailing" secondItem="8Zt-D6-b1m" secondAttribute="trailing" id="IVJ-HX-0Md"/>
@@ -194,14 +195,14 @@
                                                 </connections>
                                             </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTa-xN-zxb" userLabel="View  - 附属功能">
-                                        <rect key="frame" x="0.0" y="280" width="320" height="88"/>
+                                        <rect key="frame" x="0.0" y="288" width="320" height="98"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA6-jG-gmH">
-                                                <rect key="frame" x="34" y="0.0" width="97" height="44"/>
+                                                <rect key="frame" x="34" y="10" width="97" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title=" 话费充值" image="global_callsRecharge">
@@ -210,7 +211,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTm-D0-UEh">
-                                                <rect key="frame" x="183" y="0.0" width="97" height="44"/>
+                                                <rect key="frame" x="183" y="10" width="97" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title=" 快递查询" image="global_expressQuery">
@@ -219,7 +220,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWn-VV-1ZQ">
-                                                <rect key="frame" x="34" y="44" width="97" height="44"/>
+                                                <rect key="frame" x="34" y="54" width="97" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title=" 推荐信息" image="global_recommendation">
@@ -228,7 +229,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGQ-Xz-EnN">
-                                                <rect key="frame" x="183" y="44" width="97" height="44"/>
+                                                <rect key="frame" x="183" y="54" width="97" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title=" 查询地铁" image="global_subwayQuery">
@@ -241,6 +242,9 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.94514142335766427" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="740" id="fim-nT-nJM"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -248,7 +252,6 @@
                             <constraint firstAttribute="trailing" secondItem="rOe-6K-qW3" secondAttribute="trailing" id="1hB-r5-vXW"/>
                             <constraint firstItem="rOe-6K-qW3" firstAttribute="leading" secondItem="6zo-Id-osq" secondAttribute="leading" id="dqh-G2-4Cb"/>
                             <constraint firstItem="rOe-6K-qW3" firstAttribute="top" secondItem="6zo-Id-osq" secondAttribute="top" id="h7n-Y8-GtT"/>
-                            <constraint firstAttribute="bottom" secondItem="rOe-6K-qW3" secondAttribute="bottom" id="kk1-ni-Npa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="周边生活" id="DiW-jA-gXM">
@@ -302,6 +305,7 @@
                         <outlet property="doorServiceAndBookedConsumptionView" destination="LWj-sx-cIg" id="ngO-6o-eVc"/>
                         <outlet property="extraFunctionsView" destination="bTa-xN-zxb" id="ctD-gC-hPc"/>
                         <outlet property="houseEstateInteractionAndsecondHandGoodsView" destination="xGT-6k-3zD" id="sFn-AM-epc"/>
+                        <outlet property="scrollView" destination="rOe-6K-qW3" id="QmZ-ti-zvO"/>
                         <outlet property="subFunctionsArrowView" destination="djK-3C-1eS" id="Mkp-SZ-jQb"/>
                     </connections>
                 </viewController>
