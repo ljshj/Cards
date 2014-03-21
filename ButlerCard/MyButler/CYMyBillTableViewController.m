@@ -70,11 +70,13 @@
 {
     if (indexPath.row == 0)
     {
+        //月份cell高度
         return 30.0;
 
     }
     else
     {
+        //消费清单cell高度
         return 80.0;
     }
 
@@ -106,17 +108,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
+    //点击的如果是月份cell  row == 0  则触发折叠功能
     if (indexPath.row == 0)
     {
         NSArray *dataArrayAtSection = _dataArray[indexPath.section];
         NSArray *allDataArrayAtSection = _allDataArray[indexPath.section];
-        NSLog(@"section == %d",indexPath.section);
-        NSLog(@"dataArrayAtSection.count == %d",dataArrayAtSection.count);
-        NSLog(@"allDataArrayAtSection.count == %d",allDataArrayAtSection.count);
+//        NSLog(@"section == %d",indexPath.section);
+//        NSLog(@"dataArrayAtSection.count == %d",dataArrayAtSection.count);
+//        NSLog(@"allDataArrayAtSection.count == %d",allDataArrayAtSection.count);
         //折叠的情况
         if (dataArrayAtSection.count == allDataArrayAtSection.count)
         {
-            NSLog(@"折叠！");
+//            NSLog(@"折叠！");
             NSMutableArray *tempArray = [[NSMutableArray alloc]initWithObjects:_dataArray[indexPath.section][indexPath.row], nil];
             _dataArray[indexPath.section] = tempArray;
 //            NSLog(@"_dataArray == %@",_dataArray);
@@ -126,9 +129,7 @@
         //展开的情况
         else
         {
-            NSLog(@"展开！");
-//            NSMutableArray *tempArray = [[NSMutableArray alloc]initWithObjects:_allDataArray[indexPath.section], nil];
-//            _dataArray[indexPath.section] = tempArray;
+//            NSLog(@"展开！");
             _dataArray[indexPath.section] = _allDataArray[indexPath.section];
             [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
         }
