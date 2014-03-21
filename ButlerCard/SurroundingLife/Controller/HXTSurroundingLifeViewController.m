@@ -25,6 +25,7 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
 
 @property (weak, nonatomic) IBOutlet UILabel *chooseCityLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *coverView;
 @property (weak, nonatomic) IBOutlet UIView *doorServiceAndBookedConsumptionView;
 @property (weak, nonatomic) IBOutlet UIView *houseEstateInteractionAndsecondHandGoodsView;
 @property (weak, nonatomic) IBOutlet UIView *extraFunctionsView;
@@ -76,8 +77,6 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
     } else {
         _chooseCityLabel.text = @"选择小区";
     }
-    
-    NSLog(@"default width = %f height = %f", CGRectGetWidth(_scrollView.frame), CGRectGetHeight(_scrollView.frame));
 }
 
 #pragma -- key value abserver
@@ -99,9 +98,9 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     _subFunctionsArrowView.hidden = YES;
 }
-
 #pragma UICollectionView DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (_functionsGroupNeedDisplay != FunctionsGroupIsNone) {
@@ -151,14 +150,12 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
 
 //上门服务
 - (IBAction)doorServiceButtonPressed:(UIButton *)sender {
+    _subFunctionsArrowView.hidden = NO;
     if (_functionsGroupNeedDisplay != FunctionsGroupIsDoorService) {
-        
-        _subFunctionsArrowView.hidden = NO;
         CGPoint lastRelativeOriginPoint = _subFunctionsArrowView.relativeOrigin;
         _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
         NSUInteger subFunctionsArrowViewHeight = [self caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:FunctionsGroupIsDoorService];
-        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + subFunctionsArrowViewHeight);
-        
+        _scrollView.contentSize = CGSizeMake(_scrollView.contentSize.width, CGRectGetHeight(_coverView.frame) - 172 + subFunctionsArrowViewHeight);
         if (_functionsGroupNeedDisplay == FunctionsGroupIsBookedConsumption) {
             
             [UIView animateWithDuration:kDurationTime
@@ -182,7 +179,9 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
                                                                         CGRectGetHeight(_extraFunctionsView.frame));
                                  
                                  [_subFunctionsArrowView horizonMoveArrowFromX:lastRelativeOriginPoint.x toX:_subFunctionsArrowView.relativeOrigin.x];
-                             }completion:^(BOOL finished){ }];
+                                 
+                             }completion:^(BOOL finished){
+                             }];
 
         } else {
             
@@ -208,23 +207,18 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
                                                                         CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
                                                                         CGRectGetWidth(_extraFunctionsView.frame),
                                                                         CGRectGetHeight(_extraFunctionsView.frame));
-                             }completion:^(BOOL finished){ }];
+                             }completion:^(BOOL finished){
+                             }];
         }
         
          _functionsGroupNeedDisplay = FunctionsGroupIsDoorService;
         
     } else {
-        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
         _functionsGroupNeedDisplay = FunctionsGroupIsNone;
         [UIView animateWithDuration:kDurationTime
                               delay:0.0f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
-                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
-                                                                       CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
-                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
-                                                                       CGRectGetHeight(_subFunctionsArrowView.frame));
-                             
                              _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
                                                                        CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
                                                                        CGRectGetWidth(_subFunctionsArrowView.frame),
@@ -238,19 +232,19 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
                                                                     CGRectGetWidth(_extraFunctionsView.frame),
                                                                     CGRectGetHeight(_extraFunctionsView.frame));
                          }completion:^(BOOL finished){
-                             _subFunctionsArrowView.hidden = YES;
                          }];
     }
 }
 
 //预定消费
 - (IBAction)bookedConsumptionPressed:(UIButton *)sender {
+    _subFunctionsArrowView.hidden = NO;
+    _scrollView.contentSize = CGSizeMake(_scrollView.contentSize.width, CGRectGetHeight(_coverView.frame));
+    
     if (_functionsGroupNeedDisplay != FunctionsGroupIsBookedConsumption) {
-        _subFunctionsArrowView.hidden = NO;
         CGPoint lastRelativeOriginPoint = _subFunctionsArrowView.relativeOrigin;
         _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
         NSUInteger subFunctionsArrowViewHeight = [self caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:FunctionsGroupIsBookedConsumption];
-        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + subFunctionsArrowViewHeight);
         if (_functionsGroupNeedDisplay == FunctionsGroupIsDoorService) {
             [UIView animateWithDuration:kDurationTime
                                   delay:0.0f
@@ -302,7 +296,6 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
         }
         _functionsGroupNeedDisplay = FunctionsGroupIsBookedConsumption;
     }else {
-        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
         _functionsGroupNeedDisplay = FunctionsGroupIsNone;
         [UIView animateWithDuration:kDurationTime
                               delay:0.0f
@@ -327,20 +320,19 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
                                                                     CGRectGetWidth(_extraFunctionsView.frame),
                                                                     CGRectGetHeight(_extraFunctionsView.frame));
                          }completion:^(BOOL finished){
-                             _subFunctionsArrowView.hidden = YES;
                          }];
     }
 }
 
 //小区互动
 - (IBAction)houseEstateInteractionButtonPressed:(UIButton *)sender {
+    _subFunctionsArrowView.hidden = NO;
+    _scrollView.contentSize = CGSizeMake(_scrollView.contentSize.width, CGRectGetHeight(_coverView.frame));
+    
     if (_functionsGroupNeedDisplay != FunctionsGroupIsHouseEstateInteraction) {
-        _subFunctionsArrowView.hidden = NO;
         CGPoint lastRelativeOriginPoint = _subFunctionsArrowView.relativeOrigin;
         _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
         NSUInteger subFunctionsArrowViewHeight = [self caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:FunctionsGroupIsHouseEstateInteraction];
-        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + subFunctionsArrowViewHeight);
-        
         if (_functionsGroupNeedDisplay == FunctionsGroupIsSecondHandGoods) {
             [UIView animateWithDuration:kDurationTime
                                   delay:0.0f
@@ -387,17 +379,11 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
         }
         _functionsGroupNeedDisplay = FunctionsGroupIsHouseEstateInteraction;
     }else {
-        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
         _functionsGroupNeedDisplay = FunctionsGroupIsNone;
         [UIView animateWithDuration:kDurationTime
                               delay:0.0f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
-                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
-                                                                       CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
-                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
-                                                                       CGRectGetHeight(_subFunctionsArrowView.frame));
-                             
                              _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
                                                                        CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
                                                                        CGRectGetWidth(_subFunctionsArrowView.frame),
@@ -411,20 +397,18 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
                                                                     CGRectGetWidth(_extraFunctionsView.frame),
                                                                     CGRectGetHeight(_extraFunctionsView.frame));
                          }completion:^(BOOL finished){
-                             _subFunctionsArrowView.hidden = YES;
                          }];
     }
 }
 
 //二手物品
 - (IBAction)secondHandGoodsButtonPressed:(UIButton *)sender {
+    _subFunctionsArrowView.hidden = NO;
+    _scrollView.contentSize = CGSizeMake(_scrollView.contentSize.width, CGRectGetHeight(_coverView.frame));
     if (_functionsGroupNeedDisplay != FunctionsGroupIsSecondHandGoods) {
-        _subFunctionsArrowView.hidden = NO;
         CGPoint lastRelativeOriginPoint = _subFunctionsArrowView.relativeOrigin;
         _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
         NSUInteger subFunctionsArrowViewHeight = [self caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:FunctionsGroupIsSecondHandGoods];
-        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + subFunctionsArrowViewHeight);
-        
         if (_functionsGroupNeedDisplay == FunctionsGroupIsHouseEstateInteraction) {
             [UIView animateWithDuration:kDurationTime
                                   delay:0.0f
@@ -472,17 +456,11 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
         }
         _functionsGroupNeedDisplay = FunctionsGroupIsSecondHandGoods;
     }else {
-        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
         _functionsGroupNeedDisplay = FunctionsGroupIsNone;
         [UIView animateWithDuration:kDurationTime
                               delay:0.0f
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
-                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
-                                                                       CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
-                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
-                                                                       CGRectGetHeight(_subFunctionsArrowView.frame));
-                             
                              _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
                                                                        CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
                                                                        CGRectGetWidth(_subFunctionsArrowView.frame),
@@ -496,25 +474,40 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
                                                                     CGRectGetWidth(_extraFunctionsView.frame),
                                                                     CGRectGetHeight(_extraFunctionsView.frame));
                          }completion:^(BOOL finished){
-                             _subFunctionsArrowView.hidden = YES;
                          }];
     }
 }
 
+- (IBAction)backgroundTouchUpInside:(id)sender {
+    NSLog(@"backgroundTouchUpInside");
+}
 #pragma mark -- scroview delegate
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    NSLog(@"x = %f y = %f width = %f, height = %f ", CGRectGetMidX(_subFunctionsArrowView.frame), CGRectGetMidY(_subFunctionsArrowView.frame), CGRectGetWidth(_subFunctionsArrowView.frame), CGRectGetHeight(_subFunctionsArrowView.frame));
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (!CGSizeEqualToSize(_scrollView.contentSize, _coverView.frame.size)) {
+        _scrollView.contentSize = _coverView.frame.size;
+    }
 }
 
+
 #pragma mark -- local functions
+
+//手机充值
+- (IBAction)rechargeButtonPressed:(id)sender {
+    NSLog(@"手机充值");
+}
+
+//推荐信息
+- (IBAction)recommendInfomationButtonPressed:(id)sender {
+    NSLog(@"推荐信息");
+}
 
 - (NSUInteger)caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:(FunctionsGroup)group {
     
     NSUInteger numberOfItems = [_FunctionsGroupItems[group] count];
     
     float rowTemp = numberOfItems / 3.0;
-    NSUInteger row = (fabs(rowTemp - (NSUInteger)rowTemp) < 0.001) ? rowTemp : (NSUInteger)rowTemp + 1;
+    NSUInteger row = (fabs(rowTemp - (NSUInteger)rowTemp) < 0.01) ? rowTemp : (NSUInteger)rowTemp + 1;
     
     return row * 40 + 12;;
 }
