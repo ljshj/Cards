@@ -10,4 +10,6 @@
 
 @interface HXTViewWithArrow : UIView
 @property(assign, nonatomic) CGPoint relativeOrigin;
+
+- (void)moveArrowFromPoint:(CGPoint)sourcePoint toPoint:(CGPoint)destPoint;
 @end

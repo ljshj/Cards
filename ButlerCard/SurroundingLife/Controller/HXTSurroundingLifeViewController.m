@@ -10,12 +10,15 @@
 #import "HXTAccountManager.h"
 #import "HXTViewWithArrow.h"
 
-typedef NS_ENUM(NSUInteger, DisplayGroup) {
-    DisplayGroupIsNone = 0,
-    DisplayGroupIsShowYouCome = 1,
-    DisplayGroupIsIGo,
-    DisplayGroupIsGroupTogether,
-    DisplayGroupIsGoYou,
+#define kDurationTime 0.5f
+
+typedef NS_ENUM(NSUInteger, FunctionsGroup) {
+    
+    FunctionsGroupIsDoorService = 0,
+    FunctionsGroupIsBookedConsumption,
+    FunctionsGroupIsHouseEstateInteraction,
+    FunctionsGroupIsSecondHandGoods,
+    FunctionsGroupIsNone = -1
 };
 
 @interface HXTSurroundingLifeViewController ()
@@ -24,11 +27,11 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 @property (weak, nonatomic) IBOutlet UIView *doorServiceAndBookedConsumptionView;
 @property (weak, nonatomic) IBOutlet UIView *houseEstateInteractionAndsecondHandGoodsView;
 @property (weak, nonatomic) IBOutlet UIView *extraFunctionsView;
-@property (weak, nonatomic) IBOutlet HXTViewWithArrow *arrowView;
+@property (weak, nonatomic) IBOutlet HXTViewWithArrow *subFunctionsArrowView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
-@property (assign, nonatomic) DisplayGroup groupNeedDisplay;
-@property (strong, nonatomic) NSArray *DisplayGroupItems;
+@property (assign, nonatomic) FunctionsGroup functionsGroupNeedDisplay;
+@property (strong, nonatomic) NSArray *FunctionsGroupItems;
 
 @end
 
@@ -50,7 +53,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     
     self.navigationController.navigationBarHidden = NO;
     
-    _DisplayGroupItems = @[@[@"杂货铺", @"外卖", @"维修",
+    _FunctionsGroupItems = @[@[@"杂货铺", @"外卖", @"维修",
                                @"家政", @"送水", @"开锁",
                                @"缝补", @"洗衣", @"鞋子",
                                @"快递", @"废品回收"],
@@ -62,7 +65,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
                                @"二手车", @"其他"]];
     
     
-    _groupNeedDisplay = DisplayGroupIsNone;
+    _functionsGroupNeedDisplay = FunctionsGroupIsNone;
     
     [[HXTAccountManager sharedInstance] addObserver:self
                                          forKeyPath:@"defaultHouseingEstate"
@@ -94,7 +97,11 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 
 #pragma UICollectionView DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [_DisplayGroupItems[_groupNeedDisplay] count];
+    if (_functionsGroupNeedDisplay != FunctionsGroupIsNone) {
+        return [_FunctionsGroupItems[_functionsGroupNeedDisplay] count];
+    } else {
+        return 0;
+    }
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -105,7 +112,7 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     
     //    UIButton *cellButton = (UIButton *)[cell viewWithTag:100];
     UILabel  *cellLabel  = (UILabel *)[cell viewWithTag:100];
-    cellLabel.text = _DisplayGroupItems[_groupNeedDisplay][indexPath.row];
+    cellLabel.text = _FunctionsGroupItems[_functionsGroupNeedDisplay][indexPath.row];
     
     return cell;
 }
@@ -113,8 +120,8 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
 #pragma -- UICollectionView Delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"didSelectItemAtIndexPath indexPath.section = %li, indexPath.row = %li", (long)indexPath.section, (long)indexPath.row);
-    switch (_groupNeedDisplay) {
-        case DisplayGroupIsShowYouCome: {
+    switch (_functionsGroupNeedDisplay) {
+        case FunctionsGroupIsDoorService: {
             UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TheGroceryStoreStoryboardID"];
             [self.navigationController pushViewController:viewController animated:YES];
             break;
@@ -134,75 +141,344 @@ typedef NS_ENUM(NSUInteger, DisplayGroup) {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+
+
 //上门服务
-- (IBAction)doorServiceButtonPressed:(id)sender {
-    if (_groupNeedDisplay != DisplayGroupIsShowYouCome) {
-        _groupNeedDisplay = DisplayGroupIsShowYouCome;
-        UIButton *button = (UIButton *)sender;
+- (IBAction)doorServiceButtonPressed:(UIButton *)sender {
+    
+    if (_functionsGroupNeedDisplay != FunctionsGroupIsDoorService) {
+        _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
+        if (_functionsGroupNeedDisplay == FunctionsGroupIsBookedConsumption) {
+            [UIView animateWithDuration:kDurationTime
+                                  delay:0.0f
+                                options:UIViewAnimationOptionTransitionNone
+                             animations:^{
+                                 [_collectionView reloadData];
+                                 [_subFunctionsArrowView setNeedsDisplay];
+                                 
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           240.0f);
+                                 _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetMaxY(_subFunctionsArrowView.frame),
+                                                                                                  CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+                                 _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                        CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                        CGRectGetWidth(_extraFunctionsView.frame),
+                                                                        CGRectGetHeight(_extraFunctionsView.frame));
+                                 
+                             }completion:^(BOOL finished){
+                            
+                             }];
+        } else {
+            [UIView animateWithDuration:kDurationTime
+                                  delay:0.0f
+                                options:UIViewAnimationOptionCurveEaseInOut
+                             animations:^{
+                                 [_subFunctionsArrowView setNeedsDisplay];
+                                 [_collectionView reloadData];
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           10.0f);
+                                 
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           240.0f);
+                                 _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetMaxY(_subFunctionsArrowView.frame),
+                                                                                                  CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+                                 _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                        CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                        CGRectGetWidth(_extraFunctionsView.frame),
+                                                                        CGRectGetHeight(_extraFunctionsView.frame));
+                             }completion:^(BOOL finished){
+                                 
+                             }];
+        }
+         _functionsGroupNeedDisplay = FunctionsGroupIsDoorService;
         
-        _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
-        [_arrowView setNeedsDisplay];
-        [_collectionView reloadData];
-        
-        _arrowView.frame = CGRectMake(CGRectGetMinX(_arrowView.frame),
-                                      CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
-                                      CGRectGetWidth(_arrowView.frame),
-                                      CGRectGetHeight(_arrowView.frame));
-        _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
-                                                                         CGRectGetMaxY(_arrowView.frame),
-                                                                         CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
-                                                                         CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
-        _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
-                                               CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
-                                               CGRectGetWidth(_extraFunctionsView.frame),
-                                               CGRectGetHeight(_extraFunctionsView.frame));
-        
+    } else {
+        _functionsGroupNeedDisplay = FunctionsGroupIsNone;
+        [UIView animateWithDuration:kDurationTime
+                              delay:0.0f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                       CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                       CGRectGetHeight(_subFunctionsArrowView.frame));
+                             
+                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                       CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                       0);
+                             _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                              CGRectGetMaxY(_subFunctionsArrowView.frame),
+                                                                                              CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                              CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+                             _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                    CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                    CGRectGetWidth(_extraFunctionsView.frame),
+                                                                    CGRectGetHeight(_extraFunctionsView.frame));
+                         }completion:^(BOOL finished){
+                             
+                         }];
     }
 }
 
 //预定消费
-- (IBAction)bookedConsumptionPressed:(id)sender {
-    if (_groupNeedDisplay != DisplayGroupIsIGo) {
-        _groupNeedDisplay = DisplayGroupIsIGo;
-        UIButton *button = (UIButton *)sender;
-        _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
-        [_arrowView setNeedsDisplay];
-        [_collectionView reloadData];
-        
-        _arrowView.frame = CGRectMake(CGRectGetMinX(_arrowView.frame),
-                                      CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
-                                      CGRectGetWidth(_arrowView.frame),
-                                      CGRectGetHeight(_arrowView.frame));
-        _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
-                                                                         CGRectGetMaxY(_arrowView.frame),
-                                                                         CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
-                                                                         CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
-        _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
-                                               CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
-                                               CGRectGetWidth(_extraFunctionsView.frame),
-                                               CGRectGetHeight(_extraFunctionsView.frame));
+- (IBAction)bookedConsumptionPressed:(UIButton *)sender {
+    if (_functionsGroupNeedDisplay != FunctionsGroupIsBookedConsumption) {
+        _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
+        if (_functionsGroupNeedDisplay == FunctionsGroupIsDoorService) {
+            [UIView animateWithDuration:kDurationTime
+                                  delay:0.0f
+                                options:UIViewAnimationOptionTransitionNone
+                             animations:^{
+                                 [_collectionView reloadData];
+                                 [_subFunctionsArrowView setNeedsDisplay];
+                                 
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           240.0f);
+                                 _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetMaxY(_subFunctionsArrowView.frame),
+                                                                                                  CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+                                 _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                        CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                        CGRectGetWidth(_extraFunctionsView.frame),
+                                                                        CGRectGetHeight(_extraFunctionsView.frame));
+                                 
+                             }completion:^(BOOL finished){
+                                 
+                             }];
+        } else {
+            [UIView animateWithDuration:kDurationTime
+                                  delay:0.0f
+                                options:UIViewAnimationOptionCurveEaseInOut
+                             animations:^{
+                                 [_subFunctionsArrowView setNeedsDisplay];
+                                 [_collectionView reloadData];
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           10.0f);
+                                 
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           240.0f);
+                                 _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetMaxY(_subFunctionsArrowView.frame),
+                                                                                                  CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+                                 _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                        CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                        CGRectGetWidth(_extraFunctionsView.frame),
+                                                                        CGRectGetHeight(_extraFunctionsView.frame));
+                             }completion:^(BOOL finished){
+                                 
+                             }];
+        }
+        _functionsGroupNeedDisplay = FunctionsGroupIsBookedConsumption;
+    }else {
+        _functionsGroupNeedDisplay = FunctionsGroupIsNone;
+        [UIView animateWithDuration:kDurationTime
+                              delay:0.0f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             
+                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                       CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                       CGRectGetHeight(_subFunctionsArrowView.frame));
+                             
+                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                       CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame) ,
+                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                       0);
+                             _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                              CGRectGetMaxY(_subFunctionsArrowView.frame),
+                                                                                              CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                              CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+                             _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                    CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                    CGRectGetWidth(_extraFunctionsView.frame),
+                                                                    CGRectGetHeight(_extraFunctionsView.frame));
+                         }completion:^(BOOL finished){
+                             
+                         }];
     }
 }
 
 //小区互动
-- (IBAction)houseEstateInteractionButtonPressed:(id)sender {
-    if (_groupNeedDisplay != DisplayGroupIsGroupTogether) {
-        _groupNeedDisplay = DisplayGroupIsGroupTogether;
-        UIButton *button = (UIButton *)sender;
-        _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
-        [_arrowView setNeedsDisplay];
-        [_collectionView reloadData];
+- (IBAction)houseEstateInteractionButtonPressed:(UIButton *)sender {
+    if (_functionsGroupNeedDisplay != FunctionsGroupIsHouseEstateInteraction) {
+        _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
+        if (_functionsGroupNeedDisplay == FunctionsGroupIsSecondHandGoods) {
+            [UIView animateWithDuration:kDurationTime
+                                  delay:0.0f
+                                options:UIViewAnimationOptionCurveEaseInOut
+                             animations:^{
+                                 [_collectionView reloadData];
+                                 [_subFunctionsArrowView setNeedsDisplay];
+                                 
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           240.0f);
+                                 _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                        CGRectGetMaxY(_subFunctionsArrowView.frame),
+                                                                        CGRectGetWidth(_extraFunctionsView.frame),
+                                                                        CGRectGetHeight(_extraFunctionsView.frame));
+                             } completion:^(BOOL finished){
+                                 
+                             }];
+        } else {
+            [UIView animateWithDuration:kDurationTime
+                                  delay:0.0f
+                                options:UIViewAnimationOptionCurveEaseInOut
+                             animations:^{
+                                 [_collectionView reloadData];
+                                 [_subFunctionsArrowView setNeedsDisplay];
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           0.0f);
+                                 
+                                 _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame),
+                                                                                                  CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+                                 
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           240.0f);
+                                 _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                        CGRectGetMaxY(_subFunctionsArrowView.frame),
+                                                                        CGRectGetWidth(_extraFunctionsView.frame),
+                                                                        CGRectGetHeight(_extraFunctionsView.frame));
+                             } completion:^(BOOL finished){
+                                 
+                             }];
+        }
+        _functionsGroupNeedDisplay = FunctionsGroupIsHouseEstateInteraction;
+    }else {
+        _functionsGroupNeedDisplay = FunctionsGroupIsNone;
+        [UIView animateWithDuration:kDurationTime
+                              delay:0.0f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                       CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
+                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                       CGRectGetHeight(_subFunctionsArrowView.frame));
+                             
+                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                       CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
+                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                       0);
+                             _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                              CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame),
+                                                                                              CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                              CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+                             _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                    CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                    CGRectGetWidth(_extraFunctionsView.frame),
+                                                                    CGRectGetHeight(_extraFunctionsView.frame));
+                         }completion:^(BOOL finished){
+                             
+                         }];
     }
 }
 
 //二手物品
-- (IBAction)secondHandGoodsButtonPressed:(id)sender {
-    if (_groupNeedDisplay != DisplayGroupIsGoYou) {
-        _groupNeedDisplay = DisplayGroupIsGoYou;
-        UIButton *button = (UIButton *)sender;
-        _arrowView.relativeOrigin = CGPointMake(button.frame.origin.x + button.frame.size.width / 2, button.frame.origin.y + button.frame.size.height);
-        [_arrowView setNeedsDisplay];
-        [_collectionView reloadData];
+- (IBAction)secondHandGoodsButtonPressed:(UIButton *)sender {
+    if (_functionsGroupNeedDisplay != FunctionsGroupIsSecondHandGoods) {
+        _subFunctionsArrowView.relativeOrigin = [sender convertPoint:CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame)) toView:self.view];
+        if (_functionsGroupNeedDisplay == FunctionsGroupIsHouseEstateInteraction) {
+            [UIView animateWithDuration:kDurationTime
+                                  delay:0.0f
+                                options:UIViewAnimationOptionCurveEaseInOut
+                             animations:^{
+                                 [_collectionView reloadData];
+                                 [_subFunctionsArrowView setNeedsDisplay];
+                                 
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           240.0f);
+                                 _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                        CGRectGetMaxY(_subFunctionsArrowView.frame),
+                                                                        CGRectGetWidth(_extraFunctionsView.frame),
+                                                                        CGRectGetHeight(_extraFunctionsView.frame));
+                             } completion:^(BOOL finished){
+                                 
+                             }];
+        } else {
+            [UIView animateWithDuration:kDurationTime
+                                  delay:0.0f
+                                options:UIViewAnimationOptionCurveEaseInOut
+                             animations:^{
+                                 [_collectionView reloadData];
+                                 [_subFunctionsArrowView setNeedsDisplay];
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           0.0f);
+                                 
+                                 _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame),
+                                                                                                  CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                                  CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+                                 
+                                 _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                           CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
+                                                                           CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                           240.0f);
+                                 _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                        CGRectGetMaxY(_subFunctionsArrowView.frame),
+                                                                        CGRectGetWidth(_extraFunctionsView.frame),
+                                                                        CGRectGetHeight(_extraFunctionsView.frame));
+                             } completion:^(BOOL finished){
+                                 
+                             }];
+        }
+        _functionsGroupNeedDisplay = FunctionsGroupIsSecondHandGoods;
+    }else {
+        _functionsGroupNeedDisplay = FunctionsGroupIsNone;
+        [UIView animateWithDuration:kDurationTime
+                              delay:0.0f
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                       CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
+                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                       CGRectGetHeight(_subFunctionsArrowView.frame));
+                             
+                             _subFunctionsArrowView.frame = CGRectMake(CGRectGetMinX(_subFunctionsArrowView.frame),
+                                                                       CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame) ,
+                                                                       CGRectGetWidth(_subFunctionsArrowView.frame),
+                                                                       0);
+                             _houseEstateInteractionAndsecondHandGoodsView.frame = CGRectMake(CGRectGetMinX(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                              CGRectGetMaxY(_doorServiceAndBookedConsumptionView.frame),
+                                                                                              CGRectGetWidth(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                                              CGRectGetHeight(_houseEstateInteractionAndsecondHandGoodsView.frame));
+                             _extraFunctionsView.frame = CGRectMake(CGRectGetMinX(_extraFunctionsView.frame),
+                                                                    CGRectGetMaxY(_houseEstateInteractionAndsecondHandGoodsView.frame),
+                                                                    CGRectGetWidth(_extraFunctionsView.frame),
+                                                                    CGRectGetHeight(_extraFunctionsView.frame));
+                         }completion:^(BOOL finished){
+                             
+                         }];
     }
 }
 
