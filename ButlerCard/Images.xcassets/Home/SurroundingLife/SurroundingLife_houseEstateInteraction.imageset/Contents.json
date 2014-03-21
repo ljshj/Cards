@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "want_icon_together.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "zbsh_together@2x.png"
+      "filename" : "want_icon_together@2x.png"
     }
   ],
   "info" : {

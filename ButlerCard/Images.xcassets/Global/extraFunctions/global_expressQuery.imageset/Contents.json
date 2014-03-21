@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "want_icon2_kdcx.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "zbsh_kdcxicon@2x.png"
+      "filename" : "want_icon2_kdcx@2x.png"
     }
   ],
   "info" : {
