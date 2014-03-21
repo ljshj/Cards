@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CYMyBillTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
-//@property(nonatomic,retain)NSMutableDictionary *dataDic;
+//储存需要显示的数据 用于实现表单的折叠
 @property(nonatomic,retain)NSMutableArray *dataArray;
+//储存消费清单的所有数据
 @property(nonatomic,retain)NSMutableArray *allDataArray;
-
 @end
