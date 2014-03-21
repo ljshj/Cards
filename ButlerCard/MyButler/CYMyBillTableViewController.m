@@ -105,19 +105,34 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     if (indexPath.row == 0)
     {
-//        NSString *tempString = [NSString stringWithFormat:@"%@",_dataArray[indexPath.section][indexPath.row]];
-        _dataArray[indexPath.section] = _dataArray[indexPath.section][indexPath.row];
-        NSLog(@"_dataArray == %@",_dataArray);
-        NSLog(@"_dataArray.count == %d",_dataArray.count);
-
-//        [self.tableView reloadData];
+        NSArray *dataArrayAtSection = _dataArray[indexPath.section];
+        NSArray *allDataArrayAtSection = _allDataArray[indexPath.section];
+        NSLog(@"section == %d",indexPath.section);
+        NSLog(@"dataArrayAtSection.count == %d",dataArrayAtSection.count);
+        NSLog(@"allDataArrayAtSection.count == %d",allDataArrayAtSection.count);
+        //折叠的情况
+        if (dataArrayAtSection.count == allDataArrayAtSection.count)
+        {
+            NSLog(@"折叠！");
+            NSMutableArray *tempArray = [[NSMutableArray alloc]initWithObjects:_dataArray[indexPath.section][indexPath.row], nil];
+            _dataArray[indexPath.section] = tempArray;
+//            NSLog(@"_dataArray == %@",_dataArray);
+//            NSLog(@"_dataArray.count == %d",_dataArray.count);
+            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
+        }
+        //展开的情况
+        else
+        {
+            NSLog(@"展开！");
+//            NSMutableArray *tempArray = [[NSMutableArray alloc]initWithObjects:_allDataArray[indexPath.section], nil];
+//            _dataArray[indexPath.section] = tempArray;
+            _dataArray[indexPath.section] = _allDataArray[indexPath.section];
+            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
+        }
     }
-    else
-    {
-    }
-
 
 }
 
