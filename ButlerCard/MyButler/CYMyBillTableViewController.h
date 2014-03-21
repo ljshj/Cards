@@ -11,5 +11,6 @@
 @interface CYMyBillTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
 //@property(nonatomic,retain)NSMutableDictionary *dataDic;
 @property(nonatomic,retain)NSMutableArray *dataArray;
+@property(nonatomic,retain)NSMutableArray *allDataArray;
 
 @end

@@ -30,6 +30,8 @@
     [super viewDidLoad];
 //    _dataDic = [[NSMutableDictionary alloc]initWithObjects:@[@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"]]forKeys:@[@"1月",@"2月"]];
 //    NSLog(@"_dataDic = %@",_dataDic);
+    _allDataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
+
     _dataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
     NSLog(@"_dataArray == %@",_dataArray);
 
@@ -66,7 +68,16 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80.0;
+    if (indexPath.row == 0)
+    {
+        return 30.0;
+
+    }
+    else
+    {
+        return 80.0;
+    }
+
 }
 
 
@@ -74,33 +85,40 @@
 {
     [self.tableView registerClass:[CYMyBillMonthCell class] forCellReuseIdentifier:@"CYMyBillMonthCell"];
     [self.tableView registerClass:[CYMyBillDetailCell class] forCellReuseIdentifier:@"CYMyBillDetailCell"];
-    
-    CYMyBillDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillDetailCell" forIndexPath:indexPath];
-
     // Configure the cell...
-    if (indexPath.section == 0)
+    if (indexPath.row == 0)
     {
+        CYMyBillMonthCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillMonthCell" forIndexPath:indexPath];
+        NSString *tempString = [NSString stringWithFormat:@"%@",_dataArray[indexPath.section][indexPath.row]];
+        [cell.timeLable setText:tempString];
         cell.backgroundColor = [UIColor greenColor];
-        if (indexPath.row == 0)
-        {
-            CYMyBillMonthCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillMonthCell" forIndexPath:indexPath];
-            NSString *tempString = [NSString stringWithFormat:@"%@",_dataArray[indexPath.section][indexPath.row]];
-            [cell.timeLable setText:tempString];
-            return cell;
-        }
-        else
-        {
-            CYMyBillDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillDetailCell" forIndexPath:indexPath];
-            [cell.titleLable setText:@"123"];
-            return cell;
-        }
+        return cell;
     }
     else
     {
-        cell.backgroundColor = [UIColor redColor];
-
+        CYMyBillDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillDetailCell" forIndexPath:indexPath];
+        NSString *tempString = [NSString stringWithFormat:@"%@",_dataArray[indexPath.section][indexPath.row]];
+        [cell.titleLable setText:tempString];
+        cell.backgroundColor = [UIColor yellowColor];
+        return cell;
     }
-    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0)
+    {
+//        NSString *tempString = [NSString stringWithFormat:@"%@",_dataArray[indexPath.section][indexPath.row]];
+        _dataArray[indexPath.section] = _dataArray[indexPath.section][indexPath.row];
+        NSLog(@"_dataArray == %@",_dataArray);
+        NSLog(@"_dataArray.count == %d",_dataArray.count);
+
+//        [self.tableView reloadData];
+    }
+    else
+    {
+    }
+
+
 }
 
 
