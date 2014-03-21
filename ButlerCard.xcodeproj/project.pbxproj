@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231F444A18DC1D550042FA6C /* PieLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F444518DC1D550042FA6C /* PieLayer.m */; };
+		231F444B18DC1D550042FA6C /* NSMutableArray+pieEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F444718DC1D550042FA6C /* NSMutableArray+pieEx.m */; };
+		231F444C18DC1D550042FA6C /* PieElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F444918DC1D550042FA6C /* PieElement.m */; };
+		231F444F18DC1D720042FA6C /* Example2PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F444E18DC1D720042FA6C /* Example2PieView.m */; };
+		231F445218DC1DF20042FA6C /* CYBillPieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F445118DC1DF20042FA6C /* CYBillPieViewController.m */; };
+		231F445518DC1E690042FA6C /* MyPieElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F445418DC1E690042FA6C /* MyPieElement.m */; };
 		2385634318DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385634018DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m */; };
 		2385634418DADA6B005D5AF5 /* CYMyPropertyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385634218DADA6B005D5AF5 /* CYMyPropertyTableViewController.m */; };
 		2385634918DAE03E005D5AF5 /* CYMyBillTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385634818DAE03E005D5AF5 /* CYMyBillTableViewController.m */; };
@@ -110,6 +116,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		231F444318DC1D550042FA6C /* MagicPieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicPieLayer.h; sourceTree = "<group>"; };
+		231F444418DC1D550042FA6C /* PieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieLayer.h; sourceTree = "<group>"; };
+		231F444518DC1D550042FA6C /* PieLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieLayer.m; sourceTree = "<group>"; };
+		231F444618DC1D550042FA6C /* NSMutableArray+pieEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+pieEx.h"; sourceTree = "<group>"; };
+		231F444718DC1D550042FA6C /* NSMutableArray+pieEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+pieEx.m"; sourceTree = "<group>"; };
+		231F444818DC1D550042FA6C /* PieElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieElement.h; sourceTree = "<group>"; };
+		231F444918DC1D550042FA6C /* PieElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieElement.m; sourceTree = "<group>"; };
+		231F444D18DC1D720042FA6C /* Example2PieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example2PieView.h; sourceTree = "<group>"; };
+		231F444E18DC1D720042FA6C /* Example2PieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example2PieView.m; sourceTree = "<group>"; };
+		231F445018DC1DF20042FA6C /* CYBillPieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBillPieViewController.h; sourceTree = "<group>"; };
+		231F445118DC1DF20042FA6C /* CYBillPieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBillPieViewController.m; sourceTree = "<group>"; };
+		231F445318DC1E690042FA6C /* MyPieElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPieElement.h; sourceTree = "<group>"; };
+		231F445418DC1E690042FA6C /* MyPieElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPieElement.m; sourceTree = "<group>"; };
 		2385633F18DADA6B005D5AF5 /* CYMyPropertyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyPropertyTableViewCell.h; sourceTree = "<group>"; };
 		2385634018DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyPropertyTableViewCell.m; sourceTree = "<group>"; };
 		2385634118DADA6B005D5AF5 /* CYMyPropertyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyPropertyTableViewController.h; sourceTree = "<group>"; };
@@ -226,6 +245,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231F444218DC1D430042FA6C /* MagicPieLayer */ = {
+			isa = PBXGroup;
+			children = (
+				231F444318DC1D550042FA6C /* MagicPieLayer.h */,
+				231F444418DC1D550042FA6C /* PieLayer.h */,
+				231F444518DC1D550042FA6C /* PieLayer.m */,
+				231F444618DC1D550042FA6C /* NSMutableArray+pieEx.h */,
+				231F444718DC1D550042FA6C /* NSMutableArray+pieEx.m */,
+				231F444818DC1D550042FA6C /* PieElement.h */,
+				231F444918DC1D550042FA6C /* PieElement.m */,
+			);
+			name = MagicPieLayer;
+			sourceTree = "<group>";
+		};
 		2385633E18DADA6B005D5AF5 /* MyButler---------我的管家 */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +276,8 @@
 				2385634218DADA6B005D5AF5 /* CYMyPropertyTableViewController.m */,
 				2385634718DAE03E005D5AF5 /* CYMyBillTableViewController.h */,
 				2385634818DAE03E005D5AF5 /* CYMyBillTableViewController.m */,
+				231F445018DC1DF20042FA6C /* CYBillPieViewController.h */,
+				231F445118DC1DF20042FA6C /* CYBillPieViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -250,12 +285,17 @@
 		2385634618DADAA4005D5AF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				231F445318DC1E690042FA6C /* MyPieElement.h */,
+				231F445418DC1E690042FA6C /* MyPieElement.m */,
+				231F444D18DC1D720042FA6C /* Example2PieView.h */,
+				231F444E18DC1D720042FA6C /* Example2PieView.m */,
 				2385633F18DADA6B005D5AF5 /* CYMyPropertyTableViewCell.h */,
 				2385634018DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m */,
 				2385634E18DAE22D005D5AF5 /* CYMyBillDetailCell.h */,
 				2385634F18DAE22E005D5AF5 /* CYMyBillDetailCell.m */,
 				2385635118DAE242005D5AF5 /* CYMyBillMonthCell.h */,
 				2385635218DAE242005D5AF5 /* CYMyBillMonthCell.m */,
+				231F444218DC1D430042FA6C /* MagicPieLayer */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -730,7 +770,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231F444A18DC1D550042FA6C /* PieLayer.m in Sources */,
 				2385634418DADA6B005D5AF5 /* CYMyPropertyTableViewController.m in Sources */,
+				231F445518DC1E690042FA6C /* MyPieElement.m in Sources */,
 				B2C27D9818B48432003AA091 /* main.m in Sources */,
 				B2CE1C0318D2A912007A754D /* HXTBindCardViewController.m in Sources */,
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
@@ -744,6 +786,7 @@
 				B2BB18ED18D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m in Sources */,
 				B2A1D3C218DBD0DA0023900B /* HXTViewWithArrow.m in Sources */,
 				B2AA7EE818D2AE4000F4EF88 /* HXTCheckBox.m in Sources */,
+				231F444C18DC1D550042FA6C /* PieElement.m in Sources */,
 				B2CE1C0918D2A912007A754D /* HXTPropertyItemDetailTableViewController.m in Sources */,
 				B291D55318D97D72008ACE36 /* HXTChooseHousingEstateTableViewController.m in Sources */,
 				B2BB18E918D829D700BD9FC9 /* HXTIGoViewController.m in Sources */,
@@ -752,8 +795,11 @@
 				B2C016EE18D2BB8F0058F1BF /* HXTSelectCityViewController.m in Sources */,
 				B2BB18EB18D829D700BD9FC9 /* HXTIGoWithTypeViewController.m in Sources */,
 				B2C016EA18D2BA310058F1BF /* HXTChooseHousingEstateViewController.m in Sources */,
+				231F445218DC1DF20042FA6C /* CYBillPieViewController.m in Sources */,
 				B2AA7EF818D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */,
 				B2AA7EB018D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
+				231F444F18DC1D720042FA6C /* Example2PieView.m in Sources */,
+				231F444B18DC1D550042FA6C /* NSMutableArray+pieEx.m in Sources */,
 				B2CE1C1718D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
 				2385634918DAE03E005D5AF5 /* CYMyBillTableViewController.m in Sources */,
 				B2CE1C0F18D2A912007A754D /* HXTMyProperties.m in Sources */,
