@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CYMyBillTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
-@property(nonatomic,retain)NSMutableDictionary *dataDic;
+//@property(nonatomic,retain)NSMutableDictionary *dataDic;
 @property(nonatomic,retain)NSMutableArray *dataArray;
 
 @end

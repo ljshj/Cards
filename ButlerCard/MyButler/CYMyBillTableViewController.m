@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _dataDic = [[NSMutableDictionary alloc]initWithObjects:@[@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"]]forKeys:@[@"1月",@"2月"]];
+//    _dataDic = [[NSMutableDictionary alloc]initWithObjects:@[@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"]]forKeys:@[@"1月",@"2月"]];
 //    NSLog(@"_dataDic = %@",_dataDic);
     _dataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
     NSLog(@"_dataArray == %@",_dataArray);
@@ -60,14 +60,6 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-//    if (section == 0)
-//    {
-//        return 3;
-//    }
-//    else
-//    {
-//        return 2;
-//    }
     NSMutableArray *tempArray = _dataArray[section];
     return tempArray.count;
 
@@ -82,13 +74,26 @@
 {
     [self.tableView registerClass:[CYMyBillMonthCell class] forCellReuseIdentifier:@"CYMyBillMonthCell"];
     [self.tableView registerClass:[CYMyBillDetailCell class] forCellReuseIdentifier:@"CYMyBillDetailCell"];
-
-    CYMyBillDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillDetailCell" forIndexPath:indexPath];
     
+    CYMyBillDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillDetailCell" forIndexPath:indexPath];
+
     // Configure the cell...
     if (indexPath.section == 0)
     {
         cell.backgroundColor = [UIColor greenColor];
+        if (indexPath.row == 0)
+        {
+            CYMyBillMonthCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillMonthCell" forIndexPath:indexPath];
+            NSString *tempString = [NSString stringWithFormat:@"%@",_dataArray[indexPath.section][indexPath.row]];
+            [cell.timeLable setText:tempString];
+            return cell;
+        }
+        else
+        {
+            CYMyBillDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillDetailCell" forIndexPath:indexPath];
+            [cell.titleLable setText:@"123"];
+            return cell;
+        }
     }
     else
     {
