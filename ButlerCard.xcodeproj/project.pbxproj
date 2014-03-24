@@ -30,7 +30,7 @@
 		236E3B5B18E0DA3800E0619E /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B3518E0DA3800E0619E /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		236E3B5C18E0DA3800E0619E /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B3718E0DA3800E0619E /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		236E3B5D18E0DA3800E0619E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B3918E0DA3800E0619E /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		236E3B5E18E0DA3800E0619E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B3D18E0DA3800E0619E /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		236E3B5E18E0DA3800E0619E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B3D18E0DA3800E0619E /* Reachability.m */; };
 		236E3B5F18E0DA3800E0619E /* UIDevice+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B3F18E0DA3800E0619E /* UIDevice+Resolutions.m */; };
 		236E3B6018E0DA3800E0619E /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 236E3B4218E0DA3800E0619E /* checkbox_checked.png */; };
 		236E3B6118E0DA3800E0619E /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 236E3B4318E0DA3800E0619E /* checkbox_unchecked.png */; };
