@@ -439,7 +439,7 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
 
 - (void)showSubFunctionInGroup:(FunctionsGroup)group {
      _subFunctionsArrowView.hidden = NO;
-     NSUInteger subFunctionsArrowViewHeight = [self caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:group];
+//     NSUInteger subFunctionsArrowViewHeight = [self caculateSubFunctionsArrowViewHeightThroughFunctionsGroup:group];
     
     if (group == FunctionsGroupIsDoorService) { //上门服务
         
