@@ -106,7 +106,7 @@
 - (void)horizonMoveArrowFromX:(float)sourceX toX:(float)destX; {
     
     CAKeyframeAnimation *move = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    move.duration = 0.5;
+    move.duration = 0.3f;
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, NULL, sourceX, kArrowHeight / 2.0);
     CGPathAddLineToPoint(path, NULL, destX, kArrowHeight / 2.0);
@@ -115,7 +115,7 @@
     CGPathRelease(path);
     
     CAAnimationGroup *totalAnimation = [CAAnimationGroup animation];
-    totalAnimation.duration = 0.5f;
+    totalAnimation.duration = 0.3f;
     totalAnimation.animations = @[move];
     totalAnimation.fillMode = kCAFillModeForwards;
     totalAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];

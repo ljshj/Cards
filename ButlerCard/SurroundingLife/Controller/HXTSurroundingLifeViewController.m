@@ -10,7 +10,7 @@
 #import "HXTAccountManager.h"
 #import "HXTViewWithArrow.h"
 
-#define kDurationTime 0.5f
+#define kDurationTime 0.3f
 
 typedef NS_ENUM(NSUInteger, FunctionsGroup) {
     
@@ -480,6 +480,7 @@ typedef NS_ENUM(NSUInteger, FunctionsGroup) {
 
 - (IBAction)backgroundTouchUpInside:(id)sender {
     NSLog(@"backgroundTouchUpInside");
+    
 }
 #pragma mark -- scroview delegate
 
