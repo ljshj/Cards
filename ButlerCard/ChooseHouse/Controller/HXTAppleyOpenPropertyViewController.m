@@ -7,8 +7,11 @@
 //
 
 #import "HXTAppleyOpenPropertyViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface HXTAppleyOpenPropertyViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
 
 @end
 

@@ -1,5 +1,5 @@
 //
-//  CYMyBillDetailCell.h
+//  CYMyPropertyTableViewCell.h
 //  ButlerCard
 //
 //  Created by niko on 14-3-20.
@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CYMyBillDetailCell : UITableViewCell
+@interface CYMyPropertyTableViewCell : UITableViewCell
 @property(nonatomic,retain)UIImageView *titleImageView;
 @property(nonatomic,retain)UILabel *titleLable;
-@property(nonatomic,retain)UILabel *timeLable;
-@property(nonatomic,retain)UILabel *moneyLable;
-@property(nonatomic,retain)UILabel *stateLable;
+@property(nonatomic,retain)UILabel *contentLable;
 
 @end
