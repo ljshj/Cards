@@ -9,6 +9,7 @@
 #import "CYMyBillTableViewController.h"
 #import "CYMyBillMonthCell.h"
 #import "CYMyBillDetailCell.h"
+#import "SVPullToRefresh.h"
 
 @interface CYMyBillTableViewController ()
 
@@ -28,8 +29,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    _dataDic = [[NSMutableDictionary alloc]initWithObjects:@[@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"]]forKeys:@[@"1月",@"2月"]];
-//    NSLog(@"_dataDic = %@",_dataDic);
+    //注册下拉刷新功能
+    __weak CYMyBillTableViewController *weakSelf = self;
+    [self.tableView addPullToRefreshWithActionHandler:^{
+    [weakSelf insertRowAtTop];
+}];
+    //注册上拉刷新功能
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+    [weakSelf insertRowAtBottom];
+    }];
+    
+    
     _allDataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
 
     _dataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
@@ -128,55 +138,32 @@
         }
     }
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark --SVPullToRefresh--
+//下拉刷新
+- (void)insertRowAtTop
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    //为了模拟加载数据的过程 设置方法延迟2秒执行
+    // 延迟2秒执行：
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        NSLog(@"停止刷新！");
+        //停止刷新
+        [self.tableView.pullToRefreshView stopAnimating];
+    });
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//上拉加载更多
+- (void)insertRowAtBottom
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    //为了模拟加载数据的过程 设置方法延迟2秒执行
+    // 延迟2秒执行：
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        NSLog(@"停止加载更多！");
+        //停止加载更多
+        [self.tableView.infiniteScrollingView stopAnimating];
+    });
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
