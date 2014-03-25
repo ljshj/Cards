@@ -119,11 +119,8 @@
     static NSString *collectionViewCellIdentifier= @"CollectionViewCellIdentifier";
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionViewCellIdentifier forIndexPath:indexPath];
-    UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
-    imageView.image = [UIImage imageNamed:@"超市"];
-//    UIButton *cellButton = (UIButton *)[cell viewWithTag:100];
-    UILabel  *cellLabel  = (UILabel *)[cell viewWithTag:101];
-    cellLabel.text = _housingEstateNamesToShow[indexPath.row];
+    ((UIImageView *)[cell viewWithTag:100]).image = [UIImage imageNamed:[NSString stringWithFormat:@"property_house%lu", (long)(indexPath.row % 7 + 1)]];
+    ((UILabel *)[cell viewWithTag:101]).text = _housingEstateNamesToShow[indexPath.row];
     
     return cell;
 }
