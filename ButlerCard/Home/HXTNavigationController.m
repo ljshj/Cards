@@ -54,8 +54,8 @@
     self.navigationBar.barTintColor = [UIColor orangeColor];
     
     //设置Title属性
-    [self.navigationBar setTitleTextAttributes:@{UITextAttributeFont: [UIFont boldSystemFontOfSize:20],
-                                                 UITextAttributeTextColor: [UIColor whiteColor]}];
+    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:20],
+                                                 NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 
 - (void)didReceiveMemoryWarning
