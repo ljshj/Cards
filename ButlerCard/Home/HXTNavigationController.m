@@ -50,12 +50,14 @@
             break;
     }
     
-    //设置navigationBar背景色
-    self.navigationBar.barTintColor = [UIColor orangeColor];
-    
-    //设置Title属性
-    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:20],
-                                                 NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        //设置navigationBar背景色
+        self.navigationBar.barTintColor = [UIColor orangeColor];
+        
+        //设置Title属性
+        [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:20],
+                                                     NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,14 +67,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

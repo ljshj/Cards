@@ -1,18 +1,18 @@
 //
-//  HXTTabBarViewController.m
+//  HXTAppleyOpenPropertyViewController.m
 //  ButlerCard
 //
-//  Created by johnny tang on 3/17/14.
+//  Created by johnny tang on 3/25/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#import "HXTTabBarViewController.h"
+#import "HXTAppleyOpenPropertyViewController.h"
 
-@interface HXTTabBarViewController ()
+@interface HXTAppleyOpenPropertyViewController ()
 
 @end
 
-@implementation HXTTabBarViewController
+@implementation HXTAppleyOpenPropertyViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,16 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-//    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar_background"]; //del: 透明度太高会导致其他界面底层图像显式太明显
-    [self.tabBar setSelectedImageTintColor:[UIColor orangeColor]];
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) { //iOS 6 TabBar显式机制不一样，需要单独适配
-        self.tabBar.backgroundColor = [UIColor whiteColor];
-    } else {
-//        self.tabBar.backgroundColor = [UIColor clearColor];
-    }
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,9 +35,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
+#pragma mark - Navigation
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -56,4 +46,7 @@
 }
 */
 
+- (IBAction)backButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{}];
+}
 @end

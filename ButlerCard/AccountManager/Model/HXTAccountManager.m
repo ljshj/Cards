@@ -13,18 +13,24 @@
 
 + (HXTAccountManager *)sharedInstance {
     static HXTAccountManager *accountManager;
-    if (accountManager == nil) {
+    if (!accountManager) {
         accountManager = [[HXTAccountManager alloc] init];
         [accountManager LoadDataFromUserDefault];
+        
+        if (!accountManager.currentCity ||!accountManager.username || !accountManager.password) {
+            accountManager.currentCity = @"成都";
+            accountManager.username = @"username";
+            accountManager.password = @"password";
+            [accountManager writeDataToUserDefault];
+            [accountManager LoadDataFromUserDefault];
+        }
+        
+        NSLog(@"111username = #%@#, password = #%@# currentCity = %@", accountManager.username, accountManager.password, accountManager.currentCity);
+        
+    } else {
+        NSLog(@"222########username = #%@#, password = #%@# currentCity = %@", accountManager.username, accountManager.password, accountManager.currentCity);
     }
-    if (!accountManager.currentCity ||!accountManager.username || !accountManager.password) {
-        accountManager.currentCity = @"成都";
-        accountManager.username = @"username";
-        accountManager.password = @"password";
-        [accountManager writeDataToUserDefault];
-        [accountManager LoadDataFromUserDefault];
-    }
-    NSLog(@"username = #%@#, password = #%@#", accountManager.username, accountManager.password);
+    
     return accountManager;
 }
 

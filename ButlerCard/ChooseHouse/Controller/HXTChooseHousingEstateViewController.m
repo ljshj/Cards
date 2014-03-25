@@ -119,10 +119,8 @@
     static NSString *collectionViewCellIdentifier= @"CollectionViewCellIdentifier";
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionViewCellIdentifier forIndexPath:indexPath];
-    
-//    UIButton *cellButton = (UIButton *)[cell viewWithTag:100];
-    UILabel  *cellLabel  = (UILabel *)[cell viewWithTag:101];
-    cellLabel.text = _housingEstateNamesToShow[indexPath.row];
+    ((UIImageView *)[cell viewWithTag:100]).image = [UIImage imageNamed:[NSString stringWithFormat:@"property_house%lu", (long)(indexPath.row % 7 + 1)]];
+    ((UILabel *)[cell viewWithTag:101]).text = _housingEstateNamesToShow[indexPath.row];
     
     return cell;
 }
@@ -132,19 +130,14 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"didSelectItemAtIndexPath indexPath.section = %li, indexPath.row = %li", (long)indexPath.section, (long)indexPath.row);
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
-
-- (IBAction)houseingEstateButtonPressed:(UIButton *)sender {
-    NSIndexPath *indexPath = [_housingEstatesCollectionView indexPathForCell:(UICollectionViewCell *)sender.superview.superview];
-    NSLog(@"ButtonPressedAtIndexPath indexPath.section = %li, indexPath.row = %li", (long)indexPath.section, (long)indexPath.row);
     UIViewController *loginViewcontroller = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
     
     [loginViewcontroller setValue:self forKey:@"delegate"];
     [self.navigationController pushViewController:loginViewcontroller animated:YES];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 #pragma mark -- LoginViewController delegate
@@ -170,7 +163,7 @@
 }
 
 - (IBAction)appleyOpenPropertyButtonPressed:(id)sender {
-    
+    NSLog(@"appleyOpenPropertyButtonPressed");
 }
 
 #pragma mark - Navigation

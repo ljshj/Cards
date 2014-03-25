@@ -183,7 +183,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
             }];
             
         } else if (indexPath.section == sectionTypeTopCities) {
-            [HXTAccountManager sharedInstance].currentCity = _topCities[indexPath.row];
+            _currentCity = _topCities[indexPath.row];
             
             [self dismissViewControllerAnimated:YES completion:^{
                 if (_currentCity && ![_currentCity isEqualToString:[HXTAccountManager sharedInstance].currentCity]) {

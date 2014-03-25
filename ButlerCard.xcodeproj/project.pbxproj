@@ -41,6 +41,8 @@
 		B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */; };
 		B25A8A2218D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
 		B25A8A2318D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
+		B25E175418E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25E175318E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m */; };
+		B25E175518E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25E175318E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m */; };
 		B291D55318D97D72008ACE36 /* HXTChooseHousingEstateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B291D55218D97D72008ACE36 /* HXTChooseHousingEstateTableViewController.m */; };
 		B291D55418D97D72008ACE36 /* HXTChooseHousingEstateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B291D55218D97D72008ACE36 /* HXTChooseHousingEstateTableViewController.m */; };
 		B291D55718D9E78F008ACE36 /* HXTSelectCitySecondLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B291D55618D9E78F008ACE36 /* HXTSelectCitySecondLevelViewController.m */; };
@@ -186,6 +188,8 @@
 		B2380E0418B6FC3B00D895DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyProperty.storyboard; sourceTree = "<group>"; };
 		B25A8A2018D92B7F00A8D145 /* HXTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTNavigationController.h; path = Home/HXTNavigationController.h; sourceTree = "<group>"; };
 		B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTNavigationController.m; path = Home/HXTNavigationController.m; sourceTree = "<group>"; };
+		B25E175218E18277004E0C57 /* HXTAppleyOpenPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTAppleyOpenPropertyViewController.h; sourceTree = "<group>"; };
+		B25E175318E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTAppleyOpenPropertyViewController.m; sourceTree = "<group>"; };
 		B291D55118D97D72008ACE36 /* HXTChooseHousingEstateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTChooseHousingEstateTableViewController.h; sourceTree = "<group>"; };
 		B291D55218D97D72008ACE36 /* HXTChooseHousingEstateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTChooseHousingEstateTableViewController.m; sourceTree = "<group>"; };
 		B291D55518D9E78F008ACE36 /* HXTSelectCitySecondLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTSelectCitySecondLevelViewController.h; sourceTree = "<group>"; };
@@ -558,6 +562,8 @@
 				B2C016ED18D2BB8F0058F1BF /* HXTSelectCityViewController.m */,
 				B291D55518D9E78F008ACE36 /* HXTSelectCitySecondLevelViewController.h */,
 				B291D55618D9E78F008ACE36 /* HXTSelectCitySecondLevelViewController.m */,
+				B25E175218E18277004E0C57 /* HXTAppleyOpenPropertyViewController.h */,
+				B25E175318E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m */,
 			);
 			name = Controller;
 			path = ChooseHouse/Controller;
@@ -601,6 +607,7 @@
 				079B0BD346A049589BA9660B /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		B2C27D8918B48432003AA091 /* Products */ = {
 			isa = PBXGroup;
@@ -932,6 +939,11 @@
 				23D5EACB18E16B460063AB9A /* CYActivityCell.m in Sources */,
 				B2BB18E718D829D700BD9FC9 /* HXTSurroundingLifeViewController.m in Sources */,
 				B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
+<<<<<<< HEAD
+=======
+				2385634318DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m in Sources */,
+				B25E175418E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m in Sources */,
+>>>>>>> FETCH_HEAD
 				B2CE1C1518D2A912007A754D /* HXTPropertyCell.m in Sources */,
 				236E3B5E18E0DA3800E0619E /* Reachability.m in Sources */,
 			);
@@ -963,6 +975,7 @@
 				B2CE1C1018D2A912007A754D /* HXTMyProperties.m in Sources */,
 				B2C016EF18D2BB8F0058F1BF /* HXTSelectCityViewController.m in Sources */,
 				B291D55818D9E78F008ACE36 /* HXTSelectCitySecondLevelViewController.m in Sources */,
+				B25E175518E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m in Sources */,
 				B2AA7EF918D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */,
 				B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */,
 			);
@@ -1115,6 +1128,7 @@
 				INFOPLIST_FILE = "ButlerCard/ButlerCard-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1132,6 +1146,7 @@
 				INFOPLIST_FILE = "ButlerCard/ButlerCard-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

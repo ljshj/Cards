@@ -60,7 +60,7 @@
 @property (assign, nonatomic, getter = isRememberdUsernameAtLogin) BOOL rememberdUsernameAtLogin;
 @property (assign, nonatomic, getter = isRememberdPasswordAtLogin) BOOL rememberdPasswordAtLogin;
 
-+ (HXTAccountManager *)sharedInstance;
++ (instancetype)sharedInstance;
 - (BOOL)writeDataToUserDefault;
 
 - (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password;
