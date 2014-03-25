@@ -36,6 +36,7 @@
     } else {
 //        self.tabBar.backgroundColor = [UIColor clearColor];
     }
+    
 }
 
 - (void)didReceiveMemoryWarning
