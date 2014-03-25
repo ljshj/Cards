@@ -1,19 +1,20 @@
 //
-//  CYMyPropertyTableViewController.m
+//  CYMsgTableViewController.m
 //  ButlerCard
 //
-//  Created by niko on 14-3-20.
+//  Created by niko on 14-3-25.
 //  Copyright (c) 2014年 johnny tang. All rights reserved.
 //
 
-#import "CYMyPropertyTableViewController.h"
+#import "CYMsgTableViewController.h"
+#import "CYMsgCell.h"
 #import "SVPullToRefresh.h"
 
-@interface CYMyPropertyTableViewController ()
+@interface CYMsgTableViewController ()
 
 @end
 
-@implementation CYMyPropertyTableViewController
+@implementation CYMsgTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,9 +29,10 @@
 {
     [super viewDidLoad];
     //注册下拉刷新功能
-    __weak CYMyPropertyTableViewController *weakSelf = self;
+    __weak CYMsgTableViewController *weakSelf = self;
     [self.tableView addPullToRefreshWithActionHandler:^{
         [weakSelf insertRowAtTop];
+        
     }];
     //注册上拉刷新功能
     [self.tableView addInfiniteScrollingWithActionHandler:^{
@@ -42,7 +44,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -54,18 +55,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 7;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80.0;
+    return 80;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyPropertyCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMsgCell" forIndexPath:indexPath];
     // Configure the cell...
     return cell;
 }

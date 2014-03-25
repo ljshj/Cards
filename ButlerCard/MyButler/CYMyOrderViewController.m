@@ -1,23 +1,23 @@
 //
-//  CYMyPropertyTableViewController.m
+//  CYMyOrderViewController.m
 //  ButlerCard
 //
-//  Created by niko on 14-3-20.
+//  Created by niko on 14-3-25.
 //  Copyright (c) 2014年 johnny tang. All rights reserved.
 //
 
-#import "CYMyPropertyTableViewController.h"
+#import "CYMyOrderViewController.h"
 #import "SVPullToRefresh.h"
 
-@interface CYMyPropertyTableViewController ()
+@interface CYMyOrderViewController ()
 
 @end
 
-@implementation CYMyPropertyTableViewController
+@implementation CYMyOrderViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -28,15 +28,15 @@
 {
     [super viewDidLoad];
     //注册下拉刷新功能
-    __weak CYMyPropertyTableViewController *weakSelf = self;
+    __weak CYMyOrderViewController *weakSelf = self;
     [self.tableView addPullToRefreshWithActionHandler:^{
         [weakSelf insertRowAtTop];
+        
     }];
     //注册上拉刷新功能
     [self.tableView addInfiniteScrollingWithActionHandler:^{
         [weakSelf insertRowAtBottom];
     }];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,30 +44,37 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    //#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    //#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 3;
+    
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80.0;
+    return 80;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyPropertyCell" forIndexPath:indexPath];
+    //    [self.tableView registerClass:[CYActivityCell class] forCellReuseIdentifier:@"CYActivityCell"];
     // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyOrderCell" forIndexPath:indexPath];
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 }
 #pragma mark --SVPullToRefresh--
 //下拉刷新
@@ -97,4 +104,19 @@
                    });
 }
 
+#pragma mark --segmentValueChanged--
+- (IBAction)segmentValueChange:(UISegmentedControl *)sender
+{
+    //    NSLog(@"segmentIndex == %d",sender.selectedSegmentIndex);
+    //根据Index刷新不同的内容
+    if (sender.selectedSegmentIndex == 0)
+    {
+        [self.tableView triggerPullToRefresh];
+    }
+    else
+    {
+        [self.tableView triggerPullToRefresh];
+    }
+
+}
 @end

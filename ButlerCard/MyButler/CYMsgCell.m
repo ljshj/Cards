@@ -1,14 +1,14 @@
 //
-//  CYMyBillDetailCell.m
+//  CYMsgCell.m
 //  ButlerCard
 //
-//  Created by niko on 14-3-20.
+//  Created by niko on 14-3-25.
 //  Copyright (c) 2014年 johnny tang. All rights reserved.
 //
 
-#import "CYMyBillDetailCell.h"
+#import "CYMsgCell.h"
 
-@implementation CYMyBillDetailCell
+@implementation CYMsgCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
