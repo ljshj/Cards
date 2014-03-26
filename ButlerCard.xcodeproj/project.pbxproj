@@ -13,6 +13,7 @@
 		2301F90218E26A8B0051171E /* CYMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F90118E26A8B0051171E /* CYMsgCell.m */; };
 		2301F90518E26A930051171E /* CYMsgTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F90418E26A930051171E /* CYMsgTableViewController.m */; };
 		2301F90818E26ABB0051171E /* CYMyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F90718E26ABB0051171E /* CYMyOrderViewController.m */; };
+		2301F90B18E27A520051171E /* CYOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F90A18E27A520051171E /* CYOrderCell.m */; };
 		231F444A18DC1D550042FA6C /* PieLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F444518DC1D550042FA6C /* PieLayer.m */; };
 		231F444B18DC1D550042FA6C /* NSMutableArray+pieEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F444718DC1D550042FA6C /* NSMutableArray+pieEx.m */; };
 		231F444C18DC1D550042FA6C /* PieElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F444918DC1D550042FA6C /* PieElement.m */; };
@@ -142,6 +143,8 @@
 		2301F90418E26A930051171E /* CYMsgTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMsgTableViewController.m; sourceTree = "<group>"; };
 		2301F90618E26ABB0051171E /* CYMyOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyOrderViewController.h; sourceTree = "<group>"; };
 		2301F90718E26ABB0051171E /* CYMyOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyOrderViewController.m; sourceTree = "<group>"; };
+		2301F90918E27A520051171E /* CYOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYOrderCell.h; sourceTree = "<group>"; };
+		2301F90A18E27A520051171E /* CYOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYOrderCell.m; sourceTree = "<group>"; };
 		231F444318DC1D550042FA6C /* MagicPieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicPieLayer.h; sourceTree = "<group>"; };
 		231F444418DC1D550042FA6C /* PieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieLayer.h; sourceTree = "<group>"; };
 		231F444518DC1D550042FA6C /* PieLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieLayer.m; sourceTree = "<group>"; };
@@ -413,6 +416,8 @@
 		2385634618DADAA4005D5AF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2301F90918E27A520051171E /* CYOrderCell.h */,
+				2301F90A18E27A520051171E /* CYOrderCell.m */,
 				2301F90018E26A8B0051171E /* CYMsgCell.h */,
 				2301F90118E26A8B0051171E /* CYMsgCell.m */,
 				2301F8F718E26A740051171E /* CYActivityCell.h */,
@@ -935,6 +940,7 @@
 				2301F90218E26A8B0051171E /* CYMsgCell.m in Sources */,
 				2301F90818E26ABB0051171E /* CYMyOrderViewController.m in Sources */,
 				236E3B5718E0DA3800E0619E /* NSStringAdditions.m in Sources */,
+				2301F90B18E27A520051171E /* CYOrderCell.m in Sources */,
 				B2CE1C1718D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
 				2385634918DAE03E005D5AF5 /* CYMyBillTableViewController.m in Sources */,
 				B2CE1C0F18D2A912007A754D /* HXTMyProperties.m in Sources */,

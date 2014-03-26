@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CYMsgCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLable;
+@property (weak, nonatomic) IBOutlet UILabel *subTitleLable;
+@property (weak, nonatomic) IBOutlet UILabel *contentLable;
+@property (weak, nonatomic) IBOutlet UILabel *stateLable;
 
 @end

@@ -31,7 +31,6 @@
     __weak CYMyOrderViewController *weakSelf = self;
     [self.tableView addPullToRefreshWithActionHandler:^{
         [weakSelf insertRowAtTop];
-        
     }];
     //注册上拉刷新功能
     [self.tableView addInfiniteScrollingWithActionHandler:^{
@@ -68,9 +67,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    [self.tableView registerClass:[CYActivityCell class] forCellReuseIdentifier:@"CYActivityCell"];
     // Configure the cell...
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyOrderCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYOrderCell" forIndexPath:indexPath];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -107,7 +105,6 @@
 #pragma mark --segmentValueChanged--
 - (IBAction)segmentValueChange:(UISegmentedControl *)sender
 {
-    //    NSLog(@"segmentIndex == %d",sender.selectedSegmentIndex);
     //根据Index刷新不同的内容
     if (sender.selectedSegmentIndex == 0)
     {

@@ -10,8 +10,8 @@
 
 @interface CYActivityCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *titleImageView;
-@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *titleLable;
-@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *timeLable;
+@property (strong, nonatomic) IBOutlet UILabel *titleLable;
+@property (strong, nonatomic) IBOutlet UILabel *timeLable;
 @property (weak, nonatomic) IBOutlet UILabel *stateLable;
 
 @end
