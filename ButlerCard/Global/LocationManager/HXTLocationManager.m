@@ -145,21 +145,54 @@
 
 -(void)startLocation
 {
-    if (_locationManager) {
-        _locationManager = nil;
+    // check to see if Location Services is enabled, there are two state possibilities:
+    // 1) disabled for entire device, 2) disabled just for this app
+    //
+    NSString *causeStr = nil;
+    
+    // check whether location services are enabled on the device
+    if ([CLLocationManager locationServicesEnabled] == NO)
+    {
+        causeStr = @"device";
+    }
+    // check the application’s explicit authorization status:
+    else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
+    {
+        causeStr = @"app";
+    }
+    else
+    {
+        // we are good to go, start the location
+        if (_locationManager) {
+            _locationManager = nil;
+        }
+        
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        _locationManager.distanceFilter = 1000.0f;
+        [_locationManager startUpdatingLocation];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     }
     
-    _locationManager = [[CLLocationManager alloc] init];
-    _locationManager.delegate = self;
-    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    _locationManager.distanceFilter = 1000.0f;
-    [_locationManager startUpdatingLocation];
+    if (causeStr != nil)
+    {
+        NSString *alertMessage = [NSString stringWithFormat:@"You currently have location services disabled for this %@. Please refer to \"Settings\" app to turn on Location Services.", causeStr];
+        
+        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled"
+                                                                        message:alertMessage
+                                                                       delegate:nil
+                                                              cancelButtonTitle:@"OK"
+                                                              otherButtonTitles:nil];
+        [servicesDisabledAlert show];
+    }
 }
 
 -(void)stopLocation
 {
     [_locationManager stopUpdatingLocation];
     _locationManager = nil;
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 @end

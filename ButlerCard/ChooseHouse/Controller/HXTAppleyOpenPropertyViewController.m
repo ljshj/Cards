@@ -46,8 +46,8 @@
 - (IBAction)locationButtonPressed:(id)sender {
     __block __weak HXTAppleyOpenPropertyViewController *appleyOpenPropertyViewController = self;
     [[HXTLocationManager sharedLocation] getLocationCoordinate:^(CLLocationCoordinate2D locationCorrrdinate) {
-        appleyOpenPropertyViewController.latitudeLabel.text  = [NSString stringWithFormat:@"%3.5f", locationCorrrdinate.latitude];
-        appleyOpenPropertyViewController.longitudeLabel.text = [NSString stringWithFormat:@"%3.5f", locationCorrrdinate.longitude];
+        appleyOpenPropertyViewController.latitudeLabel.text  = [NSString stringWithFormat:@"%f", locationCorrrdinate.latitude];
+        appleyOpenPropertyViewController.longitudeLabel.text = [NSString stringWithFormat:@"%f", locationCorrrdinate.longitude];
     } withAddress:^(NSString *addressString) {
         appleyOpenPropertyViewController.addrLabel.text = addressString;
     }];
