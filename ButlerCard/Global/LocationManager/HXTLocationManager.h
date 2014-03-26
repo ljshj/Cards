@@ -28,7 +28,7 @@ typedef void (^NSStringBlock)(NSString *addressString);
  *
  *  @param locaiontBlock locaiontBlock description
  */
-- (void) getLocationCoordinate:(LocationBlock) locaiontBlock ;
+- (void) getLocationCoordinate:(LocationBlock)locaiontBlock;
 
 /**
  *  获取坐标和地址
@@ -36,7 +36,7 @@ typedef void (^NSStringBlock)(NSString *addressString);
  *  @param locaiontBlock locaiontBlock description
  *  @param addressBlock  addressBlock description
  */
-- (void) getLocationCoordinate:(LocationBlock) locaiontBlock  withAddress:(NSStringBlock) addressBlock;
+- (void) getLocationCoordinate:(LocationBlock)locaiontBlock withAddress:(NSStringBlock)addressBlock;
 
 /**
  *  获取地址

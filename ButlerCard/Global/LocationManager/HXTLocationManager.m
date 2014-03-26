@@ -10,11 +10,11 @@
 
 @interface HXTLocationManager () <CLLocationManagerDelegate>
 
-@property (nonatomic, assign)CLLocationCoordinate2D lastCoordinate;
-@property (nonatomic, strong)NSString *lastCity;
-@property (nonatomic, strong)NSString *lastAddress;
-@property (nonatomic, assign)float latitude;
-@property (nonatomic, assign)float longitude;
+@property (nonatomic, assign) CLLocationCoordinate2D lastCoordinate;
+@property (nonatomic, strong) NSString *lastCity;
+@property (nonatomic, strong) NSString *lastAddress;
+@property (nonatomic, assign) float latitude;
+@property (nonatomic, assign) float longitude;
 
 @property (nonatomic, strong) LocationBlock locationBlock;
 @property (nonatomic, strong) NSStringBlock cityBlock;
@@ -94,7 +94,7 @@
     
     [standard setObject:@(self.lastCoordinate.latitude) forKey:kLastLatitude];
     [standard setObject:@(self.lastCoordinate.longitude) forKey:kLastLongitude];
-
+    
     CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
     
     [geoCoder reverseGeocodeLocation:newLocation
@@ -107,7 +107,7 @@
                            [standard setObject:self.lastCity forKey:kLastCity];
                            [standard setObject:self.lastAddress forKey:kLastAddress];
                            
-                           NSLog(@"%@", placeMark.addressDictionary);
+                           NSLog(@"%s %s %d %@", __FILE__, __FUNCTION__, __LINE__, placeMark.addressDictionary);
                            
                            [self stopLocation];
                        }
