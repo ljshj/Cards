@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CYMyPropertyTableViewCell : UITableViewCell
-@property(nonatomic,retain)UIImageView *titleImageView;
-@property(nonatomic,retain)UILabel *titleLable;
-@property(nonatomic,retain)UILabel *contentLable;
+@property (weak, nonatomic) IBOutlet UIImageView *titleImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLable;
+@property (weak, nonatomic) IBOutlet UILabel *contentLable;
+@property (weak, nonatomic) IBOutlet UILabel *stateLable;
 
 @end

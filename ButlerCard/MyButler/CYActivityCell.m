@@ -1,14 +1,14 @@
 //
-//  CYMyPropertyTableViewCell.m
+//  CYActivityCell.m
 //  ButlerCard
 //
-//  Created by niko on 14-3-20.
+//  Created by niko on 14-3-25.
 //  Copyright (c) 2014年 johnny tang. All rights reserved.
 //
 
-#import "CYMyPropertyTableViewCell.h"
+#import "CYActivityCell.h"
 
-@implementation CYMyPropertyTableViewCell
+@implementation CYActivityCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -22,7 +22,6 @@
 - (void)awakeFromNib
 {
     // Initialization code
-
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

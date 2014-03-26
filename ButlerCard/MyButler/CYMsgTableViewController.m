@@ -1,20 +1,20 @@
 //
-//  CYMyPropertyTableViewController.m
+//  CYMsgTableViewController.m
 //  ButlerCard
 //
-//  Created by niko on 14-3-20.
+//  Created by niko on 14-3-25.
 //  Copyright (c) 2014年 johnny tang. All rights reserved.
 //
 
-#import "CYMyPropertyTableViewController.h"
-#import "CYMyPropertyTableViewCell.h"
+#import "CYMsgTableViewController.h"
+#import "CYMsgCell.h"
 #import "SVPullToRefresh.h"
 
-@interface CYMyPropertyTableViewController ()
+@interface CYMsgTableViewController ()
 
 @end
 
-@implementation CYMyPropertyTableViewController
+@implementation CYMsgTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,9 +29,10 @@
 {
     [super viewDidLoad];
     //注册下拉刷新功能
-    __weak CYMyPropertyTableViewController *weakSelf = self;
+    __weak CYMsgTableViewController *weakSelf = self;
     [self.tableView addPullToRefreshWithActionHandler:^{
         [weakSelf insertRowAtTop];
+        
     }];
     //注册上拉刷新功能
     [self.tableView addInfiniteScrollingWithActionHandler:^{
@@ -54,20 +55,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 7;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80.0;
+    return 80;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMsgCell" forIndexPath:indexPath];
     // Configure the cell...
-    CYMyPropertyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyPropertyCell" forIndexPath:indexPath];
-    [cell.titleLable setText:[NSString stringWithFormat:@"小区通知%d",indexPath.row]];
     return cell;
 }
 #pragma mark --SVPullToRefresh--
@@ -78,10 +76,11 @@
     // 延迟2秒执行：
     double delayInSeconds = 2.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        //停止刷新
-        [self.tableView.pullToRefreshView stopAnimating];
-    });
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void)
+                   {
+                       //停止刷新
+                       [self.tableView.pullToRefreshView stopAnimating];
+                   });
 }
 //上拉加载更多
 - (void)insertRowAtBottom
@@ -90,11 +89,11 @@
     // 延迟2秒执行：
     double delayInSeconds = 2.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        //停止加载更多
-        [self.tableView.infiniteScrollingView stopAnimating];
-    });
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void)
+                   {
+                       //停止加载更多
+                       [self.tableView.infiniteScrollingView stopAnimating];
+                   });
 }
-
 
 @end

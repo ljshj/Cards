@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface CYMyBillDetailCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLable;
+@property (weak, nonatomic) IBOutlet UILabel *timeLable;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLable;
 @property(nonatomic,retain)UIImageView *titleImageView;
-@property(nonatomic,retain)UILabel *titleLable;
-@property(nonatomic,retain)UILabel *timeLable;
-@property(nonatomic,retain)UILabel *moneyLable;
-@property(nonatomic,retain)UILabel *stateLable;
+@property (weak, nonatomic) IBOutlet UILabel *stateLable;
 
 @end

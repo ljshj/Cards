@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2301F8F918E26A740051171E /* CYActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F8F818E26A740051171E /* CYActivityCell.m */; };
+		2301F8FC18E26A7B0051171E /* CYActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F8FB18E26A7B0051171E /* CYActivityViewController.m */; };
+		2301F8FF18E26A840051171E /* CYFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F8FE18E26A840051171E /* CYFeedBackViewController.m */; };
+		2301F90218E26A8B0051171E /* CYMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F90118E26A8B0051171E /* CYMsgCell.m */; };
+		2301F90518E26A930051171E /* CYMsgTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F90418E26A930051171E /* CYMsgTableViewController.m */; };
+		2301F90818E26ABB0051171E /* CYMyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2301F90718E26ABB0051171E /* CYMyOrderViewController.m */; };
 		231F444A18DC1D550042FA6C /* PieLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F444518DC1D550042FA6C /* PieLayer.m */; };
 		231F444B18DC1D550042FA6C /* NSMutableArray+pieEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F444718DC1D550042FA6C /* NSMutableArray+pieEx.m */; };
 		231F444C18DC1D550042FA6C /* PieElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F444918DC1D550042FA6C /* PieElement.m */; };
@@ -124,6 +130,18 @@
 /* Begin PBXFileReference section */
 		079B0BD346A049589BA9660B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		17FC7110AE204E14A8C22B67 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2301F8F718E26A740051171E /* CYActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYActivityCell.h; sourceTree = "<group>"; };
+		2301F8F818E26A740051171E /* CYActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYActivityCell.m; sourceTree = "<group>"; };
+		2301F8FA18E26A7B0051171E /* CYActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYActivityViewController.h; sourceTree = "<group>"; };
+		2301F8FB18E26A7B0051171E /* CYActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYActivityViewController.m; sourceTree = "<group>"; };
+		2301F8FD18E26A840051171E /* CYFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFeedBackViewController.h; sourceTree = "<group>"; };
+		2301F8FE18E26A840051171E /* CYFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYFeedBackViewController.m; sourceTree = "<group>"; };
+		2301F90018E26A8B0051171E /* CYMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMsgCell.h; sourceTree = "<group>"; };
+		2301F90118E26A8B0051171E /* CYMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMsgCell.m; sourceTree = "<group>"; };
+		2301F90318E26A930051171E /* CYMsgTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMsgTableViewController.h; sourceTree = "<group>"; };
+		2301F90418E26A930051171E /* CYMsgTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMsgTableViewController.m; sourceTree = "<group>"; };
+		2301F90618E26ABB0051171E /* CYMyOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyOrderViewController.h; sourceTree = "<group>"; };
+		2301F90718E26ABB0051171E /* CYMyOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyOrderViewController.m; sourceTree = "<group>"; };
 		231F444318DC1D550042FA6C /* MagicPieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicPieLayer.h; sourceTree = "<group>"; };
 		231F444418DC1D550042FA6C /* PieLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieLayer.h; sourceTree = "<group>"; };
 		231F444518DC1D550042FA6C /* PieLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieLayer.m; sourceTree = "<group>"; };
@@ -380,6 +398,14 @@
 				2385634818DAE03E005D5AF5 /* CYMyBillTableViewController.m */,
 				231F445018DC1DF20042FA6C /* CYBillPieViewController.h */,
 				231F445118DC1DF20042FA6C /* CYBillPieViewController.m */,
+				2301F8FA18E26A7B0051171E /* CYActivityViewController.h */,
+				2301F8FB18E26A7B0051171E /* CYActivityViewController.m */,
+				2301F8FD18E26A840051171E /* CYFeedBackViewController.h */,
+				2301F8FE18E26A840051171E /* CYFeedBackViewController.m */,
+				2301F90318E26A930051171E /* CYMsgTableViewController.h */,
+				2301F90418E26A930051171E /* CYMsgTableViewController.m */,
+				2301F90618E26ABB0051171E /* CYMyOrderViewController.h */,
+				2301F90718E26ABB0051171E /* CYMyOrderViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -387,6 +413,10 @@
 		2385634618DADAA4005D5AF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2301F90018E26A8B0051171E /* CYMsgCell.h */,
+				2301F90118E26A8B0051171E /* CYMsgCell.m */,
+				2301F8F718E26A740051171E /* CYActivityCell.h */,
+				2301F8F818E26A740051171E /* CYActivityCell.m */,
 				231F445318DC1E690042FA6C /* MyPieElement.h */,
 				231F445418DC1E690042FA6C /* MyPieElement.m */,
 				231F444D18DC1D720042FA6C /* Example2PieView.h */,
@@ -870,6 +900,7 @@
 				2385634418DADA6B005D5AF5 /* CYMyPropertyTableViewController.m in Sources */,
 				231F445518DC1E690042FA6C /* MyPieElement.m in Sources */,
 				B2C27D9818B48432003AA091 /* main.m in Sources */,
+				2301F90518E26A930051171E /* CYMsgTableViewController.m in Sources */,
 				B2CE1C0318D2A912007A754D /* HXTBindCardViewController.m in Sources */,
 				B2C27D9C18B48432003AA091 /* HXTAppDelegate.m in Sources */,
 				236E3B5618E0DA3800E0619E /* NSDictionaryAdditions.m in Sources */,
@@ -879,6 +910,7 @@
 				236E3B6218E0DA3800E0619E /* HXTCheckBox.m in Sources */,
 				B2CE1C0718D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
 				B2E4E35018D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */,
+				2301F8FC18E26A7B0051171E /* CYActivityViewController.m in Sources */,
 				2385635018DAE22E005D5AF5 /* CYMyBillDetailCell.m in Sources */,
 				B25A8A2218D92B7F00A8D145 /* HXTNavigationController.m in Sources */,
 				B2BB18ED18D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m in Sources */,
@@ -900,6 +932,8 @@
 				231F444F18DC1D720042FA6C /* Example2PieView.m in Sources */,
 				231F444B18DC1D550042FA6C /* NSMutableArray+pieEx.m in Sources */,
 				236E3B5418E0DA3800E0619E /* NSArrayAdditionals.m in Sources */,
+				2301F90218E26A8B0051171E /* CYMsgCell.m in Sources */,
+				2301F90818E26ABB0051171E /* CYMyOrderViewController.m in Sources */,
 				236E3B5718E0DA3800E0619E /* NSStringAdditions.m in Sources */,
 				B2CE1C1718D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
 				2385634918DAE03E005D5AF5 /* CYMyBillTableViewController.m in Sources */,
@@ -907,6 +941,8 @@
 				B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
 				236E3B5318E0DA3800E0619E /* KeyboardCommon.m in Sources */,
 				B2BB18E718D829D700BD9FC9 /* HXTSurroundingLifeViewController.m in Sources */,
+				2301F8FF18E26A840051171E /* CYFeedBackViewController.m in Sources */,
+				2301F8F918E26A740051171E /* CYActivityCell.m in Sources */,
 				B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
 				2385634318DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m in Sources */,
 				B25E175418E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m in Sources */,

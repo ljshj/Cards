@@ -25,6 +25,13 @@
     }
     return self;
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    //消费单的假数据初始化
+    _allDataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
+    
+    _dataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
+}
 
 - (void)viewDidLoad
 {
@@ -33,24 +40,11 @@
     __weak CYMyBillTableViewController *weakSelf = self;
     [self.tableView addPullToRefreshWithActionHandler:^{
     [weakSelf insertRowAtTop];
-}];
+    }];
     //注册上拉刷新功能
     [self.tableView addInfiniteScrollingWithActionHandler:^{
     [weakSelf insertRowAtBottom];
     }];
-    
-    
-    _allDataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
-
-    _dataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
-    NSLog(@"_dataArray == %@",_dataArray);
-
-    NSLog(@"_dataArray.count == %lu",(unsigned long)_dataArray.count);
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,15 +89,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.tableView registerClass:[CYMyBillMonthCell class] forCellReuseIdentifier:@"CYMyBillMonthCell"];
-    [self.tableView registerClass:[CYMyBillDetailCell class] forCellReuseIdentifier:@"CYMyBillDetailCell"];
     // Configure the cell...
     if (indexPath.row == 0)
     {
         CYMyBillMonthCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillMonthCell" forIndexPath:indexPath];
         NSString *tempString = [NSString stringWithFormat:@"%@",_dataArray[indexPath.section][indexPath.row]];
         [cell.timeLable setText:tempString];
-        cell.backgroundColor = [UIColor greenColor];
         return cell;
     }
     else
@@ -111,7 +102,6 @@
         CYMyBillDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyBillDetailCell" forIndexPath:indexPath];
         NSString *tempString = [NSString stringWithFormat:@"%@",_dataArray[indexPath.section][indexPath.row]];
         [cell.titleLable setText:tempString];
-        cell.backgroundColor = [UIColor yellowColor];
         return cell;
     }
 }
@@ -121,10 +111,8 @@
     //点击的如果是月份cell  row == 0  则触发折叠功能
     if (indexPath.row == 0)
     {
-        NSArray *dataArrayAtSection = _dataArray[indexPath.section];
-        NSArray *allDataArrayAtSection = _allDataArray[indexPath.section];
         //折叠的情况
-        if (dataArrayAtSection.count == allDataArrayAtSection.count)
+        if ([_dataArray[indexPath.section] count]> 1)
         {
             NSMutableArray *tempArray = [[NSMutableArray alloc]initWithObjects:_dataArray[indexPath.section][indexPath.row], nil];
             _dataArray[indexPath.section] = tempArray;
@@ -147,7 +135,9 @@
     double delayInSeconds = 2.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        NSLog(@"停止刷新！");
+        _allDataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],@[@"2月",@"杀虫剂"],nil];
+        _dataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],@[@"2月",@"杀虫剂"],nil];
+        [self.tableView reloadData];
         //停止刷新
         [self.tableView.pullToRefreshView stopAnimating];
     });
@@ -160,7 +150,9 @@
     double delayInSeconds = 2.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        NSLog(@"停止加载更多！");
+        [_allDataArray addObjectsFromArray:[NSArray arrayWithObjects:@[@"x月",@"杀虫剂"],@[@"y月",@"香皂",@"洗面奶"],@[@"z月",@"杀虫剂"],nil]];
+        [_dataArray addObjectsFromArray:[NSArray arrayWithObjects:@[@"x月",@"杀虫剂"],@[@"y月",@"香皂",@"洗面奶"],@[@"z月",@"杀虫剂"],nil]];
+        [self.tableView reloadData];
         //停止加载更多
         [self.tableView.infiniteScrollingView stopAnimating];
     });
