@@ -395,10 +395,10 @@
             </objects>
             <point key="canvasLocation" x="-81" y="3395"/>
         </scene>
-        <!--View Controller - 意见反馈-->
+        <!--Feed Back View Controller - 意见反馈-->
         <scene sceneID="egh-cS-uUl">
             <objects>
-                <viewController id="A4A-YZ-irG" sceneMemberID="viewController">
+                <viewController id="A4A-YZ-irG" customClass="CYFeedBackViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OKG-Fn-YG3"/>
                         <viewControllerLayoutGuide type="bottom" id="pVI-jO-QoT"/>
@@ -408,25 +408,34 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="我来提建议" translatesAutoresizingMaskIntoConstraints="NO" id="NBc-nM-YR9">
-                                <rect key="frame" x="40" y="113" width="240" height="93"/>
+                                <rect key="frame" x="40" y="20" width="240" height="127"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="A4A-YZ-irG" id="JFt-Bq-ANg"/>
+                                </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Teq-yO-mt4">
-                                <rect key="frame" x="128" y="293" width="65" height="33"/>
+                                <rect key="frame" x="128" y="155" width="65" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.64947492969999998" blue="0.1623483154" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="提交">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendBtnClick:" destination="A4A-YZ-irG" eventType="touchUpInside" id="67I-AF-73b"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="意见反馈" id="ajn-RQ-uxH"/>
+                    <connections>
+                        <outlet property="feedBackTextView" destination="NBc-nM-YR9" id="42j-9f-hlm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oei-Np-y53" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
