@@ -1335,7 +1335,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PiR-5R-iME" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="qMB-3E-sYC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pDI-cL-V3C">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pDI-cL-V3C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
