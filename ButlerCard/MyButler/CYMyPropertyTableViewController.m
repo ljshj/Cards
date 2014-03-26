@@ -67,7 +67,7 @@
 
     // Configure the cell...
     CYMyPropertyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYMyPropertyCell" forIndexPath:indexPath];
-    [cell.titleLable setText:[NSString stringWithFormat:@"小区通知%d",indexPath.row]];
+    [cell.titleLable setText:[NSString stringWithFormat:@"小区通知%lu",(long)indexPath.row]];
     return cell;
 }
 #pragma mark --SVPullToRefresh--

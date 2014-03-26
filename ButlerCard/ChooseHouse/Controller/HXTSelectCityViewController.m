@@ -212,7 +212,6 @@ typedef NS_ENUM(NSUInteger, sectionType) {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
