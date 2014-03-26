@@ -44,7 +44,21 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 10;
+    NSUInteger rows = 0;
+    switch (component) {
+        case 0:
+            rows = 15;
+            break;
+        case 1:
+            rows = 4;
+            break;
+        case 2:
+            rows = 20;
+            break;
+        default:
+            break;
+    }
+    return rows;
 }
 
 #pragma mark - UIPickerView Delegate
@@ -60,7 +74,22 @@
  */
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [NSString stringWithFormat:@"%lu-%lu", component, row];
+    NSString *title;
+    switch (component) {
+        case 0:
+            title = [NSString stringWithFormat:@"%lu栋", (long)(row + 1)];
+            break;
+        case 1:
+            title = [NSString stringWithFormat:@"%lu单元", (long)(row + 1)];
+            break;
+        case 2:
+            title = [NSString stringWithFormat:@"%lu", (long)(100 * (row / 2 + 1) + row + 1)];
+            break;
+        default:
+            break;
+    }
+    
+    return title;
 }
 
 /*
@@ -74,13 +103,20 @@
  */
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSLog(@"row = %lu, component = %lu", row, component);
+    NSLog(@"row = %lu, component = %lu", (long)row, (long)component);
 }
 
 
 #pragma mark - UI Actons
 
 - (IBAction)okButtonPresssed:(id)sender {
+    NSString *building = [NSString stringWithFormat:@"%lu栋", (long)[self.housePicker selectedRowInComponent:0] + 1];
+    NSString *unit     = [NSString stringWithFormat:@"%lu单元", (long)[self.housePicker selectedRowInComponent:1] + 1];
+    
+    NSUInteger selectedRow = [self.housePicker selectedRowInComponent:2];
+    NSString *houseNo  = [NSString stringWithFormat:@"%lu", (long)(100 * (selectedRow / 2 + 1) + selectedRow + 1)];
+    
+    NSLog(@"%@%@%@", building, unit, houseNo);
 }
 
 #pragma mark - Navigation
