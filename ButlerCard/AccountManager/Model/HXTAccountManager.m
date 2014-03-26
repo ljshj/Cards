@@ -18,7 +18,7 @@
         [accountManager LoadDataFromUserDefault];
         
         if (!accountManager.currentCity ||!accountManager.username || !accountManager.password) {
-            accountManager.currentCity = @"成都";
+            accountManager.currentCity = @"重庆";
             accountManager.username = @"username";
             accountManager.password = @"password";
             [accountManager writeDataToUserDefault];
