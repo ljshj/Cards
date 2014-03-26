@@ -2,13 +2,19 @@
 //  HXTLocationManager.m
 //  ButlerCard
 //
-//  Created by johnny tang on 3/20/14.
+//  Created by johnny tang on 3/26/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
 #import "HXTLocationManager.h"
 
-@interface HXTLocationManager () <MKMapViewDelegate, CLLocationManagerDelegate>
+@interface HXTLocationManager () <CLLocationManagerDelegate>
+
+@property (nonatomic, assign)CLLocationCoordinate2D lastCoordinate;
+@property (nonatomic, strong)NSString *lastCity;
+@property (nonatomic, strong)NSString *lastAddress;
+@property (nonatomic, assign)float latitude;
+@property (nonatomic, assign)float longitude;
 
 @property (nonatomic, strong) LocationBlock locationBlock;
 @property (nonatomic, strong) NSStringBlock cityBlock;
@@ -36,13 +42,13 @@
     if (self) {
         NSUserDefaults *standard = [NSUserDefaults standardUserDefaults];
         
-        float longitude = [standard floatForKey:MMLastLongitude];
-        float latitude = [standard floatForKey:MMLastLatitude];
+        float longitude = [standard floatForKey:kLastLongitude];
+        float latitude = [standard floatForKey:kLastLatitude];
         self.longitude = longitude;
         self.latitude = latitude;
         self.lastCoordinate = CLLocationCoordinate2DMake(longitude,latitude);
-        self.lastCity = [standard objectForKey:MMLastCity];
-        self.lastAddress=[standard objectForKey:MMLastAddress];
+        self.lastCity = [standard objectForKey:kLastCity];
+        self.lastAddress=[standard objectForKey:kLastAddress];
     }
     return self;
 }
@@ -79,77 +85,81 @@
     [self startLocation];
 }
 
-- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
-{
-    CLLocation * newLocation = userLocation.location;
-    self.lastCoordinate=mapView.userLocation.location.coordinate;
+#pragma mark - CLLocationManager delegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     
+    self.lastCoordinate = newLocation.coordinate;
     NSUserDefaults *standard = [NSUserDefaults standardUserDefaults];
     
-    [standard setObject:@(self.lastCoordinate.longitude) forKey:MMLastLongitude];
-    [standard setObject:@(self.lastCoordinate.latitude) forKey:MMLastLatitude];
+    [standard setObject:@(self.lastCoordinate.latitude) forKey:kLastLatitude];
+    [standard setObject:@(self.lastCoordinate.longitude) forKey:kLastLongitude];
+
+    CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
     
-    CLGeocoder *clGeoCoder = [[CLGeocoder alloc] init];
-    CLGeocodeCompletionHandler handle = ^(NSArray *placemarks,NSError *error)
-    {
-        for (CLPlacemark * placeMark in placemarks)
-        {
-            NSDictionary *addressDic=placeMark.addressDictionary;
-            
-            NSString *state=[addressDic objectForKey:@"State"];
-            NSString *city=[addressDic objectForKey:@"City"];
-            NSString *subLocality=[addressDic objectForKey:@"SubLocality"];
-            NSString *street=[addressDic objectForKey:@"Street"];
-            
-            self.lastCity = city;
-            self.lastAddress=[NSString stringWithFormat:@"%@%@%@%@",state,city,subLocality,street];
-            
-            [standard setObject:self.lastCity forKey:MMLastCity];
-            [standard setObject:self.lastAddress forKey:MMLastAddress];
-            
-            [self stopLocation];
-        }
-        
-        if (_cityBlock) {
-            _cityBlock(_lastCity);
-            _cityBlock = nil;
-        }
-        
-        if (_locationBlock) {
-            _locationBlock(_lastCoordinate);
-            _locationBlock = nil;
-        }
-        
-        if (_addressBlock) {
-            _addressBlock(_lastAddress);
-            _addressBlock = nil;
-        }
-    };
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [clGeoCoder reverseGeocodeLocation:newLocation completionHandler:handle];
+    [geoCoder reverseGeocodeLocation:newLocation
+                   completionHandler:^(NSArray *placemarks,NSError *error) {
+                       for (CLPlacemark * placeMark in placemarks)
+                       {
+                           self.lastCity = placeMark.locality;
+                           self.lastAddress = placeMark.name;
+                           
+                           [standard setObject:self.lastCity forKey:kLastCity];
+                           [standard setObject:self.lastAddress forKey:kLastAddress];
+                           
+                           NSLog(@"%@", placeMark.addressDictionary);
+                           
+                           [self stopLocation];
+                       }
+                       
+                       if (_cityBlock) {
+                           _cityBlock(_lastCity);
+                           _cityBlock = nil;
+                       }
+                       
+                       if (_locationBlock) {
+                           _locationBlock(_lastCoordinate);
+                           _locationBlock = nil;
+                       }
+                       
+                       if (_addressBlock) {
+                           _addressBlock(_lastAddress);
+                           _addressBlock = nil;
+                       }
+                       
+                       [[NSUserDefaults standardUserDefaults] synchronize];
+                   }];
 }
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    NSLog(@"%s %s %d %@", __FILE__, __FUNCTION__, __LINE__, [error localizedDescription]);
+    if (_errorBlock) {
+        _errorBlock(error);
+        _errorBlock = nil;
+    }
+    
+    [self stopLocation];
+}
+
+#pragma mark - location functions
 
 -(void)startLocation
 {
-    if (_mapView) {
-        _mapView = nil;
+    if (_locationManager) {
+        _locationManager = nil;
     }
     
-    _mapView = [[MKMapView alloc] init];
-    _mapView.delegate = self;
-    _mapView.showsUserLocation = YES;
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    _locationManager.distanceFilter = 1000.0f;
+    [_locationManager startUpdatingLocation];
 }
 
 -(void)stopLocation
 {
-    _mapView.showsUserLocation = NO;
-    _mapView = nil;
-}
-
-- (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error
-{
-    [self stopLocation];
+    [_locationManager stopUpdatingLocation];
+    _locationManager = nil;
 }
 
 @end

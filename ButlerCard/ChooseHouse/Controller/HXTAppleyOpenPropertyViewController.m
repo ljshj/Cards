@@ -7,11 +7,14 @@
 //
 
 #import "HXTAppleyOpenPropertyViewController.h"
+#import "HXTLocationManager.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface HXTAppleyOpenPropertyViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addrLabel;
 
 @end
 
@@ -38,6 +41,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UI Actions
+
+- (IBAction)locationButtonPressed:(id)sender {
+    __block __weak HXTAppleyOpenPropertyViewController *appleyOpenPropertyViewController = self;
+    [[HXTLocationManager sharedLocation] getLocationCoordinate:^(CLLocationCoordinate2D locationCorrrdinate) {
+        appleyOpenPropertyViewController.latitudeLabel.text  = [NSString stringWithFormat:@"%3.5f", locationCorrrdinate.latitude];
+        appleyOpenPropertyViewController.longitudeLabel.text = [NSString stringWithFormat:@"%3.5f", locationCorrrdinate.longitude];
+    } withAddress:^(NSString *addressString) {
+        appleyOpenPropertyViewController.addrLabel.text = addressString;
+    }];
+    
+    [[HXTLocationManager sharedLocation] getCity:^(NSString *addressString) {
+        appleyOpenPropertyViewController.cityLabel.text = addressString;
+    }];
+}
 
 #pragma mark - Navigation
 /*

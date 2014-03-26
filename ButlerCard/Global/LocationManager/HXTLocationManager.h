@@ -2,32 +2,24 @@
 //  HXTLocationManager.h
 //  ButlerCard
 //
-//  Created by johnny tang on 3/20/14.
+//  Created by johnny tang on 3/26/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-#define  MMLastLongitude @"MMLastLongitude"
-#define  MMLastLatitude  @"MMLastLatitude"
-#define  MMLastCity      @"MMLastCity"
-#define  MMLastAddress   @"MMLastAddress"
+#define  kLastLongitude @"LastLongitude"
+#define  kLastLatitude  @"LastLatitude"
+#define  kLastCity      @"LastCity"
+#define  kLastAddress   @"LastAddress"
 
 typedef void (^LocationBlock)(CLLocationCoordinate2D locationCorrrdinate);
 typedef void (^LocationErrorBlock) (NSError *error);
-typedef void(^NSStringBlock)(NSString *cityString);
-typedef void(^NSStringBlock)(NSString *addressString);
+typedef void (^NSStringBlock)(NSString *cityString);
+typedef void (^NSStringBlock)(NSString *addressString);
 
 @interface HXTLocationManager : NSObject
-
-@property (nonatomic,strong) MKMapView *mapView;
-@property (nonatomic) CLLocationCoordinate2D lastCoordinate;
-@property (nonatomic,strong)NSString *lastCity;
-@property (nonatomic,strong) NSString *lastAddress;
-
-@property(nonatomic,assign)float latitude;
-@property(nonatomic,assign)float longitude;
 
 + (instancetype)sharedLocation;
 
