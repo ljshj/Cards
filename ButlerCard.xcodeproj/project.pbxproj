@@ -40,6 +40,7 @@
 		2385635018DAE22E005D5AF5 /* CYMyBillDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385634F18DAE22E005D5AF5 /* CYMyBillDetailCell.m */; };
 		2385635318DAE242005D5AF5 /* CYMyBillMonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385635218DAE242005D5AF5 /* CYMyBillMonthCell.m */; };
 		53DD8B63B9B84B5DB2207E3D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FC7110AE204E14A8C22B67 /* libPods.a */; };
+		B226170A18E2BCCB0000FEA1 /* HXTLoacationManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B226170918E2BCCB0000FEA1 /* HXTLoacationManagerTests.m */; };
 		B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */; };
 		B25A8A2218D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
 		B25A8A2318D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
@@ -193,6 +194,7 @@
 		2385634F18DAE22E005D5AF5 /* CYMyBillDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyBillDetailCell.m; sourceTree = "<group>"; };
 		2385635118DAE242005D5AF5 /* CYMyBillMonthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyBillMonthCell.h; sourceTree = "<group>"; };
 		2385635218DAE242005D5AF5 /* CYMyBillMonthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyBillMonthCell.m; sourceTree = "<group>"; };
+		B226170918E2BCCB0000FEA1 /* HXTLoacationManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTLoacationManagerTests.m; sourceTree = "<group>"; };
 		B2380E0418B6FC3B00D895DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyProperty.storyboard; sourceTree = "<group>"; };
 		B25A8A2018D92B7F00A8D145 /* HXTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTNavigationController.h; path = Home/HXTNavigationController.h; sourceTree = "<group>"; };
 		B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTNavigationController.m; path = Home/HXTNavigationController.m; sourceTree = "<group>"; };
@@ -693,6 +695,7 @@
 		B2C27DB018B48432003AA091 /* ButlerCardTests */ = {
 			isa = PBXGroup;
 			children = (
+				B226170918E2BCCB0000FEA1 /* HXTLoacationManagerTests.m */,
 				B2C27DB618B48432003AA091 /* ButlerCardTests.m */,
 				B2C27DB118B48432003AA091 /* Supporting Files */,
 			);
@@ -1002,6 +1005,7 @@
 				B25E175518E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m in Sources */,
 				B2AA7EF918D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */,
 				B2C27DB718B48432003AA091 /* ButlerCardTests.m in Sources */,
+				B226170A18E2BCCB0000FEA1 /* HXTLoacationManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
