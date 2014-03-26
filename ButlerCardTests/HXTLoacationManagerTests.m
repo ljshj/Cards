@@ -37,6 +37,7 @@
     [super tearDown];
 }
 
+/*
 - (void)testLocationCoordinate {
     __block __weak HXTLoacationManagerTests *loacationManagerTests = self;
     [[HXTLocationManager sharedLocation] getLocationCoordinate:^(CLLocationCoordinate2D locationCorrrdinate) {
@@ -66,4 +67,5 @@
     
     XCTAssertNotNil(_addr, @"cant find address");
 }
+ */
 @end
