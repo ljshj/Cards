@@ -32,6 +32,8 @@
 		2385634918DAE03E005D5AF5 /* CYMyBillTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385634818DAE03E005D5AF5 /* CYMyBillTableViewController.m */; };
 		2385635018DAE22E005D5AF5 /* CYMyBillDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385634F18DAE22E005D5AF5 /* CYMyBillDetailCell.m */; };
 		2385635318DAE242005D5AF5 /* CYMyBillMonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385635218DAE242005D5AF5 /* CYMyBillMonthCell.m */; };
+		23A565CC18E26E4900C1EEE3 /* XPHTTPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A565CB18E26E4900C1EEE3 /* XPHTTPURLConnection.m */; };
+		23A565CF18E26E5900C1EEE3 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A565CE18E26E5900C1EEE3 /* MBProgressHUD.m */; };
 		53DD8B63B9B84B5DB2207E3D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FC7110AE204E14A8C22B67 /* libPods.a */; };
 		B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */; };
 		B25A8A2218D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
@@ -170,6 +172,10 @@
 		2385634F18DAE22E005D5AF5 /* CYMyBillDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyBillDetailCell.m; sourceTree = "<group>"; };
 		2385635118DAE242005D5AF5 /* CYMyBillMonthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyBillMonthCell.h; sourceTree = "<group>"; };
 		2385635218DAE242005D5AF5 /* CYMyBillMonthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyBillMonthCell.m; sourceTree = "<group>"; };
+		23A565CA18E26E4900C1EEE3 /* XPHTTPURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPHTTPURLConnection.h; path = Global/XPHTTPURLConnection.h; sourceTree = "<group>"; };
+		23A565CB18E26E4900C1EEE3 /* XPHTTPURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPHTTPURLConnection.m; path = Global/XPHTTPURLConnection.m; sourceTree = "<group>"; };
+		23A565CD18E26E5900C1EEE3 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = "../../../../hexinpassios副本/ButlerCard/Global/View/MBProgressHUD.h"; sourceTree = "<group>"; };
+		23A565CE18E26E5900C1EEE3 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = "../../../../hexinpassios副本/ButlerCard/Global/View/MBProgressHUD.m"; sourceTree = "<group>"; };
 		B2380E0418B6FC3B00D895DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyProperty.storyboard; sourceTree = "<group>"; };
 		B25A8A2018D92B7F00A8D145 /* HXTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTNavigationController.h; path = Home/HXTNavigationController.h; sourceTree = "<group>"; };
 		B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTNavigationController.m; path = Home/HXTNavigationController.m; sourceTree = "<group>"; };
@@ -325,6 +331,8 @@
 		236E3B4018E0DA3800E0619E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				23A565CD18E26E5900C1EEE3 /* MBProgressHUD.h */,
+				23A565CE18E26E5900C1EEE3 /* MBProgressHUD.m */,
 				236E3B4118E0DA3800E0619E /* CheckBox */,
 				236E3B4618E0DA3800E0619E /* Images */,
 				236E3B4818E0DA3800E0619E /* ViewWithArrow */,
@@ -462,6 +470,8 @@
 		B2AA7EC818D2AE2E00F4EF88 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				23A565CA18E26E4900C1EEE3 /* XPHTTPURLConnection.h */,
+				23A565CB18E26E4900C1EEE3 /* XPHTTPURLConnection.m */,
 				236E3B2118E0DA3800E0619E /* Extra */,
 				236E3B3B18E0DA3800E0619E /* Reachability */,
 				B26B020F18E10D080008B49B /* UIDevice+Resolutions */,
@@ -894,8 +904,10 @@
 				236E3B5518E0DA3800E0619E /* NSDataAdditions.m in Sources */,
 				B2BB18EB18D829D700BD9FC9 /* HXTIGoWithTypeViewController.m in Sources */,
 				B2C016EA18D2BA310058F1BF /* HXTChooseHousingEstateViewController.m in Sources */,
+				23A565CC18E26E4900C1EEE3 /* XPHTTPURLConnection.m in Sources */,
 				231F445218DC1DF20042FA6C /* CYBillPieViewController.m in Sources */,
 				B2AA7EF818D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */,
+				23A565CF18E26E5900C1EEE3 /* MBProgressHUD.m in Sources */,
 				B2AA7EB018D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
 				231F444F18DC1D720042FA6C /* Example2PieView.m in Sources */,
 				231F444B18DC1D550042FA6C /* NSMutableArray+pieEx.m in Sources */,

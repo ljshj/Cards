@@ -3,11 +3,6 @@
 #import "AFNetworking.h"
 #import "SBJson4.h"
 
-static const int SyncGetTimeOutSeconds = 30;
-static const int AsyncGetTimeOutSeconds = 30;
-static const int SyncPostTimeOutSeconds = 30;
-static const int ASyncPostTimeOutSeconds = 30;
-
 @interface XPHTTPURLConnection ()
 - (BOOL)isValidHeader:(NSString*)response;
 - (void)processResponse:(NSData*)data;
