@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
 };
 
 @interface HXTSelectCityViewController ()
-@property (strong, nonatomic) NSString     *currentCity;
+@property (copy  , nonatomic) NSString     *currentCity;
 @property (strong, nonatomic) NSArray      *topCities;
 @property (strong, nonatomic) NSDictionary *provinces;
 
@@ -52,21 +52,6 @@ typedef NS_ENUM(NSUInteger, sectionType) {
     _topCities   = [[NSArray alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"hotCities" ofType:@"plist"]];
     _provinces   = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"provinces" ofType:@"plist"]];
     
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = YES;
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    
     //获得当前城市
     __block __weak HXTSelectCityViewController *selectCityViewController = self;
     [[HXTLocationManager sharedLocation] getCity:^(NSString *addressString) {
@@ -81,8 +66,19 @@ typedef NS_ENUM(NSUInteger, sectionType) {
         }
     }];
     
-    [super viewDidAppear:animated];
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = YES;
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     self.tabBarController.tabBar.hidden = NO;
     [super viewWillDisappear:animated];
