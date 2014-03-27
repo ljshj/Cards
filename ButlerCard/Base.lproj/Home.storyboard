@@ -90,7 +90,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" backgroundImage="home_propertyService_s"/>
-                                <state key="highlighted" backgroundImage="property_service"/>
                                 <connections>
                                     <action selector="propertyServiceButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="D7C-nn-KwQ"/>
                                 </connections>
@@ -1440,7 +1439,6 @@
         <image name="home_propertyService_s" width="84" height="91"/>
         <image name="home_surroundingLife" width="87" height="103"/>
         <image name="home_surroundingLife_s" width="87" height="103"/>
-        <image name="property_service" width="84" height="91"/>
         <image name="tabbar_collection" width="25" height="25"/>
         <image name="tabbar_home" width="25" height="25"/>
         <image name="tabbar_myButler" width="25" height="25"/>
