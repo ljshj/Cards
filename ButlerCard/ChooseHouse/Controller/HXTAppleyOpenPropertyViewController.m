@@ -51,6 +51,8 @@
         NSLog(@"取消");
     } else { //确定
         NSLog(@"确定");
+        
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
     
     [self dismissViewControllerAnimated:YES completion:^{}];
@@ -86,6 +88,7 @@
 */
 
 - (IBAction)backButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{}];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

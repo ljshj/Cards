@@ -588,14 +588,14 @@
 			children = (
 				B2C016E618D2BA310058F1BF /* HXTChooseHousingEstateViewController.h */,
 				B2C016E718D2BA310058F1BF /* HXTChooseHousingEstateViewController.m */,
+				B226170B18E2CAE40000FEA1 /* HXTChooseHouseViewController.h */,
+				B226170C18E2CAE40000FEA1 /* HXTChooseHouseViewController.m */,
 				B2C016EC18D2BB8F0058F1BF /* HXTSelectCityViewController.h */,
 				B2C016ED18D2BB8F0058F1BF /* HXTSelectCityViewController.m */,
 				B291D55518D9E78F008ACE36 /* HXTSelectCitySecondLevelViewController.h */,
 				B291D55618D9E78F008ACE36 /* HXTSelectCitySecondLevelViewController.m */,
 				B25E175218E18277004E0C57 /* HXTAppleyOpenPropertyViewController.h */,
 				B25E175318E18277004E0C57 /* HXTAppleyOpenPropertyViewController.m */,
-				B226170B18E2CAE40000FEA1 /* HXTChooseHouseViewController.h */,
-				B226170C18E2CAE40000FEA1 /* HXTChooseHouseViewController.m */,
 			);
 			name = Controller;
 			path = ChooseHouse/Controller;

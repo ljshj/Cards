@@ -7,6 +7,7 @@
 //
 
 #import "HXTChooseHouseViewController.h"
+#import "HXTAccountManager.h"
 
 @interface HXTChooseHouseViewController ()
 
@@ -117,6 +118,21 @@
     NSString *houseNo  = [NSString stringWithFormat:@"%lu", (long)(100 * (selectedRow / 2 + 1) + selectedRow + 1)];
     
     NSLog(@"%@%@%@", building, unit, houseNo);
+    
+    //如果没有登录进入登录界面
+    if (![HXTAccountManager sharedInstance].logged) {
+        if (self.navigationController.viewControllers.count == 2) { //使用的模态方式进入改页面
+             UIViewController *accountManagerNavViewController = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"AccountManagerNavStoryboardID"];
+            [self presentViewController:accountManagerNavViewController animated:YES completion:^{}];
+        } else { //其他Controller通过导航控制器进入该页面
+            
+            UIViewController *loginViewController = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
+            [self.navigationController pushViewController:loginViewController animated:YES];
+        }
+        
+    } else { //已登录，保存住房信息到账户
+        
+    }
 }
 
 #pragma mark - Navigation
