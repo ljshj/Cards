@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#define kUncheckedImage @"checkbox_unchecked"
-#define kCheckedImage   @"checkbox_checked"
+#define kUncheckedImage @"global_point"
+#define kCheckedImage   @"global_point_s"
 #import "HXTCheckBox.h"
 
 @implementation HXTCheckBox

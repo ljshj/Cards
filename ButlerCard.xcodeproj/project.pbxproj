@@ -27,8 +27,6 @@
 		236E3B5718E0DA3800E0619E /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B2B18E0DA3800E0619E /* NSStringAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		236E3B5E18E0DA3800E0619E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B3D18E0DA3800E0619E /* Reachability.m */; };
 		236E3B5F18E0DA3800E0619E /* UIDevice+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B3F18E0DA3800E0619E /* UIDevice+Resolutions.m */; };
-		236E3B6018E0DA3800E0619E /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 236E3B4218E0DA3800E0619E /* checkbox_checked.png */; };
-		236E3B6118E0DA3800E0619E /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 236E3B4318E0DA3800E0619E /* checkbox_unchecked.png */; };
 		236E3B6218E0DA3800E0619E /* HXTCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B4518E0DA3800E0619E /* HXTCheckBox.m */; };
 		236E3B6318E0DA3800E0619E /* housingEstate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 236E3B4718E0DA3800E0619E /* housingEstate.jpg */; };
 		236E3B6418E0DA3800E0619E /* HXTViewWithArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 236E3B4A18E0DA3800E0619E /* HXTViewWithArrow.m */; };
@@ -177,8 +175,6 @@
 		236E3B3D18E0DA3800E0619E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		236E3B3E18E0DA3800E0619E /* UIDevice+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+Resolutions.h"; path = "Global/UIDevice+Resolutions.h"; sourceTree = "<group>"; };
 		236E3B3F18E0DA3800E0619E /* UIDevice+Resolutions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+Resolutions.m"; path = "Global/UIDevice+Resolutions.m"; sourceTree = "<group>"; };
-		236E3B4218E0DA3800E0619E /* checkbox_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_checked.png; sourceTree = "<group>"; };
-		236E3B4318E0DA3800E0619E /* checkbox_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_unchecked.png; sourceTree = "<group>"; };
 		236E3B4418E0DA3800E0619E /* HXTCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTCheckBox.h; sourceTree = "<group>"; };
 		236E3B4518E0DA3800E0619E /* HXTCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTCheckBox.m; sourceTree = "<group>"; };
 		236E3B4718E0DA3800E0619E /* housingEstate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = housingEstate.jpg; sourceTree = "<group>"; };
@@ -367,8 +363,6 @@
 		236E3B4118E0DA3800E0619E /* CheckBox */ = {
 			isa = PBXGroup;
 			children = (
-				236E3B4218E0DA3800E0619E /* checkbox_checked.png */,
-				236E3B4318E0DA3800E0619E /* checkbox_unchecked.png */,
 				236E3B4418E0DA3800E0619E /* HXTCheckBox.h */,
 				236E3B4518E0DA3800E0619E /* HXTCheckBox.m */,
 			);
@@ -859,8 +853,6 @@
 				B2C27DA418B48432003AA091 /* Images.xcassets in Resources */,
 				B2C016E218D2B3EB0058F1BF /* ChooseHouse.storyboard in Resources */,
 				B2C27D9F18B48432003AA091 /* Home.storyboard in Resources */,
-				236E3B6018E0DA3800E0619E /* checkbox_checked.png in Resources */,
-				236E3B6118E0DA3800E0619E /* checkbox_unchecked.png in Resources */,
 				B2D4880818B5DF1000F331D3 /* SurroundingLife.storyboard in Resources */,
 				B2CE1C1918D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */,
 				B2C016F718D2BD1F0058F1BF /* provinces.plist in Resources */,
