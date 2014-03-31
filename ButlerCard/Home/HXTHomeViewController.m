@@ -71,8 +71,6 @@
     if (viewController == self) {
         self.navigationController.navigationBarHidden = YES;
     }
-    
-    NSLog(@"saldjfaslf");
 }
 
 #pragma mark -- UI actions

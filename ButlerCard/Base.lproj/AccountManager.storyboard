@@ -75,56 +75,33 @@
                                     <constraint firstAttribute="height" constant="68" id="qRl-LP-Idh"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cM-2j-vb7" customClass="UIControl">
-                                <rect key="frame" x="42" y="230" width="236" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gB-I0-itS">
+                                <rect key="frame" x="42" y="230" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbk-cK-Sln">
-                                        <rect key="frame" x="176" y="0.0" width="60" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="注册账号">
-                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="regesterAccountButtonPressed:" destination="rjh-qG-5i0" eventType="touchUpInside" id="RTm-o0-k7n"/>
-                                            <segue destination="EuQ-sy-3IN" kind="push" identifier="UserRegisterStoryboardSegueIdentifier" id="p0V-aI-OTr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gB-I0-itS">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="忘记密码">
-                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="forgetPassordButtonPressed:" destination="rjh-qG-5i0" eventType="touchUpInside" id="2QB-q5-tdP"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8OW-OY-hOv"/>
+                                    <constraint firstAttribute="height" constant="30" id="tfn-6f-dT4"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="忘记密码">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="backgroundTouchUpInside:" destination="rjh-qG-5i0" eventType="touchUpInside" id="MT4-NF-guF"/>
+                                    <action selector="forgetPassordButtonPressed:" destination="rjh-qG-5i0" eventType="touchUpInside" id="2QB-q5-tdP"/>
                                 </connections>
-                            </view>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.95000000000000007" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="8cM-2j-vb7" secondAttribute="trailing" constant="42" id="5rG-Se-7hD"/>
                             <constraint firstItem="Dbe-v2-IRl" firstAttribute="leading" secondItem="6zw-iO-czu" secondAttribute="leading" constant="42" id="Fhn-YW-D7N"/>
                             <constraint firstItem="S3W-Vt-549" firstAttribute="leading" secondItem="6zw-iO-czu" secondAttribute="leading" constant="42" id="Hn1-Fx-uJD"/>
-                            <constraint firstItem="8cM-2j-vb7" firstAttribute="leading" secondItem="6zw-iO-czu" secondAttribute="leading" constant="42" id="ItQ-JV-Tr7"/>
                             <constraint firstItem="Dbe-v2-IRl" firstAttribute="top" secondItem="S3W-Vt-549" secondAttribute="bottom" constant="30" id="LsW-Zu-WOu"/>
+                            <constraint firstItem="8gB-I0-itS" firstAttribute="top" secondItem="Dbe-v2-IRl" secondAttribute="bottom" constant="8" id="PQh-yb-iS4"/>
                             <constraint firstAttribute="trailing" secondItem="S3W-Vt-549" secondAttribute="trailing" constant="42" id="QhJ-4v-T2S"/>
                             <constraint firstAttribute="trailing" secondItem="Dbe-v2-IRl" secondAttribute="trailing" constant="42" id="RuP-2T-Kgs"/>
                             <constraint firstItem="S3W-Vt-549" firstAttribute="top" secondItem="Rcq-BM-hzX" secondAttribute="bottom" constant="20" id="Tyx-1b-V43"/>
-                            <constraint firstItem="8cM-2j-vb7" firstAttribute="top" secondItem="Dbe-v2-IRl" secondAttribute="bottom" constant="8" id="sai-5k-TpD"/>
+                            <constraint firstItem="8gB-I0-itS" firstAttribute="leading" secondItem="6zw-iO-czu" secondAttribute="leading" constant="42" id="WcT-tK-DGK"/>
+                            <constraint firstAttribute="trailing" secondItem="8gB-I0-itS" secondAttribute="trailing" constant="218" id="rYJ-Ee-AbK"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTouchUpInside:" destination="rjh-qG-5i0" eventType="touchUpInside" id="brB-M5-zEr"/>
@@ -142,6 +119,20 @@
                                 </state>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="rjh-qG-5i0" eventType="touchUpInside" id="P4G-Tz-HmH"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="PJd-kE-bLF">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CZs-2o-fjY">
+                                <rect key="frame" x="264" y="5" width="40" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="注册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EuQ-sy-3IN" kind="push" identifier="UserRegisterStoryboardSegueIdentifier" id="Wq8-zd-hhG"/>
                                 </connections>
                             </button>
                         </barButtonItem>

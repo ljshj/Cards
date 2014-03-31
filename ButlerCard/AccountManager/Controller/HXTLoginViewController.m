@@ -40,6 +40,11 @@
     _rememberPasswordCheckBox.selected = YES;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [_userNameTextField becomeFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -78,9 +83,6 @@
     [self dismissKeyboard];
 }
 
-- (IBAction)regesterAccountButtonPressed:(UIButton *)sender {
-    
-}
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
     BOOL loginDidSucessed = [[HXTAccountManager sharedInstance] loginWithUsername:_userNameTextField.text password:_passwordTextField.text];
