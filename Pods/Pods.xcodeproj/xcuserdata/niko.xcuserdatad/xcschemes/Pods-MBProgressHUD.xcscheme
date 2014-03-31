@@ -14,10 +14,10 @@
             buildForTesting = "YES">
             <BuildableReference
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods.a"
-               BlueprintIdentifier = "369D62144915412F9F6CD642"
+               BuildableName = "libPods-MBProgressHUD.a"
+               BlueprintIdentifier = "30E4C47365DD4753BD70C955"
                BuildableIdentifier = "primary"
-               BlueprintName = "Pods">
+               BlueprintName = "Pods-MBProgressHUD">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
