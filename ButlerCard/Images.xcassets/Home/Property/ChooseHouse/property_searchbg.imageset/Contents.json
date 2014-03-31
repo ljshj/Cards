@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "house_searchbg.png"
+      "filename" : "ios_32044px.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "house_searchbg@2x.png"
+      "filename" : "ios_64088px.png"
     }
   ],
   "info" : {

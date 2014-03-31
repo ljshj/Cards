@@ -1,17 +1,17 @@
 //
-//  CYMyPropertyTableViewCell.h
+//  CYActivityCell.h
 //  ButlerCard
 //
-//  Created by niko on 14-3-20.
+//  Created by niko on 14-3-25.
 //  Copyright (c) 2014年 johnny tang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface CYMyPropertyTableViewCell : UITableViewCell
+@interface CYActivityCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *titleImageView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLable;
-@property (weak, nonatomic) IBOutlet UILabel *contentLable;
+@property (strong, nonatomic) IBOutlet UILabel *titleLable;
+@property (strong, nonatomic) IBOutlet UILabel *timeLable;
 @property (weak, nonatomic) IBOutlet UILabel *stateLable;
 
 @end

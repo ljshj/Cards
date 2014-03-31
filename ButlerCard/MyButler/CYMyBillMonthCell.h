@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CYMyBillMonthCell : UITableViewCell
-@property(nonatomic,getter = isFold)BOOL fold;
-@property(nonatomic,retain)UILabel *timeLable;
-@property(nonatomic,retain)UILabel *moneyLable;
+@property (weak, nonatomic) IBOutlet UILabel *timeLable;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLable;
 @end

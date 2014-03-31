@@ -8,6 +8,7 @@
 
 #import "HXTSelectCityViewController.h"
 #import "HXTAccountManager.h"
+#import "HXTLocationManager.h"
 
 typedef NS_ENUM(NSUInteger, sectionType) {
     sectionTypeCurrentCity = 0,
@@ -46,9 +47,25 @@ typedef NS_ENUM(NSUInteger, sectionType) {
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.navigationController.navigationBarHidden = NO;
+    
     _currentCity = [HXTAccountManager sharedInstance].currentCity;
     _topCities   = [[NSArray alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"hotCities" ofType:@"plist"]];
     _provinces   = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"provinces" ofType:@"plist"]];
+    
+    //获得当前城市
+    __block __weak HXTSelectCityViewController *selectCityViewController = self;
+    [[HXTLocationManager sharedLocation] getCity:^(NSString *addressString) {
+        if (addressString && addressString.length > 0 && ![addressString isEqualToString:_currentCity]) {
+            selectCityViewController.currentCity = addressString;
+            
+            // Update Tabel View
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSIndexSet *indexSet= [NSIndexSet indexSetWithIndex:0];
+                [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+            });
+        }
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -125,6 +142,7 @@ typedef NS_ENUM(NSUInteger, sectionType) {
             // Configure the cell...
             
             cell.textLabel.text = _currentCity;
+            
             return cell;
         } else if (indexPath.section == sectionTypeTopCities) {
             static NSString *CellIdentifier = @"TopCityCellIdentifier";
@@ -211,7 +229,6 @@ typedef NS_ENUM(NSUInteger, sectionType) {
 - (IBAction)backButtonPressed:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 #pragma mark - Navigation
 

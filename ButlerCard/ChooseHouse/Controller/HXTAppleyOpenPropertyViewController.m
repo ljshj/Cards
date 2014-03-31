@@ -7,11 +7,10 @@
 //
 
 #import "HXTAppleyOpenPropertyViewController.h"
-#import <CoreLocation/CoreLocation.h>
 
 @interface HXTAppleyOpenPropertyViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
+
+@property (weak, nonatomic) IBOutlet UITextField *housingEstateNameTestField;
 
 @end
 
@@ -38,6 +37,45 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITextField Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [_housingEstateNameTestField resignFirstResponder];
+    
+    return YES;
+}
+
+#pragma mark - UIAlertView Delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) { //取消
+        NSLog(@"取消");
+    } else { //确定
+        NSLog(@"确定");
+        
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:^{}];
+}
+
+#pragma mark - UI Actions
+
+- (IBAction)backgoudTouchUpInside:(id)sender {
+    
+    [_housingEstateNameTestField resignFirstResponder];
+}
+
+
+- (IBAction)applyButtonPressed:(id)sender {
+    [_housingEstateNameTestField resignFirstResponder];
+    NSString *alerString = [NSString  stringWithFormat:@"你申请开通的小区是%@", _housingEstateNameTestField.text];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:alerString
+                                                       delegate:self
+                                              cancelButtonTitle:@"取消"
+                                              otherButtonTitles:@"确定",nil];
+    [alertView show];
+}
 
 #pragma mark - Navigation
 /*
@@ -50,6 +88,7 @@
 */
 
 - (IBAction)backButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{}];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

@@ -130,10 +130,12 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"didSelectItemAtIndexPath indexPath.section = %li, indexPath.row = %li", (long)indexPath.section, (long)indexPath.row);
+    /*
     UIViewController *loginViewcontroller = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
     
     [loginViewcontroller setValue:self forKey:@"delegate"];
     [self.navigationController pushViewController:loginViewcontroller animated:YES];
+     */
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -150,7 +152,12 @@
 #pragma mark -- UI Actions
 
 - (IBAction)backButtonPressed:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    if (self.navigationController.viewControllers.count == 1) { //使用的模态方式进入改页面
+        [self dismissViewControllerAnimated:YES completion:^{}];
+    } else { //其他Controller通过导航控制器进入该页面
+         [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (IBAction)chooseCityButtonPressed:(UIButton *)sender {

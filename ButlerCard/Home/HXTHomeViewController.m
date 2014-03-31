@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *ecologicalDistributionButton;
 @property (weak, nonatomic) IBOutlet UIButton *surroundingLifeButton;
 
+
+@property (strong, nonatomic) UIViewController *browseHousingEstateViewController;
 @end
 
 @implementation HXTHomeViewController
@@ -69,6 +71,8 @@
     if (viewController == self) {
         self.navigationController.navigationBarHidden = YES;
     }
+    
+    NSLog(@"saldjfaslf");
 }
 
 #pragma mark -- UI actions
@@ -76,7 +80,7 @@
 //物管服务
 - (IBAction)propertyServiceButtonPressed:(UIButton *)sender {
     sender.selected = !sender.selected;
-     NSLog(@"物业服务 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
+    NSLog(@"物业服务 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
 }
 
 //物业缴费
@@ -89,10 +93,11 @@
         
         [self.navigationController pushViewController:myPropertyViewController animated:YES];
     } else { //没有登录，进入小区浏览界面
-        UIViewController *browseHousingEstateViewController = [[UIStoryboard storyboardWithName:@"ChooseHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"ChooseHouseEstateStoryboardID"];
         
-//        [self presentViewController:browseHousingEstateViewController animated:YES completion:nil];
-        [self.navigationController pushViewController:browseHousingEstateViewController animated:YES];
+        _browseHousingEstateViewController = [[UIStoryboard storyboardWithName:@"ChooseHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"ChooseHouseEstateStoryboardID"];
+        
+//        [self presentViewController:_browseHousingEstateViewController animated:YES completion:nil];
+        [self.navigationController pushViewController:_browseHousingEstateViewController animated:YES];
     }
 }
 
@@ -115,7 +120,7 @@
     sender.selected = !sender.selected;
     NSLog(@"周边生活 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
     UIViewController *surroundingLifeViewcontroller = [[UIStoryboard storyboardWithName:@"SurroundingLife" bundle:nil] instantiateViewControllerWithIdentifier:@"SurroundingLifeStoryboardID"];
-//    [self presentViewController:surroundingLifeViewcontroller animated:YES completion:^{}];
+    //    [self presentViewController:surroundingLifeViewcontroller animated:YES completion:^{}];
     [self.navigationController pushViewController:surroundingLifeViewcontroller animated:YES];
 }
 

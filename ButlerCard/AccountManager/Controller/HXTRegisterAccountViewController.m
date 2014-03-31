@@ -49,8 +49,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma --
-#pragma -- UITextFieldDelegate
+#pragma -- UITextField Delegate
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == _userNameTextField) {
         [_passwordTextField becomeFirstResponder];
@@ -158,6 +158,13 @@
         [alertView show];
     }
     
+}
+
+#pragma mark - Navigation
+
+- (IBAction)backButtonPressed:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

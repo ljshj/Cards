@@ -69,8 +69,8 @@
     }
 }
 
-#pragma --
 #pragma -- RegisterAccountViewController Delegate
+
 - (void)registerAccountViewController:(UIViewController *)registerAccountViewController registerDidSucessed:(BOOL)sucessed {
     NSLog(@"%s %s %d register account sucessed = %@", __FILE__, __FUNCTION__, __LINE__, sucessed? @"YES": @"NO");
 }
@@ -108,4 +108,17 @@
         [_passwordTextField resignFirstResponder];
     }
 }
+
+#pragma mark - Navigation
+
+- (IBAction)backButtonPressed:(id)sender {
+    
+    if (self.navigationController.viewControllers.count == 1) { //使用的模态方式进入改页面
+        [self dismissViewControllerAnimated:YES completion:^{}];
+    } else { //其他Controller通过导航控制器进入该页面
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+
 @end
