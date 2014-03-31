@@ -7,6 +7,8 @@
 - (BOOL)isValidHeader:(NSString*)response;
 - (void)processResponse:(NSData*)data;
 - (void)processErrorInfo:(int)errorType;
+- (BOOL)isValidDictionary:(NSObject*)obj;
+- (BOOL)isValidNSArray:(NSObject*)obj;
 @end
 
 @implementation XPHTTPURLConnection
@@ -81,6 +83,7 @@
 #pragma mark get methods
 - (void)DoGetRequestURL:(NSString*)strUrl parent:(UIViewController*)parent delegate:(id<HTTPURLConnectionDelegate>)delegate
 {
+    NSString *strRequest = [NSString stringWithFormat:@"http://192.168.22.12/%@", strUrl];
     mdelegate = delegate;
     mProgressHUD = [[MBProgressHUD alloc] initWithView:parent.view];
 	[parent.view addSubview:mProgressHUD];
@@ -91,7 +94,10 @@
 	[mProgressHUD show:YES];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:strUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    //manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    //manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    //manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager GET:strRequest parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [mProgressHUD hide:YES];
         [mProgressHUD removeFromSuperview];
         [self processResponse:responseObject];
@@ -108,7 +114,7 @@
     mProgressHUD = [[MBProgressHUD alloc] initWithView:parent.view];
 	[parent.view addSubview:mProgressHUD];
 	mProgressHUD.delegate = nil;
-	mProgressHUD.labelText = @"Loading";
+	mProgressHUD.labelText = @"正在请求数据...";
 	mProgressHUD.square = YES;
 	[mProgressHUD show:YES];
     
@@ -127,7 +133,7 @@
 }
 
 #pragma mark get from local file
-- (void)loadFromJSONFile:(NSString*)strFile
+- (NSString*)loadFromJSONFile:(NSString*)strFile
 {
     NSString* file = strFile;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -135,11 +141,8 @@
 	NSString* finalPath = [path stringByAppendingPathComponent:file];
     NSString* fileData = [NSString stringWithContentsOfFile:finalPath encoding:NSUTF8StringEncoding error:nil];
     
-//    NSData *data = [NSData dataWithContentsOfFile:filePath];
-//    NSString *textFile  = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    
     [self setResponseString:fileData];
-    if(mdelegate != nil)[mdelegate ProcessRequestOK:self.responseString];
+    return self.responseString;
 }
 
 - (void)writeToJSONFile:(NSString*)strFile content:(NSString*)content
