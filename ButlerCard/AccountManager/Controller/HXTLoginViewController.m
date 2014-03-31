@@ -14,8 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet HXTCheckBox *rememberUserNameCheckBox;
-@property (weak, nonatomic) IBOutlet HXTCheckBox *rememberPasswordCheckBox;
 
 @end
 
@@ -36,8 +34,6 @@
 	// Do any additional setup after loading the view.
     _userNameTextField.delegate = self;
     _passwordTextField.delegate = self;
-    _rememberUserNameCheckBox.selected = YES;
-    _rememberPasswordCheckBox.selected = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {

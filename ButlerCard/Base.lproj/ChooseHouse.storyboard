@@ -241,13 +241,12 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOh-ZP-2Iq">
-                                <rect key="frame" x="20" y="270" width="280" height="30"/>
+                                <rect key="frame" x="43" y="234" width="234" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="sXG-Ui-Ehw"/>
+                                    <constraint firstAttribute="height" constant="40" id="Rc7-Oz-1K2"/>
                                 </constraints>
-                                <state key="normal" title="确定">
+                                <state key="normal" title="确定" backgroundImage="global_button_login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -257,12 +256,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GOh-ZP-2Iq" firstAttribute="leading" secondItem="WmM-XR-0oy" secondAttribute="leading" constant="43" id="8SH-gg-JRN"/>
+                            <constraint firstItem="GOh-ZP-2Iq" firstAttribute="top" secondItem="Zsx-Pa-waH" secondAttribute="bottom" constant="8" id="OqF-qK-uAU"/>
                             <constraint firstItem="Zsx-Pa-waH" firstAttribute="leading" secondItem="WmM-XR-0oy" secondAttribute="leading" id="baE-mv-iCW"/>
-                            <constraint firstAttribute="trailing" secondItem="GOh-ZP-2Iq" secondAttribute="trailing" constant="20" id="bxU-yj-j7y"/>
+                            <constraint firstAttribute="trailing" secondItem="GOh-ZP-2Iq" secondAttribute="trailing" constant="43" id="bwI-3Y-92Q"/>
                             <constraint firstAttribute="trailing" secondItem="Zsx-Pa-waH" secondAttribute="trailing" id="c8w-MO-VlA"/>
-                            <constraint firstItem="GOh-ZP-2Iq" firstAttribute="leading" secondItem="WmM-XR-0oy" secondAttribute="leading" constant="20" id="cy2-A9-KbZ"/>
                             <constraint firstItem="Zsx-Pa-waH" firstAttribute="top" secondItem="rQj-Ob-xk7" secondAttribute="bottom" id="fDa-DE-xqX"/>
-                            <constraint firstItem="GOh-ZP-2Iq" firstAttribute="top" secondItem="Zsx-Pa-waH" secondAttribute="bottom" constant="44" id="nRX-LE-2ol"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="选择住房" id="vz5-Km-Kis">
@@ -301,26 +300,25 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" 小区名称:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfJ-Cw-mhy">
-                                <rect key="frame" x="20" y="107" width="78" height="21"/>
+                                <rect key="frame" x="43" y="107" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入申请开通的小区名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-cx-wGH">
-                                <rect key="frame" x="106" y="103" width="194" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入申请开通的小区名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gh0-cx-wGH">
+                                <rect key="frame" x="115" y="103" width="161" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="vRv-54-B51" id="aQj-pt-FQg"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5p-Cc-hC0">
-                                <rect key="frame" x="20" y="159" width="280" height="30"/>
+                                <rect key="frame" x="43" y="160" width="234" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="申请">
+                                <state key="normal" title="申请" backgroundImage="global_button_login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -535,6 +533,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="global_button_login" width="236" height="40"/>
         <image name="house" width="26" height="26"/>
         <image name="navigationBar_back" width="44" height="44"/>
         <image name="navigationBar_down" width="15" height="15"/>
