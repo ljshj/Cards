@@ -1,21 +1,22 @@
 //
-//  HXTChooseHouseViewController.m
+//  HXTAddHouseViewController.m
 //  ButlerCard
 //
 //  Created by johnny tang on 3/26/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#import "HXTChooseHouseViewController.h"
+#import "HXTAddHouseViewController.h"
 #import "HXTAccountManager.h"
+#import "HXTHouse.h"
 
-@interface HXTChooseHouseViewController ()
+@interface HXTAddHouseViewController ()
 
 @property (weak, nonatomic) IBOutlet UIPickerView *housePicker;
 
 @end
 
-@implementation HXTChooseHouseViewController
+@implementation HXTAddHouseViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -117,11 +118,14 @@
     NSUInteger selectedRow = [self.housePicker selectedRowInComponent:2];
     NSString *houseNo  = [NSString stringWithFormat:@"%lu", (long)(100 * (selectedRow / 2 + 1) + selectedRow + 1)];
     
+    _addedHouse.buildingNo = [self.housePicker selectedRowInComponent:0] + 1;
+    _addedHouse.unitNo = [self.housePicker selectedRowInComponent:1] + 1;
+    _addedHouse.houseNo = (100 * (selectedRow / 2 + 1) + selectedRow + 1);
     NSLog(@"%@%@%@", building, unit, houseNo);
     
     //如果没有登录进入登录界面
     if (![HXTAccountManager sharedInstance].logged) {
-        if (self.navigationController.viewControllers.count == 2) { //使用的模态方式进入改页面
+        if (self.navigationController.viewControllers.count == 2) { //使用的模态方式进入该页面
              UIViewController *accountManagerNavViewController = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"AccountManagerNavStoryboardID"];
             [self presentViewController:accountManagerNavViewController animated:YES completion:^{}];
         } else { //其他Controller通过导航控制器进入该页面
@@ -130,8 +134,13 @@
             [self.navigationController pushViewController:loginViewController animated:YES];
         }
         
-    } else { //已登录，保存住房信息到账户
-        
+    } else { //已登录，返回选择的选择的住房信息
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"kAddHouseNotification"
+                                                            object:self
+                                                          userInfo:@{kHouseEstateName: _addedHouse.housingEstatename,
+                                                                     kBuildingNo: @(_addedHouse.buildingNo),
+                                                                     kUnitNo: @(_addedHouse.unitNo),
+                                                                     kHouseNo: @(_addedHouse.houseNo)}];
     }
 }
 

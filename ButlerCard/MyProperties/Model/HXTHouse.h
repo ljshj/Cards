@@ -13,5 +13,5 @@
 @property (copy,   nonatomic) NSString   *imageName;
 @property (assign, nonatomic) NSUInteger buildingNo;
 @property (assign, nonatomic) NSUInteger unitNo;
-@property (assign, nonatomic) NSUInteger roomNo;
+@property (assign, nonatomic) NSUInteger houseNo;
 @end

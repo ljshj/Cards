@@ -102,7 +102,7 @@
     //设置Header显示小区地址
     HXTPropertyCell *property = [HXTMyProperties sharedInstance].properties[section];
     UILabel *label = (UILabel *)[tableViewHeaderFooterView viewWithTag:103];
-    label.text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, (long)property.house.buildingNo, (long)property.house.unitNo, (long)property.house.roomNo];
+    label.text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, (long)property.house.buildingNo, (long)property.house.unitNo, (long)property.house.houseNo];
     
     if (_expandedSection == tableViewHeaderFooterView.tag) {
         tableViewHeaderFooterView.expanded = YES;
@@ -119,7 +119,7 @@
     //设置Header显示小区地址
     HXTPropertyCell *property = [HXTMyProperties sharedInstance].properties[section];
     UILabel *label = (UILabel *)[tableViewHeaderFooterView viewWithTag:103];
-    label.text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, (long)property.house.buildingNo, (long)property.house.unitNo, (long)property.house.roomNo];
+    label.text = [NSString stringWithFormat:@"%@ %li栋%li单元%li", property.house.housingEstatename, (long)property.house.buildingNo, (long)property.house.unitNo, (long)property.house.houseNo];
     
     if (_expandedSection == tableViewHeaderFooterView.tag) {
         tableViewHeaderFooterView.expanded = YES;

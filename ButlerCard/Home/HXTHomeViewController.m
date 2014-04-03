@@ -19,8 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *ecologicalDistributionButton;
 @property (weak, nonatomic) IBOutlet UIButton *surroundingLifeButton;
 
-
-@property (strong, nonatomic) UIViewController *browseHousingEstateViewController;
 @end
 
 @implementation HXTHomeViewController
@@ -92,10 +90,10 @@
         [self.navigationController pushViewController:myPropertyViewController animated:YES];
     } else { //没有登录，进入小区浏览界面
         
-        _browseHousingEstateViewController = [[UIStoryboard storyboardWithName:@"ChooseHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"ChooseHouseEstateStoryboardID"];
+        UIViewController * addHouseEstateViewController = [[UIStoryboard storyboardWithName:@"AddHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"AddHouseEstateStoryboardID"];
         
 //        [self presentViewController:_browseHousingEstateViewController animated:YES completion:nil];
-        [self.navigationController pushViewController:_browseHousingEstateViewController animated:YES];
+        [self.navigationController pushViewController:addHouseEstateViewController animated:YES];
     }
 }
 

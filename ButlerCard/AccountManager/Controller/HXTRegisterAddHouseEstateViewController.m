@@ -7,6 +7,7 @@
 //
 
 #import "HXTRegisterAddHouseEstateViewController.h"
+#import "HXTAddHouseViewController.h"
 
 @interface HXTRegisterAddHouseEstateViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -31,6 +32,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _willAddedhouseEstates = [NSMutableArray arrayWithArray:@[@"中铁小区 1栋2单元302", @"广都小区 1栋2单元302"]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationSelector:) name:kAddHouseNotification object:nil];
+}
+
+- (void)notificationSelector:(NSNotification *)notification {
+    if (notification.object != self && [notification.name isEqualToString:kAddHouseNotification]) {
+        NSLog(@"notification.userInfo = %@", notification.userInfo);
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,10 +112,13 @@
 
 - (IBAction)addHouseEstateButtonPressed:(id)sender {
     NSLog(@"添加小区");
+    
+    UIViewController * addHouseNavViewController = [[UIStoryboard storyboardWithName:@"AddHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"AddHouseNavStoryboardID"];
+    [self presentViewController:addHouseNavViewController animated:YES completion:^{}];
+    
 }
 
 - (IBAction)delHouseEstateButtonPressed:(UIButton *)sender {
-    NSLog(@"删除小区");
     
     UIView *view = sender.superview;
     

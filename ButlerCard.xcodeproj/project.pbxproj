@@ -42,8 +42,8 @@
 		2385635318DAE242005D5AF5 /* CYMyBillMonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2385635218DAE242005D5AF5 /* CYMyBillMonthCell.m */; };
 		53DD8B63B9B84B5DB2207E3D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FC7110AE204E14A8C22B67 /* libPods.a */; };
 		B226170A18E2BCCB0000FEA1 /* HXTLoacationManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B226170918E2BCCB0000FEA1 /* HXTLoacationManagerTests.m */; };
-		B226170D18E2CAE40000FEA1 /* HXTChooseHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B226170C18E2CAE40000FEA1 /* HXTChooseHouseViewController.m */; };
-		B226170E18E2CAE40000FEA1 /* HXTChooseHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B226170C18E2CAE40000FEA1 /* HXTChooseHouseViewController.m */; };
+		B226170D18E2CAE40000FEA1 /* HXTAddHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B226170C18E2CAE40000FEA1 /* HXTAddHouseViewController.m */; };
+		B226170E18E2CAE40000FEA1 /* HXTAddHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B226170C18E2CAE40000FEA1 /* HXTAddHouseViewController.m */; };
 		B2380E0518B6FC3B00D895DA /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */; };
 		B25A8A2218D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
 		B25A8A2318D92B7F00A8D145 /* HXTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */; };
@@ -85,10 +85,10 @@
 		B2BB18ED18D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB18E618D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m */; };
 		B2BB18EE18D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB18E618D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m */; };
 		B2C016DC18D2B2040058F1BF /* AccountManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C016DA18D2B2040058F1BF /* AccountManager.storyboard */; };
-		B2C016E218D2B3EB0058F1BF /* ChooseHouse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C016E018D2B3EB0058F1BF /* ChooseHouse.storyboard */; };
-		B2C016E318D2B3EB0058F1BF /* ChooseHouse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C016E018D2B3EB0058F1BF /* ChooseHouse.storyboard */; };
-		B2C016EA18D2BA310058F1BF /* HXTChooseHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C016E718D2BA310058F1BF /* HXTChooseHousingEstateViewController.m */; };
-		B2C016EB18D2BA310058F1BF /* HXTChooseHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C016E718D2BA310058F1BF /* HXTChooseHousingEstateViewController.m */; };
+		B2C016E218D2B3EB0058F1BF /* AddHouse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C016E018D2B3EB0058F1BF /* AddHouse.storyboard */; };
+		B2C016E318D2B3EB0058F1BF /* AddHouse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C016E018D2B3EB0058F1BF /* AddHouse.storyboard */; };
+		B2C016EA18D2BA310058F1BF /* HXTAddHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C016E718D2BA310058F1BF /* HXTAddHousingEstateViewController.m */; };
+		B2C016EB18D2BA310058F1BF /* HXTAddHousingEstateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C016E718D2BA310058F1BF /* HXTAddHousingEstateViewController.m */; };
 		B2C016EE18D2BB8F0058F1BF /* HXTSelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C016ED18D2BB8F0058F1BF /* HXTSelectCityViewController.m */; };
 		B2C016EF18D2BB8F0058F1BF /* HXTSelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C016ED18D2BB8F0058F1BF /* HXTSelectCityViewController.m */; };
 		B2C016F518D2BD1F0058F1BF /* hotCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2C016F118D2BD1F0058F1BF /* hotCities.plist */; };
@@ -214,8 +214,8 @@
 		2385635118DAE242005D5AF5 /* CYMyBillMonthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMyBillMonthCell.h; sourceTree = "<group>"; };
 		2385635218DAE242005D5AF5 /* CYMyBillMonthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMyBillMonthCell.m; sourceTree = "<group>"; };
 		B226170918E2BCCB0000FEA1 /* HXTLoacationManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTLoacationManagerTests.m; sourceTree = "<group>"; };
-		B226170B18E2CAE40000FEA1 /* HXTChooseHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTChooseHouseViewController.h; sourceTree = "<group>"; };
-		B226170C18E2CAE40000FEA1 /* HXTChooseHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTChooseHouseViewController.m; sourceTree = "<group>"; };
+		B226170B18E2CAE40000FEA1 /* HXTAddHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTAddHouseViewController.h; sourceTree = "<group>"; };
+		B226170C18E2CAE40000FEA1 /* HXTAddHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTAddHouseViewController.m; sourceTree = "<group>"; };
 		B2380E0418B6FC3B00D895DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyProperty.storyboard; sourceTree = "<group>"; };
 		B25A8A2018D92B7F00A8D145 /* HXTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTNavigationController.h; path = Home/HXTNavigationController.h; sourceTree = "<group>"; };
 		B25A8A2118D92B7F00A8D145 /* HXTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HXTNavigationController.m; path = Home/HXTNavigationController.m; sourceTree = "<group>"; };
@@ -257,9 +257,9 @@
 		B2BB18E518D829D700BD9FC9 /* HXTTheGroceryStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTTheGroceryStoreViewController.h; sourceTree = "<group>"; };
 		B2BB18E618D829D700BD9FC9 /* HXTTheGroceryStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTTheGroceryStoreViewController.m; sourceTree = "<group>"; };
 		B2C016DB18D2B2040058F1BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AccountManager.storyboard; sourceTree = "<group>"; };
-		B2C016E118D2B3EB0058F1BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChooseHouse.storyboard; sourceTree = "<group>"; };
-		B2C016E618D2BA310058F1BF /* HXTChooseHousingEstateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTChooseHousingEstateViewController.h; sourceTree = "<group>"; };
-		B2C016E718D2BA310058F1BF /* HXTChooseHousingEstateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTChooseHousingEstateViewController.m; sourceTree = "<group>"; };
+		B2C016E118D2B3EB0058F1BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddHouse.storyboard; sourceTree = "<group>"; };
+		B2C016E618D2BA310058F1BF /* HXTAddHousingEstateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTAddHousingEstateViewController.h; sourceTree = "<group>"; };
+		B2C016E718D2BA310058F1BF /* HXTAddHousingEstateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTAddHousingEstateViewController.m; sourceTree = "<group>"; };
 		B2C016EC18D2BB8F0058F1BF /* HXTSelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTSelectCityViewController.h; sourceTree = "<group>"; };
 		B2C016ED18D2BB8F0058F1BF /* HXTSelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTSelectCityViewController.m; sourceTree = "<group>"; };
 		B2C016F118D2BD1F0058F1BF /* hotCities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hotCities.plist; sourceTree = "<group>"; };
@@ -629,10 +629,10 @@
 		B2C016E518D2BA310058F1BF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B2C016E618D2BA310058F1BF /* HXTChooseHousingEstateViewController.h */,
-				B2C016E718D2BA310058F1BF /* HXTChooseHousingEstateViewController.m */,
-				B226170B18E2CAE40000FEA1 /* HXTChooseHouseViewController.h */,
-				B226170C18E2CAE40000FEA1 /* HXTChooseHouseViewController.m */,
+				B2C016E618D2BA310058F1BF /* HXTAddHousingEstateViewController.h */,
+				B2C016E718D2BA310058F1BF /* HXTAddHousingEstateViewController.m */,
+				B226170B18E2CAE40000FEA1 /* HXTAddHouseViewController.h */,
+				B226170C18E2CAE40000FEA1 /* HXTAddHouseViewController.m */,
 				B2C016EC18D2BB8F0058F1BF /* HXTSelectCityViewController.h */,
 				B2C016ED18D2BB8F0058F1BF /* HXTSelectCityViewController.m */,
 				B291D55518D9E78F008ACE36 /* HXTSelectCitySecondLevelViewController.h */,
@@ -721,7 +721,7 @@
 				B2C016E418D2BA0F0058F1BF /* ChooseHouse ----选择小区/住房/城市 */,
 				B2C27D9D18B48432003AA091 /* Home.storyboard */,
 				B2C016DA18D2B2040058F1BF /* AccountManager.storyboard */,
-				B2C016E018D2B3EB0058F1BF /* ChooseHouse.storyboard */,
+				B2C016E018D2B3EB0058F1BF /* AddHouse.storyboard */,
 				B2D4880618B5DF1000F331D3 /* SurroundingLife.storyboard */,
 				B2380E0318B6FC3B00D895DA /* MyProperty.storyboard */,
 				B2A4441118C5CAD5008A4592 /* EcologicalDistribution.storyboard */,
@@ -902,7 +902,7 @@
 				B2C016F518D2BD1F0058F1BF /* hotCities.plist in Resources */,
 				B2C016DC18D2B2040058F1BF /* AccountManager.storyboard in Resources */,
 				B2C27DA418B48432003AA091 /* Images.xcassets in Resources */,
-				B2C016E218D2B3EB0058F1BF /* ChooseHouse.storyboard in Resources */,
+				B2C016E218D2B3EB0058F1BF /* AddHouse.storyboard in Resources */,
 				B2C27D9F18B48432003AA091 /* Home.storyboard in Resources */,
 				B2D4880818B5DF1000F331D3 /* SurroundingLife.storyboard in Resources */,
 				B2CE1C1918D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */,
@@ -921,7 +921,7 @@
 				B2CE1BE518D2A744007A754D /* Home.storyboard in Resources */,
 				B2C016F818D2BD1F0058F1BF /* provinces.plist in Resources */,
 				B2C016FA18D2BD1F0058F1BF /* provinces_bck.plist in Resources */,
-				B2C016E318D2B3EB0058F1BF /* ChooseHouse.storyboard in Resources */,
+				B2C016E318D2B3EB0058F1BF /* AddHouse.storyboard in Resources */,
 				B2CE1C1A18D2A912007A754D /* MyPropertyTableViewHeaderFooterView.xib in Resources */,
 				B2C016F618D2BD1F0058F1BF /* hotCities.plist in Resources */,
 			);
@@ -987,7 +987,7 @@
 				B2CE1C0718D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
 				B2E4E35018D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */,
 				2353E83B18E9D8CA00D87837 /* StoreBaseItem.m in Sources */,
-				B226170D18E2CAE40000FEA1 /* HXTChooseHouseViewController.m in Sources */,
+				B226170D18E2CAE40000FEA1 /* HXTAddHouseViewController.m in Sources */,
 				2301F8FC18E26A7B0051171E /* CYActivityViewController.m in Sources */,
 				2385635018DAE22E005D5AF5 /* CYMyBillDetailCell.m in Sources */,
 				B25A8A2218D92B7F00A8D145 /* HXTNavigationController.m in Sources */,
@@ -1004,7 +1004,7 @@
 				236E3B5518E0DA3800E0619E /* NSDataAdditions.m in Sources */,
 				B2BB18EB18D829D700BD9FC9 /* HXTIGoWithTypeViewController.m in Sources */,
 				B25BC75A18E9400100BF4DF7 /* HXTRegisterInputPhoneNumberViewController.m in Sources */,
-				B2C016EA18D2BA310058F1BF /* HXTChooseHousingEstateViewController.m in Sources */,
+				B2C016EA18D2BA310058F1BF /* HXTAddHousingEstateViewController.m in Sources */,
 				231F445218DC1DF20042FA6C /* CYBillPieViewController.m in Sources */,
 				B2AA7EF818D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */,
 				B2AA7EB018D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
@@ -1048,14 +1048,14 @@
 				B2AA7EB118D2AAE800F4EF88 /* HXTAccountManager.m in Sources */,
 				B2CE1C1418D2A912007A754D /* HXTPropertyFeeDetailCell.m in Sources */,
 				B2751FA218E972E700D44493 /* HXTRegisterUserProtocolViewController.m in Sources */,
-				B2C016EB18D2BA310058F1BF /* HXTChooseHousingEstateViewController.m in Sources */,
+				B2C016EB18D2BA310058F1BF /* HXTAddHousingEstateViewController.m in Sources */,
 				B2BB18EA18D829D700BD9FC9 /* HXTIGoViewController.m in Sources */,
 				B25BC75718E93F2700BF4DF7 /* HXTRetrievePasswordViewController.m in Sources */,
 				B291D55418D97D72008ACE36 /* HXTChooseHousingEstateTableViewController.m in Sources */,
 				B2CE1C1818D2A912007A754D /* HXTPropertyTableViewHeaderFooterView.m in Sources */,
 				B2751F9E18E9594500D44493 /* HXTRegisterAddHouseEstateViewController.m in Sources */,
 				B2E4E35118D6DE7D00C0C0F5 /* HXTTabBarViewController.m in Sources */,
-				B226170E18E2CAE40000FEA1 /* HXTChooseHouseViewController.m in Sources */,
+				B226170E18E2CAE40000FEA1 /* HXTAddHouseViewController.m in Sources */,
 				B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */,
 				B25A8A2318D92B7F00A8D145 /* HXTNavigationController.m in Sources */,
 				B2CE1C0818D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
@@ -1110,12 +1110,12 @@
 			name = AccountManager.storyboard;
 			sourceTree = "<group>";
 		};
-		B2C016E018D2B3EB0058F1BF /* ChooseHouse.storyboard */ = {
+		B2C016E018D2B3EB0058F1BF /* AddHouse.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B2C016E118D2B3EB0058F1BF /* Base */,
 			);
-			name = ChooseHouse.storyboard;
+			name = AddHouse.storyboard;
 			sourceTree = "<group>";
 		};
 		B2C27D9D18B48432003AA091 /* Home.storyboard */ = {

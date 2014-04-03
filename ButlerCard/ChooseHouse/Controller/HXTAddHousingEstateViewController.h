@@ -1,5 +1,5 @@
 //
-//  HXTChooseHousingEstateViewController.h
+//  HXTAddHousingEstateViewController.h
 //  ButlerCard
 //
 //  Created by johnny tang on 2/21/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HXTChooseHousingEstateViewController : UIViewController
+@interface HXTAddHousingEstateViewController : UIViewController
 
 @end

@@ -36,7 +36,7 @@ static HXTMyProperties *myProprtyModel;
         aProperty.house.imageName = @"house";
         aProperty.house.buildingNo = 1;
         aProperty.house.unitNo = 2;
-        aProperty.house.roomNo = 301;
+        aProperty.house.houseNo = 301;
         for (NSUInteger i = 0; i < 5; i++) {
             HXTPropertyFeeCell *aFeeCell = [[HXTPropertyFeeCell alloc] init];
             [aProperty.fees addObject:aFeeCell];
@@ -48,7 +48,7 @@ static HXTMyProperties *myProprtyModel;
         aProperty.house.imageName = @"house";
         aProperty.house.buildingNo = 2;
         aProperty.house.unitNo = 3;
-        aProperty.house.roomNo = 302;
+        aProperty.house.houseNo = 302;
         for (NSUInteger i = 0; i < 5; i++) {
             HXTPropertyFeeCell *aFeeCell = [[HXTPropertyFeeCell alloc] init];
             [aProperty.fees addObject:aFeeCell];
@@ -60,7 +60,7 @@ static HXTMyProperties *myProprtyModel;
         aProperty.house.imageName = @"house";
         aProperty.house.buildingNo = 2;
         aProperty.house.unitNo = 3;
-        aProperty.house.roomNo = 303;
+        aProperty.house.houseNo = 303;
         for (NSUInteger i = 0; i < 5; i++) {
             HXTPropertyFeeCell *aFeeCell = [[HXTPropertyFeeCell alloc] init];
             [aProperty.fees addObject:aFeeCell];
@@ -72,7 +72,7 @@ static HXTMyProperties *myProprtyModel;
         aProperty.house.imageName = @"house";
         aProperty.house.buildingNo = 2;
         aProperty.house.unitNo = 3;
-        aProperty.house.roomNo = 304;
+        aProperty.house.houseNo = 304;
         for (NSUInteger i = 0; i < 5; i++) {
             HXTPropertyFeeCell *aFeeCell = [[HXTPropertyFeeCell alloc] init];
             [aProperty.fees addObject:aFeeCell];

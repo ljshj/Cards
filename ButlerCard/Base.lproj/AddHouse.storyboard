@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Choose Housing Estate View Controller - 选择小区-->
+        <!--Add Housing Estate View Controller - 选择小区-->
         <scene sceneID="yie-27-K9g">
             <objects>
-                <viewController storyboardIdentifier="ChooseHouseEstateStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KbO-D9-o9T" customClass="HXTChooseHousingEstateViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddHouseEstateStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KbO-D9-o9T" customClass="HXTAddHousingEstateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5ay-93-U0h"/>
                         <viewControllerLayoutGuide type="bottom" id="REb-iE-BXa"/>
@@ -217,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="1033" y="132"/>
         </scene>
-        <!--Choose House View Controller - 选择住房-->
+        <!--Add House View Controller - 选择住房-->
         <scene sceneID="IQj-bM-Jsk">
             <objects>
-                <viewController id="CEx-uv-6mb" customClass="HXTChooseHouseViewController" sceneMemberID="viewController">
+                <viewController id="CEx-uv-6mb" customClass="HXTAddHouseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rQj-Ob-xk7"/>
                         <viewControllerLayoutGuide type="bottom" id="Cw1-wH-olw"/>
@@ -497,7 +497,7 @@
         <!--Navigation Controller-->
         <scene sceneID="unw-sE-oeN">
             <objects>
-                <navigationController storyboardIdentifier="ChooseHouseNavStoryboardID" automaticallyAdjustsScrollViewInsets="NO" id="Ngw-rg-gIa" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddHouseNavStoryboardID" automaticallyAdjustsScrollViewInsets="NO" id="Ngw-rg-gIa" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8qt-IS-zzA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
