@@ -10,6 +10,8 @@
 
 @interface HXTRegisterAddHouseEstateViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *houseEstateTableView;
+
 @property (strong, nonatomic) NSMutableArray *willAddedhouseEstates;
 @end
 
@@ -28,7 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _willAddedhouseEstates = [NSMutableArray arrayWithArray:@[@"中铁小区 1栋2单元302"]];
+    _willAddedhouseEstates = [NSMutableArray arrayWithArray:@[@"中铁小区 1栋2单元302", @"广都小区 1栋2单元302"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,11 +48,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *houseEstateCellIdentifier = @"houseEstateCellIdentifier";
+    static NSString *houseEstateCellIdentifier = @"HouseEstateCellIdentifier";
     static NSString *RegisterCellIdentifer = @"RegisterCellIdentifer";
     
     if (indexPath.row < _willAddedhouseEstates.count) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:houseEstateCellIdentifier forIndexPath:indexPath];
+        //        cell.textLabel.textColor = [UIColor colorWithWhite:0.3f alpha:1];
+        //        cell.textLabel.font = [UIFont systemFontOfSize:15];
+        //        cell.textLabel.text = _willAddedhouseEstates[indexPath.row];
         
         ((UILabel *)[cell viewWithTag:101]).text = _willAddedhouseEstates[indexPath.row];
         return cell;
@@ -70,42 +75,64 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row < _willAddedhouseEstates.count) {
-        return 44;
+        return 40;
     } else {
         return 84;
     }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 320.0f, 20.0f)];
-    label.backgroundColor = [UIColor colorWithWhite:0.9f alpha:1];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.font = [UIFont systemFontOfSize:11];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320.0f, 40.0f)];
+    headerView.backgroundColor = [UIColor colorWithWhite:241.0f / 255.0f alpha:1];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 300.0f, 20.0f)];
+    [headerView addSubview:label];
+    
+    label.font = [UIFont systemFontOfSize:13];
+    label.textColor = [UIColor colorWithWhite:156.0f / 255 alpha:1];
     label.text = @"添加小区后可以使用物业社区服务及相关配送功能";
     
-    return label;
+    return headerView;
 }
 
 #pragma mark - UI Actions
 
-- (IBAction)addMoreHouseEstateButtonPressed:(id)sender {
-    
-}
-
 - (IBAction)registerButtonPressed:(id)sender {
+    NSLog(@"注册");
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)addHouseEstateButtonPressed:(id)sender {
+    NSLog(@"添加小区");
 }
-*/
+
+- (IBAction)delHouseEstateButtonPressed:(UIButton *)sender {
+    NSLog(@"删除小区");
+    
+    UIView *view = sender.superview;
+    
+    while (view && view.superview) {
+        if ([view isKindOfClass:[UITableViewCell class]]) {
+            NSIndexPath *indexPath = [_houseEstateTableView indexPathForCell:(UITableViewCell *)view];
+            [_willAddedhouseEstates removeObjectAtIndex:indexPath.row];
+            [_houseEstateTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            
+            return;
+        }
+        
+        view = view.superview;
+    }
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
