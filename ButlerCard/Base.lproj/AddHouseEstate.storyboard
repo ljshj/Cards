@@ -497,7 +497,7 @@
         <!--Navigation Controller-->
         <scene sceneID="unw-sE-oeN">
             <objects>
-                <navigationController storyboardIdentifier="AddHouseNavStoryboardID" automaticallyAdjustsScrollViewInsets="NO" id="Ngw-rg-gIa" customClass="HXTNavigationController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddHouseEstateNavStoryboardID" automaticallyAdjustsScrollViewInsets="NO" id="Ngw-rg-gIa" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8qt-IS-zzA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

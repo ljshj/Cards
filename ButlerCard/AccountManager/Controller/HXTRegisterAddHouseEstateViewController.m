@@ -113,7 +113,7 @@
 - (IBAction)addHouseEstateButtonPressed:(id)sender {
     NSLog(@"添加小区");
     
-    UIViewController * addHouseNavViewController = [[UIStoryboard storyboardWithName:@"AddHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"AddHouseNavStoryboardID"];
+    UIViewController * addHouseNavViewController = [[UIStoryboard storyboardWithName:@"AddHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"AddHouseEstateNavStoryboardID"];
     [self presentViewController:addHouseNavViewController animated:YES completion:^{}];
     
 }
