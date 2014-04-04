@@ -241,12 +241,14 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOh-ZP-2Iq">
-                                <rect key="frame" x="43" y="234" width="234" height="40"/>
+                                <rect key="frame" x="20" y="234" width="280" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Rc7-Oz-1K2"/>
+                                    <constraint firstAttribute="height" constant="40" id="Q1m-EC-Ms8"/>
                                 </constraints>
-                                <state key="normal" title="确定" backgroundImage="global_button_login">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="确定" backgroundImage="account_sigh_button_tjxq">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -256,12 +258,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GOh-ZP-2Iq" firstAttribute="leading" secondItem="WmM-XR-0oy" secondAttribute="leading" constant="43" id="8SH-gg-JRN"/>
-                            <constraint firstItem="GOh-ZP-2Iq" firstAttribute="top" secondItem="Zsx-Pa-waH" secondAttribute="bottom" constant="8" id="OqF-qK-uAU"/>
+                            <constraint firstItem="GOh-ZP-2Iq" firstAttribute="leading" secondItem="WmM-XR-0oy" secondAttribute="leading" constant="20" id="8nz-9o-PdZ"/>
                             <constraint firstItem="Zsx-Pa-waH" firstAttribute="leading" secondItem="WmM-XR-0oy" secondAttribute="leading" id="baE-mv-iCW"/>
-                            <constraint firstAttribute="trailing" secondItem="GOh-ZP-2Iq" secondAttribute="trailing" constant="43" id="bwI-3Y-92Q"/>
                             <constraint firstAttribute="trailing" secondItem="Zsx-Pa-waH" secondAttribute="trailing" id="c8w-MO-VlA"/>
+                            <constraint firstAttribute="trailing" secondItem="GOh-ZP-2Iq" secondAttribute="trailing" constant="20" id="eH0-Tz-v3N"/>
                             <constraint firstItem="Zsx-Pa-waH" firstAttribute="top" secondItem="rQj-Ob-xk7" secondAttribute="bottom" id="fDa-DE-xqX"/>
+                            <constraint firstItem="GOh-ZP-2Iq" firstAttribute="top" secondItem="Zsx-Pa-waH" secondAttribute="bottom" constant="8" id="hUE-P1-Mtv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="选择住房" id="vz5-Km-Kis">
@@ -533,6 +535,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="account_sigh_button_tjxq" width="234" height="26"/>
         <image name="global_button_login" width="236" height="40"/>
         <image name="house" width="26" height="26"/>
         <image name="navigationBar_back" width="44" height="44"/>
