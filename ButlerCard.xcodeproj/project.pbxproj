@@ -62,8 +62,6 @@
 		B2A4441318C5CAD5008A4592 /* EcologicalDistribution.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A4441118C5CAD5008A4592 /* EcologicalDistribution.storyboard */; };
 		B2AA7EAC18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */; };
 		B2AA7EAD18D2AAE800F4EF88 /* HXTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */; };
-		B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */; };
-		B2AA7EAF18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */; };
 		B2AA7EB018D2AAE800F4EF88 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */; };
 		B2AA7EB118D2AAE800F4EF88 /* HXTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */; };
 		B2AA7EF818D2AFAD00F4EF88 /* HXTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AA7EF718D2AFAD00F4EF88 /* HXTHomeViewController.m */; };
@@ -238,8 +236,6 @@
 		B2A4441218C5CAD5008A4592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EcologicalDistribution.storyboard; sourceTree = "<group>"; };
 		B2AA7EA418D2AAE800F4EF88 /* HXTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTLoginViewController.h; sourceTree = "<group>"; };
 		B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTLoginViewController.m; sourceTree = "<group>"; };
-		B2AA7EA618D2AAE800F4EF88 /* HXTRegisterAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTRegisterAccountViewController.h; sourceTree = "<group>"; };
-		B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTRegisterAccountViewController.m; sourceTree = "<group>"; };
 		B2AA7EA918D2AAE800F4EF88 /* HXTAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTAccountManager.h; sourceTree = "<group>"; };
 		B2AA7EAA18D2AAE800F4EF88 /* HXTAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTAccountManager.m; sourceTree = "<group>"; };
 		B2AA7EF618D2AFAD00F4EF88 /* HXTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXTHomeViewController.h; path = Home/HXTHomeViewController.h; sourceTree = "<group>"; };
@@ -518,8 +514,6 @@
 				B2AA7EA518D2AAE800F4EF88 /* HXTLoginViewController.m */,
 				B25BC75418E93F2700BF4DF7 /* HXTRetrievePasswordViewController.h */,
 				B25BC75518E93F2700BF4DF7 /* HXTRetrievePasswordViewController.m */,
-				B2AA7EA618D2AAE800F4EF88 /* HXTRegisterAccountViewController.h */,
-				B2AA7EA718D2AAE800F4EF88 /* HXTRegisterAccountViewController.m */,
 				B25BC75818E9400100BF4DF7 /* HXTRegisterInputPhoneNumberViewController.h */,
 				B25BC75918E9400100BF4DF7 /* HXTRegisterInputPhoneNumberViewController.m */,
 				B25BC75C18E9406900BF4DF7 /* HXTRegisterInputValidCodeViewController.h */,
@@ -1029,7 +1023,6 @@
 				B2BB18E718D829D700BD9FC9 /* HXTSurroundingLifeViewController.m in Sources */,
 				2301F8FF18E26A840051171E /* CYFeedBackViewController.m in Sources */,
 				2301F8F918E26A740051171E /* CYActivityCell.m in Sources */,
-				B2AA7EAE18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
 				2385634318DADA6B005D5AF5 /* CYMyPropertyTableViewCell.m in Sources */,
 				B2B6AC9218EE46C000E6F1B6 /* HXTAppleyOpenPropertyViewController.m in Sources */,
 				B2CE1C1518D2A912007A754D /* HXTPropertyCell.m in Sources */,
@@ -1064,7 +1057,6 @@
 				B2CE1C0818D2A912007A754D /* HXTMyPropertyViewController.m in Sources */,
 				B2B6AC9118EE46C000E6F1B6 /* HXTAddHouseViewController.m in Sources */,
 				B2BB18E818D829D700BD9FC9 /* HXTSurroundingLifeViewController.m in Sources */,
-				B2AA7EAF18D2AAE800F4EF88 /* HXTRegisterAccountViewController.m in Sources */,
 				B2CE1C1218D2A912007A754D /* HXTPropertyFeeCell.m in Sources */,
 				B2B6AC9918EE46C000E6F1B6 /* HXTSelectCityViewController.m in Sources */,
 				B2B6ACA518EE478B00E6F1B6 /* HXTBrowseHouseEstateViewController.m in Sources */,

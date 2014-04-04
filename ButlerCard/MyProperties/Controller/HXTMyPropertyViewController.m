@@ -171,5 +171,8 @@
 
 #pragma mark - UI actions
 
+- (IBAction)addPropertyButtonPressed:(id)sender {
+    NSLog(@"添加物业");
+}
 
 @end

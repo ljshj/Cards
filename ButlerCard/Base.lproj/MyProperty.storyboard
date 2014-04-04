@@ -178,7 +178,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="我的物业" id="FDu-Ri-jBf">
-                        <barButtonItem key="rightBarButtonItem" image="plus" id="hgU-cf-bmT"/>
+                        <barButtonItem key="rightBarButtonItem" id="Shn-DL-4Pi">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CjN-qa-0SP">
+                                <rect key="frame" x="264" y="5" width="40" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="navigationBar_add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPropertyButtonPressed:" destination="WJD-nw-qmQ" eventType="touchUpInside" id="JKi-0R-EJ8"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFx-Pm-zYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,7 +405,7 @@
     </scenes>
     <resources>
         <image name="house" width="26" height="26"/>
-        <image name="plus" width="26" height="26"/>
+        <image name="navigationBar_add" width="22" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
