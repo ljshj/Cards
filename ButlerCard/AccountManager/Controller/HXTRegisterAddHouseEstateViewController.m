@@ -115,8 +115,13 @@
 #pragma mark - UI Actions
 
 - (IBAction)registerButtonPressed:(id)sender {
-    NSLog(@"注册");
-    [self dismissViewControllerAnimated:YES completion:^{}];
+    NSLog(@"注册 navigationController.viewControllers.count = %lu", (long)self.navigationController.viewControllers.count);
+    
+    if (self.navigationController.viewControllers.count > 5) { //其他Controller通过导航控制器进入该页面
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    } else { //使用的模态方式进入改页面
+        [self dismissViewControllerAnimated:YES completion:^{}];
+    }
 }
 
 - (IBAction)addHouseEstateButtonPressed:(id)sender {

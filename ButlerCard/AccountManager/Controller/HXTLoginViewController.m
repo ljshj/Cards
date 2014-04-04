@@ -111,10 +111,10 @@
 
 - (IBAction)backButtonPressed:(id)sender {
     
-    if (self.navigationController.viewControllers.count == 1) { //使用的模态方式进入改页面
-        [self dismissViewControllerAnimated:YES completion:^{}];
-    } else { //其他Controller通过导航控制器进入该页面
+    if (self.navigationController.viewControllers.count > 1) { //其他Controller通过导航控制器进入该页面
         [self.navigationController popViewControllerAnimated:YES];
+    } else { //使用的模态方式进入改页面
+        [self dismissViewControllerAnimated:YES completion:^{}];
     }
 }
 
