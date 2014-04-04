@@ -31,6 +31,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (!_addedHouse) {
+        _addedHouse = [[HXTHouse alloc] init];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,13 +70,13 @@
 #pragma mark - UIPickerView Delegate
 
 /*
-- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
-    
-}
-
-- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
-    
-}
+ - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+ 
+ }
+ 
+ - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
+ 
+ }
  */
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
@@ -95,13 +99,13 @@
 }
 
 /*
-- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    
-}
-
-- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
-    
-}
+ - (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+ 
+ }
+ 
+ - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+ 
+ }
  */
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
@@ -123,37 +127,21 @@
     _addedHouse.houseNo = (100 * (selectedRow / 2 + 1) + selectedRow + 1);
     NSLog(@"%@%@%@", building, unit, houseNo);
     
-    //如果没有登录进入登录界面
-    if (![HXTAccountManager sharedInstance].logged) {
-        if (self.navigationController.viewControllers.count == 2) { //使用的模态方式进入该页面
-             UIViewController *accountManagerNavViewController = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"AccountManagerNavStoryboardID"];
-            [self presentViewController:accountManagerNavViewController animated:YES completion:^{}];
-        } else { //其他Controller通过导航控制器进入该页面
-            
-            UIViewController *loginViewController = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
-            [self.navigationController pushViewController:loginViewController animated:YES];
-        }
-        
-    } else { //已登录，返回选择的选择的住房信息
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"kAddHouseNotification"
-                                                            object:self
-                                                          userInfo:@{kHouseEstateName: _addedHouse.housingEstatename,
-                                                                     kBuildingNo: @(_addedHouse.buildingNo),
-                                                                     kUnitNo: @(_addedHouse.unitNo),
-                                                                     kHouseNo: @(_addedHouse.houseNo)}];
+    if (!_addedHouse.housingEstatename) {
+        _addedHouse.housingEstatename = @"测试添加的小区";
     }
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:kAddHouseNotification
+                                                        object:self
+                                                      userInfo:@{kHouseEstateName:_addedHouse.housingEstatename,
+                                                                 kBuildingNo: @(_addedHouse.buildingNo),
+                                                                 kUnitNo: @(_addedHouse.unitNo),
+                                                                 kHouseNo: @(_addedHouse.houseNo)}];
+    
+    [self dismissViewControllerAnimated:YES completion:^{ }];
 }
 
 #pragma mark - Navigation
-
-/*
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];

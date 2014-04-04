@@ -37,8 +37,17 @@
 }
 
 - (void)notificationSelector:(NSNotification *)notification {
+    
     if (notification.object != self && [notification.name isEqualToString:kAddHouseNotification]) {
-        NSLog(@"notification.userInfo = %@", notification.userInfo);
+        NSLog(@"22notification.userInfo = %@", notification.userInfo);
+        NSString *houseEetateName = notification.userInfo[kHouseEstateName];
+        NSUInteger buildingNo = [notification.userInfo[kBuildingNo] unsignedIntegerValue];
+        NSUInteger unitNo = [notification.userInfo[kUnitNo] unsignedIntegerValue];
+        NSUInteger houseNo = [notification.userInfo[kHouseNo] unsignedIntegerValue];
+        NSString *houseString = [NSString stringWithFormat:@"%@ %lu栋%lu单元%lu", houseEetateName, (long)buildingNo, (long)unitNo, (long)houseNo];
+        [_willAddedhouseEstates  addObject:houseString];
+        
+        [_houseEstateTableView reloadData];
     }
 }
 
@@ -146,7 +155,4 @@
  }
  */
 
-- (IBAction)backButtonPressed:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
 @end

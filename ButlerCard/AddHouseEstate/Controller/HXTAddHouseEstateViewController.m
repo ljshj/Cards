@@ -16,7 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIControl *coverView;
 @property (weak, nonatomic) IBOutlet UISearchBar *propertySearchBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *housingEstatesCollectionView;
+
 @property (copy, nonatomic) NSMutableArray *housingEstateNamesToShow;
+@property (strong, nonatomic)HXTHouse *addedHouse;
 @end
 
 @implementation HXTAddHouseEstateViewController
@@ -38,6 +40,7 @@
     self.navigationController.navigationBarHidden = NO;
     
     _housingEstateNamesToShow = [[NSMutableArray alloc] initWithArray:[HXTMyProperties sharedInstance].allHousingEstateNames];
+    _addedHouse = [[HXTHouse alloc] init];
     
     [[HXTAccountManager sharedInstance] addObserver:self
                                          forKeyPath:@"currentCity"
@@ -51,7 +54,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"currentCity"] && object == [HXTAccountManager sharedInstance]) {
         _cityLabel.text = [HXTAccountManager sharedInstance].currentCity;
-    } 
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -61,7 +64,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-//    self.tabBarController.tabBar.hidden = NO;
+    //    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -130,11 +133,12 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"didSelectItemAtIndexPath indexPath.section = %li, indexPath.row = %li", (long)indexPath.section, (long)indexPath.row);
+    _addedHouse.housingEstatename = _housingEstateNamesToShow[indexPath.row];
     /*
-    UIViewController *loginViewcontroller = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
-    
-    [loginViewcontroller setValue:self forKey:@"delegate"];
-    [self.navigationController pushViewController:loginViewcontroller animated:YES];
+     UIViewController *loginViewcontroller = [[UIStoryboard storyboardWithName:@"AccountManager" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginStoryboardID"];
+     
+     [loginViewcontroller setValue:self forKey:@"delegate"];
+     [self.navigationController pushViewController:loginViewcontroller animated:YES];
      */
 }
 
@@ -150,15 +154,6 @@
 
 
 #pragma mark -- UI Actions
-
-- (IBAction)backButtonPressed:(UIButton *)sender {
-    
-    if (self.navigationController.viewControllers.count == 1) { //使用的模态方式进入改页面
-        [self dismissViewControllerAnimated:YES completion:^{}];
-    } else { //其他Controller通过导航控制器进入该页面
-         [self.navigationController popViewControllerAnimated:YES];
-    }
-}
 
 - (IBAction)chooseCityButtonPressed:(UIButton *)sender {
     sender.selected = !sender.selected;
@@ -176,11 +171,14 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"ChooseCityStoryboardID"]) {
-        //模态显示动画
-//        ((UIViewController *)segue.destinationViewController).modalPresentationStyle = UIModalPresentationPageSheet;
-//        ((UIViewController *)segue.destinationViewController).modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    if ([segue.identifier isEqualToString:@"AddHouseStoryboardSegue"]) {
+        UIViewController *addHouseViewController = segue.destinationViewController;
+        [addHouseViewController setValue:_addedHouse forKey:@"addedHouse"];
     }
+}
+
+- (IBAction)cancelButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 @end

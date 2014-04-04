@@ -88,11 +88,11 @@
         UITableViewController *myPropertyViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"MyPropertiesStoryboardID"];
         
         [self.navigationController pushViewController:myPropertyViewController animated:YES];
-    } else { //没有登录，进入小区浏览界面
+    } else { //没有登录，进入浏览小区界面
         
-        UIViewController * addHouseEstateViewController = [[UIStoryboard storyboardWithName:@"AddHouseEstate" bundle:nil] instantiateViewControllerWithIdentifier:@"AddHouseEstateStoryboardID"];
+        UIViewController * browseHouseEstateViewController = [[UIStoryboard storyboardWithName:@"BrowseHouseEstate" bundle:nil] instantiateViewControllerWithIdentifier:@"BrowseHouseEstateStoryboardID"];
         
-        [self.navigationController pushViewController:addHouseEstateViewController animated:YES];
+        [self.navigationController pushViewController:browseHouseEstateViewController animated:YES];
     }
 }
 

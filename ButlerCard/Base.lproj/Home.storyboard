@@ -97,7 +97,7 @@
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" id="2FR-eI-eZB">
-                        <barButtonItem key="backBarButtonItem" id="6ZD-Hj-Gxb"/>
+                        <barButtonItem key="backBarButtonItem" title="首页" id="6ZD-Hj-Gxb"/>
                     </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>

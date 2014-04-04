@@ -80,7 +80,7 @@
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="CEx-uv-6mb" kind="push" id="r9u-yN-sD5"/>
+                                            <segue destination="CEx-uv-6mb" kind="push" identifier="AddHouseStoryboardSegue" id="r9u-yN-sD5"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -144,16 +144,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="选择小区" id="T9y-7o-5kM">
                         <barButtonItem key="backBarButtonItem" id="YIH-jW-S2E"/>
-                        <barButtonItem key="leftBarButtonItem" id="MWA-Hw-IQe">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bcc-Qc-yRH">
-                                <rect key="frame" x="16" y="5" width="33" height="33"/>
+                        <barButtonItem key="leftBarButtonItem" id="gx7-Hb-Mte">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="na3-ek-qzZ">
+                                <rect key="frame" x="16" y="5" width="40" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="navigationBar_back">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="取消">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="KbO-D9-o9T" eventType="touchUpInside" id="4Po-XE-fX8"/>
+                                    <action selector="cancelButtonPressed:" destination="KbO-D9-o9T" eventType="touchUpInside" id="rSW-ip-2Ey"/>
                                 </connections>
                             </button>
                         </barButtonItem>
