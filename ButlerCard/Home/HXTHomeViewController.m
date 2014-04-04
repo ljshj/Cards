@@ -90,9 +90,8 @@
         [self.navigationController pushViewController:myPropertyViewController animated:YES];
     } else { //没有登录，进入小区浏览界面
         
-        UIViewController * addHouseEstateViewController = [[UIStoryboard storyboardWithName:@"AddHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"AddHouseEstateStoryboardID"];
+        UIViewController * addHouseEstateViewController = [[UIStoryboard storyboardWithName:@"AddHouseEstate" bundle:nil] instantiateViewControllerWithIdentifier:@"AddHouseEstateStoryboardID"];
         
-//        [self presentViewController:_browseHousingEstateViewController animated:YES completion:nil];
         [self.navigationController pushViewController:addHouseEstateViewController animated:YES];
     }
 }

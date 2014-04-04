@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#define kAddHouseNotification           @"HXTAddHouseNotification"
-#define kHouseEstateName    @"houseEstateName"
-#define kBuildingNo         @"buildingNo"
-#define kUnitNo             @"unitNo"
-#define kHouseNo            @"houseNo"
+#define kAddHouseNotification   @"HXTAddHouseNotification"
+#define kHouseEstateName        @"houseEstateName"
+#define kBuildingNo             @"buildingNo"
+#define kUnitNo                 @"unitNo"
+#define kHouseNo                @"houseNo"
 
 @class HXTHouse;
 

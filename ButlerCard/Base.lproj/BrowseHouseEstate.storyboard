@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Add House Estate View Controller - 选择小区-->
+        <!--Browse House Estate View Controller - 浏览小区-->
         <scene sceneID="yie-27-K9g">
             <objects>
-                <viewController storyboardIdentifier="AddHouseEstateStoryboardID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KbO-D9-o9T" customClass="HXTAddHouseEstateViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BrowseHouseEstateStoryboardID" id="KbO-D9-o9T" customClass="HXTBrowseHouseEstateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5ay-93-U0h"/>
                         <viewControllerLayoutGuide type="bottom" id="REb-iE-BXa"/>
@@ -142,21 +142,8 @@
                             <constraint firstItem="YBD-Ce-MEF" firstAttribute="top" secondItem="iIy-Op-YwT" secondAttribute="bottom" id="zrc-wl-DYE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="选择小区" id="T9y-7o-5kM">
+                    <navigationItem key="navigationItem" title="浏览小区" id="T9y-7o-5kM">
                         <barButtonItem key="backBarButtonItem" id="YIH-jW-S2E"/>
-                        <barButtonItem key="leftBarButtonItem" id="MWA-Hw-IQe">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bcc-Qc-yRH">
-                                <rect key="frame" x="16" y="5" width="33" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="navigationBar_back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="KbO-D9-o9T" eventType="touchUpInside" id="4Po-XE-fX8"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="e6O-5N-3iV">
                             <view key="customView" contentMode="scaleToFill" id="89W-ot-K2x">
                                 <rect key="frame" x="234" y="5" width="70" height="33"/>
@@ -497,7 +484,7 @@
         <!--Navigation Controller-->
         <scene sceneID="unw-sE-oeN">
             <objects>
-                <navigationController storyboardIdentifier="AddHouseEstateNavStoryboardID" automaticallyAdjustsScrollViewInsets="NO" id="Ngw-rg-gIa" customClass="HXTNavigationController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="BrowseHouseEstateNavStoryboardID" automaticallyAdjustsScrollViewInsets="NO" id="Ngw-rg-gIa" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8qt-IS-zzA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

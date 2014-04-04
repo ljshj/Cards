@@ -1,16 +1,16 @@
 //
-//  HXTAddHousingEstateViewController.m
+//  HXTAddHouseEstateViewController.m
 //  ButlerCard
 //
 //  Created by johnny tang on 2/21/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#import "HXTAddHousingEstateViewController.h"
+#import "HXTAddHouseEstateViewController.h"
 #import "HXTAccountManager.h"
 #import "HXTMyProperties.h"
 
-@interface HXTAddHousingEstateViewController ()
+@interface HXTAddHouseEstateViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *chooseCityButton;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UIControl *coverView;
@@ -19,7 +19,7 @@
 @property (copy, nonatomic) NSMutableArray *housingEstateNamesToShow;
 @end
 
-@implementation HXTAddHousingEstateViewController
+@implementation HXTAddHouseEstateViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
