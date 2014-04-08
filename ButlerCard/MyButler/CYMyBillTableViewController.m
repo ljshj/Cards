@@ -27,15 +27,17 @@
 }
 - (void)viewWillAppear:(BOOL)animated
 {
-    //消费单的假数据初始化
-    _allDataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
-    
-    _dataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //消费单的假数据初始化
+    _allDataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
+    
+    _dataArray = [[NSMutableArray alloc]initWithObjects:@[@"1月",@"香皂",@"洗面奶"],@[@"2月",@"杀虫剂"],nil];
+
     //注册下拉刷新功能
     __weak CYMyBillTableViewController *weakSelf = self;
     [self.tableView addPullToRefreshWithActionHandler:^{
