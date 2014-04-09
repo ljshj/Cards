@@ -90,8 +90,8 @@
 #pragma mark - Table view delegate
 
 
-
 #pragma mark -- UI actions
+
 - (IBAction)chooseHouseEstateButtonPressed:(UIButton *)sender {
     sender.selected = !sender.selected;
     NSLog(@"选择小区");
@@ -101,6 +101,8 @@
 - (IBAction)propertyServiceButtonPressed:(UIButton *)sender {
     sender.selected = !sender.selected;
     NSLog(@"物业服务 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
+    UIViewController *propertyServiceViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"PropertyServiceStoryboardID"];
+    [self.navigationController pushViewController:propertyServiceViewController animated:YES];
 }
 
 //物业缴费
@@ -109,7 +111,7 @@
     NSLog(@"物业缴费 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
     
     if ([[HXTAccountManager sharedInstance] isLogged]) { //已登录，进入用户账单界面
-        UITableViewController *myPropertyViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"MyPropertiesStoryboardID"];
+        UITableViewController *myPropertyViewController = [[UIStoryboard storyboardWithName:@"MyProperty" bundle:nil] instantiateViewControllerWithIdentifier:@"PropertyFeeStoryboardID"];
         
         [self.navigationController pushViewController:myPropertyViewController animated:YES];
     } else { //没有登录，进入浏览小区界面

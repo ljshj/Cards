@@ -1,25 +1,25 @@
 //
-//  HXTMyPropertyViewController.m
+//  HXTPropertyFeeViewController.m
 //  ButlerCard
 //
 //  Created by johnny tang on 3/10/14.
 //  Copyright (c) 2014 johnny tang. All rights reserved.
 //
 
-#import "HXTMyPropertyViewController.h"
+#import "HXTPropertyFeeViewController.h"
 #import "HXTPropertyTableViewHeaderFooterView.h"
 #import "HXTMyProperties.h"
 
 #define kHeaderFooterViewReuseIdentifier @"HeaderFooterViewReuseIdentifier"
 
-@interface HXTMyPropertyViewController () <HXTPropertyTableViewHeaderFooterViewDelegate>
+@interface HXTPropertyFeeViewController () <HXTPropertyTableViewHeaderFooterViewDelegate>
 
 @property (assign, nonatomic) NSInteger expandedSection;
 @property (strong, nonatomic) NSArray *freeNames;
 
 @end
 
-@implementation HXTMyPropertyViewController
+@implementation HXTPropertyFeeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
