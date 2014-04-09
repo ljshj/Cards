@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface HXTViewWithArrow : UIView
+<<<<<<< HEAD
 
 @property(assign, nonatomic) CGPoint relativeOrigin;
 @property(assign, nonatomic) CGPoint lastRelativeOrigin;
 
 - (void)horizonMoveArrowFromX:(float)sourceX toX:(float)destX;
 
+=======
+@property(assign, nonatomic) CGPoint relativeOrigin;
+>>>>>>> FETCH_HEAD
 @end

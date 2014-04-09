@@ -14,6 +14,11 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+<<<<<<< HEAD
+=======
+@property (weak, nonatomic) IBOutlet HXTCheckBox *rememberUserNameCheckBox;
+@property (weak, nonatomic) IBOutlet HXTCheckBox *rememberPasswordCheckBox;
+>>>>>>> FETCH_HEAD
 
 @end
 
@@ -34,6 +39,7 @@
 	// Do any additional setup after loading the view.
     _userNameTextField.delegate = self;
     _passwordTextField.delegate = self;
+<<<<<<< HEAD
     
     [[HXTAccountManager sharedInstance] addObserver:self
                                          forKeyPath:@"logged"
@@ -64,6 +70,10 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [_userNameTextField becomeFirstResponder];
+=======
+    _rememberUserNameCheckBox.selected = YES;
+    _rememberPasswordCheckBox.selected = YES;
+>>>>>>> FETCH_HEAD
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,8 +105,13 @@
     }
 }
 
+<<<<<<< HEAD
 #pragma -- RegisterAccountViewController Delegate
 
+=======
+#pragma --
+#pragma -- RegisterAccountViewController Delegate
+>>>>>>> FETCH_HEAD
 - (void)registerAccountViewController:(UIViewController *)registerAccountViewController registerDidSucessed:(BOOL)sucessed {
     NSLog(@"%s %s %d register account sucessed = %@", __FILE__, __FUNCTION__, __LINE__, sucessed? @"YES": @"NO");
 }
@@ -104,9 +119,33 @@
     [self dismissKeyboard];
 }
 
+<<<<<<< HEAD
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
     [[HXTAccountManager sharedInstance] loginWithUsername:_userNameTextField.text password:_passwordTextField.text];
+=======
+- (IBAction)regesterAccountButtonPressed:(UIButton *)sender {
+    
+}
+
+- (IBAction)loginButtonPressed:(UIButton *)sender {
+    BOOL loginDidSucessed = [[HXTAccountManager sharedInstance] loginWithUsername:_userNameTextField.text password:_passwordTextField.text];
+    
+    if (loginDidSucessed) {
+        if (_delegate && [_delegate respondsToSelector:@selector(loginViewController:loginDidSucessed:)]) {
+            [_delegate loginViewController:self loginDidSucessed:loginDidSucessed];
+        }
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败"
+                                                            message:@"无效用户名或密码"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+    
+>>>>>>> FETCH_HEAD
 }
 
 - (void)dismissKeyboard {
@@ -116,6 +155,7 @@
         [_passwordTextField resignFirstResponder];
     }
 }
+<<<<<<< HEAD
 
 #pragma mark - Navigation
 
@@ -129,4 +169,6 @@
 }
 
 
+=======
+>>>>>>> FETCH_HEAD
 @end

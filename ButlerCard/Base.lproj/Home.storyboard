@@ -14,6 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yf4-Qb-jnH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xRp-wG-DGX">
+<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -296,6 +297,97 @@
                         <outlet property="propertyFeeButton" destination="srh-sM-lIZ" id="8Xc-xw-ohk"/>
                         <outlet property="propertyServiceButton" destination="WEe-sU-cWb" id="dRs-FQ-Hzl"/>
                         <outlet property="surroundingLifeButton" destination="Pqa-WU-xKE" id="U7b-lX-FZM"/>
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_1136X640" translatesAutoresizingMaskIntoConstraints="NO" id="Jpy-UR-7sd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srh-sM-lIZ">
+                                <rect key="frame" x="66" y="138" width="80" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="物业缴费" backgroundImage="property_fee">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" backgroundImage="property_fee_selected"/>
+                                <connections>
+                                    <action selector="propertyFeePressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="k3T-mT-IRW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-WU-xKE">
+                                <rect key="frame" x="191" y="200" width="92" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="我的小日子" backgroundImage="my_easy_life">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="my_easy_life_selected"/>
+                                <connections>
+                                    <action selector="myEasyLifeButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="TPa-Un-Z0w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sv-IW-BVv">
+                                <rect key="frame" x="183" y="108" width="76" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="我的农场" backgroundImage="my_farm">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="my_farm_selected"/>
+                                <connections>
+                                    <action selector="myFarmButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="r8b-xY-uMT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu1-HL-J5v">
+                                <rect key="frame" x="34" y="221" width="94" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="25" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="我的存钱罐" backgroundImage="my_piggy_bank">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="my_piggy_bank_selected"/>
+                                <connections>
+                                    <action selector="myPiggyBankButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="KWS-Br-zTw"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panda" translatesAutoresizingMaskIntoConstraints="NO" id="dAf-wl-Atw">
+                                <rect key="frame" x="104" y="319" width="150" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEe-sU-cWb">
+                                <rect key="frame" x="54" y="38" width="85" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="25" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="物管服务" backgroundImage="property_service">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="property_service_selected"/>
+                                <state key="highlighted" backgroundImage="property_service"/>
+                                <connections>
+                                    <action selector="propertyServiceButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="D7C-nn-KwQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="2FR-eI-eZB">
+                        <barButtonItem key="backBarButtonItem" title=" " id="6ZD-Hj-Gxb"/>
+                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Jpy-UR-7sd" id="neX-68-2Fd"/>
+>>>>>>> FETCH_HEAD
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZk-vx-e2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -310,6 +402,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SLr-CV-gTj">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+<<<<<<< HEAD
+=======
+                        <color key="backgroundColor" white="0.97999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+>>>>>>> FETCH_HEAD
                         <color key="selectedImageTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
@@ -361,6 +457,7 @@
             </objects>
             <point key="canvasLocation" x="1818" y="431"/>
         </scene>
+<<<<<<< HEAD
         <!--Msg Table View Controller - 我的消息-->
         <scene sceneID="Xhl-cm-0gJ">
             <objects>
@@ -1529,6 +1626,32 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3i4-Go-HmA" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="2" title="消息" image="tabbar_message" id="BK9-n3-ZQO">
+=======
+        <!--View Controller-->
+        <scene sceneID="sxS-tl-Prd">
+            <objects>
+                <viewController id="h96-Yo-m4S" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZjD-1p-sYY"/>
+                        <viewControllerLayoutGuide type="bottom" id="pFR-cy-cBN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8fa-5T-KqA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0WH-BM-3ap"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ou6-hb-ng4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818" y="1779"/>
+        </scene>
+        <!--Navigation Controller - 购物车-->
+        <scene sceneID="r7D-qR-x4Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3i4-Go-HmA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="购物车" image="trolley" id="BK9-n3-ZQO">
+>>>>>>> FETCH_HEAD
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1548,6 +1671,7 @@
         <!--Navigation Controller - 首页-->
         <scene sceneID="9II-xH-DN3">
             <objects>
+<<<<<<< HEAD
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PiR-5R-iME" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="qMB-3E-sYC"/>
                     <toolbarItems/>
@@ -1555,6 +1679,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.94509803921568625" green="0.4392156862745098" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+=======
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PiR-5R-iME" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="home" id="qMB-3E-sYC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pDI-cL-V3C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+>>>>>>> FETCH_HEAD
                         <textAttributes key="titleTextAttributes">
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
@@ -1568,11 +1701,19 @@
             </objects>
             <point key="canvasLocation" x="1292" y="-222"/>
         </scene>
+<<<<<<< HEAD
         <!--Navigation Controller - 关注-->
         <scene sceneID="ZUy-G9-WMH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0O2-9c-WIU" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="关注" image="tabbar_collection" id="4Bb-vz-dqq"/>
+=======
+        <!--Navigation Controller - 收藏-->
+        <scene sceneID="ZUy-G9-WMH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0O2-9c-WIU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="收藏" image="collection" id="4Bb-vz-dqq"/>
+>>>>>>> FETCH_HEAD
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5uA-Ad-rjN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1590,6 +1731,7 @@
         <!--Navigation Controller - 我的管家-->
         <scene sceneID="B6F-mI-vG6">
             <objects>
+<<<<<<< HEAD
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KY7-Zn-7HO" customClass="HXTNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="3" title="我的管家" image="tabbar_myButler" id="nOn-rQ-Hsw"/>
                     <toolbarItems/>
@@ -1604,6 +1746,18 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="ujk-EG-zuN" kind="relationship" relationship="rootViewController" id="mSb-am-bYy"/>
+=======
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KY7-Zn-7HO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="3" title="我的管家" image="myButler" id="nOn-rQ-Hsw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLg-v1-h69">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h96-Yo-m4S" kind="relationship" relationship="rootViewController" id="mSK-Q3-mQO"/>
+>>>>>>> FETCH_HEAD
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rP-Vm-ueZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1612,6 +1766,7 @@
         </scene>
     </scenes>
     <resources>
+<<<<<<< HEAD
         <image name="global_callsRecharge" width="25" height="25"/>
         <image name="global_expressQuery" width="25" height="25"/>
         <image name="global_recommendation" width="25" height="25"/>
@@ -1637,6 +1792,24 @@
         <image name="tabbar_home" width="26" height="26"/>
         <image name="tabbar_message" width="26" height="26"/>
         <image name="tabbar_myButler" width="26" height="26"/>
+=======
+        <image name="background_1136X640" width="320" height="568"/>
+        <image name="collection" width="26" height="26"/>
+        <image name="home" width="26" height="26"/>
+        <image name="myButler" width="26" height="26"/>
+        <image name="my_easy_life" width="87" height="103"/>
+        <image name="my_easy_life_selected" width="87" height="103"/>
+        <image name="my_farm" width="74" height="85"/>
+        <image name="my_farm_selected" width="74" height="85"/>
+        <image name="my_piggy_bank" width="73" height="72"/>
+        <image name="my_piggy_bank_selected" width="73" height="72"/>
+        <image name="panda" width="110" height="165"/>
+        <image name="property_fee" width="69" height="75"/>
+        <image name="property_fee_selected" width="69" height="75"/>
+        <image name="property_service" width="84" height="91"/>
+        <image name="property_service_selected" width="84" height="91"/>
+        <image name="trolley" width="26" height="26"/>
+>>>>>>> FETCH_HEAD
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

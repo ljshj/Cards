@@ -37,6 +37,7 @@
                BlueprintName = "ButlerCardTests"
                ReferencedContainer = "container:ButlerCard.xcodeproj">
             </BuildableReference>
+<<<<<<< HEAD
             <SkippedTests>
                <Test
                   Identifier = "HXTLoacationManagerTests/testAddr">
@@ -48,6 +49,8 @@
                   Identifier = "HXTLoacationManagerTests/testLocationCoordinate">
                </Test>
             </SkippedTests>
+=======
+>>>>>>> FETCH_HEAD
          </TestableReference>
       </Testables>
       <MacroExpansion>

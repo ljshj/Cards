@@ -7,13 +7,17 @@
 //
 
 #import "HXTAccountManager.h"
+<<<<<<< HEAD
 #import "AFNetworking.h"
+=======
+>>>>>>> FETCH_HEAD
 
 @implementation HXTAccountManager
 
 
 + (HXTAccountManager *)sharedInstance {
     static HXTAccountManager *accountManager;
+<<<<<<< HEAD
     if (!accountManager) {
         accountManager = [[HXTAccountManager alloc] init];
         [accountManager LoadDataFromUserDefault];
@@ -26,6 +30,20 @@
         
     }
     
+=======
+    if (accountManager == nil) {
+        accountManager = [[HXTAccountManager alloc] init];
+        [accountManager LoadDataFromUserDefault];
+    }
+    if (!accountManager.currentCity ||!accountManager.username || !accountManager.password) {
+        accountManager.currentCity = @"成都";
+        accountManager.username = @"username";
+        accountManager.password = @"password";
+        [accountManager writeDataToUserDefault];
+        [accountManager LoadDataFromUserDefault];
+    }
+    NSLog(@"username = #%@#, password = #%@#", accountManager.username, accountManager.password);
+>>>>>>> FETCH_HEAD
     return accountManager;
 }
 
@@ -35,6 +53,7 @@
 {
     NSUserDefaults *accountDefaults = [NSUserDefaults standardUserDefaults];
     
+<<<<<<< HEAD
     _deposit                  = [accountDefaults doubleForKey:kDeposit];
     _sessionID                = [accountDefaults objectForKey:kSessionID];
     _userID                   = [accountDefaults integerForKey:kUserID];
@@ -51,6 +70,22 @@
     _logged                   = [accountDefaults boolForKey:kLogged];
     _firstRun                 = [accountDefaults boolForKey:kFirstRun];
     _enablePush               = [accountDefaults boolForKey:kEnablePush];
+=======
+    _sessionID   = [accountDefaults objectForKey:kSessionID];
+    _userID      = [accountDefaults objectForKey:kUserID];
+    _groupID     = [accountDefaults objectForKey:kGroupID];
+    _username    = [accountDefaults objectForKey:kUserName];
+    _nickName    = [accountDefaults objectForKey:kNickName];
+    _schemeName  = [accountDefaults objectForKey:kSchemeName];
+    _password    = [accountDefaults objectForKey:kPassword];
+    _phoneNumber = [accountDefaults objectForKey:kPhoneNumber];
+    _emailAddr   = [accountDefaults objectForKey:kEmailAddr];
+    _sex         = [accountDefaults objectForKey:kSex];
+    _currentCity = [accountDefaults objectForKey:kCurrentCity];
+    _logged      = [accountDefaults boolForKey:kLogged];
+    _firstRun    = [accountDefaults boolForKey:kFirstRun];
+    _enablePush  = [accountDefaults boolForKey:kEnablePush];
+>>>>>>> FETCH_HEAD
     _rememberdUsernameAtLogin = [accountDefaults boolForKey:kRememberdUsernameAtLogin];
     _rememberdPasswordAtLogin = [accountDefaults boolForKey:kRememberdPasswordAtLogin];
     
@@ -60,9 +95,14 @@
 - (BOOL)writeDataToUserDefault {
     NSUserDefaults *accountDefaults = [NSUserDefaults standardUserDefaults];
     
+<<<<<<< HEAD
     [accountDefaults setDouble:_deposit forKey:kDeposit];
     [accountDefaults setObject:_sessionID forKey:kSessionID];
     [accountDefaults setInteger:_userID forKey:kUserID];
+=======
+    [accountDefaults setObject:_sessionID forKey:kSessionID];
+    [accountDefaults setObject:_userID forKey:kUserID];
+>>>>>>> FETCH_HEAD
     [accountDefaults setObject:_groupID forKey:kGroupID];
     [accountDefaults setObject:_username forKey:kUserName];
     [accountDefaults setObject:_nickName forKey:kNickName];
@@ -72,7 +112,10 @@
     [accountDefaults setObject:_emailAddr forKey:kEmailAddr];
     [accountDefaults setObject:_sex forKey:kSex];
     [accountDefaults setObject:_currentCity forKey:kCurrentCity];
+<<<<<<< HEAD
     [accountDefaults setObject:_defaultHouseingEstate forKey:kDefaultHouseingEstate];
+=======
+>>>>>>> FETCH_HEAD
     [accountDefaults setBool:_logged forKey:kLogged];
     [accountDefaults setBool:_firstRun forKey:kFirstRun];
     [accountDefaults setBool:_enablePush forKey:kEnablePush];
@@ -82,6 +125,7 @@
     return YES;
 }
 
+<<<<<<< HEAD
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password {
     
     NSDictionary *parameters = @{@"tel": username, @"password": password};
@@ -125,13 +169,31 @@
 }
 
 - (void)registerAccountWithUsername:(NSString *)username password:(NSString *)password {
+=======
+- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password {
+    if (username && password && [username isEqualToString:_username] && [password isEqualToString:_password]) {
+        self.logged = YES;
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)registerAccountWithUsername:(NSString *)username password:(NSString *)password {
+>>>>>>> FETCH_HEAD
     _username = username;
     _password = password;
     [[NSUserDefaults standardUserDefaults] setObject:_username forKey:kUserName];
     [[NSUserDefaults standardUserDefaults] setObject:_password forKey:kPassword];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+<<<<<<< HEAD
 }
 
 
+=======
+    return YES;
+}
+
+>>>>>>> FETCH_HEAD
 @end

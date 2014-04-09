@@ -5,18 +5,28 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>E5E3C289-881B-47A8-ADCE-FA4924433D4E</string>
+=======
+	<string>16FCA38E-2EA3-461C-AA79-0BF0E1411675</string>
+>>>>>>> FETCH_HEAD
 	<key>IDESourceControlProjectName</key>
 	<string>ButlerCard</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>16D5543F-86A9-48D9-AB90-DC3B8D3B929E</key>
 		<string>ssh://192.168.18.8:7999/os/hexinpassios.git</string>
+=======
+		<key>8492A2B4-B8FF-4D4C-B82E-E667C1376A0B</key>
+		<string>http://192.168.18.8:7990/scm/os/hexinpassios.git</string>
+>>>>>>> FETCH_HEAD
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ButlerCard.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>16D5543F-86A9-48D9-AB90-DC3B8D3B929E</key>
 		<string>../..</string>
 	</dict>
@@ -26,13 +36,28 @@
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>16D5543F-86A9-48D9-AB90-DC3B8D3B929E</string>
+=======
+		<key>8492A2B4-B8FF-4D4C-B82E-E667C1376A0B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://192.168.18.8:7990/scm/os/hexinpassios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8492A2B4-B8FF-4D4C-B82E-E667C1376A0B</string>
+>>>>>>> FETCH_HEAD
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
 			<string>16D5543F-86A9-48D9-AB90-DC3B8D3B929E</string>
+=======
+			<string>8492A2B4-B8FF-4D4C-B82E-E667C1376A0B</string>
+>>>>>>> FETCH_HEAD
 			<key>IDESourceControlWCCName</key>
 			<string>hexinpassios</string>
 		</dict>

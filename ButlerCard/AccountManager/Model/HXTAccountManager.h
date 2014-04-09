@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+<<<<<<< HEAD
 #define kDeposit                  @"Deposit"
+=======
+>>>>>>> FETCH_HEAD
 #define kSessionID				  @"SessionID"
 #define kUserID                   @"UserID"
 #define kGroupID                  @"GroupID"
@@ -20,7 +23,10 @@
 #define kEmailAddr                @"EmailAddr"
 #define kSex                      @"Sex"
 #define kCurrentCity              @"CurrentCity"
+<<<<<<< HEAD
 #define kDefaultHouseingEstate    @"DefaultHouseingEstate"
+=======
+>>>>>>> FETCH_HEAD
 #define kLogged                   @"Logged"
 #define kFirstRun                 @"FirstRun"
 #define kEnablePush               @"EnablePush"
@@ -42,9 +48,14 @@
 
 @property (assign, nonatomic) id<AccountManagerDelegate> delegate;
 
+<<<<<<< HEAD
 @property (assign, nonatomic) double   deposit;
 @property (copy,   nonatomic) NSString *sessionID;
 @property (assign, nonatomic) NSUInteger userID;
+=======
+@property (copy,   nonatomic) NSString *sessionID;
+@property (copy,   nonatomic) NSString *userID;
+>>>>>>> FETCH_HEAD
 @property (copy,   nonatomic) NSString *groupID;
 @property (copy,   nonatomic) NSString *username;
 @property (copy,   nonatomic) NSString *nickName;
@@ -54,7 +65,10 @@
 @property (copy,   nonatomic) NSString *emailAddr;
 @property (copy,   nonatomic) NSString *sex;
 @property (copy,   nonatomic) NSString *currentCity;
+<<<<<<< HEAD
 @property (copy,   nonatomic) NSString *defaultHouseingEstate;
+=======
+>>>>>>> FETCH_HEAD
 
 @property (assign, nonatomic, getter = isLogged) BOOL logged;
 @property (assign, nonatomic, getter = isFirstRun) BOOL firstRun;
@@ -62,9 +76,17 @@
 @property (assign, nonatomic, getter = isRememberdUsernameAtLogin) BOOL rememberdUsernameAtLogin;
 @property (assign, nonatomic, getter = isRememberdPasswordAtLogin) BOOL rememberdPasswordAtLogin;
 
+<<<<<<< HEAD
 + (instancetype)sharedInstance;
 - (BOOL)writeDataToUserDefault;
 
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password;
 - (void)registerAccountWithUsername:(NSString *)username password:(NSString *)password;
+=======
++ (HXTAccountManager *)sharedInstance;
+- (BOOL)writeDataToUserDefault;
+
+- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password;
+- (BOOL)registerAccountWithUsername:(NSString *)username password:(NSString *)password;
+>>>>>>> FETCH_HEAD
 @end

@@ -28,6 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+<<<<<<< HEAD
 //    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar_background"]; //del: 透明度太高会导致其他界面底层图像显式太明显
     [self.tabBar setSelectedImageTintColor:[UIColor colorWithRed:242.0f / 255 green:111.0f / 255 blue:14.f / 255 alpha:1.0f]];
     
@@ -37,6 +38,9 @@
 //        self.tabBar.backgroundColor = [UIColor clearColor];
     }
     
+=======
+    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar_background"]; //iOS 6需要显式设置
+>>>>>>> FETCH_HEAD
 }
 
 - (void)didReceiveMemoryWarning
