@@ -120,20 +120,6 @@
     }
 }
 
-//我的理财
-- (IBAction)myFinancesButtonPressed:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    NSLog(@"我的理财 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
-}
-
-//生态配送
-- (IBAction)ecologicalDistributionButtonPressed:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    NSLog(@"生态配送 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
-    UIViewController *ecologicalDistributionViewcontroller = [[UIStoryboard storyboardWithName:@"EcologicalDistribution" bundle:nil] instantiateViewControllerWithIdentifier:@"EcologicalDistributionStoryboardID"];
-    [self.navigationController pushViewController:ecologicalDistributionViewcontroller animated:YES];
-}
-
 //周边生活
 - (IBAction)surroundingLifeButtonPressed:(UIButton *)sender {
     sender.selected = !sender.selected;
@@ -141,6 +127,21 @@
     UIViewController *surroundingLifeViewcontroller = [[UIStoryboard storyboardWithName:@"SurroundingLife" bundle:nil] instantiateViewControllerWithIdentifier:@"SurroundingLifeStoryboardID"];
     //    [self presentViewController:surroundingLifeViewcontroller animated:YES completion:^{}];
     [self.navigationController pushViewController:surroundingLifeViewcontroller animated:YES];
+}
+
+
+//小区互动
+- (IBAction)houseEstateInteractionButtonPressed:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    NSLog(@"小区互动 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
+}
+
+//商家登录
+- (IBAction)sellerButtonPressed:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    NSLog(@"商家登录 %s %s %d", __FILE__, __FUNCTION__, __LINE__);
+    UIViewController *ecologicalDistributionViewcontroller = [[UIStoryboard storyboardWithName:@"EcologicalDistribution" bundle:nil] instantiateViewControllerWithIdentifier:@"EcologicalDistributionStoryboardID"];
+    [self.navigationController pushViewController:ecologicalDistributionViewcontroller animated:YES];
 }
 
 

@@ -73,7 +73,7 @@
                                         </state>
                                         <state key="selected" image="home_houseEstateInteraction_s"/>
                                         <connections>
-                                            <action selector="myFinancesButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="5xj-sm-oma"/>
+                                            <action selector="houseEstateInteractionButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="DB5-Rz-zu2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sv-IW-BVv">
@@ -87,7 +87,7 @@
                                         </state>
                                         <state key="selected" image="home_seller_s"/>
                                         <connections>
-                                            <action selector="ecologicalDistributionButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="1c2-Tw-5ek"/>
+                                            <action selector="sellerButtonPressed:" destination="dHP-Nd-9Cb" eventType="touchUpInside" id="0Bn-Eb-6NT"/>
                                         </connections>
                                     </button>
                                 </subviews>
