@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#define kDeposit                  @"Deposit"
 #define kSessionID				  @"SessionID"
 #define kUserID                   @"UserID"
 #define kGroupID                  @"GroupID"
@@ -41,8 +42,9 @@
 
 @property (assign, nonatomic) id<AccountManagerDelegate> delegate;
 
+@property (assign, nonatomic) double   deposit;
 @property (copy,   nonatomic) NSString *sessionID;
-@property (copy,   nonatomic) NSString *userID;
+@property (assign, nonatomic) NSUInteger userID;
 @property (copy,   nonatomic) NSString *groupID;
 @property (copy,   nonatomic) NSString *username;
 @property (copy,   nonatomic) NSString *nickName;
@@ -63,6 +65,6 @@
 + (instancetype)sharedInstance;
 - (BOOL)writeDataToUserDefault;
 
-- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password;
-- (BOOL)registerAccountWithUsername:(NSString *)username password:(NSString *)password;
+- (void)loginWithUsername:(NSString *)username password:(NSString *)password;
+- (void)registerAccountWithUsername:(NSString *)username password:(NSString *)password;
 @end

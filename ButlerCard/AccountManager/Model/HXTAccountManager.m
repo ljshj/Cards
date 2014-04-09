@@ -7,6 +7,7 @@
 //
 
 #import "HXTAccountManager.h"
+#import "AFNetworking.h"
 
 @implementation HXTAccountManager
 
@@ -19,16 +20,10 @@
         
         if (!accountManager.currentCity ||!accountManager.username || !accountManager.password) {
             accountManager.currentCity = @"重庆";
-            accountManager.username = @"username";
-            accountManager.password = @"password";
             [accountManager writeDataToUserDefault];
-            [accountManager LoadDataFromUserDefault];
         }
         
-        NSLog(@"111username = #%@#, password = #%@# currentCity = %@", accountManager.username, accountManager.password, accountManager.currentCity);
         
-    } else {
-        NSLog(@"222########username = #%@#, password = #%@# currentCity = %@", accountManager.username, accountManager.password, accountManager.currentCity);
     }
     
     return accountManager;
@@ -40,8 +35,9 @@
 {
     NSUserDefaults *accountDefaults = [NSUserDefaults standardUserDefaults];
     
+    _deposit                  = [accountDefaults doubleForKey:kDeposit];
     _sessionID                = [accountDefaults objectForKey:kSessionID];
-    _userID                   = [accountDefaults objectForKey:kUserID];
+    _userID                   = [accountDefaults integerForKey:kUserID];
     _groupID                  = [accountDefaults objectForKey:kGroupID];
     _username                 = [accountDefaults objectForKey:kUserName];
     _nickName                 = [accountDefaults objectForKey:kNickName];
@@ -64,8 +60,9 @@
 - (BOOL)writeDataToUserDefault {
     NSUserDefaults *accountDefaults = [NSUserDefaults standardUserDefaults];
     
+    [accountDefaults setDouble:_deposit forKey:kDeposit];
     [accountDefaults setObject:_sessionID forKey:kSessionID];
-    [accountDefaults setObject:_userID forKey:kUserID];
+    [accountDefaults setInteger:_userID forKey:kUserID];
     [accountDefaults setObject:_groupID forKey:kGroupID];
     [accountDefaults setObject:_username forKey:kUserName];
     [accountDefaults setObject:_nickName forKey:kNickName];
@@ -85,23 +82,56 @@
     return YES;
 }
 
-- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password {
-    if (username && password && [username isEqualToString:_username] && [password isEqualToString:_password]) {
-        self.logged = YES;
-        return YES;
-    }
+- (void)loginWithUsername:(NSString *)username password:(NSString *)password {
     
-    return NO;
+    NSDictionary *parameters = @{@"tel": username, @"password": password};
+    [[AFHTTPRequestOperationManager manager] POST:@"http://bbs.enveesoft.com:1602/htx/hexinpassserver/appserver/public/user/login"
+                                       parameters:parameters
+                                          success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+                                              NSLog(@"JSON: %@", responseObject);
+                                              
+                                              if ([responseObject[@"success"] integerValue] == 1) {
+                                                  self.logged = YES;
+                                                  _username = username;
+                                                  _password = password;
+                                                  _nickName = responseObject[@"results"][@"nickname"];
+                                                  _userID = [responseObject[@"results"][@"uid"] integerValue];
+                                                  _emailAddr = responseObject[@"results"][@"email"];
+                                                  _deposit = [responseObject[@"results"][@"deposit"] doubleValue];
+                                              } else {
+                                                  self.logged = NO;
+                                              }
+                                              
+                                              [self writeDataToUserDefault];
+                                          }
+                                          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                              NSLog(@"Error: %@", error);
+                                              self.logged = NO;
+                                              [self writeDataToUserDefault];
+                                          }];
+    
 }
 
-- (BOOL)registerAccountWithUsername:(NSString *)username password:(NSString *)password {
+- (void)getUserInfo {
+    NSURL *baseURL = [NSURL URLWithString:@"http://bbs.enveesoft.com:1602"];
+    
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
+    NSDictionary *parameters = @{@"uid": @"1", @"sid": @"66d804a0bb4c0a06"};
+    [manager POST:@"/htx/hexinpassserver/appserver/public/user/info" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
+
+- (void)registerAccountWithUsername:(NSString *)username password:(NSString *)password {
     _username = username;
     _password = password;
     [[NSUserDefaults standardUserDefaults] setObject:_username forKey:kUserName];
     [[NSUserDefaults standardUserDefaults] setObject:_password forKey:kPassword];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    return YES;
 }
+
 
 @end

@@ -34,6 +34,31 @@
 	// Do any additional setup after loading the view.
     _userNameTextField.delegate = self;
     _passwordTextField.delegate = self;
+    
+    [[HXTAccountManager sharedInstance] addObserver:self
+                                         forKeyPath:@"logged"
+                                            options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld
+                                            context:NULL];
+}
+
+#pragma -- key value abserver
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"logged"] && object == [HXTAccountManager sharedInstance]) {
+        if ([HXTAccountManager sharedInstance].logged) {
+            NSLog(@"login sucess!");
+            [self.navigationController popToRootViewControllerAnimated:YES];
+            
+        } else {
+            NSLog(@"login fail!");
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败"
+                                                                message:@"无效用户名或密码"
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"确定"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        }
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -81,22 +106,7 @@
 
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
-    BOOL loginDidSucessed = [[HXTAccountManager sharedInstance] loginWithUsername:_userNameTextField.text password:_passwordTextField.text];
-    
-    if (loginDidSucessed) {
-        if (_delegate && [_delegate respondsToSelector:@selector(loginViewController:loginDidSucessed:)]) {
-            [_delegate loginViewController:self loginDidSucessed:loginDidSucessed];
-        }
-        [self.navigationController popToRootViewControllerAnimated:NO];
-    } else {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败"
-                                                            message:@"无效用户名或密码"
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"确定"
-                                                  otherButtonTitles:nil];
-        [alertView show];
-    }
-    
+    [[HXTAccountManager sharedInstance] loginWithUsername:_userNameTextField.text password:_passwordTextField.text];
 }
 
 - (void)dismissKeyboard {
