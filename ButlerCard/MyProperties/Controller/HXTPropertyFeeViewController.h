@@ -1,5 +1,5 @@
 //
-//  HXTMyPropertyViewController.h
+//  HXTPropertyFeeViewController.h
 //  ButlerCard
 //
 //  Created by johnny tang on 3/10/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HXTMyPropertyViewController : UITableViewController
+@interface HXTPropertyFeeViewController : UITableViewController
 
 @end
