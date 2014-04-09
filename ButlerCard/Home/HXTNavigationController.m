@@ -52,10 +52,10 @@
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         //设置navigationBar背景色
-        self.navigationBar.barTintColor = [UIColor colorWithRed:242.0/255.0f green:112.0/255.0f blue:13.0/255.0f alpha:1.0f];
+        self.navigationBar.barTintColor = [UIColor colorWithRed:242.0f / 255 green:111.0f / 255 blue:14.f / 255 alpha:1.0f];
         
         //设置Title属性
-        self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
+        self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:255.0f / 255 green:192.0f / 255 blue:141.0f / 255 alpha:1.0f]};
         
         self.navigationBar.tintColor = [UIColor whiteColor];
     }
