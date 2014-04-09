@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "home_panda.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "zy_panda@2x.png"
+      "filename" : "home_panda@2x.png"
     }
   ],
   "info" : {

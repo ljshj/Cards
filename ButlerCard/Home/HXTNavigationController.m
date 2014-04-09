@@ -38,7 +38,7 @@
         }
             break;
         case 2:{ //购物车
-            [self.tabBarItem  setSelectedImage:[UIImage imageNamed:@"tabbar_trolley_s"]];
+            [self.tabBarItem  setSelectedImage:[UIImage imageNamed:@"tabbar_message_s"]];
         }
             break;
         case 3:{ //我的管家
@@ -52,7 +52,7 @@
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         //设置navigationBar背景色
-        self.navigationBar.barTintColor = [UIColor colorWithRed:242.0/255.0f green:111.0/255.0f blue:14.0/255.0f alpha:1.0f];
+        self.navigationBar.barTintColor = [UIColor colorWithRed:242.0/255.0f green:112.0/255.0f blue:13.0/255.0f alpha:1.0f];
         
         //设置Title属性
         self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};

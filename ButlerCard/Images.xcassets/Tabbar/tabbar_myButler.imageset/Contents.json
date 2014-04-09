@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "tabbar_icon_myid.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "zy_myid@2x.png"
+      "filename" : "tabbar_icon_myid@2x.png"
     }
   ],
   "info" : {

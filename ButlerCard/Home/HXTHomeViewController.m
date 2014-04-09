@@ -12,12 +12,12 @@
 
 @interface HXTHomeViewController () <UINavigationControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UIButton *propertyServiceButton;
 @property (weak, nonatomic) IBOutlet UIButton *propertyFeeButton;
 @property (weak, nonatomic) IBOutlet UIButton *myFinancesButton;
 @property (weak, nonatomic) IBOutlet UIButton *ecologicalDistributionButton;
 @property (weak, nonatomic) IBOutlet UIButton *surroundingLifeButton;
+@property (weak, nonatomic) IBOutlet UITableView *messageTableView;
 
 @end
 
@@ -38,13 +38,8 @@
 	// Do any additional setup after loading the view.
     
     self.navigationController.delegate = self;
-    self.navigationController.navigationBarHidden = YES;
+    //    self.navigationController.navigationBarHidden = YES;
     
-    if ([UIDevice isRunningOniPhone5]) {
-        _backgroundImageView.image = [UIImage imageNamed:@"background_1136X640"];
-    } else {
-        _backgroundImageView.image = [UIImage imageNamed:@"background_960X640"];
-    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -67,11 +62,40 @@
 #pragma mark -- UINavigationController Delegate
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (viewController == self) {
-        self.navigationController.navigationBarHidden = YES;
+        //        self.navigationController.navigationBarHidden = YES;
     }
 }
 
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *messageGreenCellIdentifier = @"MessageGreenCellIdentifier";
+    static NSString *messageRedCellIdentifier = @"MessageRedCellIdentifier";
+    
+    if (indexPath.row % 2 ) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:messageRedCellIdentifier forIndexPath:indexPath];
+        return cell;
+    } else {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:messageGreenCellIdentifier forIndexPath:indexPath];
+        return cell;
+    }
+}
+
+#pragma mark - Table view delegate
+
+
+
 #pragma mark -- UI actions
+- (IBAction)chooseHouseEstateButtonPressed:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    NSLog(@"选择小区");
+}
 
 //物管服务
 - (IBAction)propertyServiceButtonPressed:(UIButton *)sender {
